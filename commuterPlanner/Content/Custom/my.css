@@ -1,0 +1,24 @@
+﻿.datepickerdemoBasicUsage {
+  /** Demo styles for mdCalendar. */ }
+  .datepickerdemoBasicUsage md-content {
+    padding-bottom: 200px; }
+  .datepickerdemoBasicUsage .validation-messages {
+    font-size: 12px;
+    color: #dd2c00;
+    margin-left: 15px; }
+
+.mycontent {
+    margin-left: auto;
+    min-width: 0;
+}
+
+md-sidenav, md-sidenav.md-locked-open, md-sidenav.md-closed.md-locked-open-add-active {
+
+    /*position: relative;
+    max-width: 200px;*/
+    min-width: 200px !important;
+    width: 50vw !important;
+    max-width: 200px !important;
+    position:relative;
+}
+

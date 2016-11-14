@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html ng-app="datepickerBasicUsage">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" toggle="collapse" target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/angular-material")
+    @Scripts.Render("~/bundles/myscripts") 
+    @RenderSection("scripts", required: false)
+    @*<script>
+        angular.module('datepickerBasicUsage',
+    ['ngMaterial', 'ngMessages']).controller('AppCtrl', function ($scope) {
+        $scope.myDate = new Date();
+
+        $scope.minDate = new Date(
+            $scope.myDate.getFullYear(),
+            $scope.myDate.getMonth() - 2,
+            $scope.myDate.getDate());
+
+        $scope.maxDate = new Date(
+            $scope.myDate.getFullYear(),
+            $scope.myDate.getMonth() + 2,
+            $scope.myDate.getDate());
+
+        $scope.onlyWeekendsPredicate = function (date) {
+            var day = date.getDay();
+            return day === 0 || day === 6;
+        };
+    });
+    </script>*@
+</body>
+</html>
