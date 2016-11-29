@@ -11,24 +11,37 @@
     <title>Dashboard Template for Bootstrap</title>
     <!-- Bootstrap core CSS -->
     @Styles.Render("~/Content/css")
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+
+    @*<link href='https://api.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.28.0/mapbox-gl.js'></script>*@
+    @*<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDf5nvdvmUcv_nOXsaJ33U49RC7VKnb1s0">
+    </script>*@
+    @*<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>*@
     
+
 </head>
-<body layout="column" ng-controller="MyNewController" ng-cloak>
+<body >
 
 
-    <div>
-    @*<div class="container body-content">*@
+        @*<div ng-controller="MapCtrl">
+            <div id="map"></div>
+            <div id="repeat" ng-repeat="marker in markers | orderBy : 'title'">
+                <a id="country_container" href="#" ng-click="openInfoWindow($event, marker)">
+                    <label id="names">{{marker.title}}</label>
+                </a>
+            </div>
+        </div>*@
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/angular-material")
     @Scripts.Render("~/bundles/myscripts")
     @RenderSection("scripts", required: false)
+    
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

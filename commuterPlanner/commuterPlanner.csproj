@@ -222,6 +222,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Custom\my.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\images\layers-2x.png" />
+    <Content Include="Content\images\layers.png" />
+    <Content Include="Content\images\marker-icon-2x.png" />
+    <Content Include="Content\images\marker-icon.png" />
+    <Content Include="Content\images\marker-shadow.png" />
+    <Content Include="Content\leaflet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -344,8 +350,17 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\leaflet-0.7.3.js" />
+    <Content Include="Scripts\leaflet-0.7.3.min.js" />
+    <Content Include="Scripts\lodash.js" />
+    <Content Include="Scripts\lodash.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\MyScripts\myScript.js" />
+    <Content Include="Scripts\MyScripts\controllers.js" />
+    <Content Include="Scripts\MyScripts\directives.js" />
+    <Content Include="Scripts\MyScripts\app.js" />
+    <Content Include="Scripts\MyScripts\odlScripts.js" />
+    <Content Include="Scripts\MyScripts\routes.js" />
+    <Content Include="Scripts\MyScripts\services.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
@@ -361,6 +376,7 @@
     <Content Include="Scripts\vendor\uglify.min.js" />
     <Content Include="Scripts\vendor\ZeroClipboard.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Home\IndexSave2.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

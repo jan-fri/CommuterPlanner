@@ -27,7 +27,11 @@ namespace commuterPlanner
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/myscripts").Include(
-                        "~/Scripts/MyScripts/myScript.js",
+                        "~/Scripts/MyScripts/app.js",
+                        "~/Scripts/MyScripts/controllers.js",
+                        "~/Scripts/MyScripts/directives.js",
+                        "~/Scripts/MyScripts/routes.js",
+                        "~/Scripts/MyScripts/services.js",                        
                         "~/Scripts/vendor/holder.min.js",
                         "~/Scripts/vendor/jquery.min.js"));
 
@@ -41,6 +45,8 @@ namespace commuterPlanner
                       "~/Content/angular-material.css",
                       "~/Content/Custom/my.css",
                       "~/Content/Custom/myless.less"));
+
+
         }
     }
 }
