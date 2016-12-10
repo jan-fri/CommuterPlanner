@@ -3,9 +3,11 @@
 }
 <md-toolbar style="background-color: gray" class="mycontent" flex layout="column" ng-controller="ToolbarController">
     <div class="md-toolbar-tools">
-        <md-button style="margin-left: auto; color: white; border: solid">
-            <h1>Wyszukaj przystanki</h1>
-        </md-button>
+        <div class="demo-md-panel-content" >
+            <md-button style="margin-left: auto; color: white; border: solid" ng-click="showPan($event)">
+                <h1>Wyszukaj przystanki</h1>
+            </md-button>
+        </div>
         <md-button ng-click="toggleSidenav('left-side-nav')" class="md-raised" style="margin-left: auto">
             <strong>Zaplanuj podróż</strong>
         </md-button>
