@@ -77,21 +77,20 @@ app.controller('ToolbarController', function ($scope, $mdSidenav, $mdPanel) {
 
 app.controller('PanelController', function ($scope) {
 
-    var selected = 0;
-
-    var stopName;
-
+    var cityNo = 0;
     var cities;
-
     var selectedCity;
     var cityStops;
+    var iterations = 0;
 
     $scope.selectCity = function (index) {
-        selected = index;
+        cityNo = index;
     };
 
-    $scope.selectStop = function (stopName) {
-        stopName = stopName;
+    $scope.selectStop = function (name) {
+        iterations = 0;
+        console.log("zmiana stopu");
+        getRelation(name);
     };
 
     $scope.getCities = function () {
@@ -101,15 +100,16 @@ app.controller('PanelController', function ($scope) {
         for (var i = 0; i < cities.length; i++) {
             $scope.citieslist.push(Object.keys(cities[i])[0]);
         }
-
+        console.log("getCities");
         return $scope.citieslist;
     };
 
     $scope.getStops = function () {
+
         $scope.stopList = new Array();
 
-        selectedCity = Object.keys(cities[selected])[0];
-        cityStops = cities[selected][selectedCity];
+        selectedCity = Object.keys(cities[cityNo])[0];
+        cityStops = cities[cityNo][selectedCity];
 
 
         for (var i = 0; i < cityStops.length; i++) {
@@ -119,24 +119,18 @@ app.controller('PanelController', function ($scope) {
             }
         }
 
-        stopName = $scope.stopList[0];
-        console.log("GETSTOPLIST: " + $scope.stopList[0]);
+        if (iterations == 0) {
+            getRelation($scope.stopList[0]);
+        }
 
-        getRelation();
         return $scope.stopList;
 
     };
 
-    var getRelation = function () {
+    var getRelation = function (stopName) {
 
-
-        //$scope.stopList = new Array();
-
-       // var selectedCity = Object.keys(cities[selected])[0];
-        //var cityStops = cities[selected][selectedCity];
-
-        console.log("loguje : " + cityStops.length);
-
+        iterations++;
+        console.log("ilosc przystankow w miescie: " + cityStops.length);
 
         $scope.busLines = [];
         for (var i = 0; i < cityStops.length; i++) {
@@ -150,8 +144,9 @@ app.controller('PanelController', function ($scope) {
                 }
             }
         }
+        console.log($scope.busLines);
     };
-
+    
 
     $scope.stops = {
         "busStops": [
