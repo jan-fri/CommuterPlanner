@@ -77,32 +77,29 @@ app.controller('ToolbarController', function ($scope, $mdSidenav, $mdPanel) {
 
 app.controller('PanelController', function ($scope) {
 
-    $scope.selected = 0;
+    var selected = 0;
 
-    $scope.stopName = null;
-    $scope.busLines = [];
+    var stopName;
 
-    $scope.cities;
+    var cities;
 
-    $scope.selectedCity = function (index) {
-        $scope.selected = index;
-        //  console.log($scope.selected);
+    var selectedCity;
+    var cityStops;
+
+    $scope.selectCity = function (index) {
+        selected = index;
     };
 
-    $scope.selectedStop = function (stopName) {
-        $scope.stopName = stopName;
-        console.log(stopName);
-        $scope.getRelation();
-        //  console.log($scope.selected);
+    $scope.selectStop = function (stopName) {
+        stopName = stopName;
     };
 
     $scope.getCities = function () {
 
         $scope.citieslist = new Array();
-        $scope.cities = $scope.stops.busStops;
-        for (var i = 0; i < $scope.cities.length; i++) {
-            $scope.citieslist.push(Object.keys($scope.cities[i])[0]);
-            // console.log(Object.keys($scope.stops.busStops[i])[0]);            
+        cities = $scope.stops.busStops;
+        for (var i = 0; i < cities.length; i++) {
+            $scope.citieslist.push(Object.keys(cities[i])[0]);
         }
 
         return $scope.citieslist;
@@ -111,8 +108,8 @@ app.controller('PanelController', function ($scope) {
     $scope.getStops = function () {
         $scope.stopList = new Array();
 
-        var selectedCity = Object.keys($scope.cities[$scope.selected])[0];
-        var cityStops = $scope.cities[$scope.selected][selectedCity];
+        selectedCity = Object.keys(cities[selected])[0];
+        cityStops = cities[selected][selectedCity];
 
 
         for (var i = 0; i < cityStops.length; i++) {
@@ -120,22 +117,30 @@ app.controller('PanelController', function ($scope) {
             if (!$scope.stopList.includes(busStop)) {
                 $scope.stopList.push(busStop);
             }
-            //   $scope.stopList.push(cityStops[i]['tags']['name']);
         }
+
+        stopName = $scope.stopList[0];
+        console.log("GETSTOPLIST: " + $scope.stopList[0]);
+
+        getRelation();
         return $scope.stopList;
 
     };
 
-    $scope.getRelation = function () {
+    var getRelation = function () {
 
 
-        $scope.stopList = new Array();
+        //$scope.stopList = new Array();
 
-        var selectedCity = Object.keys($scope.cities[$scope.selected])[0];
-        var cityStops = $scope.cities[$scope.selected][selectedCity];
+       // var selectedCity = Object.keys(cities[selected])[0];
+        //var cityStops = cities[selected][selectedCity];
 
+        console.log("loguje : " + cityStops.length);
+
+
+        $scope.busLines = [];
         for (var i = 0; i < cityStops.length; i++) {
-            if (cityStops[i]['tags']['name'] == $scope.stopName) {
+            if (cityStops[i]['tags']['name'] == stopName) {
                 for (var j = 0; j < cityStops[i]['tags']['relation'].length; j++) {
                     $scope.busLines.push({
                         line: cityStops[i]['tags']['relation'][j]['line'],
@@ -145,63 +150,8 @@ app.controller('PanelController', function ($scope) {
                 }
             }
         }
-        
-       // console.log($scope.busLines[0].line);
-
-        //return buses;
-
-        //$scope.busLines = {
-        //    lines: []
-        //};
-
-
-        //for (var i = 0; i < cityStops.length; i++) {
-        //    if (cityStops[i]['tags']['name'] == $scope.stopName) {
-        //        for (var j = 0; j < cityStops[i]['tags']['relation'].length; j++) {
-        //            //console.log(cityStops[i]['tags']['relation'].length);
-        //            //console.log(cityStops[i]['tags']['relation']);
-
-        //            $scope.busLines.lines.push({
-        //                "line": cityStops[i]['tags']['relation'][j]['line'],
-        //                "route": cityStops[i]['tags']['relation'][j]['route'],
-        //                "stopRef": cityStops[i]['tags']['ref']
-        //            });
-        //            //console.log(cityStops[i]['tags']['relation'][j]['line']);
-        //            //console.log(cityStops[i]['tags']['relation'][j]['route']);
-        //            //console.log(cityStops[i]['tags']['ref']);
-        //        }
-        //    }
-        //}\
-
-
-
-
-        //console.log($scope.busLines[0]['line']);
-        //console.log($scope.busLines[0]['route']);
-        //console.log($scope.busLines[1]['line']);
-        //console.log($scope.busLines[1]['route']);
-
-        
     };
 
-
-
-    $scope.test = function (index) {
-        $scope.stopList = new Array();
-        var n = Object.keys($scope.stops.busStops[0])[0];
-        console.log(n);
-        console.log($scope.stops.busStops[1].Buczkowice);
-        console.log($scope.stops['busStops'][0][n][0]['tags']['name']);
-        console.log($scope.stops['busStops'][0][n]);
-        //for (var i = 0; i < $scope.cities.length; i++) {
-        //    //$scope.citieslist.push($scope.stops.busStops[i]);
-        //    //$scope.stopList.push(Object.keys($scope.cities[i])[0]);
-        //    console.log($scope.cities[0].tags.name);
-        //}
-
-        return $scope.stopList;
-
-    };
 
     $scope.stops = {
         "busStops": [
@@ -325,161 +275,4 @@ app.controller('PanelController', function ($scope) {
 
         }]
     };
-
-    //$scope.stops = {
-    //    "busStops": {
-    //        "Bielsko-Biała": [{
-    //            "type": "node",
-    //            "id": 1437869030,
-    //            "lat": 49.8123892,
-    //            "lon": 19.0661571,
-    //            "tags": {
-    //                "name": "Osiedle Langiewicza",
-    //                "relation": ["15"],
-    //                "ref": "329"
-    //            }
-    //        },
-    //       {
-    //           "type": "node",
-    //           "id": 259977929,
-    //           "lat": 49.8125139,
-    //           "lon": 19.0557542,
-    //           "tags": {
-    //               "name": "Żywiecka Osiedle Grunwaldzkie",
-    //               "relation": ["15"],
-    //               "ref": "388"
-    //           }
-    //       }],
-
-
-    //        "Buczkowice": [{
-    //            "type": "node",
-    //            "id": 259977929,
-    //            "lat": 49.8125139,
-    //            "lon": 19.0557542,
-    //            "tags": {
-    //                "name": "aaaa",
-    //                "relation": ["15"],
-    //                "ref": "388"
-    //            }
-    //        }],
-
-
-
-    //        "Bystra": [
-    //            {
-    //                "type": "node",
-    //                "id": 259977929,
-    //                "lat": 49.8125139,
-    //                "lon": 19.0557542,
-    //                "tags": {
-    //                    "name": "bbb",
-    //                    "relation": ["15"],
-    //                    "ref": "388"
-    //                }
-    //            }],
-
-    //        "Meszna": [
-    //            {
-    //                "type": "node",
-    //                "id": 259977929,
-    //                "lat": 49.8125139,
-    //                "lon": 19.0557542,
-    //                "tags": {
-    //                    "name": "ccc",
-    //                    "relation": ["15"],
-    //                    "ref": "388"
-    //                }
-    //            }],
-
-
-
-
-    //        "Szczyrk": [
-    //            {
-    //                "type": "node",
-    //                "id": 259977929,
-    //                "lat": 49.8125139,
-    //                "lon": 19.0557542,
-    //                "tags": {
-    //                    "name": "dddd",
-    //                    "relation": ["15"],
-    //                    "ref": "388"
-    //                }
-    //            }]
-
-    //    }
-    //};
-
-    $scope.todos = [
-      {
-
-          what: 'Brunch this weekend?',
-          who: 'Min Li Chan',
-          when: '3:08PM',
-          notes: " I'll be in your neighborhood doing errands"
-      },
-      {
-
-          what: 'Brunch this weekend?',
-          who: 'aaaaan',
-          when: '3:08PM',
-          notes: " I'll be in your neighborhood doing errands"
-      },
-      {
-
-          what: 'Brunch this weekend?',
-          who: 'Min Li Chan',
-          when: '3:08PM',
-          notes: " I'll be in your neighborhood doing errands"
-      },
-      {
-
-          what: 'Brunch this weekend?',
-          who: 'bbbbb',
-          when: '3:08PM',
-          notes: " I'll be in your neighborhood doing errands"
-      },
-      {
-
-          what: 'Brunch this weekend?',
-          who: 'Min Li Chan',
-          when: '3:08PM',
-          notes: " I'll be in your neighborhood doing errands"
-      },
-      {
-
-          what: 'Brunch this weekend?',
-          who: 'ccccc',
-          when: '3:08PM',
-          notes: " I'll be in your neighborhood doing errands"
-      },
-      {
-
-          what: 'Brunch this weekend?',
-          who: 'Min Li Chan',
-          when: '3:08PM',
-          notes: " I'll be in your neighborhood doing errands"
-      },
-      {
-
-          what: 'Brunch this weekend?',
-          who: 'ddddd',
-          when: '3:08PM',
-          notes: " I'll be in your neighborhood doing errands"
-      },
-      {
-
-          what: 'Brunch this weekend?',
-          who: 'Min Li Chan',
-          when: '3:08PM',
-          notes: " I'll be in your neighborhood doing errands"
-      },
-      {
-          what: 'Brunch this weekend?',
-          who: 'eeeeee',
-          when: '3:08PM',
-          notes: " I'll be in your neighborhood doing errands"
-      },
-    ];
 });
