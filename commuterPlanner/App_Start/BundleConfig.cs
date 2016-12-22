@@ -26,6 +26,9 @@ namespace commuterPlanner
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/lodash").Include(
+                        "~/Scripts/lodash*"));
+
             bundles.Add(new ScriptBundle("~/bundles/myscripts").Include(
                         "~/Scripts/MyScripts/app.js",
                         "~/Scripts/MyScripts/controllers.js",
