@@ -77,22 +77,31 @@ app.controller('ToolbarController', function ($scope, $mdSidenav, $mdPanel) {
 
 app.controller('PanelController', function ($scope) {
 
-    var cityNo = 0;
+    //list of all available cities 
     var cities;
+    //index number of selected city from list 
+    var cityNo = 0;
+    //name of selected city
     var selectedCity;
+    //list of all stops is given city
     var cityStops;
+
+    //variable used to prevent calling fuction multiple times (!digest loop error)
     var iterations = 0;
 
+    //set index number of selected city
     $scope.selectCity = function (index) {
         cityNo = index;
+        iterations = 0;
     };
 
+    //calls getRelation() with name of selected stop
     $scope.selectStop = function (name) {
         iterations = 0;
-        console.log("zmiana stopu");
         getRelation(name);
     };
 
+    //reads all available cities from data
     $scope.getCities = function () {
 
         $scope.citieslist = new Array();
@@ -100,10 +109,10 @@ app.controller('PanelController', function ($scope) {
         for (var i = 0; i < cities.length; i++) {
             $scope.citieslist.push(Object.keys(cities[i])[0]);
         }
-        console.log("getCities");
         return $scope.citieslist;
     };
 
+    //reads stops in selected city
     $scope.getStops = function () {
 
         $scope.stopList = new Array();
@@ -114,11 +123,13 @@ app.controller('PanelController', function ($scope) {
 
         for (var i = 0; i < cityStops.length; i++) {
             var busStop = cityStops[i]['tags']['name'];
+            //avoids printing duplicates in bus stop list
             if (!$scope.stopList.includes(busStop)) {
                 $scope.stopList.push(busStop);
             }
         }
 
+        //checks if getRelation() was already called, used to prevent calling fuction multiple times (!digest loop error)
         if (iterations == 0) {
             getRelation($scope.stopList[0]);
         }
@@ -127,26 +138,53 @@ app.controller('PanelController', function ($scope) {
 
     };
 
+    //reads all available bus lines for selected bus stop
     var getRelation = function (stopName) {
 
         iterations++;
         console.log("ilosc przystankow w miescie: " + cityStops.length);
 
         $scope.busLines = [];
+        $scope.busNumbers = [];
         for (var i = 0; i < cityStops.length; i++) {
             if (cityStops[i]['tags']['name'] == stopName) {
                 for (var j = 0; j < cityStops[i]['tags']['relation'].length; j++) {
+                    var line = cityStops[i]['tags']['relation'][j]['line'];
                     $scope.busLines.push({
-                        line: cityStops[i]['tags']['relation'][j]['line'],
-                        route: cityStops[i]['tags']['relation'][j]['route'],
-                        stopRef: cityStops[i]['tags']['ref']
+                        line: line,
+                        route: cityStops[i]['tags']['relation'][j]['route']
+                        // stopRef: cityStops[i]['tags']['ref']
                     });
+
+                    //avoids printing duplicates in bus lines list
+                    if (!$scope.busNumbers.includes(line)) {
+                        $scope.busNumbers.push(line);
+                    }
                 }
             }
         }
-        console.log($scope.busLines);
     };
-    
+
+    //selected bus line to show details
+    $scope.seletBus = function (index) {
+
+        $scope.busLineDetails = [];
+        for (var i = 0; i < $scope.busLines.length; i++) {
+            if ($scope.busLines[i]['line'] == $scope.busNumbers[index]) {
+                $scope.busLineDetails.push({
+                    line: $scope.busLines[i]['line'],
+                    route: $scope.busLines[i]['route']
+                });                
+            }
+        };
+        console.log("Bus details " + $scope.busLineDetails);
+
+
+
+    }
+
+
+
 
     $scope.stops = {
         "busStops": [
