@@ -17,6 +17,7 @@ namespace commuterPlanner
             bundles.Add(new ScriptBundle("~/bundles/angular-material").Include(
                         "~/Scripts/angular/angular.js",
                         "~/Scripts/angular-animate/angular-animate.js",
+                        "~/Scripts/angular-route.js",
                         "~/Scripts/angular-aria/angular-aria.js",
                         "~/Scripts/angular-material/angular-material.js",
                         "~/Scripts/angular-messages.js"));

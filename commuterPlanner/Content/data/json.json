@@ -1,0 +1,158 @@
+﻿ {
+  "busStops": [
+    {
+      "Bielsko Biała": [
+        {
+          "type": "node",
+          "id": 1437869030,
+          "lat": 49.8123892,
+          "lon": 19.0661571,
+          "tags": {
+            "name": "Osiedle Langiewicza",
+            "relation": [
+              {
+                "line": "15",
+                "route": "Osiedle Polskich Skrzydeł"
+              },
+              {
+                "line": "34",
+                "route": "Jakis kierunek"
+              }
+            ],
+            "ref": "328"
+          }
+        },
+
+        {
+          "type": "node",
+          "id": 1437869030,
+          "lat": 49.8123892,
+          "lon": 19.0661571,
+          "tags": {
+            "name": "Osiedle Langiewicza",
+            "relation": [
+              {
+                "line": "15",
+                "route": "Return"
+              },
+              {
+                "line": "34",
+                "route": "New"
+              }
+            ],
+            "ref": "329"
+          }
+        },
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "Żywiecka Osiedle Grunwaldzkie",
+            "relation": [
+              {
+                "line": "15",
+                "route": "Langiewicza"
+              },
+              {
+                "line": "34",
+                "route": "Powrót"
+              }
+            ],
+            "ref": "388"
+          }
+        },
+
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "Żywiecka Osiedle Grunwaldzkie",
+            "relation": [
+              {
+                "line": "15",
+                "route": "Grundwald"
+              },
+              {
+                "line": "34",
+                "route": "Golgota"
+              }
+            ],
+            "ref": "388"
+          }
+        }
+      ]
+
+    },
+    {
+
+      "Buczkowice": [
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "aaaa",
+            "relation": [ "15" ],
+            "ref": "388"
+          }
+        }
+      ]
+
+    },
+    {
+
+      "Bystra": [
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "bbb",
+            "relation": [ "15" ],
+            "ref": "388"
+          }
+        }
+      ]
+    },
+    {
+
+      "Meszna": [
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "ccc",
+            "relation": [ "15" ],
+            "ref": "388"
+          }
+        }
+      ]
+
+    },
+    {
+
+      "Szczyrk": [
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "dddd",
+            "relation": [ "15" ],
+            "ref": "388"
+          }
+        }
+      ]
+
+    }
+  ]
+}

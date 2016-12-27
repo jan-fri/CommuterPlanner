@@ -39,12 +39,59 @@ app.controller('PlanController', function ($scope) {
 
 });
 
-app.controller('ToolbarController', function ($scope, $mdSidenav, $mdPanel) {
+app.controller('ToolbarController', ['$scope', '$mdSidenav', '$mdPanel', 'BusService', function ($scope, $mdSidenav, $mdPanel, BusService) {
+
+    //var func = function () {
+    //    console.log("get data from BusService");
+    //    var da = BusService.sendBusData();
+    //    console.log(da);
+    //};
+
+
+    $scope.init = function () {
+        console.log("toolbar controller");
+        BusService.getBusData().then(
+            function (data) {
+                // func();
+            },
+            function () {
+                alert('error while fetching speakers from server')
+            });
+
+   //     func();
+
+    };
+
+
     $scope.toggleSidenav = function (side) {
         $mdSidenav(side).toggle();
     };
 
-    $scope.showPan = function () {
+    //$scope.getbusServiceData = function () {
+    //    console.log("inside get getbusServiceData");
+    //    BusService.getBusData().then(
+    //        function (data) {
+    //            console.log("inside get busData");
+    //            $scope.stops = data;
+    //            console.log($scope.stops);
+    //            console.log("showing panel");
+    //            $scope.showPan();
+    //            $scope.func();
+
+    //        },
+    //        function () {
+    //            alert('error while fetching speakers from server')
+    //        });
+
+
+    //    $scope.func = function () {
+    //        console.log("add data");
+    //        console.log($scope.stops);
+    //        dataService.addStopData($scope.stops);
+    //    };
+    //};
+
+    $scope.showPanel = function () {
 
         var position = $mdPanel.newPanelPosition()
              .absolute()
@@ -53,7 +100,7 @@ app.controller('ToolbarController', function ($scope, $mdSidenav, $mdPanel) {
 
         var config = {
             attachTo: angular.element(document.body),
-            // controller: PanelDialogCtrl,
+            controller: 'PanelController',
             // controllerAs: 'ctrl',
             // disableParentScroll: this.disableParentScroll,
             templateUrl: '/Content/Custom/panel2.html',
@@ -71,11 +118,18 @@ app.controller('ToolbarController', function ($scope, $mdSidenav, $mdPanel) {
         $mdPanel.open(config);
     };
 
-});
+}]);
 
 
 
-app.controller('PanelController', function ($scope) {
+app.controller('PanelController', ['$scope', '$mdPanel', 'BusService', function ($scope, $mdPanel, BusService) {
+    console.log("inside PanelCont");
+    $scope.stops = BusService.sendBusData();
+    console.log($scope.stops);
+
+
+ //   console.log("read stops");
+ //   console.log($scope.stops);
 
     //list of all available cities 
     var cities;
@@ -105,10 +159,14 @@ app.controller('PanelController', function ($scope) {
     $scope.getCities = function () {
 
         $scope.citieslist = new Array();
-        cities = $scope.stops.busStops;
+        console.log("get cities " + $scope.stops);
+        cities = $scope.stops['busStops'];
+        console.log(cities.length);
         for (var i = 0; i < cities.length; i++) {
             $scope.citieslist.push(Object.keys(cities[i])[0]);
         }
+        console.log("cities:");
+        console.log($scope.citieslist);
         return $scope.citieslist;
     };
 
@@ -174,7 +232,7 @@ app.controller('PanelController', function ($scope) {
                 $scope.busLineDetails.push({
                     line: $scope.busLines[i]['line'],
                     route: $scope.busLines[i]['route']
-                });                
+                });
             }
         };
         console.log("Bus details " + $scope.busLineDetails);
@@ -186,126 +244,116 @@ app.controller('PanelController', function ($scope) {
 
 
 
-    $scope.stops = {
-        "busStops": [
-        {
-            "Bielsko Biała": [{
-                "type": "node",
-                "id": 1437869030,
-                "lat": 49.8123892,
-                "lon": 19.0661571,
-                "tags": {
-                    "name": "Osiedle Langiewicza",
-                    "relation": [
-                        { "line": "15", "route": "Osiedle Polskich Skrzydeł" },
-                        { "line": "34", "route": "Jakis kierunek" }],
-                    "ref": "328"
-                }
-            },
-
-            {
-                "type": "node",
-                "id": 1437869030,
-                "lat": 49.8123892,
-                "lon": 19.0661571,
-                "tags": {
-                    "name": "Osiedle Langiewicza",
-                    "relation": [
-                        { "line": "15", "route": "Return" },
-                        { "line": "34", "route": "New" }],
-                    "ref": "329"
-                }
-            },
-        {
-            "type": "node",
-            "id": 259977929,
-            "lat": 49.8125139,
-            "lon": 19.0557542,
-            "tags": {
-                "name": "Żywiecka Osiedle Grunwaldzkie",
-                "relation": [
-                     { "line": "15", "route": "Langiewicza" },
-                     { "line": "34", "route": "Powrót" }],
-                "ref": "388"
-            }
-        },
-
-        {
-            "type": "node",
-            "id": 259977929,
-            "lat": 49.8125139,
-            "lon": 19.0557542,
-            "tags": {
-                "name": "Żywiecka Osiedle Grunwaldzkie",
-                "relation": [
-                     { "line": "15", "route": "Grundwald" },
-                     { "line": "34", "route": "Golgota" }],
-                "ref": "388"
-            }
-        }],
-
-        },
-        {
-
-            "Buczkowice": [{
-                "type": "node",
-                "id": 259977929,
-                "lat": 49.8125139,
-                "lon": 19.0557542,
-                "tags": {
-                    "name": "aaaa",
-                    "relation": ["15"],
-                    "ref": "388"
-                }
-            }],
-
-        },
-        {
-
-            "Bystra": [
-        {
-            "type": "node",
-            "id": 259977929,
-            "lat": 49.8125139,
-            "lon": 19.0557542,
-            "tags": {
-                "name": "bbb",
-                "relation": ["15"],
-                "ref": "388"
-            }
-        }],
-        },
-        {
-
-            "Meszna": [
-        {
-            "type": "node",
-            "id": 259977929,
-            "lat": 49.8125139,
-            "lon": 19.0557542,
-            "tags": {
-                "name": "ccc",
-                "relation": ["15"],
-                "ref": "388"
-            }
-        }],
-
-        },
-        {
-
-            "Szczyrk": [
-        {
-            "type": "node",
-            "id": 259977929,
-            "lat": 49.8125139,
-            "lon": 19.0557542,
-            "tags": {
-                "name": "dddd",
-                "relation": ["15"],
-                "ref": "388"
-            }
-        }, ]
-
-        }]
-    };
-});
+    //$scope.stops = {
+    //    "busStops": [
+    //    {
+    //        "Bielsko Biała": [{
+    //            "type": "node",
+    //            "id": 1437869030,
+    //            "lat": 49.8123892,
+    //            "lon": 19.0661571,
+    //            "tags": {
+    //                "name": "Osiedle Langiewicza",
+    //                "relation": [
+    //                    { "line": "15", "route": "Osiedle Polskich Skrzydeł" },
+    //                    { "line": "34", "route": "Jakis kierunek" }],
+    //                "ref": "328"
+    //            }
+    //        },
+    //        {
+    //            "type": "node",
+    //            "id": 1437869030,
+    //            "lat": 49.8123892,
+    //            "lon": 19.0661571,
+    //            "tags": {
+    //                "name": "Osiedle Langiewicza",
+    //                "relation": [
+    //                    { "line": "15", "route": "Return" },
+    //                    { "line": "34", "route": "New" }],
+    //                "ref": "329"
+    //            }
+    //        },
+    //    {
+    //        "type": "node",
+    //        "id": 259977929,
+    //        "lat": 49.8125139,
+    //        "lon": 19.0557542,
+    //        "tags": {
+    //            "name": "Żywiecka Osiedle Grunwaldzkie",
+    //            "relation": [
+    //                 { "line": "15", "route": "Langiewicza" },
+    //                 { "line": "34", "route": "Powrót" }],
+    //            "ref": "388"
+    //        }
+    //    },
+    //    {
+    //        "type": "node",
+    //        "id": 259977929,
+    //        "lat": 49.8125139,
+    //        "lon": 19.0557542,
+    //        "tags": {
+    //            "name": "Żywiecka Osiedle Grunwaldzkie",
+    //            "relation": [
+    //                 { "line": "15", "route": "Grundwald" },
+    //                 { "line": "34", "route": "Golgota" }],
+    //            "ref": "388"
+    //        }
+    //    }],
+    //    },
+    //    {
+    //        "Buczkowice": [{
+    //            "type": "node",
+    //            "id": 259977929,
+    //            "lat": 49.8125139,
+    //            "lon": 19.0557542,
+    //            "tags": {
+    //                "name": "aaaa",
+    //                "relation": ["15"],
+    //                "ref": "388"
+    //            }
+    //        }],
+    //    },
+    //    {
+    //        "Bystra": [
+    //    {
+    //        "type": "node",
+    //        "id": 259977929,
+    //        "lat": 49.8125139,
+    //        "lon": 19.0557542,
+    //        "tags": {
+    //            "name": "bbb",
+    //            "relation": ["15"],
+    //            "ref": "388"
+    //        }
+    //    }],
+    //    },
+    //    {
+    //        "Meszna": [
+    //    {
+    //        "type": "node",
+    //        "id": 259977929,
+    //        "lat": 49.8125139,
+    //        "lon": 19.0557542,
+    //        "tags": {
+    //            "name": "ccc",
+    //            "relation": ["15"],
+    //            "ref": "388"
+    //        }
+    //    }],
+    //    },
+    //    {
+    //        "Szczyrk": [
+    //    {
+    //        "type": "node",
+    //        "id": 259977929,
+    //        "lat": 49.8125139,
+    //        "lon": 19.0557542,
+    //        "tags": {
+    //            "name": "dddd",
+    //            "relation": ["15"],
+    //            "ref": "388"
+    //        }
+    //    }, ]
+    //    }]
+    //};
+}]);

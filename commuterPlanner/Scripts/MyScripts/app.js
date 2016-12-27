@@ -1,1 +1,1 @@
-﻿var app = angular.module('datepickerBasicUsage', ['ngMaterial', 'ngMessages']);
+﻿var app = angular.module('app', ['ngMaterial', 'ngMessages', 'ngRoute']);

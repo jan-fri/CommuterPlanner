@@ -1,10 +1,10 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<md-toolbar style="background-color: gray" class="mycontent" flex layout="column" ng-controller="ToolbarController">
+<md-toolbar style="background-color: gray" class="mycontent" flex layout="column" ng-controller="ToolbarController" ng-init="init()">
     <div class="md-toolbar-tools">
-        <div class="demo-md-panel-content" >
-            <md-button style="margin-left: auto; color: white; border: solid" ng-click="showPan($event)">
+        <div class="demo-md-panel-content">
+            <md-button style="margin-left: auto; color: white; border: solid" ng-click="showPanel()">
                 <h1>Wyszukaj przystanki</h1>
             </md-button>
         </div>
@@ -155,8 +155,8 @@
     </md-content>
 </md-sidenav>
 
- 
-<div id="mapid" style="z-index: 1" ng-controller="MapController">    
+
+<div id="mapid" style="z-index: 1" ng-controller="MapController">
 </div>
 
 @*<div class="container body-content">
@@ -187,17 +187,17 @@
     });
     </script>*@
 @*<script>
-    var map = L.map('mapid').setView([51.505, -0.09], 13);
+        var map = L.map('mapid').setView([51.505, -0.09], 13);
 
-    L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+        L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
 
-    L.marker([51.5, -0.09]).addTo(map)
-        .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-        .openPopup();
+        L.marker([51.5, -0.09]).addTo(map)
+            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+            .openPopup();
 
-</script>*@
+    </script>*@
 
 @*<md-toolbar layout="row">
         <md-button class="menu" ng-click="toggleSidenav();"><i class="material-icons">menu</i></md-button>
