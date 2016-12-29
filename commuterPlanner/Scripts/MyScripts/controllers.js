@@ -39,57 +39,20 @@ app.controller('PlanController', function ($scope) {
 
 });
 
-app.controller('ToolbarController', ['$scope', '$mdSidenav', '$mdPanel', 'BusService', function ($scope, $mdSidenav, $mdPanel, BusService) {
-
-    //var func = function () {
-    //    console.log("get data from BusService");
-    //    var da = BusService.sendBusData();
-    //    console.log(da);
-    //};
-
-
+app.controller('ToolbarController', ['$scope', '$mdSidenav', '$mdPanel', 'BusStopService', function ($scope, $mdSidenav, $mdPanel, BusStopService) {
     $scope.init = function () {
         console.log("toolbar controller");
-        BusService.getBusData().then(
+        BusStopService.getBusData().then(
             function (data) {
-                // func();
             },
             function () {
                 alert('error while fetching speakers from server')
             });
-
-   //     func();
-
     };
-
 
     $scope.toggleSidenav = function (side) {
         $mdSidenav(side).toggle();
     };
-
-    //$scope.getbusServiceData = function () {
-    //    console.log("inside get getbusServiceData");
-    //    BusService.getBusData().then(
-    //        function (data) {
-    //            console.log("inside get busData");
-    //            $scope.stops = data;
-    //            console.log($scope.stops);
-    //            console.log("showing panel");
-    //            $scope.showPan();
-    //            $scope.func();
-
-    //        },
-    //        function () {
-    //            alert('error while fetching speakers from server')
-    //        });
-
-
-    //    $scope.func = function () {
-    //        console.log("add data");
-    //        console.log($scope.stops);
-    //        dataService.addStopData($scope.stops);
-    //    };
-    //};
 
     $scope.showPanel = function () {
 
@@ -114,22 +77,16 @@ app.controller('ToolbarController', ['$scope', '$mdSidenav', '$mdPanel', 'BusSer
             escapeToClose: true,
             focusOnOpen: true
         };
-
         $mdPanel.open(config);
     };
-
 }]);
 
 
 
-app.controller('PanelController', ['$scope', '$mdPanel', 'BusService', function ($scope, $mdPanel, BusService) {
+app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'TimeTableService', function ($scope, $mdPanel, BusStopService, TimeTableService) {
     console.log("inside PanelCont");
-    $scope.stops = BusService.sendBusData();
+    $scope.stops = BusStopService.sendBusData();
     console.log($scope.stops);
-
-
- //   console.log("read stops");
- //   console.log($scope.stops);
 
     //list of all available cities 
     var cities;
@@ -147,26 +104,28 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusService', function 
     $scope.selectCity = function (index) {
         cityNo = index;
         iterations = 0;
+        $scope.busLineDetails = [];
     };
 
     //calls getRelation() with name of selected stop
     $scope.selectStop = function (name) {
         iterations = 0;
         getRelation(name);
+        $scope.busLineDetails = [];
     };
 
     //reads all available cities from data
     $scope.getCities = function () {
 
         $scope.citieslist = new Array();
-        console.log("get cities " + $scope.stops);
+        //console.log("get cities " + $scope.stops);
         cities = $scope.stops['busStops'];
         console.log(cities.length);
         for (var i = 0; i < cities.length; i++) {
             $scope.citieslist.push(Object.keys(cities[i])[0]);
         }
-        console.log("cities:");
-        console.log($scope.citieslist);
+        //console.log("cities:");
+        //console.log($scope.citieslist);
         return $scope.citieslist;
     };
 
@@ -237,12 +196,8 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusService', function 
         };
         console.log("Bus details " + $scope.busLineDetails);
 
-
-
+        TimeTableService.getTimeTableData()
     }
-
-
-
 
     //$scope.stops = {
     //    "busStops": [

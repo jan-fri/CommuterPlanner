@@ -3242,25 +3242,68 @@
       ]
     },
     {
-      "Szczyrk": [
-        { }
+      "Buczkowice": [
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "aaaa",
+            "relation": [ "15" ],
+            "ref": "388"
+          }
+        }
+      ]
+
+    },
+    {
+      "Bystra": [
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "bbb",
+            "relation": [ "15" ],
+            "ref": "388"
+          }
+        }
       ]
     },
     {
       "Meszna": [
-        { }
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "ccc",
+            "relation": [ "15" ],
+            "ref": "388"
+          }
+        }
       ]
+
     },
     {
-      "Bystra": [
-        { }
+      "Szczyrk": [
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "dddd",
+            "relation": [ "15" ],
+            "ref": "388"
+          }
+        }
       ]
-    },
-    {
-      "Buczkowice": [
-        { }
-      ]
+
     }
-    
+
   ]
 }

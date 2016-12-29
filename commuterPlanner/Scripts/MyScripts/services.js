@@ -1,7 +1,6 @@
-﻿app.factory('BusService', function ($http, $q) {
+﻿app.factory('BusStopService', function ($http, $q) {
 
-    var data;
-
+    var busStops;
 
     return {
         getBusData: function () {
@@ -11,32 +10,51 @@
             .success(deferred.resolve)
             .error(deferred.reject);
 
-            data = deferred.promise;
+            busStops = deferred.promise;
 
-            return deferred.promise; 
+            return deferred.promise;
         },
 
         sendBusData: function () {
-            return data.$$state.value;
+            return busStops.$$state.value;
         }
     };
 });
 
+app.factory('TimeTableService', function ($http, $q) {
+    var timeTable;
 
+    return {
+        getTimeTableData: function (busStopRef, busNo) {
+            var deferred = $q.defer();
 
-app.service('dataService', function () {
-    this.busStopData = [];
-    this.addStopData = function (data) {
-        busStopData = data;
-        console.log("sent data " + data);
+            $http({ method: 'GET', url: '/Home/GetBusTimeTable', params: {} })
+            .success(deferred.resolve)
+            .error(deferred.reject);
+
+            timeTable = deferred.promise;
+
+            return deferred.promise;
+        },
+
+        sendTimeTableData: function () {
+            return timeTable.$$state.value;
+        }
     };
-    this.getStopData = function () {
-        return busStopData;
-    };
-
-
-
-
-
-
 });
+//app.service('dataService', function () {
+//    this.busStopData = [];
+//    this.addStopData = function (data) {
+//        busStopData = data;
+//        console.log("sent data " + data);
+//    };
+//    this.getStopData = function () {
+//        return busStopData;
+//    };
+
+
+
+
+
+
+//});

@@ -89,23 +89,23 @@ a {
 .demo-md-panel {
   min-height: 500px;
 }
-.demo-dialog-list{
 
-   /*max-height: 7.5%;*/
-   overflow: auto;
-}
 .demo-dialog-example {
   background: white;
   border:50px;      
   min-width: 80%;  
   min-height: 40%;
-  max-height: 50%;
+  height: 500px;
 
-  /*overflow: auto;*/
- 
-  
+  overflow: hidden;
+}
 
+.demo-dialog-list{
 
+    position: fixed;
+   width: auto;
+    height: 80%;
+    overflow: auto;
 }
 
 .demo-dialog-content {

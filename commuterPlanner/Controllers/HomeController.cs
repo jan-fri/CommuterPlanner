@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +13,20 @@ namespace commuterPlanner.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+
+        public ActionResult GetBusTimeTable(string busNo, string busStopRef)
+        {
+            var settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
+
+            var jsonResult = new ContentResult
+            {
+              //  Content = JsonConvert.SerializeObject(eventsRepository.GetTalks(), settings),
+                ContentType = "application/json"
+            };
+
+            return jsonResult;
         }
 
         public ActionResult About()
