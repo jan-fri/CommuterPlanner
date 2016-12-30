@@ -84,9 +84,8 @@ app.controller('ToolbarController', ['$scope', '$mdSidenav', '$mdPanel', 'BusSto
 
 
 app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'TimeTableService', function ($scope, $mdPanel, BusStopService, TimeTableService) {
-    console.log("inside PanelCont");
+
     $scope.stops = BusStopService.sendBusData();
-    console.log($scope.stops);
 
     //list of all available cities 
     var cities;
@@ -118,14 +117,10 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
     $scope.getCities = function () {
 
         $scope.citieslist = new Array();
-        //console.log("get cities " + $scope.stops);
         cities = $scope.stops['busStops'];
-        console.log(cities.length);
         for (var i = 0; i < cities.length; i++) {
             $scope.citieslist.push(Object.keys(cities[i])[0]);
         }
-        //console.log("cities:");
-        //console.log($scope.citieslist);
         return $scope.citieslist;
     };
 
@@ -137,9 +132,9 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
         selectedCity = Object.keys(cities[cityNo])[0];
         cityStops = cities[cityNo][selectedCity];
 
-
         for (var i = 0; i < cityStops.length; i++) {
             var busStop = cityStops[i]['tags']['name'];
+
             //avoids printing duplicates in bus stop list
             if (!$scope.stopList.includes(busStop)) {
                 $scope.stopList.push(busStop);
@@ -159,7 +154,6 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
     var getRelation = function (stopName) {
 
         iterations++;
-        console.log("ilosc przystankow w miescie: " + cityStops.length);
 
         $scope.busLines = [];
         $scope.busNumbers = [];
@@ -169,8 +163,8 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
                     var line = cityStops[i]['tags']['relation'][j]['line'];
                     $scope.busLines.push({
                         line: line,
-                        route: cityStops[i]['tags']['relation'][j]['route']
-                        // stopRef: cityStops[i]['tags']['ref']
+                        route: cityStops[i]['tags']['relation'][j]['route'],
+                        stopRef: cityStops[i]['tags']['ref']
                     });
 
                     //avoids printing duplicates in bus lines list
@@ -190,13 +184,20 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
             if ($scope.busLines[i]['line'] == $scope.busNumbers[index]) {
                 $scope.busLineDetails.push({
                     line: $scope.busLines[i]['line'],
-                    route: $scope.busLines[i]['route']
+                    route: $scope.busLines[i]['route'],
+                    stopRef: $scope.busLines[i]['stopRef']
                 });
             }
         };
-        console.log("Bus details " + $scope.busLineDetails);
 
-        TimeTableService.getTimeTableData()
+        console.log($scope.busLineDetails);
+        console.log("dlugosc");
+        console.log($scope.busLineDetails.length);
+        for (var i = 0; i < $scope.busLineDetails.length; i++) {
+            TimeTableService.getTimeTableData($scope.busLineDetails[i]);
+            console.log($scope.busLineDetails[i]);
+        };
+        
     }
 
     //$scope.stops = {

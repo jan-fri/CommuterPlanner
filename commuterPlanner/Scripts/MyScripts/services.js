@@ -25,10 +25,14 @@ app.factory('TimeTableService', function ($http, $q) {
     var timeTable;
 
     return {
-        getTimeTableData: function (busStopRef, busNo) {
+        getTimeTableData: function (bus) {
+            console.log("service");
+            console.log(bus.line);
+            console.log(bus.stopRef);
+
             var deferred = $q.defer();
 
-            $http({ method: 'GET', url: '/Home/GetBusTimeTable', params: {} })
+            $http({ method: 'GET', url: '/Home/GetBusTimeTable', params: { busNo: bus.line, busStopRef: bus.stopRef } })
             .success(deferred.resolve)
             .error(deferred.reject);
 
