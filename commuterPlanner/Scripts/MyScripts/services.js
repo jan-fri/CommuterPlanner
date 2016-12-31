@@ -42,7 +42,8 @@ app.factory('TimeTableService', function ($http, $q) {
         },
 
         sendTimeTableData: function () {
-            return timeTable.$$state.value;
+            //return timeTable.$$state.value;
+            return timeTable;
         }
     };
 });
