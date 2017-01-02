@@ -30,7 +30,7 @@
             </div>
         </md-toolbar>
         <md-content class="demo-dialog-list">
-            <md-list >
+            <md-list>
                 <md-list-item class="md-1-line" ng-repeat="stop in getStops()" ng-click="selectStop(stop)">
                     <div layout="column">
                         <h4>{{ stop }}</h4>
@@ -81,23 +81,25 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" ng-href="#{{ $index }}">{{ details.line }}</a>                               
+                                <a data-toggle="collapse" ng-href="#{{ $index }}">{{ details.line }}</a>
                             </h4>
                             <p>kierunek {{ details.route }}</p>
                         </div>
                         <div ng-attr-id="{{ $index }}" class="panel-collapse collapse in">
-                            <div class="panel-body">
-                                <md-content ng-controller="PlanController">
-                                    <strong>Data i czas:</strong>
-                                    <md-datepicker ng-model="myDate" md-placeholder="Wybierz datę"></md-datepicker>
-                                    <md-input-container>
-                                        <label>Godzina</label>
-                                        <input ng-model="time">
-                                    </md-input-container>
-
+                            <div class="panel-body">                             
+                                <div ng-repeat="day in busTimeTable[$index]">
+                                    <strong>{{ day.day }}</strong>
                                     <md-divider></md-divider>
-                                    
-                                </md-content>
+                                    <md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="5" md-row-height-gt-md="1:1" md-row-height="2:2">
+                                        <md-grid-tile ng-repeat="time in day.hour">
+                                            <div>
+                                                <p>{{ time }}</p>                                                
+                                                <md-divider></md-divider>
+                                            </div>
+                                        </md-grid-tile>
+                                    </md-grid-list>
+                                </div>
+
                             </div>
                         </div>
                     </div>

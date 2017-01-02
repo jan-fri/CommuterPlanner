@@ -193,25 +193,28 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
         console.log($scope.busLineDetails);
         console.log("dlugosc");
         console.log($scope.busLineDetails.length);
+
+        $scope.busTimeTable = [];
         for (var i = 0; i < $scope.busLineDetails.length; i++) {
+            console.log($scope.busLineDetails[i]);
             TimeTableService.getTimeTableData($scope.busLineDetails[i]).then(
                 function (data) {
-                    console.log("get data");
+                    console.log("data");
                     console.log(data);
-                    //console.log("dzien1");
-                    //console.log(data[0]);
-                    //console.log("dzien2");
-                    //console.log(data[1]);
-                    //console.log("dzien3");
-                    //console.log(data[2]);
+                    $scope.busTimeTable.push({
+                        workingDay: data[0],
+                        saturday: data[1],
+                        sunday: data[2]
+                    });
+                    console.log("workingDay");
+                    console.log($scope.busTimeTable[0].workingDay);
                 },
                 function () {
                     alert('error while fetching speakers from server')
-                });
-            console.log($scope.busLineDetails[i]);
+                });            
         };
 
-        var n = TimeTableService.sendTimeTableData();
+
 
     }
     //BusStopService.getBusData().then(
