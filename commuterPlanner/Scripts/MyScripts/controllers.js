@@ -108,6 +108,7 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
 
     //calls getRelation() with name of selected stop
     $scope.selectStop = function (name) {
+        console.log("selectStop");
         iterations = 0;
         getRelation(name);
         $scope.busLineDetails = [];
@@ -152,7 +153,7 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
 
     //reads all available bus lines for selected bus stop
     var getRelation = function (stopName) {
-
+        console.log("getRelation");
         iterations++;
 
         $scope.busLines = [];
@@ -174,6 +175,9 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
                 }
             }
         }
+
+        console.log("lines");
+        console.log($scope.busLines);
     };
 
     //selected bus line to show details

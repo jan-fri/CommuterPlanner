@@ -1,8 +1,6 @@
 {
-  "bus-stops": [
-    {
-      "Bielsko Biała": [
-        {
+  "busStops": [{
+      "Bielsko Biała": [{
           "id": 288013616,
           "lat": 49.8250443,
           "lon": 19.0300396,
