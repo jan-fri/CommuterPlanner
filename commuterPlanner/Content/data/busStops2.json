@@ -1,135 +1,7 @@
-{
-  "bus-stops": [
+﻿{
+  "busStops": [
     {
       "Bielsko Biała": [
-        {
-          "id": 288013616,
-          "lat": 49.8250443,
-          "lon": 19.0300396,
-          "tags": {
-            "name": "Piastowska Wita Stwosza",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              },
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł"
-              }
-            ],
-            "ref": "268"
-          }
-        },
-        {
-          "id": 1273490602,
-          "lat": 49.8060841,
-          "lon": 19.074009,
-          "tags": {
-            "name": "Łagodna Osiedle",
-            "relation": [
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
-              }
-            ],
-            "ref": "211"
-          }
-        },
-        {
-          "id": 4459183430,
-          "lat": 49.8060634,
-          "lon": 19.0739104,
-          "tags": {
-            "name": "Łagodna Osiedle",
-            "relation": [
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł"
-              }
-            ],
-            "ref": "212"
-          }
-        },
-        {
-          "id": 2687618934,
-          "lat": 49.8799926,
-          "lon": 19.0541213,
-          "tags": {
-            "name": "Komorowice/Sosna",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "43"
-          }
-        },
-        {
-          "id": 261732394,
-          "lat": 49.8709874,
-          "lon": 19.0480933,
-          "tags": {
-            "name": "Bestwińska Krompark",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "38"
-          }
-        },
-        {
-          "id": 4003481937,
-          "lat": 49.8717829,
-          "lon": 19.0484114,
-          "tags": {
-            "name": "Bestwińska Krompark",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              }
-            ],
-            "ref": "37"
-          }
-        },
-        {
-          "id": 4003481932,
-          "lat": 49.8630202,
-          "lon": 19.0479844,
-          "tags": {
-            "name": "Bestwińska Oczyszczalnia",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "40"
-          }
-        },
-        {
-          "id": 4003481933,
-          "lat": 49.8639492,
-          "lon": 19.0479298,
-          "tags": {
-            "name": "Bestwińska Oczyszczalnia",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              }
-            ],
-            "ref": "39"
-          }
-        },
         {
           "id": 1437869030,
           "lat": 49.8123892,
@@ -155,14 +27,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
               }
             ],
             "ref": "388"
@@ -173,25 +37,10 @@
           "lat": 49.8222826,
           "lon": 19.0246509,
           "tags": {
+            "bus": "yes",
+            "highway": "bus_stop",
             "name": "Piastowska Sobieskiego",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              },
-              {
-                "line": "2",
-                "route": "Mikuszowice Stalownik"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
-              }
-            ],
+            "public_transport": "stop_position",
             "ref": "266"
           }
         },
@@ -220,15 +69,11 @@
           "lat": 49.8242652,
           "lon": 19.0538021,
           "tags": {
+            "bench": "yes",
+            "highway": "bus_stop",
             "name": "Paderewskiego",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              }
-            ],
-            "ref": "249"
-
+            "shelter": "yes",
+            "tactile_paving": "no"
           }
         },
         {
@@ -241,10 +86,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Langiewicza"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
               }
             ],
             "ref": "275"
@@ -260,10 +101,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
               }
             ],
             "ref": "334"
@@ -289,14 +126,8 @@
           "lat": 49.8210304,
           "lon": 19.0525730,
           "tags": {
-            "name": "Dmowskiego Urząd Miejski",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              }
-            ],
-            "ref": "76"
+            "created_by": "Potlatch 0.10b",
+            "highway": "bus_stop"
           }
         },
         {
@@ -304,14 +135,7 @@
           "lat": 49.8201898,
           "lon": 19.0515390,
           "tags": {
-            "name": "Dmowskiego Urząd Miejski",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "77"
+            "highway": "bus_stop"
           }
         },
         {
@@ -319,18 +143,7 @@
           "lat": 49.8157482,
           "lon": 19.0504224,
           "tags": {
-            "name": "PCK Trasa W-Z",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
-              }
-            ],
-            "ref": "262"
+            "highway": "bus_stop"
           }
         },
         {
@@ -343,10 +156,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
               }
             ],
             "ref": "274"
@@ -357,15 +166,7 @@
           "lat": 49.8152258,
           "lon": 19.0445041,
           "tags": {
-            "name": "Plac Mickiewicza",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              }
-            ],
-            "ref": "257"
-
+            "highway": "bus_stop"
           }
         },
         {
@@ -373,22 +174,8 @@
           "lat": 49.8236529,
           "lon": 19.0449636,
           "tags": {
-            "name": "Hotel Prezydent",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              },
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
-              }
-            ],
-            "ref": "3"
+            "highway": "bus_stop",
+            "name": "Hotel Prezydent"
           }
         },
         {
@@ -396,22 +183,8 @@
           "lat": 49.8234083,
           "lon": 19.0448538,
           "tags": {
-            "name": "Hotel Prezydent",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              },
-              {
-                "line": "2",
-                "route": "Mikuszowice Stalownik"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
-              }
-            ],
-            "ref": "4"
+            "highway": "bus_stop",
+            "name": "Hotel Prezydent"
           }
         },
         {
@@ -433,10 +206,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
               }
             ],
             "ref": "208"
@@ -531,10 +300,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Langiewicza"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
               }
             ],
             "ref": "335"
@@ -550,22 +315,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Langiewicza"
-              },
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              },
-              {
-                "line": "2",
-                "route": "Mikuszowice Stalownik"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
               }
             ],
             "ref": "264"
@@ -581,22 +330,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              },
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
-              },
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
               }
             ],
             "ref": "265"
@@ -619,18 +352,8 @@
           "lat": 49.8191102,
           "lon": 19.0437888,
           "tags": {
-            "name": "Żwirki i Wigury",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
-              }
-            ],
-            "ref": "261"
+            "highway": "bus_stop",
+            "name": "Żwirki i Wigury"
           }
         },
         {
@@ -701,22 +424,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              },
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
-              },
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
               }
             ],
             "ref": "2"
@@ -727,97 +434,32 @@
           "lat": 49.7760909,
           "lon": 19.0871360,
           "tags": {
+            "bench": "yes",
+            "highway": "bus_stop",
             "name": "Mikuszowice - Stalownik",
-            "relation": [
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
-              }
-            ],
-            "ref": "379"
+            "shelter": "yes"
           }
         },
-        {
-          "id": 10733776292,
-          "lat": 49.7760909,
-          "lon": 19.0871360,
-          "tags": {
-            "name": "Mikuszowice - Stalownik",
-            "relation": [
-              {
-                "line": "2",
-                "route": "Mikuszowice - Stalownik"
-              }
-            ],
-            "ref": "379-2"
-          }
-        },
-
         {
           "id": 1073449867,
           "lat": 49.7860232,
           "lon": 19.0732789,
           "tags": {
+            "bench": "yes",
+            "highway": "bus_stop",
             "name": "Mikuszowice/Dom Ludowy",
-            "relation": [
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
-              }
-            ],
-            "ref": "377"
+            "shelter": "yes"
           }
         },
-        {
-          "id": 10734498672,
-          "lat": 49.7860232,
-          "lon": 19.0732789,
-          "tags": {
-            "name": "Mikuszowice/Dom Ludowy",
-            "relation": [
-              {
-                "line": "2",
-                "route": "Mikuszowice Stalownik"
-              }
-            ],
-            "ref": "378"
-          }
-        },
-
-
         {
           "id": 1073449943,
           "lat": 49.7970232,
           "lon": 19.0635334,
           "tags": {
-            "name": "Żywiecka/Pawia",
-            "relation": [
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
-              }
-            ],
-            "ref": "390"
+            "highway": "bus_stop",
+            "name": "Żywiecka/Pawia"
           }
         },
-        {
-          "id": 10734499432,
-          "lat": 49.7970232,
-          "lon": 19.0635334,
-          "tags": {
-            "name": "Żywiecka/Pawia",
-            "relation": [
-              {
-                "line": "2",
-                "route": "Mikuszowice Stalownik"
-              }
-            ],
-            "ref": "391"
-          }
-        },
-
-
-
         {
           "id": 1088347612,
           "lat": 49.7911241,
@@ -841,18 +483,10 @@
           "lat": 49.8009316,
           "lon": 19.0306201,
           "tags": {
+            "bench": "yes",
+            "highway": "bus_stop",
             "name": "Osiedle Karpackie",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
-              }
-            ],
-            "ref": "308"
+            "shelter": "yes"
           }
         },
         {
@@ -865,14 +499,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Złote Łany"
-              },
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              },
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
               }
             ],
             "ref": "12"
@@ -888,14 +514,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
               }
             ],
             "ref": "11"
@@ -922,14 +540,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Langiewicza"
-              },
-              {
-                "line": "2",
-                "route": "Mikuszowice Stalownik"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
               }
             ],
             "ref": "389"
@@ -949,10 +559,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Złote Łany"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
               }
             ],
             "name": "Lenartowicza",
@@ -973,10 +579,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Złote Łany"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
               }
             ],
             "ref": "134"
@@ -992,10 +594,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Złote Łany"
-              },
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
               }
             ],
             "ref": "382"
@@ -1015,10 +613,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
               }
             ],
             "ref": "133"
@@ -1038,10 +632,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
               }
             ],
             "ref": "135"
@@ -1052,14 +642,7 @@
           "lat": 49.8098345,
           "lon": 19.0449406,
           "tags": {
-            "name": "Partyzantów Apena",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              }
-            ],
-            "ref": "250"
+            "highway": "bus_stop"
           }
         },
         {
@@ -1067,15 +650,7 @@
           "lat": 49.8088719,
           "lon": 19.0429593,
           "tags": {
-            "name": "Partyzantów Apena",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              }
-            ],
-            "ref": "251"
-
+            "highway": "bus_stop"
           }
         },
         {
@@ -1083,14 +658,7 @@
           "lat": 49.8139270,
           "lon": 19.0442884,
           "tags": {
-            "name": "Plac Mickiewicza",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              }
-            ],
-            "ref": "258"
+            "highway": "bus_stop"
           }
         },
         {
@@ -1098,14 +666,7 @@
           "lat": 49.8159453,
           "lon": 19.0444314,
           "tags": {
-            "name": "Plac Mickiewicza Lacznik",
-            "relation": [
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
-              }
-            ],
-            "ref": "260"
+            "highway": "bus_stop"
           }
         },
         {
@@ -1118,10 +679,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
               }
             ],
             "ref": "215"
@@ -1137,10 +694,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
               }
             ],
             "ref": "213"
@@ -1156,10 +709,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Langiewicza"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
               }
             ],
             "ref": "216"
@@ -1175,10 +724,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Langiewicza"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
               }
             ],
             "ref": "214"
@@ -1201,25 +746,10 @@
           "lat": 49.8216044,
           "lon": 19.0238551,
           "tags": {
+            "bus": "yes",
+            "highway": "bus_stop",
             "name": "Piastowska Sobieskiego",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              },
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
-              },
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
-              }
-            ],
+            "public_transport": "stop_position",
             "ref": "267"
           }
         },
@@ -1228,18 +758,8 @@
           "lat": 49.8195530,
           "lon": 19.0436427,
           "tags": {
-            "name": "Żwirki i Wigury",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
-              }
-            ],
-            "ref": "371"
+            "highway": "bus_stop",
+            "name": "Żwirki i Wigury"
           }
         },
         {
@@ -1456,13 +976,14 @@
           "lat": 49.8076779,
           "lon": 19.0718491,
           "tags": {
-            "name": "Urodzajna - Osiedle Langiewicza",
+            "highway": "bus_stop",
             "relation": [
               {
                 "line": "15",
                 "route": "Osiedle Polskich Skrzydeł"
               }
             ],
+            "name": "Urodzajna - Osiedle Langiewicza",
             "ref": "332"
           }
         },
@@ -1491,22 +1012,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Langiewicza"
-              },
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              },
-              {
-                "line": "2",
-                "route": "Mikuszowice Stalownik"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
               }
             ],
             "ref": "269"
@@ -1530,14 +1035,7 @@
           "lat": 49.8144982,
           "lon": 19.0377380,
           "tags": {
-            "name": "Michałowicza Czarnieckiego",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              }
-            ],
-            "ref": "223"
+            "highway": "bus_stop"
           }
         },
         {
@@ -1557,14 +1055,7 @@
           "lat": 49.8142749,
           "lon": 19.0365332,
           "tags": {
-            "name": "Michałowicza Czarnieckiego",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "222"
+            "highway": "bus_stop"
           }
         },
         {
@@ -1629,14 +1120,7 @@
           "lat": 49.8126300,
           "lon": 19.0316215,
           "tags": {
-            "name": "Michalowicza SAM",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              }
-            ],
-            "ref": "225"
+            "highway": "bus_stop"
           }
         },
         {
@@ -1659,14 +1143,7 @@
           "lat": 49.8120875,
           "lon": 19.0289103,
           "tags": {
-            "name": "Michałowicza Reja",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "224"
+            "highway": "bus_stop"
           }
         },
         {
@@ -1689,35 +1166,10 @@
           "lat": 49.7927749,
           "lon": 19.0672935,
           "tags": {
-            "name": "Zywiecka/Dworek",
-            "relation": [
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
-              }
-            ],
-            "ref": "380"
-
+            "highway": "bus_stop",
+            "name": "Zywiecka/Dworek"
           }
         },
-        {
-          "id": 14977523652,
-          "lat": 49.7927749,
-          "lon": 19.0672935,
-          "tags": {
-            "name": "Zywiecka/Dworek",
-            "relation": [
-              {
-                "line": "2",
-                "route": "Mikuszowice Stalownik"
-              }
-            ],
-            "ref": "381"
-
-          }
-        },
-
-
         {
           "id": 1582648031,
           "lat": 49.8228048,
@@ -1830,15 +1282,11 @@
           "lat": 49.8222518,
           "lon": 19.0553031,
           "tags": {
+            "bench": "no",
+            "highway": "bus_stop",
             "name": "Wyzwolenia/Szkolna",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              }
-            ],
-            "ref": "368"
-
+            "shelter": "no",
+            "tactile_paving": "no"
           }
         },
         {
@@ -1955,15 +1403,9 @@
           "lat": 49.8285245,
           "lon": 19.1195073,
           "tags": {
-            "name": "Lipnik - Granica",
-            "relation": [
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "186"
-
+            "highway": "bus_stop",
+            "local_ref": "186",
+            "name": "186 Lipnik / Granica"
           }
         },
         {
@@ -1995,17 +1437,10 @@
           "lat": 49.8154736,
           "lon": 19.0487242,
           "tags": {
+            "bus": "yes",
+            "highway": "bus_stop",
             "name": "PCK Trasa W-Z",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
-              }
-            ],
+            "public_transport": "stop_position",
             "ref": "263"
           }
         },
@@ -2131,10 +1566,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Langiewicza"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
               }
             ],
             "ref": "209"
@@ -2157,14 +1588,7 @@
           "lat": 49.8206803,
           "lon": 19.0704824,
           "tags": {
-            "name": "Krakowska - Solskiego",
-            "relation": [
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
-              }
-            ],
-            "ref": "185"
+            "highway": "bus_stop"
           }
         },
         {
@@ -2173,14 +1597,9 @@
           "lat": 49.8207168,
           "lon": 19.0698376,
           "tags": {
-            "name": "Krakowska - Solskiego",
-            "relation": [
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "184"
+            "bench": "yes",
+            "highway": "bus_stop",
+            "shelter": "yes"
           }
         },
         {
@@ -2362,14 +1781,9 @@
           "lat": 49.8228584,
           "lon": 19.0826008,
           "tags": {
-            "name": "Krakowska - Krzyżowa",
-            "relation": [
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "180"
+            "bench": "yes",
+            "highway": "bus_stop",
+            "shelter": "yes"
           }
         },
         {
@@ -2378,14 +1792,9 @@
           "lat": 49.8229686,
           "lon": 19.0837084,
           "tags": {
-            "name": "Krakowska - Krzyżowa",
-            "relation": [
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
-              }
-            ],
-            "ref": "181"
+            "bench": "yes",
+            "highway": "bus_stop",
+            "shelter": "yes"
           }
         },
         {
@@ -2399,16 +1808,7 @@
               {
                 "line": "34",
                 "route": "Osiedle Złote Łany"
-              },
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              },
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
               }
-
             ],
             "ref": "6"
           }
@@ -2424,14 +1824,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
               }
             ],
             "ref": "5"
@@ -2448,14 +1840,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
               }
             ],
             "ref": "19"
@@ -2618,30 +2002,12 @@
           "lat": 49.8448587,
           "lon": 19.0496081,
           "tags": {
+            "bus": "yes",
+            "highway": "bus_stop",
             "name": "Komorowicka/Mostek",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              }
-            ],
-            "ref": "162"
-
-          }
-        },
-        {
-          "id": 8787575400002,
-          "lat": 49.8448587,
-          "lon": 19.0496081,
-          "tags": {
-            "name": "Komorowicka/Mostek",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "161"
+            "network": "MZK Bielsko-Biała",
+            "operator": "MZK Bielsko-Biała",
+            "public_transport": "stop_position"
           }
         },
         {
@@ -2672,14 +2038,9 @@
           "lat": 49.8578808,
           "lon": 19.0483869,
           "tags": {
-            "name": "Bestwińska Zakręt",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              }
-            ],
-            "ref": "41"
+            "bus": "yes",
+            "highway": "bus_stop",
+            "public_transport": "stop_position"
           }
         },
         {
@@ -2688,14 +2049,9 @@
           "lat": 49.8585938,
           "lon": 19.0483172,
           "tags": {
-            "name": "Bestwińska Zakręt",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "42"
+            "bus": "yes",
+            "highway": "bus_stop",
+            "public_transport": "stop_position"
           }
         },
         {
@@ -2719,30 +2075,8 @@
           "lat": 49.7907911,
           "lon": 19.0496036,
           "tags": {
-            "name": "Cygański Las",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              }
-            ],
-            "ref": "247"
-          }
-        },
-        {
-
-          "id": 40676561842,
-          "lat": 49.7907911,
-          "lon": 19.0496036,
-          "tags": {
-            "name": "Cygański Las",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              }
-            ],
-            "ref": "247-2"
+            "highway": "bus_stop",
+            "name": "Cygański Las"
           }
         },
         {
@@ -2751,32 +2085,8 @@
           "lat": 49.7956880,
           "lon": 19.0527293,
           "tags": {
-            "name": "Bystrzańska/Olszówka",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              }
-            ],
-            "ref": "52"
-
-          }
-        },
-        {
-
-          "id": 40676561852,
-          "lat": 49.7956880,
-          "lon": 19.0527293,
-          "tags": {
-            "name": "Bystrzańska/Olszówka",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              }
-            ],
-            "ref": "248"
-
+            "highway": "bus_stop",
+            "name": "Bystrzańska/Olszówka"
           }
         },
         {
@@ -2794,36 +2104,11 @@
               {
                 "line": "34",
                 "route": "Osiedle Złote Łany"
-              },
-              {
-                "line": "2",
-                "route": "Mikuszowice Stalownik"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
               }
             ],
             "ref": "132"
           }
         },
-        {
-
-          "id": 40678194892,
-          "lat": 49.8172362,
-          "lon": 19.0140743,
-          "tags": {
-            "name": "Osiedle Kopernika",
-            "relation": [
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
-              }
-            ],
-            "ref": "132-2"
-          }
-        },
-
         {
 
           "id": 4068641829,
@@ -2848,9 +2133,6 @@
             "operator": "PKM Czechowice-Dziedzice"
           }
         },
-
-
-
         {
 
           "id": 4068641853,
@@ -2953,34 +2235,12 @@
         },
         {
 
-          "id": 89797600001,
-          "lat": 49.8289750,
-          "lon": 19.0533511,
-          "tags": {
-            "name": "Komorowicka/Bielsbud",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "155"
-          }
-        },
-        {
-
           "id": 4077045876,
           "lat": 49.8289750,
           "lon": 19.0533511,
           "tags": {
-            "name": "Komorowicka/Bielsbud",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              }
-            ],
-            "ref": "156"
+            "highway": "bus_stop",
+            "name": "Komorowicka/Bielsbud"
           }
         },
         {
@@ -2989,14 +2249,8 @@
           "lat": 49.8247841,
           "lon": 19.0524748,
           "tags": {
-            "name": "Komorowicka/Szkoła",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "167"
+            "highway": "bus_stop",
+            "name": "Komorowicka/Szkoła"
           }
         },
         {
@@ -3054,10 +2308,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Złote Łany"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
               }
             ],
             "ref": "326"
@@ -3069,14 +2319,8 @@
           "lat": 49.8072398,
           "lon": 19.0788394,
           "tags": {
-            "name": "Langiewicza/Basen",
-            "relation": [
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
-              }
-            ],
-            "ref": "197"
+            "highway": "bus_stop",
+            "name": "Langiewicza/Basen"
           }
         },
         {
@@ -3573,22 +2817,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Langiewicza"
-              },
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              },
-              {
-                "line": "2",
-                "route": "Mikuszowice Stalownik"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
               }
             ],
             "ref": "58"
@@ -3605,22 +2833,6 @@
               {
                 "line": "15",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              },
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
-              },
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
               }
             ],
             "ref": "59"
@@ -3676,10 +2888,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Złote Łany"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
               }
             ],
             "ref": "136"
@@ -3696,37 +2904,11 @@
               {
                 "line": "15",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "2",
-                "route": "Osiedle Kopernika"
               }
             ],
             "ref": "428"
           }
         },
-        {
-
-          "id": 44081896442,
-          "lat": 49.8177866,
-          "lon": 19.0555072,
-          "tags": {
-            "name": "Żywiecka Stadion Miejski",
-            "relation": [
-              {
-                "line": "15",
-                "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "2",
-                "route": "Mikuszowice Stalownik"
-              }
-            ],
-            "ref": "428-2"
-          }
-        },
-
-
         {
 
           "id": 4408189645,
@@ -3742,10 +2924,7 @@
               {
                 "line": "34",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
+
               }
             ],
             "ref": "309"
@@ -3766,10 +2945,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
               }
             ],
             "ref": "311"
@@ -3790,10 +2965,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "4",
-                "route": "Osiedle Polskich Skrzydeł "
               }
             ],
             "ref": "327"
@@ -3814,10 +2985,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Złote Łany"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
               }
             ],
             "ref": "324"
@@ -3838,10 +3005,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Złote Łany"
-              },
-              {
-                "line": "4",
-                "route": "Langiewicza Basen"
               }
             ],
             "ref": "310"
@@ -3868,14 +3031,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Złote Łany"
-              },
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              },
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
               }
             ],
             "ref": "34"
@@ -3892,14 +3047,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
               }
             ],
             "ref": "33"
@@ -3911,13 +3058,8 @@
           "lat": 49.7949224,
           "lon": 19.0387077,
           "tags": {
+            "highway": "bus_stop",
             "name": "Armii Krajowej Szpital",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              }
-            ],
             "ref": "24"
           }
         },
@@ -3927,13 +3069,8 @@
           "lat": 49.7945246,
           "lon": 19.0382270,
           "tags": {
+            "highway": "bus_stop",
             "name": "Armii Krajowej Szpital",
-            "relation": [
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              }
-            ],
             "ref": "25"
           }
         },
@@ -3948,14 +3085,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
               }
             ],
             "ref": "319"
@@ -3972,14 +3101,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Złote Łany"
-              },
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              },
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
               }
             ],
             "ref": "320"
@@ -3996,14 +3117,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "1",
-                "route": "Cygański Las"
-              },
-              {
-                "line": "6",
-                "route": "Lipnik Granica"
               }
             ],
             "ref": "317"
@@ -4020,14 +3133,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Złote Łany"
-              },
-              {
-                "line": "1",
-                "route": "Osiedle Beskidzkie"
-              },
-              {
-                "line": "6",
-                "route": "Osiedle Karpackie"
               }
             ],
             "ref": "318"
@@ -4044,10 +3149,6 @@
               {
                 "line": "34",
                 "route": "Osiedle Polskich Skrzydeł"
-              },
-              {
-                "line": "2",
-                "route": "Mikuszowice Stalownik"
               }
             ],
             "ref": "383"
@@ -4055,33 +3156,12 @@
         },
         {
 
-          "id": 999999999000001,
-          "lat": 49.8482660,
-          "lon": 19.0452707,
-          "tags": {
-            "name": "Komorowicka Piekarnia",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Osiedle Karpackie"
-              }
-            ],
-            "ref": "163"
-          }
-        },
-        {
           "id": 4413727685,
           "lat": 49.8482660,
           "lon": 19.0452707,
           "tags": {
-            "name": "Komorowicka Piekarnia",
-            "relation": [
-              {
-                "line": "3",
-                "route": "Komorowice Sosna"
-              }
-            ],
-            "ref": "164"
+            "highway": "bus_stop",
+            "name": "Komorowicka Piekarnia"
           }
         },
         {
@@ -4159,20 +3239,71 @@
             "shelter": "yes"
           }
         }
-      ],
-      "Buczkowice": [
-        { }
-      ],
-      "Bystra": [
-        { }
-      ],
-      "Meszna": [
-        { }
-      ],
-      "Szczyrk": [
-        { }
       ]
+    },
+    {
+      "Buczkowice": [
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "aaaa",
+            "relation": [ "15" ],
+            "ref": "388"
+          }
+        }
+      ]
+
+    },
+    {
+      "Bystra": [
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "bbb",
+            "relation": [ "15" ],
+            "ref": "388"
+          }
+        }
+      ]
+    },
+    {
+      "Meszna": [
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "ccc",
+            "relation": [ "15" ],
+            "ref": "388"
+          }
+        }
+      ]
+
+    },
+    {
+      "Szczyrk": [
+        {
+          "type": "node",
+          "id": 259977929,
+          "lat": 49.8125139,
+          "lon": 19.0557542,
+          "tags": {
+            "name": "dddd",
+            "relation": [ "15" ],
+            "ref": "388"
+          }
+        }
+      ]
+
     }
+
   ]
 }
-

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commuterPlanner", "commuter
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commuterPlanner.Tests", "commuterPlanner.Tests\commuterPlanner.Tests.csproj", "{E67AA4F3-1D25-486C-A88C-52D4743FD01C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commuterPlanner.MZK_parser", "commuterPlanner.MZK_parser\commuterPlanner.MZK_parser.csproj", "{0E9CDCE8-BFD8-4891-AA22-E8E717A23AFE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E67AA4F3-1D25-486C-A88C-52D4743FD01C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E67AA4F3-1D25-486C-A88C-52D4743FD01C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E67AA4F3-1D25-486C-A88C-52D4743FD01C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E9CDCE8-BFD8-4891-AA22-E8E717A23AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9CDCE8-BFD8-4891-AA22-E8E717A23AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9CDCE8-BFD8-4891-AA22-E8E717A23AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9CDCE8-BFD8-4891-AA22-E8E717A23AFE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
