@@ -33,16 +33,135 @@ app.controller('MapController', function ($scope) {
         .openPopup();
 });
 
-app.controller('PlanController', function ($scope) {
+app.controller('PlanController', ['$scope', 'BusStopService', 'DataDisplayService', function ($scope, BusStopService, DataDisplayService) {
     $scope.myDate = new Date();
     $scope.time;
 
-});
+    
+    //list of all available cities 
+    var cities;
+    //variable used to prevent calling fuction multiple times (!digest loop error)
+    var iterations = 0;
+    //index number of selected city from list 
+    var cityNoStart = 0;
+    //index number of selected city from list 
+    var cityNoEnd = 0;
+    //name of selected city
+    var selectedStartCity;
+    //name of selected city
+    var selectedEndCity;
+    //name of selected bus stop
+    var selectedBusStopStart;
+    //name of selected bus stop
+    var selectedBusStopEnd;
+    //list of all stops is given city
+    var cityStartStops;
+    //list of all stops is given city
+    var cityEndStops;
+
+    var startStopRefs;
+    var endStopRefs;
+
+    var citieslist;
+
+
+    var IsSelectedStartCity = false;
+    var IsSelectedEndCity = false;
+    var IsSelectedStartStop = false;
+    var IsSelectedEndStop = false;
+
+    init = function () {
+        console.log("toolbar controller2");
+        BusStopService.receiveBusData().then(
+            function (data) {
+                console.log("data received");
+                init2();
+            },
+            function () {
+                alert('error while fetching data from server')
+            });
+    };
+
+    init2 = function () {
+        var stops = BusStopService.getBusData();
+        console.log("get city in plan contr");
+        console.log(stops);
+        if (typeof (stops) == "undefined") {
+            
+            console.log("undefined");
+            init2();
+        }
+
+        citieslist = new Array();
+        cities = DataDisplayService.getCities(stops, citieslist);
+    };
+
+    //reads all available cities from data
+    $scope.getCities = function () {
+        return citieslist;
+    };
+
+    $scope.selectCity = function (index, selector) {
+        if (selector == 'start') {
+            console.log("is start city");
+            cityNoStart = index;
+            IsSelectedStartCity = true;
+            selectedStartCity = Object.keys(cities[index])[0];
+            cityStartStops = DataDisplayService.getStops(cities, cityNoStart, selectedStartCity);
+        }
+        else if (selector == 'end')
+        {
+            console.log("is end city");
+            cityNoEnd = index;
+            IsSelectedEndCity = true;
+            selectedEndCity = Object.keys(cities[index])[0];
+            cityEndStops = DataDisplayService.getStops(cities, cityNoEnd, selectedEndCity);
+        }
+    };
+
+    $scope.getBusStopStart = function (city) {
+        if (IsSelectedStartCity) {
+            console.log("get bus stop start");
+            return cityStartStops;
+        }
+    };
+
+    $scope.getBusStopEnd = function (city) {
+        if (IsSelectedEndCity) {
+            console.log("get bus stop end");
+            return cityEndStops;
+        }
+    };
+
+    $scope.selectBusStop = function (busStop, selector) {
+        if (selector == 'start') {
+            IsSelectedStartStop = true;
+            selectedBusStopStart = busStop;
+            console.log("start " + busStop);
+        }
+        else if (selector == 'end') {
+            IsSelectedEndStop = true;
+            selectedBusStopEnd = busStop;
+            console.log("end " + busStop);
+        }
+    };
+
+    $scope.getStopRefs = function () {
+        if (IsSelectedStartStop && IsSelectedEndStop) {
+            startStopRefs = DataDisplayService.getRefs(cities, cityNoStart, selectedStartCity, selectedBusStopStart);
+            endStopRefs = DataDisplayService.getRefs(cities, cityNoEnd, selectedEndCity, selectedBusStopEnd);
+            console.log("startStopRefs" + startStopRefs);
+            console.log("endStopRefs" + endStopRefs);
+        }
+    };
+
+   init();
+}]);
 
 app.controller('ToolbarController', ['$scope', '$mdSidenav', '$mdPanel', 'BusStopService', function ($scope, $mdSidenav, $mdPanel, BusStopService) {
-    $scope.init = function () {
-        console.log("toolbar controller");
-        BusStopService.getBusData().then(
+    init = function () {
+        console.log("toolbar controller1");
+        BusStopService.receiveBusData().then(
             function (data) {
             },
             function () {
@@ -79,13 +198,15 @@ app.controller('ToolbarController', ['$scope', '$mdSidenav', '$mdPanel', 'BusSto
         };
         $mdPanel.open(config);
     };
+
+    //init();
 }]);
 
 
 
-app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'TimeTableService', function ($scope, $mdPanel, BusStopService, TimeTableService) {
+app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'TimeTableService', 'DataDisplayService', function ($scope, $mdPanel, BusStopService, TimeTableService, DataDisplayService) {
 
-    $scope.stops = BusStopService.sendBusData();
+    $scope.stops = BusStopService.getBusData();
 
     //list of all available cities 
     var cities;
@@ -101,6 +222,7 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
 
     //set index number of selected city
     $scope.selectCity = function (index) {
+        console.log("index num " + index);
         cityNo = index;
         iterations = 0;
         $scope.busLineDetails = [];
@@ -118,10 +240,12 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
     $scope.getCities = function () {
 
         $scope.citieslist = new Array();
-        cities = $scope.stops['busStops'];
-        for (var i = 0; i < cities.length; i++) {
-            $scope.citieslist.push(Object.keys(cities[i])[0]);
-        }
+        cities = DataDisplayService.getCities($scope.stops, $scope.citieslist);
+        //cities = $scope.stops['busStops'];
+        //for (var i = 0; i < cities.length; i++) {
+        //    $scope.citieslist.push(Object.keys(cities[i])[0]);
+        //}
+
         return $scope.citieslist;
     };
 
@@ -131,16 +255,17 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
         $scope.stopList = new Array();
 
         selectedCity = Object.keys(cities[cityNo])[0];
-        cityStops = cities[cityNo][selectedCity];
+        cityStops = DataDisplayService.getStops(cities, cityNo, selectedCity, cityStops, $scope.stopList)
+       // cityStops = cities[cityNo][selectedCity];
 
-        for (var i = 0; i < cityStops.length; i++) {
-            var busStop = cityStops[i]['tags']['name'];
+        //for (var i = 0; i < cityStops.length; i++) {
+        //    var busStop = cityStops[i]['tags']['name'];
 
-            //avoids printing duplicates in bus stop list
-            if (!$scope.stopList.includes(busStop)) {
-                $scope.stopList.push(busStop);
-            }
-        }
+        //    //avoids printing duplicates in bus stop list
+        //    if (!$scope.stopList.includes(busStop)) {
+        //        $scope.stopList.push(busStop);
+        //    }
+        //}
 
         //checks if getRelation() was already called, used to prevent calling fuction multiple times (!digest loop error)
         if (iterations == 0) {
@@ -158,6 +283,8 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
 
         $scope.busLines = [];
         $scope.busNumbers = [];
+
+        //DataDisplayService.getRelations($scope.busLines, $scope.busNumbers, cityStops, stopName)
         for (var i = 0; i < cityStops.length; i++) {
             if (cityStops[i]['tags']['name'] == stopName) {
                 for (var j = 0; j < cityStops[i]['tags']['relation'].length; j++) {
@@ -180,7 +307,7 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
         console.log($scope.busLines);
     };
 
-    //selected bus line to show details
+    //show details for selected bus line
     $scope.seletBus = function (index) {
 
         $scope.busLineDetails = [];
@@ -201,7 +328,7 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
         $scope.busTimeTable = [];
         for (var i = 0; i < $scope.busLineDetails.length; i++) {
             console.log($scope.busLineDetails[i]);
-            TimeTableService.getTimeTableData($scope.busLineDetails[i]).then(
+            TimeTableService.receiveTimeTableData($scope.busLineDetails[i]).then(
                 function (data) {
                     console.log("data");
                     console.log(data);

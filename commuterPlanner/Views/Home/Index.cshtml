@@ -1,7 +1,8 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-<md-toolbar style="background-color: gray" class="mycontent" flex layout="column" ng-controller="ToolbarController" ng-init="init()">
+
+<md-toolbar style="background-color: gray" class="mycontent" flex layout="column" ng-controller="ToolbarController">
     <div class="md-toolbar-tools">
         <div class="demo-md-panel-content">
             <md-button style="margin-left: auto; color: white; border: solid" ng-click="showPanel()">
@@ -48,28 +49,28 @@
 
                             <md-divider></md-divider>
                             <strong>Miejsce rozpoczęcia:</strong>
-                            <md-select placeholder="Miasto" ng-model="user" md-on-open="loadUsers()">
-                                <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+                            <md-select placeholder="Miasto" ng-model="startCity">
+                                <md-option ng-value="startCity" ng-repeat="startCity in getCities()" ng-click="selectCity($index, 'start')">{{startCity}}</md-option>
                             </md-select>
-                            <md-select placeholder="Przystanek początkowy" ng-model="user" md-on-open="loadUsers()">
-                                <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+                            <md-select placeholder="Przystanek początkowy" ng-model="startBusStop">
+                                <md-option ng-value="startBusStop" ng-repeat="startBusStop in getBusStopStart(startCity)" ng-click="selectBusStop(startBusStop, 'start')">{{startBusStop}}</md-option>
                             </md-select>
                             <md-button style="border: solid;">
                                 <strong>Wskaż na mapie</strong>
                             </md-button>
                             <md-divider></md-divider><br />
                             <strong>Cel:</strong>
-                            <md-select placeholder="Miasto" ng-model="user" md-on-open="loadUsers()">
-                                <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+                            <md-select placeholder="Miasto" ng-model="endCity">
+                                <md-option ng-value="endCity" ng-repeat="endCity in getCities()" ng-click="selectCity($index, 'end')">{{endCity}}</md-option>
                             </md-select>
-                            <md-select placeholder="Przystanek początkowy" ng-model="user" md-on-open="loadUsers()">
-                                <md-option ng-value="user" ng-repeat="user in users">{{user.name}}</md-option>
+                            <md-select placeholder="Przystanek końcowy" ng-model="endBusStop">
+                                <md-option ng-value="endBusStop" ng-repeat="endBusStop in getBusStopEnd(endCity)" ng-click="selectBusStop(endBusStop, 'end')">{{endBusStop}}</md-option>
                             </md-select>
                             <md-button style="border: solid;">
                                 <strong>Wskaż na mapie</strong>
                             </md-button>
                             <md-divider></md-divider>
-                            <md-button style="border: solid;">
+                            <md-button style="border: solid;" ng-click="getStopRefs()">
                                 <strong>Znajdź połączenia</strong>
                             </md-button>
                         </md-content>
