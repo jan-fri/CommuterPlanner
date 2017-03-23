@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using commuterPlanner.Services;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
@@ -37,6 +38,31 @@ namespace commuterPlanner.Controllers
             var jsonResult = new ContentResult
             {
                 Content = JsonConvert.SerializeObject(timeTable, settings),
+                ContentType = "application/json"
+            };
+
+            return jsonResult;
+        }
+
+        public ActionResult GetRoute(List<string> busStopA, List<string> busStopB)
+        {
+            List<Connections> connections = new List<Connections>();
+            foreach (var beginning in busStopA)
+            {
+                foreach (var finish in busStopB)
+                {
+                    connections.Add(new Connections { busStopA = beginning, busStopB = finish });
+                }                
+            }
+
+            GraphDatabaseService graphDatabase = new GraphDatabaseService();
+            var routes = graphDatabase.getRoutes(connections);
+
+            var settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
+
+            var jsonResult = new ContentResult
+            {
+                Content = JsonConvert.SerializeObject(routes, settings),
                 ContentType = "application/json"
             };
 

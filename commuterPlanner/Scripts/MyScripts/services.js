@@ -2,7 +2,7 @@
 
     var busStops;
 
-  return {
+    return {
 
         receiveBusData: function () {
             var deferred = $q.defer();
@@ -16,7 +16,6 @@
         },
 
         getBusData: function () {
-            console.log("gtting " + busStops);
             return busStops.$$state.value;
         }
     };
@@ -24,26 +23,41 @@
 
 app.factory('TimeTableService', function ($http, $q) {
     var timeTable;
+    var busTimeTable = new Array();
 
     return {
-        receiveTimeTableData: function (bus) {
+        receiveTimeTableData: function (busLineDetails) {
             console.log("service");
-            console.log(bus.line);
-            console.log(bus.stopRef);
+            //console.log(bus.line);
+            // console.log(bus.stopRef);
 
             var deferred = $q.defer();
+            for (var i = 0; i < busLineDetails.length; i++) {
+                $http({ method: 'GET', url: '/Home/GetBusTimeTable', params: { busNo: busLineDetails[i].line, busStopRef: busLineDetails[i].stopRef } })
+                .success(deferred.resolve)
+                .error(deferred.reject);
 
-            $http({ method: 'GET', url: '/Home/GetBusTimeTable', params: { busNo: bus.line, busStopRef: bus.stopRef } })
-            .success(deferred.resolve)
-            .error(deferred.reject);
-
-            timeTable = deferred.promise;
-
-            return deferred.promise;
+                timeTable = deferred.promise;
+                timeTable.then(
+                    function (data) {
+                        console.log("data");
+                        console.log(data);
+                        busTimeTable.push({
+                            workingDay: data[0],
+                            saturday: data[1],
+                            sunday: data[2]
+                        });
+                        console.log("workingDay");
+                        console.log(busTimeTable[0].workingDay);
+                    },
+                    function () {
+                        alert('error while fetching speakers from server')
+                    });
+            }
+            return busTimeTable;
         },
 
         getTimeTableData: function () {
-            //return timeTable.$$state.value;
             return timeTable;
         }
     };
@@ -72,7 +86,6 @@ app.factory('DataDisplayService', function () {
                     stopList.push(busStop);
                 }
             }
-            console.log(stopList);
             return stopList;
         },
 
@@ -80,7 +93,7 @@ app.factory('DataDisplayService', function () {
 
             var stopRefs = new Array();
             var cityStops = cities[cityNo][selectedCity];
-            
+
             for (var i = 0; i < cityStops.length; i++) {
 
                 var stopName = cityStops[i]['tags']['name'];
@@ -91,21 +104,25 @@ app.factory('DataDisplayService', function () {
             console.log(stopRefs);
             return stopRefs;
         }
-    }    
+    }
 });
-//app.service('dataService', function () {
-//    this.busStopData = [];
-//    this.addStopData = function (data) {
-//        busStopData = data;
-//        console.log("sent data " + data);
-//    };
-//    this.getStopData = function () {
-//        return busStopData;
-//    };
 
+app.factory('RouteSelectionService', function ($http, $q) {
+    var route;
+    //var routes = new Array();
+    var routes;
+    return {
+        receiveRoutes: function (startStopRefs, endStopRefs) {
+            console.log("route selection service");
 
+            var deferred = $q.defer();
 
+            $http({ method: 'GET', url: '/Home/GetRoute', params: { busStopA: startStopRefs, busStopB: endStopRefs } })
+            .success(deferred.resolve)
+            .error(deferred.reject);
 
+            return deferred.promise;
+        }
 
-
-//});
+    };
+});

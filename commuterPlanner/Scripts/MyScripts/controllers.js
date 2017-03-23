@@ -33,7 +33,7 @@ app.controller('MapController', function ($scope) {
         .openPopup();
 });
 
-app.controller('PlanController', ['$scope', 'BusStopService', 'DataDisplayService', function ($scope, BusStopService, DataDisplayService) {
+app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'DataDisplayService', 'RouteSelectionService', function ($rootScope, $scope, BusStopService, DataDisplayService, RouteSelectionService) {
     $scope.myDate = new Date();
     $scope.time;
 
@@ -148,26 +148,96 @@ app.controller('PlanController', ['$scope', 'BusStopService', 'DataDisplayServic
 
     $scope.getStopRefs = function () {
         if (IsSelectedStartStop && IsSelectedEndStop) {
+
             startStopRefs = DataDisplayService.getRefs(cities, cityNoStart, selectedStartCity, selectedBusStopStart);
             endStopRefs = DataDisplayService.getRefs(cities, cityNoEnd, selectedEndCity, selectedBusStopEnd);
             console.log("startStopRefs" + startStopRefs);
             console.log("endStopRefs" + endStopRefs);
+
+            RouteSelectionService.receiveRoutes(startStopRefs, endStopRefs).then(
+                function (data) {
+                    console.log("data");
+                    console.log(data);
+                    //var tempRoutes = data;
+                    //console.log(routes[0]['busNumber']);
+                    //console.log(routes[1]['busStopList']);
+                    //console.log(routes[2]['busStopList'][0]);
+                    //console.log(routes[3]);
+                    //$scope.routes = new Array();
+                    //for (var i = 0; i < data.length; i++) {
+                    //    routes.push({
+                    //        busChanges: data['busChanges'],
+
+                    //    });
+                    //}
+                });
+
+
+            //$scope.$watch('routes', function () {
+            //    console.log("routes fin ");
+            //    console.log($scope.routes);
+            //});
         }
+        getRoutes();
     };
 
-   init();
+    var getRoutes = function () {
+        console.log("get routes :");
+        $scope.routes = new Array();
+        var v = new Array();
+
+        var s1 = "Trasa nr 1"
+        var s2 = "przystanek numer jeden (linia 1) -> ";
+        var s25 = "przystanek numer dwa (linia 1) -> ";
+        var s26 = "przystanek numer trzy (linia 32)";
+        var s3 = "illosc przesiadek: 2";
+
+        var d1 = "Trasa nr 1"
+        var d2 = "przystanek numer jeden (linia 1) -> ";
+        var d25 = "przystanek numer dwa (linia 1) -> ";
+        var d26 = "przystanek numer trzy (linia 32)";
+        var d3 = "illosc przesiadek: 2";
+
+        var s5 = new Array();
+        var d5 = new Array();
+
+        s5.push(s2);
+        s5.push(s25);
+        s5.push(s26);
+
+        $scope.routes.push({
+            index: s1,
+            details: s5,
+            changes: s3
+        });
+
+        d5.push(d2);
+        d5.push(d25);
+        d5.push(d26);
+
+        $scope.routes.push({
+            index: d1,
+            details: d5,
+            changes: d3
+        });
+
+
+        return $scope.routes;
+    };
+
+    init();
 }]);
 
 app.controller('ToolbarController', ['$scope', '$mdSidenav', '$mdPanel', 'BusStopService', function ($scope, $mdSidenav, $mdPanel, BusStopService) {
-    init = function () {
-        console.log("toolbar controller1");
-        BusStopService.receiveBusData().then(
-            function (data) {
-            },
-            function () {
-                alert('error while fetching speakers from server')
-            });
-    };
+    //init = function () {
+    //    console.log("toolbar controller1");
+    //    BusStopService.receiveBusData().then(
+    //        function (data) {
+    //        },
+    //        function () {
+    //            alert('error while fetching speakers from server')
+    //        });
+    //};
 
     $scope.toggleSidenav = function (side) {
         $mdSidenav(side).toggle();
@@ -241,38 +311,26 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
 
         $scope.citieslist = new Array();
         cities = DataDisplayService.getCities($scope.stops, $scope.citieslist);
-        //cities = $scope.stops['busStops'];
-        //for (var i = 0; i < cities.length; i++) {
-        //    $scope.citieslist.push(Object.keys(cities[i])[0]);
-        //}
-
+        console.log("stops " + $scope.stops);
+        console.log("get cities " + cities);
         return $scope.citieslist;
     };
 
     //reads stops in selected city
     $scope.getStops = function () {
 
-        $scope.stopList = new Array();
+        var stopList = new Array();
 
         selectedCity = Object.keys(cities[cityNo])[0];
-        cityStops = DataDisplayService.getStops(cities, cityNo, selectedCity, cityStops, $scope.stopList)
-       // cityStops = cities[cityNo][selectedCity];
+        cityStops = cities[cityNo][selectedCity];
 
-        //for (var i = 0; i < cityStops.length; i++) {
-        //    var busStop = cityStops[i]['tags']['name'];
-
-        //    //avoids printing duplicates in bus stop list
-        //    if (!$scope.stopList.includes(busStop)) {
-        //        $scope.stopList.push(busStop);
-        //    }
-        //}
+        stopList = DataDisplayService.getStops(cities, cityNo, selectedCity);
 
         //checks if getRelation() was already called, used to prevent calling fuction multiple times (!digest loop error)
         if (iterations == 0) {
-            getRelation($scope.stopList[0]);
+            getRelation(stopList[0]);
         }
-
-        return $scope.stopList;
+        return stopList;
 
     };
 
@@ -283,9 +341,12 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
 
         $scope.busLines = [];
         $scope.busNumbers = [];
+        //console.log("stop name " + stopName);
+        //console.log("city stops " + cityStops + "length " + cityStops.length);
 
         //DataDisplayService.getRelations($scope.busLines, $scope.busNumbers, cityStops, stopName)
         for (var i = 0; i < cityStops.length; i++) {
+            
             if (cityStops[i]['tags']['name'] == stopName) {
                 for (var j = 0; j < cityStops[i]['tags']['relation'].length; j++) {
                     var line = cityStops[i]['tags']['relation'][j]['line'];
@@ -303,8 +364,8 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
             }
         }
 
-        console.log("lines");
-        console.log($scope.busLines);
+        //console.log("lines");
+        //console.log($scope.busLines);
     };
 
     //show details for selected bus line
@@ -321,149 +382,31 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
             }
         };
 
-        console.log($scope.busLineDetails);
-        console.log("dlugosc");
-        console.log($scope.busLineDetails.length);
-
-        $scope.busTimeTable = [];
-        for (var i = 0; i < $scope.busLineDetails.length; i++) {
-            console.log($scope.busLineDetails[i]);
-            TimeTableService.receiveTimeTableData($scope.busLineDetails[i]).then(
-                function (data) {
-                    console.log("data");
-                    console.log(data);
-                    $scope.busTimeTable.push({
-                        workingDay: data[0],
-                        saturday: data[1],
-                        sunday: data[2]
-                    });
-                    console.log("workingDay");
-                    console.log($scope.busTimeTable[0].workingDay);
-                },
-                function () {
-                    alert('error while fetching speakers from server')
-                });            
-        };
+        //console.log($scope.busLineDetails);
+        //console.log("dlugosc");
+        //console.log($scope.busLineDetails.length);
 
 
+        $scope.busTimeTable = TimeTableService.receiveTimeTableData($scope.busLineDetails);
+        //$scope.busTimeTable = [];
+        //for (var i = 0; i < $scope.busLineDetails.length; i++) {
+        //    console.log($scope.busLineDetails[i]);
+        //    TimeTableService.receiveTimeTableData($scope.busLineDetails[i]).then(
+        //        function (data) {
+        //            console.log("data");
+        //            console.log(data);
+        //            $scope.busTimeTable.push({
+        //                workingDay: data[0],
+        //                saturday: data[1],
+        //                sunday: data[2]
+        //            });
+        //            console.log("workingDay");
+        //            console.log($scope.busTimeTable[0].workingDay);
+        //        },
+        //        function () {
+        //            alert('error while fetching speakers from server')
+        //        });            
+        //};
 
-    }
-    //BusStopService.getBusData().then(
-    //        function (data) {
-    //        },
-    //        function () {
-    //            alert('error while fetching speakers from server')
-    //        });
-    //$scope.stops = {
-    //    "busStops": [
-    //    {
-    //        "Bielsko Biała": [{
-    //            "type": "node",
-    //            "id": 1437869030,
-    //            "lat": 49.8123892,
-    //            "lon": 19.0661571,
-    //            "tags": {
-    //                "name": "Osiedle Langiewicza",
-    //                "relation": [
-    //                    { "line": "15", "route": "Osiedle Polskich Skrzydeł" },
-    //                    { "line": "34", "route": "Jakis kierunek" }],
-    //                "ref": "328"
-    //            }
-    //        },
-    //        {
-    //            "type": "node",
-    //            "id": 1437869030,
-    //            "lat": 49.8123892,
-    //            "lon": 19.0661571,
-    //            "tags": {
-    //                "name": "Osiedle Langiewicza",
-    //                "relation": [
-    //                    { "line": "15", "route": "Return" },
-    //                    { "line": "34", "route": "New" }],
-    //                "ref": "329"
-    //            }
-    //        },
-    //    {
-    //        "type": "node",
-    //        "id": 259977929,
-    //        "lat": 49.8125139,
-    //        "lon": 19.0557542,
-    //        "tags": {
-    //            "name": "Żywiecka Osiedle Grunwaldzkie",
-    //            "relation": [
-    //                 { "line": "15", "route": "Langiewicza" },
-    //                 { "line": "34", "route": "Powrót" }],
-    //            "ref": "388"
-    //        }
-    //    },
-    //    {
-    //        "type": "node",
-    //        "id": 259977929,
-    //        "lat": 49.8125139,
-    //        "lon": 19.0557542,
-    //        "tags": {
-    //            "name": "Żywiecka Osiedle Grunwaldzkie",
-    //            "relation": [
-    //                 { "line": "15", "route": "Grundwald" },
-    //                 { "line": "34", "route": "Golgota" }],
-    //            "ref": "388"
-    //        }
-    //    }],
-    //    },
-    //    {
-    //        "Buczkowice": [{
-    //            "type": "node",
-    //            "id": 259977929,
-    //            "lat": 49.8125139,
-    //            "lon": 19.0557542,
-    //            "tags": {
-    //                "name": "aaaa",
-    //                "relation": ["15"],
-    //                "ref": "388"
-    //            }
-    //        }],
-    //    },
-    //    {
-    //        "Bystra": [
-    //    {
-    //        "type": "node",
-    //        "id": 259977929,
-    //        "lat": 49.8125139,
-    //        "lon": 19.0557542,
-    //        "tags": {
-    //            "name": "bbb",
-    //            "relation": ["15"],
-    //            "ref": "388"
-    //        }
-    //    }],
-    //    },
-    //    {
-    //        "Meszna": [
-    //    {
-    //        "type": "node",
-    //        "id": 259977929,
-    //        "lat": 49.8125139,
-    //        "lon": 19.0557542,
-    //        "tags": {
-    //            "name": "ccc",
-    //            "relation": ["15"],
-    //            "ref": "388"
-    //        }
-    //    }],
-    //    },
-    //    {
-    //        "Szczyrk": [
-    //    {
-    //        "type": "node",
-    //        "id": 259977929,
-    //        "lat": 49.8125139,
-    //        "lon": 19.0557542,
-    //        "tags": {
-    //            "name": "dddd",
-    //            "relation": ["15"],
-    //            "ref": "388"
-    //        }
-    //    }, ]
-    //    }]
-    //};
+    }   
 }]);
