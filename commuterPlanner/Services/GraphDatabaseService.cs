@@ -14,15 +14,16 @@ namespace commuterPlanner.Services
     {
         public List<string> busNumber;
     }
-    public class BusStop
-    {
-        public string name;
-        public string refNo;
-    }
+    //public class BusStop
+    //{
+    //    public string name;
+    //    public string refNo;
+    //}
     public class Route
     {
         public int busChanges;
-        public List<BusStop> busStopList;
+        public List<string> busStopNameList;
+        public List<string> busStopRefList;
         public List<string> busNumber;
     }
 
@@ -48,8 +49,10 @@ namespace commuterPlanner.Services
                     var result = session.Run("MATCH p=shortestPath((a:BusStop {refNo:\"" + connection.busStopA + "\"})-[r:RELATION*]->(b:BusStop {refNo:\"" + connection.busStopB + "\"})) return extract(n in nodes(p)" +
                                    " | n) AS nodes, EXTRACT (rel in rels(p) | rel) AS relations");
 
-                    //all bus stops within route
-                    List<BusStop> busStops = new List<BusStop>();
+                    //all bus stops names within route
+                    List<string> busStopsName = new List<string>();
+                    //all bus stops refs within route
+                    List<string> busStopsRef = new List<string>();
 
                     //all possible relations
                     List<Relation> relations = new List<Relation>();
@@ -66,11 +69,13 @@ namespace commuterPlanner.Services
                         foreach (var node in nodes)
                         {
                             var nodeProperties = node.Properties.Values.ToList();
-                            busStops.Add(new BusStop
-                            {
-                                refNo = nodeProperties[0].ToString(),
-                                name = nodeProperties[1].ToString()
-                            });
+                            busStopsName.Add(nodeProperties[1].ToString());
+                            busStopsRef.Add(nodeProperties[0].ToString());
+                            //busStops.Add(new BusStop
+                            //{
+                            //    refNo = nodeProperties[0].ToString(),
+                            //    name = nodeProperties[1].ToString()
+                            //});
                         }
 
                         //saving relation to relations list variable
@@ -162,7 +167,8 @@ namespace commuterPlanner.Services
                     {
                         busChanges = changes.Min(),
                         busNumber = new List<string>(allPaths[shortestPath]),
-                        busStopList = new List<BusStop>(busStops)
+                        busStopNameList = new List<string>(busStopsName),
+                        busStopRefList = new List<string>(busStopsRef)
                     });
                 }
                 return routes;

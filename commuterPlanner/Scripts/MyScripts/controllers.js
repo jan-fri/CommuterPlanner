@@ -28,9 +28,23 @@ app.controller('MapController', function ($scope) {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([49.822, 19.058]).addTo(map)
-        .bindPopup('Bielsko-Biała.')
-        .openPopup();
+    //L.marker([49.822, 19.058]).addTo(map)
+    //    .bindPopup('Bielsko-Biała.')
+    //    .openPopup();
+
+    //L.marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup().addTo(map);
+    
+    //var circle = L.circle([49.822, 19.058], {
+    //    color: 'blue',
+    //    fillColor: '#f03',
+    //    fillOpacity: 0.5,
+    //    radius: 200
+    //}).addTo(map);
+
+    var popup = L.popup()
+    .setLatLng([49.822, 19.058])
+    .setContent("I am a standalone popup.")
+    .openOn(map);
 });
 
 app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'DataDisplayService', 'RouteSelectionService', function ($rootScope, $scope, BusStopService, DataDisplayService, RouteSelectionService) {
@@ -69,6 +83,8 @@ app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'Dat
     var IsSelectedEndCity = false;
     var IsSelectedStartStop = false;
     var IsSelectedEndStop = false;
+
+    $scope.routes = new Array();
 
     init = function () {
         console.log("toolbar controller2");
@@ -158,70 +174,24 @@ app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'Dat
                 function (data) {
                     console.log("data");
                     console.log(data);
-                    //var tempRoutes = data;
-                    //console.log(routes[0]['busNumber']);
-                    //console.log(routes[1]['busStopList']);
-                    //console.log(routes[2]['busStopList'][0]);
-                    //console.log(routes[3]);
-                    //$scope.routes = new Array();
-                    //for (var i = 0; i < data.length; i++) {
-                    //    routes.push({
-                    //        busChanges: data['busChanges'],
-
-                    //    });
-                    //}
+                    getRoutes(data);
                 });
-
-
-            //$scope.$watch('routes', function () {
-            //    console.log("routes fin ");
-            //    console.log($scope.routes);
-            //});
         }
-        getRoutes();
     };
 
-    var getRoutes = function () {
+    var getRoutes = function (data) {
         console.log("get routes :");
-        $scope.routes = new Array();
-        var v = new Array();
-
-        var s1 = "Trasa nr 1"
-        var s2 = "przystanek numer jeden (linia 1) -> ";
-        var s25 = "przystanek numer dwa (linia 1) -> ";
-        var s26 = "przystanek numer trzy (linia 32)";
-        var s3 = "illosc przesiadek: 2";
-
-        var d1 = "Trasa nr 1"
-        var d2 = "przystanek numer jeden (linia 1) -> ";
-        var d25 = "przystanek numer dwa (linia 1) -> ";
-        var d26 = "przystanek numer trzy (linia 32)";
-        var d3 = "illosc przesiadek: 2";
-
-        var s5 = new Array();
-        var d5 = new Array();
-
-        s5.push(s2);
-        s5.push(s25);
-        s5.push(s26);
-
-        $scope.routes.push({
-            index: s1,
-            details: s5,
-            changes: s3
-        });
-
-        d5.push(d2);
-        d5.push(d25);
-        d5.push(d26);
-
-        $scope.routes.push({
-            index: d1,
-            details: d5,
-            changes: d3
-        });
-
-
+        
+        for (var i = 0; i < data.length; i++) {
+            $scope.routes.push({
+                index: i + 1,
+                changes: data[i]['busChanges'],
+                details: {
+                    busStopName: data[i]['busStopNameList'],
+                    busNumber: data[i]['busNumber']
+                }
+            });
+        }
         return $scope.routes;
     };
 

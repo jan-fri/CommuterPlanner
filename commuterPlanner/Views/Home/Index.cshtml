@@ -28,7 +28,7 @@
 
 
 <md-sidenav class="md-sidenav-left" md-component-id="left-side-nav" style="min-width: 350px; margin-top: 65px; max-height: 85%;"
-            md-disable-backdrop >
+            md-disable-backdrop>
     <md-content ng-controller="PlanController">
         <div class="panel-group" id="accordion">
             <div class="panel panel-default">
@@ -88,16 +88,18 @@
                         <md-content>
                             <md-list flex>
                                 <div class="panel-group" id="accordion3">
-                                    <md-list-item class="md-3-line" ng-value="route" ng-repeat="route in routes" >
+                                    <md-list-item class="md-3-line" ng-value="route" ng-repeat="route in routes">
                                         <div class="md-list-item-text" layout="column">
                                             <h3>Trasa nr {{ route.index }}:</h3>
                                             <a data-toggle="collapse" ng-href="#{{ $index }}">szczegóły</a>
-                                            <div ng-attr-id="{{ $index }}" class="panel-collapse collapse in">
-                                                <md-list-item ng-repeat="detail in route.details" >
-                                                    <p>{{ detail }}</p>                                                          
-                                                </md-list-item>
+                                            <div layout-align="center" ng-attr-id="{{ $index }}" class="panel-collapse collapse in">
+                                                <div ng-repeat="stopName in route.details.busStopName track by $index" >
+                                                    <pre >{{ stopName }} </pre>
+
+                                                    <pre ng-if="route.details.busNumber[$index] != null"> linia nr: {{ route.details.busNumber[$index] }}</pre>
+                                                </div >                                      
                                             </div>
-                                            <p>{{ route.changes }}</p>
+                                            <p> <b>Ilość przesiadek: {{ route.changes }} </b></p>
                                         </div>
                                     </md-list-item>
                                 </div>
