@@ -47,11 +47,14 @@ app.controller('MapController', function ($scope) {
     .openOn(map);
 });
 
-app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'DataDisplayService', 'RouteSelectionService', function ($rootScope, $scope, BusStopService, DataDisplayService, RouteSelectionService) {
-    $scope.myDate = new Date();
-    $scope.time;
+app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'DataDisplayService', 'RouteSelectionService', '$filter', function ($rootScope, $scope, BusStopService, DataDisplayService, RouteSelectionService, $filter) {
 
-    
+    $scope.selectedDate = new Date();
+    $scope.selectedTime;
+
+    $scope.test = function () {
+        console.log("time " + $filter('date')($scope.selectedDate, 'EEEE') + "date     " + $scope.selectedTime)
+    };
     //list of all available cities 
     var cities;
     //variable used to prevent calling fuction multiple times (!digest loop error)
@@ -165,12 +168,16 @@ app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'Dat
     $scope.getStopRefs = function () {
         if (IsSelectedStartStop && IsSelectedEndStop) {
 
+
             startStopRefs = DataDisplayService.getRefs(cities, cityNoStart, selectedStartCity, selectedBusStopStart);
             endStopRefs = DataDisplayService.getRefs(cities, cityNoEnd, selectedEndCity, selectedBusStopEnd);
             console.log("startStopRefs" + startStopRefs);
             console.log("endStopRefs" + endStopRefs);
 
-            RouteSelectionService.receiveRoutes(startStopRefs, endStopRefs).then(
+            console.log("weekday " + $filter('date')($scope.selectedDate, 'EEEE'));
+            console.log("time " + $scope.selectedTime);
+
+            RouteSelectionService.receiveRoutes(startStopRefs, endStopRefs, $filter('date')($scope.selectedDate, 'EEEE'), $scope.selectedTime).then(
                 function (data) {
                     console.log("data");
                     console.log(data);
@@ -181,14 +188,15 @@ app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'Dat
 
     var getRoutes = function (data) {
         console.log("get routes :");
-        
+
         for (var i = 0; i < data.length; i++) {
             $scope.routes.push({
                 index: i + 1,
                 changes: data[i]['busChanges'],
                 details: {
                     busStopName: data[i]['busStopNameList'],
-                    busNumber: data[i]['busNumber']
+                    busNumber: data[i]['busNumber'],
+                    arrivalTime: data[i]['arrivalTime']
                 }
             });
         }
@@ -357,26 +365,26 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
         //console.log($scope.busLineDetails.length);
 
 
-        $scope.busTimeTable = TimeTableService.receiveTimeTableData($scope.busLineDetails);
-        //$scope.busTimeTable = [];
-        //for (var i = 0; i < $scope.busLineDetails.length; i++) {
-        //    console.log($scope.busLineDetails[i]);
-        //    TimeTableService.receiveTimeTableData($scope.busLineDetails[i]).then(
-        //        function (data) {
-        //            console.log("data");
-        //            console.log(data);
-        //            $scope.busTimeTable.push({
-        //                workingDay: data[0],
-        //                saturday: data[1],
-        //                sunday: data[2]
-        //            });
-        //            console.log("workingDay");
-        //            console.log($scope.busTimeTable[0].workingDay);
-        //        },
-        //        function () {
-        //            alert('error while fetching speakers from server')
-        //        });            
-        //};
+        //$scope.busTimeTable = TimeTableService.receiveTimeTableData($scope.busLineDetails);
+        $scope.busTimeTable = [];
+        for (var i = 0; i < $scope.busLineDetails.length; i++) {
+            console.log($scope.busLineDetails[i]);
+            TimeTableService.receiveTimeTableData($scope.busLineDetails[i]).then(
+                function (data) {
+                    console.log("tt data");
+                    console.log(data);
+                    $scope.busTimeTable.push({
+                        workingDay: data[0],
+                        saturday: data[1],
+                        sunday: data[2]
+                    });
+                    //console.log("workingDay");
+                    //console.log($scope.busTimeTable[0].workingDay);
+                },
+                function () {
+                    alert('error while fetching speakers from server')
+                });            
+        };
 
     }   
 }]);

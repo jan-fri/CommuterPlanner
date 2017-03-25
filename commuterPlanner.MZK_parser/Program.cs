@@ -347,12 +347,16 @@ namespace commuterPlanner.MZK_parser
                                 string hour = value.InnerText.Substring(0, 2);
                                 if (int.TryParse(hour, out minutes))
                                 {
-                                    if (minutes < 10)
-                                    {
-                                        hours.Add(rowNo + ".0" + minutes.ToString());
-                                    }
+                                    string tempRowNo = rowNo.ToString();
+                                    string tempMinutes = minutes.ToString();
+                                    if (tempRowNo.Length < 2)
+                                        tempRowNo = "0" + tempRowNo;
 
-                                    hours.Add(rowNo + "." + minutes.ToString());
+                                    if (tempMinutes.Length < 2)
+                                        tempMinutes = "0" + tempMinutes;
+
+
+                                    hours.Add(tempRowNo + "." + tempMinutes);
                                     nextHour = true;
                                 }
                             }

@@ -41,12 +41,14 @@
                     <div class="panel-body">
                         <md-content>
                             <strong>Data i czas:</strong>
-                            <md-datepicker ng-model="myDate" md-placeholder="Wybierz datę"></md-datepicker>
+                            <md-datepicker ng-model="selectedDate" md-placeholder="Wybierz datę"></md-datepicker>
                             <md-input-container>
                                 <label>Godzina</label>
-                                <input ng-model="time">
+                                <input ng-model="selectedTime">
                             </md-input-container>
-
+                            <md-button style="border: solid;" ng-click="test()">
+                                <strong>Test</strong>
+                            </md-button>
                             <md-divider></md-divider>
                             <strong>Miejsce rozpoczęcia:</strong>
                             <md-select placeholder="Miasto" ng-model="startCity">
@@ -94,9 +96,9 @@
                                             <a data-toggle="collapse" ng-href="#{{ $index }}">szczegóły</a>
                                             <div layout-align="center" ng-attr-id="{{ $index }}" class="panel-collapse collapse in">
                                                 <div ng-repeat="stopName in route.details.busStopName track by $index" >
-                                                    <pre >{{ stopName }} </pre>
+                                                    <pre >godz: {{ route.details.arrivalTime[$index] }} {{ stopName }} </pre>
 
-                                                    <pre ng-if="route.details.busNumber[$index] != null"> linia nr: {{ route.details.busNumber[$index] }}</pre>
+                                                    <pre ng-if="route.details.busNumber[$index] != null">linia nr: {{ route.details.busNumber[$index] }}</pre>
                                                 </div >                                      
                                             </div>
                                             <p> <b>Ilość przesiadek: {{ route.changes }} </b></p>

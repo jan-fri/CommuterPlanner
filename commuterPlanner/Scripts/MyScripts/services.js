@@ -28,33 +28,14 @@ app.factory('TimeTableService', function ($http, $q) {
     return {
         receiveTimeTableData: function (busLineDetails) {
             console.log("service");
-            //console.log(bus.line);
-            // console.log(bus.stopRef);
 
             var deferred = $q.defer();
-            for (var i = 0; i < busLineDetails.length; i++) {
-                $http({ method: 'GET', url: '/Home/GetBusTimeTable', params: { busNo: busLineDetails[i].line, busStopRef: busLineDetails[i].stopRef } })
+
+            $http({ method: 'GET', url: '/Home/GetBusTimeTable', params: { busNo: busLineDetails.line, busStopRef: busLineDetails.stopRef } })
                 .success(deferred.resolve)
                 .error(deferred.reject);
 
-                timeTable = deferred.promise;
-                timeTable.then(
-                    function (data) {
-                        console.log("data");
-                        console.log(data);
-                        busTimeTable.push({
-                            workingDay: data[0],
-                            saturday: data[1],
-                            sunday: data[2]
-                        });
-                        console.log("workingDay");
-                        console.log(busTimeTable[0].workingDay);
-                    },
-                    function () {
-                        alert('error while fetching speakers from server')
-                    });
-            }
-            return busTimeTable;
+            return deferred.promise;
         },
 
         getTimeTableData: function () {
@@ -108,16 +89,13 @@ app.factory('DataDisplayService', function () {
 });
 
 app.factory('RouteSelectionService', function ($http, $q) {
-    var route;
-    //var routes = new Array();
-    var routes;
     return {
-        receiveRoutes: function (startStopRefs, endStopRefs) {
+        receiveRoutes: function (startStopRefs, endStopRefs, day, time) {
             console.log("route selection service");
 
             var deferred = $q.defer();
 
-            $http({ method: 'GET', url: '/Home/GetRoute', params: { busStopA: startStopRefs, busStopB: endStopRefs } })
+            $http({ method: 'GET', url: '/Home/GetRoute', params: { busStopA: startStopRefs, busStopB: endStopRefs, selectedTravelDay: day, selectedTravelTime: time } })
             .success(deferred.resolve)
             .error(deferred.reject);
 
