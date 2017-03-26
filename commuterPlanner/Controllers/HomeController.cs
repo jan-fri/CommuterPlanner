@@ -44,7 +44,7 @@ namespace commuterPlanner.Controllers
             return jsonResult;
         }
 
-        public ActionResult GetRoute(List<string> busStopA, List<string> busStopB, string selectedTravelDay, string selectedTravelTime)
+        public ActionResult GetRoute(List<string> busStopA, List<string> busStopB, string selectedTravelDay, string selectedTravelTime, string selectedCity)
         {
             List<Connections> connections = new List<Connections>();
             foreach (var beginning in busStopA)
@@ -56,7 +56,7 @@ namespace commuterPlanner.Controllers
             }
 
             GraphDatabaseService graphDatabase = new GraphDatabaseService();
-            var routes = graphDatabase.getRoutes(connections, selectedTravelDay, selectedTravelTime);
+            var routes = graphDatabase.getRoutes(connections, selectedTravelDay, selectedTravelTime, selectedCity);
 
             var settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
 

@@ -96,7 +96,8 @@
                                             <a data-toggle="collapse" ng-href="#{{ $index }}">szczegóły</a>
                                             <div layout-align="center" ng-attr-id="{{ $index }}" class="panel-collapse collapse in">
                                                 <div ng-repeat="stopName in route.details.busStopName track by $index" >
-                                                    <pre >godz: {{ route.details.arrivalTime[$index] }} {{ stopName }} </pre>
+                                                    <pre>godz: {{ route.details.arrivalTime[$index] }} {{ stopName }} </pre>
+                                                    <pre>{{ route.details.busStopCoordinates[$index] }}</pre>
 
                                                     <pre ng-if="route.details.busNumber[$index] != null">linia nr: {{ route.details.busNumber[$index] }}</pre>
                                                 </div >                                      

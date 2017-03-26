@@ -19,26 +19,20 @@ namespace commuterPlanner.Services
     {
         public List<string> busNumber;
     }
-    //public class BusStop
-    //{
-    //    public string name;
-    //    public string refNo;
-    //}
     public class Route
     {
         public int busChanges;
         public List<string> busStopNameList;
         public List<string> busStopRefList;
+        public List<string> coordinates;
         public List<string> busNumber;
         public List<string> arrivalTime;
     }
-
     public class Connections
     {
         public string busStopA;
         public string busStopB;
     }
-
     public class GraphDatabaseService
     {
         //selected travel time by user
@@ -46,7 +40,6 @@ namespace commuterPlanner.Services
 
         //list of hours of bus arrival
         public static List<string> arrivalTimeList;
-
 
         public int calculateTimeDifference(string time)
         {
@@ -58,8 +51,7 @@ namespace commuterPlanner.Services
 
             return totalMinutes;
         }
-
-        public void getArrivalTimes(string busStopRef, string busNo, string day, string time, int busStopOrderNo, bool isChange)
+        public bool getArrivalTimes(string busStopRef, string busNo, string day, string time, int busStopOrderNo, bool isChange)
         {
             JObject timeTableData;
 
@@ -74,6 +66,12 @@ namespace commuterPlanner.Services
                ".timeTable[?(@.line == '" + busNo + "')]" +
                ".time[?(@.day == '" + day + "')]" +
                ".hour");
+
+            //check if there is any bus on the selected day, if no then the route is not valid
+            if (!timeTable.Any())
+            {
+                return false;
+            }
 
             //if bus stop is first in sequence then calculate total number of minutes in selected time and select closest hour in timetable
             if (busStopOrderNo == 0)
@@ -104,6 +102,7 @@ namespace commuterPlanner.Services
             }
 
             selectedTime = arrivalTimeList.Last();
+            return true;
         }
 
         public string validateWeekDay(string selectedTravelDay)
@@ -123,7 +122,7 @@ namespace commuterPlanner.Services
             }
             return weekDay;
         }
-        public List<Route> getRoutes(List<Connections> connections, string selectedTravelDay, string selectedTravelTime)
+        public List<Route> getRoutes(List<Connections> connections, string selectedTravelDay, string selectedTravelTime, string selectedCity)
         {
             selectedTravelDay = validateWeekDay(selectedTravelDay);
 
@@ -146,7 +145,6 @@ namespace commuterPlanner.Services
 
                     //all possible relations
                     List<Relation> relations = new List<Relation>();
-
 
                     foreach (var record in result)
                     {
@@ -215,7 +213,6 @@ namespace commuterPlanner.Services
                         allPaths.Add(new List<string>(path));
                     }
 
-
                     //calculating shortes connection from all available 
                     List<int> changes = new List<int>();
                     int currentBusNo;
@@ -251,6 +248,7 @@ namespace commuterPlanner.Services
                     int indexPath = 0;
                     currentBusNo = new int();
                     lastNusNo = new int();
+                    bool isValidRoute = true;
                     foreach (var stopRef in busStopsRef)
                     {
                         bool isChange = false;
@@ -258,8 +256,8 @@ namespace commuterPlanner.Services
                         if (indexPath == 0)
                         {
                             int.TryParse(allPaths[shortestPath][indexPath], out currentBusNo);
-                        }   
-                        else if (indexPath < busStopsRef.Count - 1)             
+                        }
+                        else if (indexPath < busStopsRef.Count - 1)
                         {
                             lastNusNo = currentBusNo;
                             int.TryParse(allPaths[shortestPath][indexPath], out currentBusNo);
@@ -269,27 +267,63 @@ namespace commuterPlanner.Services
                         else
                         {
                             indexPath--;
-                            getArrivalTimes(stopRef, allPaths[shortestPath][indexPath], selectedTravelDay, selectedTravelTime, indexPath, isChange);
+                            isValidRoute = getArrivalTimes(stopRef, allPaths[shortestPath][indexPath], selectedTravelDay, selectedTravelTime, indexPath, isChange);
                             break;
                         }
 
-                        getArrivalTimes(stopRef, allPaths[shortestPath][indexPath], selectedTravelDay, selectedTravelTime, indexPath, isChange);
+                        isValidRoute = getArrivalTimes(stopRef, allPaths[shortestPath][indexPath], selectedTravelDay, selectedTravelTime, indexPath, isChange);
+                        if (!isValidRoute)
+                            break;                        
                         indexPath++;
                     }
-
-                    //adding shortest route to list
-                    routes.Add(new Route
+                    
+                    //adding shortest route to list i
+                    if (isValidRoute)
                     {
-                        busChanges = changes.Min(),
-                        busNumber = new List<string>(allPaths[shortestPath]),
-                        busStopNameList = new List<string>(busStopsName),
-                        busStopRefList = new List<string>(busStopsRef),
-                        arrivalTime = new List<string>(arrivalTimeList)
-                    });
+                        var coordinates = getBusStopsCoordinates(busStopsRef, selectedCity);
+
+                        routes.Add(new Route
+                        {
+                            busChanges = changes.Min(),
+                            busNumber = new List<string>(allPaths[shortestPath]),
+                            busStopNameList = new List<string>(busStopsName),
+                            busStopRefList = new List<string>(busStopsRef),
+                            coordinates = new List<string>(coordinates),
+                            arrivalTime = new List<string>(arrivalTimeList)
+                        }); 
+                    }
                 }
                 return routes;
             }
-             
+        }
+        public static List<string> getBusStopsCoordinates(List<string> busStopsRef, string selectedCity)
+        {
+            List<string> coordinates = new List<string>();
+
+            JObject busStopData;
+
+            using (StreamReader file = new StreamReader(System.Web.HttpContext.Current.Server.MapPath("~/Content/data/busStops.json")))
+            using (JsonTextReader reader = new JsonTextReader(file))
+            {
+                busStopData = (JObject)JToken.ReadFrom(reader);
+            }
+
+            foreach (string stopRef in busStopsRef)
+            {
+                JObject busStops = busStopData["busStops"].Values<JObject>().FirstOrDefault();
+
+                JObject busStop = busStops[selectedCity].Values<JObject>()
+                    .Where(m => m["tags"]["ref"].Value<string>() == stopRef)
+                    .FirstOrDefault();
+
+                var lat = (string)busStop["lat"];
+                var lon = (string)busStop["lon"];
+
+                coordinates.Add(lat + ", " + lon);
+
+            }
+            return coordinates;
+
         }
     }
 }

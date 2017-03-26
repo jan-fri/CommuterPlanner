@@ -177,7 +177,7 @@ app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'Dat
             console.log("weekday " + $filter('date')($scope.selectedDate, 'EEEE'));
             console.log("time " + $scope.selectedTime);
 
-            RouteSelectionService.receiveRoutes(startStopRefs, endStopRefs, $filter('date')($scope.selectedDate, 'EEEE'), $scope.selectedTime).then(
+            RouteSelectionService.receiveRoutes(startStopRefs, endStopRefs, $filter('date')($scope.selectedDate, 'EEEE'), $scope.selectedTime, selectedStartCity).then(
                 function (data) {
                     console.log("data");
                     console.log(data);
@@ -196,8 +196,9 @@ app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'Dat
                 details: {
                     busStopName: data[i]['busStopNameList'],
                     busNumber: data[i]['busNumber'],
-                    arrivalTime: data[i]['arrivalTime']
-                }
+                    arrivalTime: data[i]['arrivalTime'],
+                    busStopCoordinates: data[i]['coordinates']
+                },
             });
         }
         return $scope.routes;

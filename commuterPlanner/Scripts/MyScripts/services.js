@@ -90,12 +90,12 @@ app.factory('DataDisplayService', function () {
 
 app.factory('RouteSelectionService', function ($http, $q) {
     return {
-        receiveRoutes: function (startStopRefs, endStopRefs, day, time) {
+        receiveRoutes: function (startStopRefs, endStopRefs, day, time, selectedCity) {
             console.log("route selection service");
 
             var deferred = $q.defer();
 
-            $http({ method: 'GET', url: '/Home/GetRoute', params: { busStopA: startStopRefs, busStopB: endStopRefs, selectedTravelDay: day, selectedTravelTime: time } })
+            $http({ method: 'GET', url: '/Home/GetRoute', params: { busStopA: startStopRefs, busStopB: endStopRefs, selectedTravelDay: day, selectedTravelTime: time, selectedCity: selectedCity } })
             .success(deferred.resolve)
             .error(deferred.reject);
 
