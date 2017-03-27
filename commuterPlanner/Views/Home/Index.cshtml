@@ -46,15 +46,20 @@
                                     <label>Godzina</label>
                                     <input ng-model="selectedTime">
                                 </md-input-container>
+                                <md-button style="border: solid;" ng-click="sendCoordinatesToService(0)">
+                                    <strong>test</strong>
+                                </md-button>
                                 <md-divider></md-divider>
                                 <strong>Miejsce rozpoczęcia:</strong>
-                                <md-select placeholder="Miasto" ng-model="startCity">
+                                <md-select placeholder="Miasto: " ng-model="startCity">
                                     <md-option ng-value="startCity" ng-repeat="startCity in getCities()" ng-click="selectCity($index, 'start')">{{startCity}}</md-option>
                                 </md-select>
-                                <md-select placeholder="Przystanek początkowy" ng-model="startBusStop">
-                                    <md-option ng-value="startBusStop" ng-repeat="startBusStop in getBusStopStart(startCity)" ng-click="selectBusStop(startBusStop, 'start')">{{startBusStop}}</md-option>
+                                <md-select placeholder="Przystanek początkowy: " ng-model="startBusStop">
+                                    <md-option ng-value="startBusStop" ng-repeat="startBusStop in getBusStopStart()" ng-click="selectBusStop(startBusStop, 'start')">{{startBusStop}}</md-option>
                                 </md-select>
-                                <md-button style="border: solid;">
+                                <label>{{startBusStop}}</label>
+                                <md-divider></md-divider><br />
+                                <md-button style="border: solid;" ng-click="selectStartLocation()">
                                     <strong>Wskaż na mapie</strong>
                                 </md-button>
                                 <md-divider></md-divider><br />

@@ -5955,7 +5955,9 @@ L.circle = function (latlng, radius, options) {
 L.CircleMarker = L.Circle.extend({
 	options: {
 		radius: 10,
-		weight: 2
+		weight: 2,
+		name: 'unknown',
+        city: 'unknown'
 	},
 
 	initialize: function (latlng, options) {

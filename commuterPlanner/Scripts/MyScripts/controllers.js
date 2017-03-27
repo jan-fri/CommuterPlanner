@@ -2,9 +2,6 @@
 
 });
 
-
-
-
 app.controller('MapController', ['$rootScope', function ($scope, $rootScope) {
 
     var map = L.map('mapid').setView([49.822, 19.058], 13);
@@ -12,24 +9,6 @@ app.controller('MapController', ['$rootScope', function ($scope, $rootScope) {
     L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-
-    //L.marker([49.822, 19.058]).addTo(map)
-    //    .bindPopup('Bielsko-Biała.')
-    //    .openPopup();
-
-    //L.marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup().addTo(map);
-
-    //var circle = L.circle([49.822, 19.058], {
-    //    color: 'blue',
-    //    fillColor: '#f03',
-    //    fillOpacity: 0.5,
-    //    radius: 200
-    //}).addTo(map);
-
-    //var popup = L.popup()
-    //.setLatLng([49.822, 19.058])
-    //.setContent("I am a standalone popup.")
-    //.openOn(map);
 
     var coordinates;
     var busStopNames;
@@ -40,7 +19,7 @@ app.controller('MapController', ['$rootScope', function ($scope, $rootScope) {
     var lineRouteArray = new Array();
     var lineRouteLayer = L.layerGroup();
 
-    $scope.$on("sendCoordin", function (event, obj) {
+    $scope.$on('sendCoordin', function (event, obj) {
         coordinates = obj['coordinates']
         busStopNames = obj['busStopName'];
         showRoute();
@@ -59,6 +38,13 @@ app.controller('MapController', ['$rootScope', function ($scope, $rootScope) {
             map.removeLayer(lineRouteLayer);
         }
 
+
+        customCircleMarker = L.CircleMarker.extend({
+            options: {
+                someCustomProperty: '',
+            }
+        });
+
         var style = { color: 'blue' }
         for (var i = 0; i < coordinates.length; i++) {
             var str = coordinates[i].split(", ");
@@ -67,7 +53,14 @@ app.controller('MapController', ['$rootScope', function ($scope, $rootScope) {
                 color: 'blue',
                 fillColor: '#f03',
                 fillOpacity: 0.5,
-            }).bindPopup(busStopNames[i]);
+                name: busStopNames[i],
+                city: 'Bielsko Biała'
+
+                
+            })
+                .bindPopup(busStopNames[i])
+                .on('click', onMarkerClick);
+                
 
             stopArray.push(stop);
 
@@ -88,6 +81,24 @@ app.controller('MapController', ['$rootScope', function ($scope, $rootScope) {
 
         lineRouteLayer = L.polyline(lineRouteArray);
         map.addLayer(lineRouteLayer);
+    };
+
+    var enableClickStart = false;
+
+    $scope.$on('selectStartLocation', function (event, obj) {
+        console.log("enable click start " + obj['enableClickStart']);
+        enableClickStart = obj['enableClickStart'];
+    });
+
+    function onMarkerClick(e) {
+        console.log("you clicked on " + e.target.options.name + e.target.options.city);
+        var name = e.target.options.name;
+        var city = e.target.options.city;
+        if (enableClickStart) {
+            console.log("sending selected point to plan control ")
+            $scope.$broadcast('startLocationSelected', { busStopName: name, cityName: city })
+            enableClickStart = false;
+        }
     };
 }]);
 
@@ -141,7 +152,7 @@ app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'Dat
                 init2();
             },
             function () {
-                alert('error while fetching data from server')
+                alert('error while fetching data444from server')
             });
     };
 
@@ -271,23 +282,28 @@ app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'Dat
             coordinates: ["49.8234083, 19.0448538", "49.8088719, 19.0429593", "49.858266, 19.0552707", "49.8036574, 19.0495596", "49.8061335, 19.0625326", "49.8113982, 19.0622099"]
         });
 
-        $scope.$emit("sendCoordin", { coordinates: da[index]['coordinates'], busStopName: da[index]['busStopName'] });
+        $scope.$emit('sendCoordin', { coordinates: da[index]['coordinates'], busStopName: da[index]['busStopName'] });
     };
+
+    $scope.selectStartLocation = function () {
+        $scope.$emit('selectStartLocation', { enableClickStart: true });      
+    };
+
+    $scope.$on('startLocationSelected', function (event, obj) {
+        console.log("da received " + obj.cityName);
+        $scope.startCity = obj.cityName;
+        cityStartStops = DataDisplayService.getStops(cities, cityNoStart, $scope.startCity);
+        $scope.getBusStopStart($scope.startCity);
+        $scope.startBusStop = obj.busStopName;
+
+        console.log($scope.startBusStop);
+        $scope.$apply();
+    });
 
     init();
 }]);
 
 app.controller('ToolbarController', ['$scope', '$mdSidenav', '$mdPanel', 'BusStopService', function ($scope, $mdSidenav, $mdPanel, BusStopService) {
-    //init = function () {
-    //    console.log("toolbar controller1");
-    //    BusStopService.receiveBusData().then(
-    //        function (data) {
-    //        },
-    //        function () {
-    //            alert('error while fetching speakers from server')
-    //        });
-    //};
-
     $scope.toggleSidenav = function (side) {
         $mdSidenav(side).toggle();
     };
