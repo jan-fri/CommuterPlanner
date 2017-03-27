@@ -1,26 +1,11 @@
 ﻿app.controller('AppCtrl', function ($scope) {
-    $scope.myDate = new Date();
 
-    $scope.minDate = new Date(
-        $scope.myDate.getFullYear(),
-        $scope.myDate.getMonth() - 2,
-        $scope.myDate.getDate());
-
-    $scope.maxDate = new Date(
-        $scope.myDate.getFullYear(),
-        $scope.myDate.getMonth() + 2,
-        $scope.myDate.getDate());
-
-    $scope.onlyWeekendsPredicate = function (date) {
-        var day = date.getDay();
-        return day === 0 || day === 6;
-    };
 });
 
 
 
 
-app.controller('MapController', function ($scope) {
+app.controller('MapController', ['$rootScope', function ($scope, $rootScope) {
 
     var map = L.map('mapid').setView([49.822, 19.058], 13);
 
@@ -33,7 +18,7 @@ app.controller('MapController', function ($scope) {
     //    .openPopup();
 
     //L.marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup().addTo(map);
-    
+
     //var circle = L.circle([49.822, 19.058], {
     //    color: 'blue',
     //    fillColor: '#f03',
@@ -41,11 +26,70 @@ app.controller('MapController', function ($scope) {
     //    radius: 200
     //}).addTo(map);
 
-    var popup = L.popup()
-    .setLatLng([49.822, 19.058])
-    .setContent("I am a standalone popup.")
-    .openOn(map);
-});
+    //var popup = L.popup()
+    //.setLatLng([49.822, 19.058])
+    //.setContent("I am a standalone popup.")
+    //.openOn(map);
+
+    var coordinates;
+    var busStopNames;
+    var stopArray = new Array();
+    var stopLayer = L.layerGroup();
+    var popupArray = new Array();
+    var popupLayer = L.layerGroup();
+    var lineRouteArray = new Array();
+    var lineRouteLayer = L.layerGroup();
+
+    $scope.$on("sendCoordin", function (event, obj) {
+        coordinates = obj['coordinates']
+        busStopNames = obj['busStopName'];
+        showRoute();
+
+    });
+
+    var showRoute = function () {
+        console.log("stoparray chek " + stopArray[0]);
+        if (typeof stopArray[0] != 'undefined') {
+            console.log("cecking " + stopArray);
+            stopArray = [];
+            popupArray = [];
+            lineRouteArray = [];
+            map.removeLayer(stopLayer);
+            map.removeLayer(popupLayer);
+            map.removeLayer(lineRouteLayer);
+        }
+
+        var style = { color: 'blue' }
+        for (var i = 0; i < coordinates.length; i++) {
+            var str = coordinates[i].split(", ");
+            console.log(str[0], str[1]);
+            var stop = L.circleMarker([str[0], str[1]], {
+                color: 'blue',
+                fillColor: '#f03',
+                fillOpacity: 0.5,
+            }).bindPopup(busStopNames[i]);
+
+            stopArray.push(stop);
+
+            if (i == 0 || i == coordinates.length - 1) {
+                var popup = L.popup()
+                                .setLatLng([str[0], str[1]])
+                                .setContent(busStopNames[i]);
+                popupArray.push(popup);
+            }
+
+            lineRouteArray.push([str[0], str[1]]);
+        }
+        console.log("ba,");
+        console.log(lineRouteArray);
+
+        stopLayer = L.layerGroup(stopArray).addTo(map);
+        popupLayer = L.layerGroup(popupArray).addTo(map);
+
+        lineRouteLayer = L.polyline(lineRouteArray);
+        map.addLayer(lineRouteLayer);
+    };
+}]);
 
 app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'DataDisplayService', 'RouteSelectionService', '$filter', function ($rootScope, $scope, BusStopService, DataDisplayService, RouteSelectionService, $filter) {
 
@@ -106,7 +150,7 @@ app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'Dat
         console.log("get city in plan contr");
         console.log(stops);
         if (typeof (stops) == "undefined") {
-            
+
             console.log("undefined");
             init2();
         }
@@ -128,8 +172,7 @@ app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'Dat
             selectedStartCity = Object.keys(cities[index])[0];
             cityStartStops = DataDisplayService.getStops(cities, cityNoStart, selectedStartCity);
         }
-        else if (selector == 'end')
-        {
+        else if (selector == 'end') {
             console.log("is end city");
             cityNoEnd = index;
             IsSelectedEndCity = true;
@@ -177,7 +220,7 @@ app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'Dat
             console.log("weekday " + $filter('date')($scope.selectedDate, 'EEEE'));
             console.log("time " + $scope.selectedTime);
 
-            RouteSelectionService.receiveRoutes(startStopRefs, endStopRefs, $filter('date')($scope.selectedDate, 'EEEE'), $scope.selectedTime, selectedStartCity).then(
+            RouteSelectionService.receiveRoutes(startStopRefs, endStopRefs, $filter('date')($scope.selectedDate, 'EEEE'), $scope.selectedTime).then(
                 function (data) {
                     console.log("data");
                     console.log(data);
@@ -202,6 +245,33 @@ app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'Dat
             });
         }
         return $scope.routes;
+    };
+
+    $scope.sendCoordinatesToService = function (index) {
+        //$scope.$emit("sendCoordin", {
+        //    coordinates: $scope.routes[index]['details']['busStopCoordinates'],
+        //    busStopName: $scope.routes[index]['details']['busStopName']
+        //});
+
+        var da = new Array();
+        da.push({
+            busStopName: ["hotel prezydent", "partyzantow apena", "zywiecka hotel", "lenartowicza", "jutrzenki sam"],
+            coordinates: ["49.8236529, 19.0449636", "49.848266, 19.0452707", "49.8064226, 19.056156", "49.8117055, 19.0568656", "49.8112987, 19.0620607"]
+        });
+        da.push({
+            busStopName: ["Hotel Prezydent", "Dmowskiego Urząd Miejski", "Żywiecka Osiedle Grunwaldzkie", "Lenartowicza", "Jutrzenki SAM"],
+            coordinates: ["49.8234083, 19.0448538", "49.8201898, 19.051539", "49.8149968, 19.0556383", "49.8117055, 19.0568656", "49.8112987, 19.0620607"]
+        });
+        da.push({
+            busStopName: ["Hotel Prezydent", "3 Maja Dworzec", "Bora-Komorowskiego Gemini Park", "Osiedle Złote Łany", "Jutrzenki SAM"],
+            coordinates: ["49.8236529, 19.0449636", "49.8277174, 19.0447992", "49.8036574, 19.0495596", "49.8061335, 19.0625326", "49.8113982, 19.0622099"]
+        });
+        da.push({
+            busStopName: ["Hotel Prezydent", "Partyzantów Apena", "Partyzantów Folwark", "Bora-Komorowskiego Gemini Park", "Osiedle Złote Łany", "Jutrzenki SAM"],
+            coordinates: ["49.8234083, 19.0448538", "49.8088719, 19.0429593", "49.858266, 19.0552707", "49.8036574, 19.0495596", "49.8061335, 19.0625326", "49.8113982, 19.0622099"]
+        });
+
+        $scope.$emit("sendCoordin", { coordinates: da[index]['coordinates'], busStopName: da[index]['busStopName'] });
     };
 
     init();
@@ -325,7 +395,7 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
 
         //DataDisplayService.getRelations($scope.busLines, $scope.busNumbers, cityStops, stopName)
         for (var i = 0; i < cityStops.length; i++) {
-            
+
             if (cityStops[i]['tags']['name'] == stopName) {
                 for (var j = 0; j < cityStops[i]['tags']['relation'].length; j++) {
                     var line = cityStops[i]['tags']['relation'][j]['line'];
@@ -384,8 +454,8 @@ app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'Time
                 },
                 function () {
                     alert('error while fetching speakers from server')
-                });            
+                });
         };
 
-    }   
+    }
 }]);

@@ -122,7 +122,7 @@ namespace commuterPlanner.Services
             }
             return weekDay;
         }
-        public List<Route> getRoutes(List<Connections> connections, string selectedTravelDay, string selectedTravelTime, string selectedCity)
+        public List<Route> getRoutes(List<Connections> connections, string selectedTravelDay, string selectedTravelTime)
         {
             selectedTravelDay = validateWeekDay(selectedTravelDay);
 
@@ -280,7 +280,7 @@ namespace commuterPlanner.Services
                     //adding shortest route to list i
                     if (isValidRoute)
                     {
-                        var coordinates = getBusStopsCoordinates(busStopsRef, selectedCity);
+                        var coordinates = getBusStopsCoordinates(busStopsRef);
 
                         routes.Add(new Route
                         {
@@ -296,8 +296,11 @@ namespace commuterPlanner.Services
                 return routes;
             }
         }
-        public static List<string> getBusStopsCoordinates(List<string> busStopsRef, string selectedCity)
+        public static List<string> getBusStopsCoordinates(List<string> busStopsRef)
         {
+            //hardcodedselected city - to be implemented through Neo4j add city to database
+            string selectedCity = "Bielsko Biała";
+
             List<string> coordinates = new List<string>();
 
             JObject busStopData;

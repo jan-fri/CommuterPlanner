@@ -1,175 +1,172 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
-<md-toolbar style="background-color: gray" class="mycontent" flex layout="column" ng-controller="ToolbarController">
-    <div class="md-toolbar-tools">
-        <div class="demo-md-panel-content">
-            <md-button style="margin-left: auto; color: white; border: solid" ng-click="showPanel()">
-                <h1>Wyszukaj przystanki</h1>
+<div ng-controller="AppCtrl">
+    <md-toolbar style="background-color: gray" class="mycontent" flex layout="column" ng-controller="ToolbarController">
+        <div class="md-toolbar-tools">
+            <div class="demo-md-panel-content">
+                <md-button style="margin-left: auto; color: white; border: solid" ng-click="showPanel()">
+                    <h1>Wyszukaj przystanki</h1>
+                </md-button>
+            </div>
+            <md-button ng-click="toggleSidenav('left-side-nav')" class="md-raised" style="margin-left: auto">
+                <strong>Zaplanuj podróż</strong>
             </md-button>
+            <md-button ng-click="toggleSidenav('right-side-nav')" style="margin-left: auto; color:white; border: solid">
+                <h1>Moje podróże</h1>
+            </md-button>
+            <span flex></span>
+            <md-button style="margin-left: auto; color:white; border: solid">
+                <h1>Login</h1>
+            </md-button>
+            <md-button style="margin-left: auto; color: white; border: solid">
+                <h1>Help</h1>
+            </md-button>
+
         </div>
-        <md-button ng-click="toggleSidenav('left-side-nav')" class="md-raised" style="margin-left: auto">
-            <strong>Zaplanuj podróż</strong>
-        </md-button>
-        <md-button ng-click="toggleSidenav('right-side-nav')" style="margin-left: auto; color:white; border: solid">
-            <h1>Moje podróże</h1>
-        </md-button>
-        <span flex></span>
-        <md-button style="margin-left: auto; color:white; border: solid">
-            <h1>Login</h1>
-        </md-button>
-        <md-button style="margin-left: auto; color: white; border: solid">
-            <h1>Help</h1>
-        </md-button>
-
-    </div>
-</md-toolbar>
+    </md-toolbar>
 
 
-<md-sidenav class="md-sidenav-left" md-component-id="left-side-nav" style="min-width: 350px; margin-top: 65px; max-height: 85%;"
-            md-disable-backdrop>
-    <md-content ng-controller="PlanController">
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#leftCollapse1">Plan podróży</a>
-                    </h4>
+    <md-sidenav class="md-sidenav-left" md-component-id="left-side-nav" style="min-width: 350px; margin-top: 65px; max-height: 85%;"
+                md-disable-backdrop>
+        <md-content ng-controller="PlanController">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#leftCollapse1">Plan podróży</a>
+                        </h4>
+                    </div>
+                    <div id="leftCollapse1" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <md-content>
+                                <strong>Data i czas:</strong>
+                                <md-datepicker ng-model="selectedDate" md-placeholder="Wybierz datę"></md-datepicker>
+                                <md-input-container>
+                                    <label>Godzina</label>
+                                    <input ng-model="selectedTime">
+                                </md-input-container>
+                                <md-divider></md-divider>
+                                <strong>Miejsce rozpoczęcia:</strong>
+                                <md-select placeholder="Miasto" ng-model="startCity">
+                                    <md-option ng-value="startCity" ng-repeat="startCity in getCities()" ng-click="selectCity($index, 'start')">{{startCity}}</md-option>
+                                </md-select>
+                                <md-select placeholder="Przystanek początkowy" ng-model="startBusStop">
+                                    <md-option ng-value="startBusStop" ng-repeat="startBusStop in getBusStopStart(startCity)" ng-click="selectBusStop(startBusStop, 'start')">{{startBusStop}}</md-option>
+                                </md-select>
+                                <md-button style="border: solid;">
+                                    <strong>Wskaż na mapie</strong>
+                                </md-button>
+                                <md-divider></md-divider><br />
+                                <strong>Cel:</strong>
+                                <md-select placeholder="Miasto" ng-model="endCity">
+                                    <md-option ng-value="endCity" ng-repeat="endCity in getCities()" ng-click="selectCity($index, 'end')">{{endCity}}</md-option>
+                                </md-select>
+                                <md-select placeholder="Przystanek końcowy" ng-model="endBusStop">
+                                    <md-option ng-value="endBusStop" ng-repeat="endBusStop in getBusStopEnd(endCity)" ng-click="selectBusStop(endBusStop, 'end')">{{endBusStop}}</md-option>
+                                </md-select>
+                                <md-button style="border: solid;">
+                                    <strong>Wskaż na mapie</strong>
+                                </md-button>
+                                <md-divider></md-divider>
+                                <md-button style="border: solid;" ng-click="getStopRefs()">
+                                    <strong>Znajdź połączenia</strong>
+                                </md-button>
+                            </md-content>
+                        </div>
+                    </div>
                 </div>
-                <div id="leftCollapse1" class="panel-collapse collapse in">
-                    <div class="panel-body">
-                        <md-content>
-                            <strong>Data i czas:</strong>
-                            <md-datepicker ng-model="selectedDate" md-placeholder="Wybierz datę"></md-datepicker>
-                            <md-input-container>
-                                <label>Godzina</label>
-                                <input ng-model="selectedTime">
-                            </md-input-container>
-                            <md-button style="border: solid;" ng-click="test()">
-                                <strong>Test</strong>
-                            </md-button>
-                            <md-divider></md-divider>
-                            <strong>Miejsce rozpoczęcia:</strong>
-                            <md-select placeholder="Miasto" ng-model="startCity">
-                                <md-option ng-value="startCity" ng-repeat="startCity in getCities()" ng-click="selectCity($index, 'start')">{{startCity}}</md-option>
-                            </md-select>
-                            <md-select placeholder="Przystanek początkowy" ng-model="startBusStop">
-                                <md-option ng-value="startBusStop" ng-repeat="startBusStop in getBusStopStart(startCity)" ng-click="selectBusStop(startBusStop, 'start')">{{startBusStop}}</md-option>
-                            </md-select>
-                            <md-button style="border: solid;">
-                                <strong>Wskaż na mapie</strong>
-                            </md-button>
-                            <md-divider></md-divider><br />
-                            <strong>Cel:</strong>
-                            <md-select placeholder="Miasto" ng-model="endCity">
-                                <md-option ng-value="endCity" ng-repeat="endCity in getCities()" ng-click="selectCity($index, 'end')">{{endCity}}</md-option>
-                            </md-select>
-                            <md-select placeholder="Przystanek końcowy" ng-model="endBusStop">
-                                <md-option ng-value="endBusStop" ng-repeat="endBusStop in getBusStopEnd(endCity)" ng-click="selectBusStop(endBusStop, 'end')">{{endBusStop}}</md-option>
-                            </md-select>
-                            <md-button style="border: solid;">
-                                <strong>Wskaż na mapie</strong>
-                            </md-button>
-                            <md-divider></md-divider>
-                            <md-button style="border: solid;" ng-click="getStopRefs()">
-                                <strong>Znajdź połączenia</strong>
-                            </md-button>
-                        </md-content>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" href="#leftCollapse2">Lista połączeń</a>
+                        </h4>
+                    </div>
+                    <div id="leftCollapse2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <md-content>
+                                <md-list flex>
+                                    <div class="panel-group" id="accordion3">
+                                        <md-list-item class="md-3-line" ng-value="route" ng-repeat="route in routes">
+                                            <div class="md-list-item-text" layout="column">
+                                                <h3>Trasa nr {{ route.index }}:</h3>
+                                                <a data-toggle="collapse" ng-href="#{{ $index }}">szczegóły</a>
+                                                <div layout-align="center" ng-attr-id="{{ $index }}" class="panel-collapse collapse in">
+                                                    <div ng-repeat="stopName in route.details.busStopName track by $index">
+                                                        <pre>godz: {{ route.details.arrivalTime[$index] }} {{ stopName }} </pre>
+                                                        <pre>{{ route.details.busStopCoordinates[$index] }}</pre>
+
+                                                        <pre ng-if="route.details.busNumber[$index] != null">linia nr: {{ route.details.busNumber[$index] }}</pre>
+                                                    </div>
+                                                    <p> <b>Ilość przesiadek: {{ route.changes }} </b></p>
+                                                </div>
+                                            </div>
+                                            <md-button style="border: solid;" ng-click="sendCoordinatesToService($index)">
+                                                <strong>Pokaż na mapie</strong>
+                                            </md-button>
+                                        </md-list-item>
+                                    </div>
+                                </md-list>
+                                <md-divider></md-divider>
+                            </md-content>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" href="#leftCollapse2">Lista połączeń</a>
-                    </h4>
-                </div>
-                <div id="leftCollapse2" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <md-content>
-                            <md-list flex>
-                                <div class="panel-group" id="accordion3">
-                                    <md-list-item class="md-3-line" ng-value="route" ng-repeat="route in routes">
-                                        <div class="md-list-item-text" layout="column">
-                                            <h3>Trasa nr {{ route.index }}:</h3>
-                                            <a data-toggle="collapse" ng-href="#{{ $index }}">szczegóły</a>
-                                            <div layout-align="center" ng-attr-id="{{ $index }}" class="panel-collapse collapse in">
-                                                <div ng-repeat="stopName in route.details.busStopName track by $index" >
-                                                    <pre>godz: {{ route.details.arrivalTime[$index] }} {{ stopName }} </pre>
-                                                    <pre>{{ route.details.busStopCoordinates[$index] }}</pre>
 
-                                                    <pre ng-if="route.details.busNumber[$index] != null">linia nr: {{ route.details.busNumber[$index] }}</pre>
-                                                </div >                                      
-                                            </div>
-                                            <p> <b>Ilość przesiadek: {{ route.changes }} </b></p>
+        </md-content>
+    </md-sidenav>
+
+    <md-sidenav class="md-sidenav-right" md-component-id="right-side-nav" style="min-width: 350px; margin-top: 65px; max-height: 85%"
+                md-disable-backdrop md-whiteframe="4">
+
+        <md-toolbar class="md-theme-indigo">
+            <h1 class="md-toolbar-tools">Zapisane podróże</h1>
+        </md-toolbar>
+        <md-content>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a>Lista podróży</a>
+                        </h4>
+                    </div>
+                    <div>
+                        <div class="panel-body">
+                            <md-content>
+                                <md-list flex>
+                                    <md-subheader class="md-no-sticky">3 line item (with hover)</md-subheader>
+                                    <md-list-item class="md-3-line" ng-repeat="item in todos" ng-click="null">
+                                        <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+                                        <div class="md-list-item-text" layout="column">
+                                            <h3>{{ item.who }}</h3>
+                                            <h4>{{ item.what }}</h4>
+                                            <p>{{ item.notes }}</p>
                                         </div>
                                     </md-list-item>
-                                </div>
-                            </md-list>
-                            <md-divider></md-divider>
-                            <md-button style="border: solid;">
-                                <strong>Zapisz</strong>
-                            </md-button>
+                                </md-list>
+                                <md-divider></md-divider>
+                                <md-button style="border: solid;">
+                                    <strong>Usuń</strong>
+                                </md-button>
+                                <md-divider></md-divider>
 
-                        </md-content>
+                            </md-content>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-    </md-content>
-</md-sidenav>
 
-<md-sidenav class="md-sidenav-right" md-component-id="right-side-nav" style="min-width: 350px; margin-top: 65px; max-height: 85%"
-            md-disable-backdrop md-whiteframe="4">
-
-    <md-toolbar class="md-theme-indigo">
-        <h1 class="md-toolbar-tools">Zapisane podróże</h1>
-    </md-toolbar>
-    <md-content>
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a>Lista podróży</a>
-                    </h4>
-                </div>
-                <div>
-                    <div class="panel-body">
-                        <md-content>
-                            <md-list flex>
-                                <md-subheader class="md-no-sticky">3 line item (with hover)</md-subheader>
-                                <md-list-item class="md-3-line" ng-repeat="item in todos" ng-click="null">
-                                    <img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
-                                    <div class="md-list-item-text" layout="column">
-                                        <h3>{{ item.who }}</h3>
-                                        <h4>{{ item.what }}</h4>
-                                        <p>{{ item.notes }}</p>
-                                    </div>
-                                </md-list-item>
-                            </md-list>
-                            <md-divider></md-divider>
-                            <md-button style="border: solid;">
-                                <strong>Usuń</strong>
-                            </md-button>
-                            <md-divider></md-divider>
-
-                        </md-content>
-                    </div>
-                </div>
             </div>
 
-
-        </div>
-
-    </md-content>
-</md-sidenav>
+        </md-content>
+    </md-sidenav>
 
 
-<div id="mapid" style="z-index: 1" ng-controller="MapController">
+    <div id="mapid" style="position: fixed" ng-controller="MapController">
+    </div>
+
 </div>
-
 @*<div class="container body-content">
     </div>
         <div ng-controller="MapController">
