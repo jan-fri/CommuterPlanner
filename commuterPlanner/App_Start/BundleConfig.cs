@@ -31,11 +31,11 @@ namespace commuterPlanner
                         "~/Scripts/lodash*"));
 
             bundles.Add(new ScriptBundle("~/bundles/myscripts").Include(
-                        "~/Scripts/MyScripts/app.js",
-                        "~/Scripts/MyScripts/controllers.js",
-                        "~/Scripts/MyScripts/directives.js",
+                        "~/Scripts/MyScripts/mainApp.js",
+                        "~/Scripts/MyScripts/controllers/*.js",
+                        "~/Scripts/MyScripts/directives/*.js",
                         "~/Scripts/MyScripts/routes.js",
-                        "~/Scripts/MyScripts/services.js",                        
+                        "~/Scripts/MyScripts/services/*.js",                        
                         "~/Scripts/vendor/holder.min.js",
                         "~/Scripts/vendor/jquery.min.js"));
 
