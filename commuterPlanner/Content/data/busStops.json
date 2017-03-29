@@ -1,6 +1,240 @@
 {
 	"busStops": [{
 			"Bielsko Biała": [{
+					"id": 999999999000001,
+					"lat": 49.8582660,
+					"lon": 19.0552707,
+					"tags": {
+						"name": "Partyzantów Folwark",
+						"relation": [{
+								"line": "3",
+								"route": "Komorowice Sosna"
+							}
+						],
+						"ref": "255"
+					}
+				}, {
+					"id": 4068644717,
+					"lat": 49.8426665,
+					"lon": 19.0349627,
+					"tags": {
+						"name": "Metalplast",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "338"
+					}
+				}, {
+					"id": 4068644541,
+					"lat": 49.8518071,
+					"lon": 19.0354926,
+					"tags": {
+						"name": "Katowicka Polmozbyt",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "153"
+					}
+				}, {
+					"id": 4068641887,
+					"lat": 49.8545162,
+					"lon": 19.0354705,
+					"tags": {
+						"name": "Katowicka/Skrzyżowanie",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "154"
+					}
+				}, {
+					"id": 4068641821,
+					"lat": 49.8611729,
+					"lon": 19.0318730,
+					"tags": {
+						"name": "Katowicka/Królewska",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "150"
+					}
+				}, {
+					"id": 40686418112,
+					"lat": 49.8656149,
+					"lon": 19.0297114,
+					"tags": {
+						"name": "Centrostal",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "148"
+					}
+				}, {
+					"id": 4068641811,
+					"lat": 49.8656149,
+					"lon": 19.0297114,
+					"tags": {
+						"name": "Centrostal",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "149"
+					}
+				}, {
+					"id": 4068641825,
+					"lat": 49.8601249,
+					"lon": 19.0328758,
+					"tags": {
+						"name": "Katowicka/Królewska",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "151"
+					}
+				}, {
+					"id": 4068641879,
+					"lat": 49.8554210,
+					"lon": 19.0343367,
+					"tags": {
+						"name": "Mazańcowicka/Skrzyżowanie",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "220"
+					}
+				}, {
+					"id": 4068641853,
+					"lat": 49.8558355,
+					"lon": 19.0279681,
+					"tags": {
+						"name": "Mazańcowicka/Łącznik",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "219"
+					}
+				}, {
+					"id": 40686445422,
+					"lat": 49.8458149,
+					"lon": 19.0355083,
+					"tags": {
+						"name": "Warszawska/Tesco",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "344"
+					}
+				}, {
+					"id": 4068644542,
+					"lat": 49.8458149,
+					"lon": 19.0355083,
+					"tags": {
+						"name": "Warszawska/Tesco",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "345"
+					}
+				}, {
+					"id": 3076650796,
+					"lat": 49.7969133,
+					"lon": 19.0949997,
+					"tags": {
+						"name": "Górska Piekarnia",
+						"relation": [{
+								"line": "11",
+								"route": "Straconka Leśniczówka"
+							}
+						],
+						"ref": "100"
+					}
+				}, {
+					"id": 4494546653,
+					"lat": 49.8309404,
+					"lon": 19.0656588,
+					"tags": {
+						"name": "Wyzwolenia Piekarska",
+						"relation": [{
+								"line": "9",
+								"route": "Dom Ludowy"
+							}
+						],
+						"ref": "362"
+					}
+				}, {
+					"id": 4081980488,
+					"lat": 49.8343231,
+					"lon": 19.0572062,
+					"tags": {
+						"name": "Piekarska/B-B Wschód",
+						"relation": [{
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
+							}
+						],
+						"ref": "270"
+					}
+				}, {
+					"id": 4307547192,
+					"lat": 49.8306730,
+					"lon": 19.0658086,
+					"tags": {
+						"name": "Wyzwolenia Piekarska",
+						"relation": [{
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
+							}
+						],
+						"ref": "272"
+					}
+				}, {
+					"id": 4494546654,
+					"lat": 49.8290968,
+					"lon": 19.0637876,
+					"tags": {
+						"name": "Lwowska Wyzwolenia",
+						"relation": [{
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
+							}
+						],
+						"ref": "210"
+					}
+				}, {
+					"id": 4085483198,
+					"lat": 49.7774933,
+					"lon": 19.0143850,
+					"tags": {
+						"name": "Szyndzielnia",
+						"relation": [{
+								"line": "8",
+								"route": "Warszawska Dworzec"
+							}
+						],
+						"ref": "31"
+					}
+				}, {
 					"id": 299018518,
 					"lat": 49.8236529,
 					"lon": 19.0449636,
@@ -15,6 +249,15 @@
 							}, {
 								"line": "4",
 								"route": "Osiedle Polskich Skrzydeł "
+							}, {
+								"line": "8",
+								"route": "Warszawska Dworzec"
+							}, {
+								"line": "30",
+								"route": "Sarni Stok"
+							}, {
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
 							}
 						],
 						"ref": "3"
@@ -34,6 +277,9 @@
 							}, {
 								"line": "4",
 								"route": "Osiedle Polskich Skrzydeł"
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
 							}
 						],
 						"ref": "268"
@@ -157,6 +403,12 @@
 							}, {
 								"line": "4",
 								"route": "Osiedle Polskich Skrzydeł "
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
 							}
 						],
 						"ref": "388"
@@ -179,12 +431,14 @@
 							}, {
 								"line": "6",
 								"route": "Lipnik Granica"
+							}, {
+								"line": "9",
+								"route": "Dom Ludowy"
 							}
 						],
 						"ref": "266"
 					}
-				},
-				{
+				}, {
 					"id": 297770987,
 					"lat": 49.8242652,
 					"lon": 19.0538021,
@@ -196,7 +450,6 @@
 							}
 						],
 						"ref": "249"
-
 					}
 				}, {
 					"id": 299016869,
@@ -210,6 +463,12 @@
 							}, {
 								"line": "6",
 								"route": "Lipnik Granica"
+							}, {
+								"line": "9",
+								"route": "Dom Ludowy"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
 							}
 						],
 						"ref": "275"
@@ -226,6 +485,12 @@
 							}, {
 								"line": "6",
 								"route": "Osiedle Karpackie"
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
 							}
 						],
 						"ref": "334"
@@ -239,6 +504,12 @@
 						"relation": [{
 								"line": "15",
 								"route": "Osiedle Langiewicza"
+							}, {
+								"line": "9",
+								"route": "Dom Ludowy"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
 							}
 						],
 						"ref": "392"
@@ -297,6 +568,12 @@
 							}, {
 								"line": "6",
 								"route": "Osiedle Karpackie"
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
 							}
 						],
 						"ref": "274"
@@ -310,13 +587,14 @@
 						"relation": [{
 								"line": "1",
 								"route": "Osiedle Beskidzkie"
+							}, {
+								"line": "8",
+								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "257"
-
 					}
-				},
-				{
+				}, {
 					"id": 299018697,
 					"lat": 49.8234083,
 					"lon": 19.0448538,
@@ -331,6 +609,15 @@
 							}, {
 								"line": "4",
 								"route": "Langiewicza Basen"
+							}, {
+								"line": "8",
+								"route": "Szyndzielnia"
+							}, {
+								"line": "30",
+								"route": "Osiedle Karpackie"
+							}, {
+								"line": "50",
+								"route": "Osiedle Karpackie"
 							}
 						],
 						"ref": "4"
@@ -347,11 +634,17 @@
 							}, {
 								"line": "6",
 								"route": "Osiedle Karpackie"
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
 							}
 						],
 						"ref": "208"
 					}
-				},  {
+				}, {
 					"id": 574872670,
 					"lat": 49.8540897,
 					"lon": 18.9437115,
@@ -388,7 +681,7 @@
 						],
 						"ref": "46"
 					}
-				},{
+				}, {
 					"id": 914049722,
 					"lat": 49.8257230,
 					"lon": 19.0473687,
@@ -400,6 +693,12 @@
 							}, {
 								"line": "6",
 								"route": "Lipnik Granica"
+							}, {
+								"line": "9",
+								"route": "Dom Ludowy"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
 							}
 						],
 						"ref": "335"
@@ -425,6 +724,9 @@
 							}, {
 								"line": "6",
 								"route": "Lipnik Granica"
+							}, {
+								"line": "9",
+								"route": "Dom Ludowy"
 							}
 						],
 						"ref": "264"
@@ -450,6 +752,9 @@
 							}, {
 								"line": "6",
 								"route": "Osiedle Karpackie"
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
 							}
 						],
 						"ref": "265"
@@ -466,6 +771,15 @@
 							}, {
 								"line": "4",
 								"route": "Osiedle Polskich Skrzydeł "
+							}, {
+								"line": "8",
+								"route": "Warszawska Dworzec"
+							}, {
+								"line": "30",
+								"route": "Sarni Stok"
+							}, {
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
 							}
 						],
 						"ref": "261"
@@ -491,6 +805,21 @@
 							}, {
 								"line": "6",
 								"route": "Osiedle Karpackie"
+							}, {
+								"line": "8",
+								"route": "Warszawska Dworzec"
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
+							}, {
+								"line": "30",
+								"route": "Sarni Stok"
+							}, {
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
 							}
 						],
 						"ref": "2"
@@ -521,8 +850,7 @@
 						],
 						"ref": "379-2"
 					}
-				},
-				{
+				}, {
 					"id": 1073449867,
 					"lat": 49.7860232,
 					"lon": 19.0732789,
@@ -531,6 +859,9 @@
 						"relation": [{
 								"line": "2",
 								"route": "Osiedle Kopernika"
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
 							}
 						],
 						"ref": "377"
@@ -548,8 +879,7 @@
 						],
 						"ref": "378"
 					}
-				},
-				{
+				}, {
 					"id": 1073449943,
 					"lat": 49.7970232,
 					"lon": 19.0635334,
@@ -558,6 +888,9 @@
 						"relation": [{
 								"line": "2",
 								"route": "Osiedle Kopernika"
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
 							}
 						],
 						"ref": "390"
@@ -575,8 +908,7 @@
 						],
 						"ref": "391"
 					}
-				},
-				{
+				}, {
 					"id": 1102260005,
 					"lat": 49.8009316,
 					"lon": 19.0306201,
@@ -588,6 +920,12 @@
 							}, {
 								"line": "6",
 								"route": "Lipnik Granica"
+							}, {
+								"line": "30",
+								"route": "Sarni Stok"
+							}, {
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
 							}
 						],
 						"ref": "308"
@@ -606,6 +944,12 @@
 								"route": "Osiedle Karpackie"
 							}, {
 								"line": "6",
+								"route": "Osiedle Karpackie"
+							}, {
+								"line": "30",
+								"route": "Osiedle Karpackie"
+							}, {
+								"line": "50",
 								"route": "Osiedle Karpackie"
 							}
 						],
@@ -626,6 +970,12 @@
 							}, {
 								"line": "6",
 								"route": "Lipnik Granica"
+							}, {
+								"line": "30",
+								"route": "Sarni Stok"
+							}, {
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
 							}
 						],
 						"ref": "11"
@@ -645,6 +995,12 @@
 							}, {
 								"line": "4",
 								"route": "Langiewicza Basen"
+							}, {
+								"line": "9",
+								"route": "Dom Ludowy"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
 							}
 						],
 						"ref": "389"
@@ -700,6 +1056,12 @@
 							}, {
 								"line": "2",
 								"route": "Osiedle Kopernika"
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
 							}
 						],
 						"ref": "382"
@@ -751,6 +1113,9 @@
 						"relation": [{
 								"line": "1",
 								"route": "Osiedle Beskidzkie"
+							}, {
+								"line": "8",
+								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "250"
@@ -764,10 +1129,12 @@
 						"relation": [{
 								"line": "1",
 								"route": "Cygański Las"
+							}, {
+								"line": "8",
+								"route": "Szyndzielnia"
 							}
 						],
 						"ref": "251"
-
 					}
 				}, {
 					"id": 1157574299,
@@ -778,6 +1145,9 @@
 						"relation": [{
 								"line": "1",
 								"route": "Cygański Las"
+							}, {
+								"line": "8",
+								"route": "Szyndzielnia"
 							}
 						],
 						"ref": "258"
@@ -859,7 +1229,7 @@
 						],
 						"ref": "214"
 					}
-				},  {
+				}, {
 					"id": 1228045228,
 					"lat": 49.8216044,
 					"lon": 19.0238551,
@@ -877,6 +1247,9 @@
 							}, {
 								"line": "6",
 								"route": "Osiedle Karpackie"
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
 							}
 						],
 						"ref": "267"
@@ -893,6 +1266,15 @@
 							}, {
 								"line": "4",
 								"route": "Langiewicza Basen"
+							}, {
+								"line": "8",
+								"route": "Szyndzielnia"
+							}, {
+								"line": "30",
+								"route": "Osiedle Karpackie"
+							}, {
+								"line": "50",
+								"route": "Osiedle Karpackie"
 							}
 						],
 						"ref": "371"
@@ -902,10 +1284,12 @@
 					"lat": 49.7848090,
 					"lon": 19.0299367,
 					"tags": {
-						"bus": "yes",
-						"highway": "bus_stop",
 						"name": "Armii Krajowej Młodzieżowa",
-						"public_transport": "stop_position",
+						"relation": [{
+								"line": "8",
+								"route": "Szyndzielnia"
+							}
+						],
 						"ref": "21"
 					}
 				}, {
@@ -913,10 +1297,21 @@
 					"lat": 49.8314290,
 					"lon": 19.0433584,
 					"tags": {
-						"bus": "yes",
-						"highway": "bus_stop",
 						"name": "Warszawska Dworzec",
-						"public_transport": "stop_position",
+						"relation": [{
+								"line": "8",
+								"route": "Szyndzielnia"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
+							}, {
+								"line": "30",
+								"route": "Osiedle Karpackie"
+							}, {
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
 						"ref": "341"
 					}
 				}, {
@@ -924,10 +1319,18 @@
 					"lat": 49.8313501,
 					"lon": 19.0435580,
 					"tags": {
-						"bus": "yes",
-						"highway": "bus_stop",
 						"name": "Warszawska Dworzec",
-						"public_transport": "stop_position",
+						"relation": [{
+								"line": "8",
+								"route": "Warszawska Dworzec"
+							}, {
+								"line": "30",
+								"route": "Sarni Stok"
+							}, {
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
 						"ref": "342"
 					}
 				}, {
@@ -1017,12 +1420,14 @@
 							}, {
 								"line": "6",
 								"route": "Lipnik Granica"
+							}, {
+								"line": "9",
+								"route": "Dom Ludowy"
 							}
 						],
 						"ref": "269"
 					}
 				}, {
-
 					"id": 1482750882,
 					"lat": 49.8144982,
 					"lon": 19.0377380,
@@ -1031,6 +1436,12 @@
 						"relation": [{
 								"line": "3",
 								"route": "Komorowice Sosna"
+							}, {
+								"line": "30",
+								"route": "Sarni Stok"
+							}, {
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
 							}
 						],
 						"ref": "223"
@@ -1054,6 +1465,12 @@
 						"name": "Michałowicza Czarnieckiego",
 						"relation": [{
 								"line": "3",
+								"route": "Osiedle Karpackie"
+							}, {
+								"line": "30",
+								"route": "Osiedle Karpackie"
+							}, {
+								"line": "50",
 								"route": "Osiedle Karpackie"
 							}
 						],
@@ -1118,6 +1535,12 @@
 						"relation": [{
 								"line": "3",
 								"route": "Komorowice Sosna"
+							}, {
+								"line": "30",
+								"route": "Sarni Stok"
+							}, {
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
 							}
 						],
 						"ref": "225"
@@ -1144,6 +1567,12 @@
 						"relation": [{
 								"line": "3",
 								"route": "Osiedle Karpackie"
+							}, {
+								"line": "30",
+								"route": "Osiedle Karpackie"
+							}, {
+								"line": "50",
+								"route": "Osiedle Karpackie"
 							}
 						],
 						"ref": "224"
@@ -1169,29 +1598,15 @@
 						"name": "Zywiecka/Dworek",
 						"relation": [{
 								"line": "2",
-								"route": "Osiedle Kopernika"
+								"route": "Mikuszowice Stalownik"
+							}, {
+								"line": "9",
+								"route": "Dom Ludowy"
 							}
 						],
 						"ref": "380"
-
 					}
 				}, {
-					"id": 14977523652,
-					"lat": 49.7927749,
-					"lon": 19.0672935,
-					"tags": {
-						"name": "Zywiecka/Dworek",
-						"relation": [{
-								"line": "2",
-								"route": "Mikuszowice Stalownik"
-							}
-						],
-						"ref": "381"
-
-					}
-				},
-				{
-
 					"id": 1923941014,
 					"lat": 49.8222518,
 					"lon": 19.0553031,
@@ -1203,10 +1618,8 @@
 							}
 						],
 						"ref": "368"
-
 					}
 				}, {
-
 					"id": 1931200418,
 					"lat": 49.8232211,
 					"lon": 19.0343184,
@@ -1220,7 +1633,6 @@
 						"ref": "112"
 					}
 				}, {
-
 					"id": 2076092477,
 					"lat": 49.8079345,
 					"lon": 18.9847615,
@@ -1232,7 +1644,6 @@
 						"ref": "57"
 					}
 				}, {
-
 					"id": 2076092518,
 					"lat": 49.8079711,
 					"lon": 18.9839029,
@@ -1243,8 +1654,7 @@
 						"public_transport": "stop_position",
 						"ref": "66"
 					}
-				},{
-
+				}, {
 					"id": 2323000928,
 					"lat": 49.8285245,
 					"lon": 19.1195073,
@@ -1256,10 +1666,8 @@
 							}
 						],
 						"ref": "186"
-
 					}
 				}, {
-
 					"id": 2377920681,
 					"lat": 49.8389321,
 					"lon": 19.0359125,
@@ -1271,7 +1679,6 @@
 						"ref": "294"
 					}
 				}, {
-
 					"id": 2409835531,
 					"lat": 49.8154736,
 					"lon": 19.0487242,
@@ -1288,31 +1695,32 @@
 						"ref": "263"
 					}
 				}, {
-
 					"id": 2867166686,
 					"lat": 49.8388073,
 					"lon": 19.0353156,
 					"tags": {
-						"bus": "yes",
-						"highway": "bus_stop",
 						"name": "Sarni Stok",
-						"public_transport": "stop_position",
+						"relation": [{
+								"line": "30",
+								"route": "Osiedle Karpackie"
+							}
+						],
 						"ref": "293"
 					}
 				}, {
-
 					"id": 3032328368,
 					"lat": 49.7854619,
 					"lon": 19.0307929,
 					"tags": {
-						"bus": "yes",
-						"highway": "bus_stop",
 						"name": "Armii Krajowej Młodzieżowa",
-						"public_transport": "stop_position",
+						"relation": [{
+								"line": "8",
+								"route": "Warszawska Dworzec"
+							}
+						],
 						"ref": "20"
 					}
 				}, {
-
 					"id": 3076567474,
 					"lat": 49.8236920,
 					"lon": 19.0590945,
@@ -1324,12 +1732,17 @@
 							}, {
 								"line": "6",
 								"route": "Lipnik Granica"
+							}, {
+								"line": "9",
+								"route": "Dom Ludowy"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
 							}
 						],
 						"ref": "209"
 					}
 				}, {
-
 					"id": 3111509404,
 					"lat": 49.8206803,
 					"lon": 19.0704824,
@@ -1343,7 +1756,6 @@
 						"ref": "185"
 					}
 				}, {
-
 					"id": 3111509406,
 					"lat": 49.8207168,
 					"lon": 19.0698376,
@@ -1357,7 +1769,6 @@
 						"ref": "184"
 					}
 				}, {
-
 					"id": 3513397034,
 					"lat": 49.8379982,
 					"lon": 18.9397094,
@@ -1368,8 +1779,7 @@
 						"public_transport": "stop_position",
 						"ref": "2476"
 					}
-				},{
-
+				}, {
 					"id": 3771632770,
 					"lat": 49.8228584,
 					"lon": 19.0826008,
@@ -1383,7 +1793,6 @@
 						"ref": "180"
 					}
 				}, {
-
 					"id": 3771632773,
 					"lat": 49.8229686,
 					"lon": 19.0837084,
@@ -1397,7 +1806,6 @@
 						"ref": "181"
 					}
 				}, {
-
 					"id": 3776130457,
 					"lat": 49.8083672,
 					"lon": 19.0283183,
@@ -1412,13 +1820,17 @@
 							}, {
 								"line": "6",
 								"route": "Osiedle Karpackie"
+							}, {
+								"line": "30",
+								"route": "Osiedle Karpackie"
+							}, {
+								"line": "50",
+								"route": "Osiedle Karpackie"
 							}
-
 						],
 						"ref": "6"
 					}
 				}, {
-
 					"id": 3776130458,
 					"lat": 49.8084708,
 					"lon": 19.0287529,
@@ -1433,12 +1845,17 @@
 							}, {
 								"line": "6",
 								"route": "Lipnik Granica"
+							}, {
+								"line": "30",
+								"route": "Sarni Stok"
+							}, {
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
 							}
 						],
 						"ref": "5"
 					}
 				}, {
-
 					"id": 3866142208,
 					"lat": 49.8048861,
 					"lon": 19.0305455,
@@ -1453,12 +1870,17 @@
 							}, {
 								"line": "6",
 								"route": "Lipnik Granica"
+							}, {
+								"line": "30",
+								"route": "Sarni Stok"
+							}, {
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
 							}
 						],
 						"ref": "19"
 					}
 				}, {
-
 					"id": 4003481899,
 					"lat": 49.8342402,
 					"lon": 19.0296881,
@@ -1470,7 +1892,6 @@
 						"ref": "291"
 					}
 				}, {
-
 					"id": 4003481901,
 					"lat": 49.8348976,
 					"lon": 19.0299792,
@@ -1482,7 +1903,6 @@
 						"ref": "290"
 					}
 				}, {
-
 					"id": 4003481909,
 					"lat": 49.8448587,
 					"lon": 19.0496081,
@@ -1494,7 +1914,6 @@
 							}
 						],
 						"ref": "162"
-
 					}
 				}, {
 					"id": 8787575400002,
@@ -1509,8 +1928,7 @@
 						],
 						"ref": "161"
 					}
-				},{
-
+				}, {
 					"id": 4003481927,
 					"lat": 49.8578808,
 					"lon": 19.0483869,
@@ -1524,7 +1942,6 @@
 						"ref": "41"
 					}
 				}, {
-
 					"id": 4003481930,
 					"lat": 49.8585938,
 					"lon": 19.0483172,
@@ -1537,8 +1954,7 @@
 						],
 						"ref": "42"
 					}
-				},{
-
+				}, {
 					"id": 4067656184,
 					"lat": 49.7907911,
 					"lon": 19.0496036,
@@ -1552,7 +1968,6 @@
 						"ref": "247"
 					}
 				}, {
-
 					"id": 40676561842,
 					"lat": 49.7907911,
 					"lon": 19.0496036,
@@ -1566,7 +1981,6 @@
 						"ref": "247-2"
 					}
 				}, {
-
 					"id": 4067656185,
 					"lat": 49.7956880,
 					"lon": 19.0527293,
@@ -1578,10 +1992,8 @@
 							}
 						],
 						"ref": "52"
-
 					}
 				}, {
-
 					"id": 40676561852,
 					"lat": 49.7956880,
 					"lon": 19.0527293,
@@ -1593,10 +2005,8 @@
 							}
 						],
 						"ref": "248"
-
 					}
 				}, {
-
 					"id": 4067819489,
 					"lat": 49.8172362,
 					"lon": 19.0140743,
@@ -1619,7 +2029,6 @@
 						"ref": "132"
 					}
 				}, {
-
 					"id": 40678194892,
 					"lat": 49.8172362,
 					"lon": 19.0140743,
@@ -1632,9 +2041,7 @@
 						],
 						"ref": "132-2"
 					}
-				},
-				{
-
+				}, {
 					"id": 89797600001,
 					"lat": 49.8289750,
 					"lon": 19.0533511,
@@ -1643,12 +2050,14 @@
 						"relation": [{
 								"line": "3",
 								"route": "Osiedle Karpackie"
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
 							}
 						],
 						"ref": "155"
 					}
 				}, {
-
 					"id": 4077045876,
 					"lat": 49.8289750,
 					"lon": 19.0533511,
@@ -1657,12 +2066,14 @@
 						"relation": [{
 								"line": "3",
 								"route": "Komorowice Sosna"
+							}, {
+								"line": "9",
+								"route": "Dom Ludowy"
 							}
 						],
 						"ref": "156"
 					}
 				}, {
-
 					"id": 4077045877,
 					"lat": 49.8247841,
 					"lon": 19.0524748,
@@ -1675,8 +2086,7 @@
 						],
 						"ref": "167"
 					}
-				},{
-
+				}, {
 					"id": 4077137692,
 					"lat": 49.8120709,
 					"lon": 18.9944055,
@@ -1693,7 +2103,6 @@
 						"ref": "OPSKoniec"
 					}
 				}, {
-
 					"id": 4077137693,
 					"lat": 49.8142791,
 					"lon": 18.9999624,
@@ -1713,7 +2122,6 @@
 						"ref": "326"
 					}
 				}, {
-
 					"id": 4077137699,
 					"lat": 49.8072398,
 					"lon": 19.0788394,
@@ -1727,7 +2135,6 @@
 						"ref": "197"
 					}
 				}, {
-
 					"id": 4079673890,
 					"lat": 49.8342957,
 					"lon": 19.0378060,
@@ -1741,7 +2148,6 @@
 						"ref": "84"
 					}
 				}, {
-
 					"id": 4079673891,
 					"lat": 49.8326587,
 					"lon": 19.0331154,
@@ -1753,19 +2159,19 @@
 						"ref": "82"
 					}
 				}, {
-
 					"id": 4088927640,
 					"lat": 49.8093430,
 					"lon": 18.9986217,
 					"tags": {
-						"bus": "yes",
-						"highway": "bus_stop",
 						"name": "Cieszyńska Lotnisko",
-						"public_transport": "stop_position",
+						"relation": [{
+								"line": "9",
+								"route": "Dom Ludowy"
+							}
+						],
 						"ref": "64"
 					}
 				}, {
-
 					"id": 4088927641,
 					"lat": 49.8091012,
 					"lon": 18.9971943,
@@ -1777,7 +2183,6 @@
 						"ref": "65"
 					}
 				}, {
-
 					"id": 4172863439,
 					"lat": 49.8210606,
 					"lon": 18.9754353,
@@ -1789,7 +2194,6 @@
 						"ref": "229"
 					}
 				}, {
-
 					"id": 4172863440,
 					"lat": 49.8222190,
 					"lon": 18.9754634,
@@ -1801,7 +2205,6 @@
 						"ref": "230"
 					}
 				}, {
-
 					"id": 4172863441,
 					"lat": 49.8174587,
 					"lon": 18.9752810,
@@ -1813,7 +2216,6 @@
 						"ref": "227"
 					}
 				}, {
-
 					"id": 4172863442,
 					"lat": 49.8113016,
 					"lon": 18.9809343,
@@ -1825,7 +2227,6 @@
 						"ref": "78"
 					}
 				}, {
-
 					"id": 4172863443,
 					"lat": 49.8090132,
 					"lon": 18.9844147,
@@ -1837,31 +2238,32 @@
 						"ref": "285"
 					}
 				}, {
-
 					"id": 4172863445,
 					"lat": 49.8122155,
 					"lon": 19.0095146,
 					"tags": {
-						"bus": "yes",
-						"highway": "bus_stop",
 						"name": "Cieszyńska Osiedle Wojska Polskiego",
-						"public_transport": "stop_position",
+						"relation": [{
+								"line": "9",
+								"route": "Dom Ludowy "
+							}
+						],
 						"ref": "62"
 					}
 				}, {
-
 					"id": 4230269889,
 					"lat": 49.8116151,
 					"lon": 19.0071442,
 					"tags": {
-						"bus": "yes",
-						"highway": "bus_stop",
 						"name": "Cieszyńska Osiedle Wojska Polskiego",
-						"public_transport": "stop_position",
+						"relation": [{
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
+							}
+						],
 						"ref": "63"
 					}
 				}, {
-
 					"id": 4347939527,
 					"lat": 49.8274543,
 					"lon": 19.0329092,
@@ -1873,7 +2275,6 @@
 						"ref": "32"
 					}
 				}, {
-
 					"id": 4347939528,
 					"lat": 49.8278825,
 					"lon": 19.0334946,
@@ -1885,7 +2286,6 @@
 						"ref": "207"
 					}
 				}, {
-
 					"id": 4351800736,
 					"lat": 49.8339905,
 					"lon": 19.0377684,
@@ -1899,7 +2299,6 @@
 						"ref": "83"
 					}
 				}, {
-
 					"id": 4351800737,
 					"lat": 49.8330640,
 					"lon": 19.0288609,
@@ -1911,7 +2310,6 @@
 						"ref": "289"
 					}
 				}, {
-
 					"id": 4351800738,
 					"lat": 49.8309070,
 					"lon": 19.0427171,
@@ -1923,7 +2321,6 @@
 						"ref": "343"
 					}
 				}, {
-
 					"id": 4353175537,
 					"lat": 49.8540292,
 					"lon": 18.9436998,
@@ -1935,7 +2332,6 @@
 						"ref": "2485"
 					}
 				}, {
-
 					"id": 4353175540,
 					"lat": 49.8296856,
 					"lon": 18.9644174,
@@ -1947,7 +2343,6 @@
 						"ref": "2457"
 					}
 				}, {
-
 					"id": 4353175541,
 					"lat": 49.8310455,
 					"lon": 18.9623057,
@@ -1959,7 +2354,6 @@
 						"ref": "2456"
 					}
 				}, {
-
 					"id": 4353175542,
 					"lat": 49.8345194,
 					"lon": 18.9565343,
@@ -1971,7 +2365,6 @@
 						"ref": "2464"
 					}
 				}, {
-
 					"id": 4353175543,
 					"lat": 49.8347565,
 					"lon": 18.9558430,
@@ -1983,7 +2376,6 @@
 						"ref": "2463"
 					}
 				}, {
-
 					"id": 4353175544,
 					"lat": 49.8421091,
 					"lon": 18.9409415,
@@ -1995,7 +2387,6 @@
 						"ref": "2479"
 					}
 				}, {
-
 					"id": 4353175545,
 					"lat": 49.8422503,
 					"lon": 18.9409993,
@@ -2007,7 +2398,6 @@
 						"ref": "2478"
 					}
 				}, {
-
 					"id": 4353175546,
 					"lat": 49.8379700,
 					"lon": 18.9397274,
@@ -2019,7 +2409,6 @@
 						"ref": "2477"
 					}
 				}, {
-
 					"id": 4353175547,
 					"lat": 49.8479999,
 					"lon": 18.9422125,
@@ -2031,7 +2420,6 @@
 						"ref": "2480"
 					}
 				}, {
-
 					"id": 4353175548,
 					"lat": 49.8483507,
 					"lon": 18.9423189,
@@ -2043,7 +2431,6 @@
 						"ref": "2480"
 					}
 				}, {
-
 					"id": 4353273628,
 					"lat": 49.8161200,
 					"lon": 18.9752460,
@@ -2055,7 +2442,6 @@
 						"ref": "226"
 					}
 				}, {
-
 					"id": 4353273629,
 					"lat": 49.8260943,
 					"lon": 18.9713564,
@@ -2067,7 +2453,6 @@
 						"ref": "231"
 					}
 				}, {
-
 					"id": 4353273630,
 					"lat": 49.8261148,
 					"lon": 18.9713164,
@@ -2079,7 +2464,6 @@
 						"ref": "232"
 					}
 				}, {
-
 					"id": 4354580336,
 					"lat": 49.8144433,
 					"lon": 19.0182204,
@@ -2100,12 +2484,14 @@
 							}, {
 								"line": "6",
 								"route": "Lipnik Granica"
+							}, {
+								"line": "9",
+								"route": "Dom Ludowy"
 							}
 						],
 						"ref": "58"
 					}
 				}, {
-
 					"id": 4354580337,
 					"lat": 49.8145396,
 					"lon": 19.0185992,
@@ -2126,12 +2512,14 @@
 							}, {
 								"line": "6",
 								"route": "Osiedle Karpackie"
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
 							}
 						],
 						"ref": "59"
 					}
 				}, {
-
 					"id": 4357948863,
 					"lat": 49.8219616,
 					"lon": 19.0373203,
@@ -2143,7 +2531,6 @@
 						"ref": "351"
 					}
 				}, {
-
 					"id": 4359375344,
 					"lat": 49.8203925,
 					"lon": 19.0376915,
@@ -2154,8 +2541,7 @@
 						"public_transport": "stop_position",
 						"ref": "302"
 					}
-				},  {
-
+				}, {
 					"id": 4408093945,
 					"lat": 49.8060935,
 					"lon": 19.0623356,
@@ -2175,7 +2561,6 @@
 						"ref": "136"
 					}
 				}, {
-
 					"id": 4408189644,
 					"lat": 49.8177866,
 					"lon": 19.0555072,
@@ -2187,12 +2572,17 @@
 							}, {
 								"line": "2",
 								"route": "Osiedle Kopernika"
+							}, {
+								"line": "9",
+								"route": "Cieszyńska Lotnisko"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
 							}
 						],
 						"ref": "428"
 					}
 				}, {
-
 					"id": 44081896442,
 					"lat": 49.8177866,
 					"lon": 19.0555072,
@@ -2208,9 +2598,7 @@
 						],
 						"ref": "428-2"
 					}
-				},
-				{
-
+				}, {
 					"id": 4408189645,
 					"lat": 49.8175584,
 					"lon": 19.0131866,
@@ -2230,7 +2618,6 @@
 						"ref": "309"
 					}
 				}, {
-
 					"id": 4408189646,
 					"lat": 49.8152120,
 					"lon": 19.0033718,
@@ -2250,7 +2637,6 @@
 						"ref": "311"
 					}
 				}, {
-
 					"id": 4408189647,
 					"lat": 49.8142574,
 					"lon": 19.0002793,
@@ -2270,7 +2656,6 @@
 						"ref": "327"
 					}
 				}, {
-
 					"id": 4408244031,
 					"lat": 49.8119744,
 					"lon": 18.9950018,
@@ -2290,7 +2675,6 @@
 						"ref": "324"
 					}
 				}, {
-
 					"id": 4408244032,
 					"lat": 49.8152615,
 					"lon": 19.0040977,
@@ -2310,7 +2694,6 @@
 						"ref": "310"
 					}
 				}, {
-
 					"id": 4410324049,
 					"lat": 49.8096293,
 					"lon": 19.0227539,
@@ -2330,7 +2713,6 @@
 						"ref": "34"
 					}
 				}, {
-
 					"id": 4410324050,
 					"lat": 49.8100638,
 					"lon": 19.0235317,
@@ -2345,12 +2727,23 @@
 							}, {
 								"line": "6",
 								"route": "Lipnik Granica"
+							}, {
+								"line": "30",
+								"route": "Sarni Stok"
+							}, {
+								"line": "30",
+								"route": "Osiedle Karpackie"
+							}, {
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}, {
+								"line": "50",
+								"route": "Osiedle Karpackie"
 							}
 						],
 						"ref": "33"
 					}
 				}, {
-
 					"id": 4410324051,
 					"lat": 49.7949224,
 					"lon": 19.0387077,
@@ -2359,12 +2752,14 @@
 						"relation": [{
 								"line": "1",
 								"route": "Osiedle Beskidzkie"
+							}, {
+								"line": "8",
+								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "24"
 					}
 				}, {
-
 					"id": 4410324052,
 					"lat": 49.7945246,
 					"lon": 19.0382270,
@@ -2373,12 +2768,14 @@
 						"relation": [{
 								"line": "1",
 								"route": "Cygański Las"
+							}, {
+								"line": "8",
+								"route": "Szyndzielnia"
 							}
 						],
 						"ref": "25"
 					}
 				}, {
-
 					"id": 4410324053,
 					"lat": 49.8089346,
 					"lon": 19.0170591,
@@ -2398,7 +2795,6 @@
 						"ref": "319"
 					}
 				}, {
-
 					"id": 4410324054,
 					"lat": 49.8088231,
 					"lon": 19.0169839,
@@ -2418,7 +2814,6 @@
 						"ref": "320"
 					}
 				}, {
-
 					"id": 4410324055,
 					"lat": 49.8122232,
 					"lon": 19.0125017,
@@ -2438,7 +2833,6 @@
 						"ref": "317"
 					}
 				}, {
-
 					"id": 4410324056,
 					"lat": 49.8122376,
 					"lon": 19.0123188,
@@ -2458,7 +2852,6 @@
 						"ref": "318"
 					}
 				}, {
-
 					"id": 4410324057,
 					"lat": 49.8068488,
 					"lon": 19.0557675,
@@ -2470,12 +2863,17 @@
 							}, {
 								"line": "2",
 								"route": "Mikuszowice Stalownik"
+							}, {
+								"line": "9",
+								"route": "Dom Ludowy"
+							}, {
+								"line": "11",
+								"route": "Straconka Leśniczówka"
 							}
 						],
 						"ref": "383"
 					}
 				}, {
-
 					"id": 999999999000001,
 					"lat": 49.8482660,
 					"lon": 19.0452707,
@@ -2501,9 +2899,7 @@
 						],
 						"ref": "164"
 					}
-				 },
-				 {
-
+				}, {
 					"id": 999999999000001,
 					"lat": 49.8482660,
 					"lon": 19.0452707,
@@ -2516,36 +2912,323 @@
 						],
 						"ref": "252"
 					}
-				}, 
-				{
-
-					"id": 999999999000001,
-					"lat": 49.8582660,
-					"lon": 19.0552707,
+				}
+			]
+		}, {
+			"Czechowice-Dziedzice": [{
+					"id": 2381320535,
+					"lat": 49.8714900,
+					"lon": 19.0282779,
 					"tags": {
-						"name": "Partyzantów Folwark",
+						"name": "Legoinów/Krzywa/Elektrociepłownia",
 						"relation": [{
-								"line": "3",
-								"route": "Komorowice Sosna"
+								"line": "50",
+								"route": "Osiedle Karpackie"
 							}
 						],
-						"ref": "255"
+						"ref": "2353"
 					}
-				} 
-			]
-		}, {
-			"Buczkowice": [{}
-			]
-		}, {
-			"Bystra": [{}
-			]
-		}, {
-			"Meszna": [{}
-			]
-		}, {
-			"Szczyrk": [{}
+				}, {
+					"id": 2123787439,
+					"lat": 49.8796654,
+					"lon": 19.0264746,
+					"tags": {
+						"name": "Legionów/Junacka/Kamionka",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "2355"
+					}
+				}, {
+					"id": 2381316478,
+					"lat": 49.8873147,
+					"lon": 19.0232032,
+					"tags": {
+						"name": "Legionów/Południowe",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "2357"
+					}
+				}, {
+					"id": 3784315093,
+					"lat": 49.8902846,
+					"lon": 19.0207132,
+					"tags": {
+						"name": "Legionów/Gigant",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "2359"
+					}
+				}, {
+					"id": 2364936596,
+					"lat": 49.8975104,
+					"lon": 19.0108633,
+					"tags": {
+						"name": "Legionów/Kopernika/Gliksmanka",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "2361"
+					}
+				}, {
+					"id": 1694286672,
+					"lat": 49.9032589,
+					"lon": 19.0054014,
+					"tags": {
+						"name": "Legionów/Niepodległości/MOSiR",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "2363"
+					}
+				}, {
+					"id": 3814028432,
+					"lat": 49.9109749,
+					"lon": 19.0058932,
+					"tags": {
+						"name": "Niepodległości/MDK",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "2365"
+					}
+				}, {
+					"id": 2638377811,
+					"lat": 49.9145449,
+					"lon": 19.0062806,
+					"tags": {
+						"name": "Czechowice-Dziedzice Dworzec",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "2367"
+					}
+				}, {
+					"id": 2133736837,
+					"lat": 49.9202750,
+					"lon": 19.0074556,
+					"tags": {
+						"name": "Traugutta/ZSTiL",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "2369"
+					}
+				}, {
+					"id": 2381701216,
+					"lat": 49.9254744,
+					"lon": 19.0038143,
+					"tags": {
+						"name": "Wyspiańskiego/Osiedle Północ",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "2371"
+					}
+				}, {
+					"id": 2120217926,
+					"lat": 49.9298704,
+					"lon": 19.0105449,
+					"tags": {
+						"name": "Węglowa/Kościół św. Barbary",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "2373"
+					}
+				}, {
+					"id": 3993399923,
+					"lat": 49.9364025,
+					"lon": 19.0132910,
+					"tags": {
+						"name": "Silesia",
+						"relation": [{
+								"line": "50",
+								"route": "Osiedle Karpackie"
+							}
+						],
+						"ref": "2375"
+					}
+				}, {
+					"id": 2361038664,
+					"lat": 49.9327382,
+					"lon": 19.0124217,
+					"tags": {
+						"name": "Węglowa/Urząd Skarbowy",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "2374"
+					}
+				}, {
+					"id": 2120217925,
+					"lat": 49.9294263,
+					"lon": 19.0100480,
+					"tags": {
+						"name": "Węglowa/Kościół św. Barbary",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "2372"
+					}
+				}, {
+					"id": 2119392975,
+					"lat": 49.9254857,
+					"lon": 19.0039412,
+					"tags": {
+						"name": "Wyspiańskiego/Osiedle Północ",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "2370"
+					}
+				}, {
+					"id": 4512252451,
+					"lat": 49.9204224,
+					"lon": 19.0075258,
+					"tags": {
+						"name": "Traugutta/ZSTiL",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "2368"
+					}
+				}, {
+					"id": 2638377817,
+					"lat": 49.9145757,
+					"lon": 19.0065578,
+					"tags": {
+						"name": "Czechowice-Dziedzice Dworzec",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "2366"
+					}
+				}, {
+					"id": 2121789863,
+					"lat": 49.9105460,
+					"lon": 19.0059745,
+					"tags": {
+						"name": "Niepodległości/MDK",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "2364"
+					}
+				}, {
+					"id": 2364935887,
+					"lat": 49.9034701,
+					"lon": 19.0052761,
+					"tags": {
+						"name": "Legionów/Niepodległości/MOSiR",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "2362"
+					}
+				}, {
+					"id": 2364936596,
+					"lat": 49.8975104,
+					"lon": 19.0108633,
+					"tags": {
+						"name": "Legionów/Kopernika/Gliksmanka",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "2360"
+					}
+				}, {
+					"id": 3772450820,
+					"lat": 49.8916587,
+					"lon": 19.0195975,
+					"tags": {
+						"name": "Legionów/Gigant",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "2358"
+					}
+				}, {
+					"id": 2381316474,
+					"lat": 49.8884283,
+					"lon": 19.0224806,
+					"tags": {
+						"name": "Legionów/Południowe",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "2356"
+					}
+				}, {
+					"id": 2377391294,
+					"lat": 49.8785630,
+					"lon": 19.0268098,
+					"tags": {
+						"name": "Legionów/Junacka/Kamionka",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "2354"
+					}
+				}, {
+					"id": 2381320537,
+					"lat": 49.8727995,
+					"lon": 19.0280119,
+					"tags": {
+						"name": "Legoinów/Krzywa/Elektrociepłownia",
+						"relation": [{
+								"line": "50",
+								"route": "Czechowice-Dziedzice Silesia"
+							}
+						],
+						"ref": "2352"
+					}
+				}
 			]
 		}
-
 	]
 }

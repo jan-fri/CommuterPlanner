@@ -259,30 +259,30 @@ app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'Dat
     };
 
     $scope.sendCoordinatesToService = function (index) {
-        //$scope.$emit("sendCoordin", {
-        //    coordinates: $scope.routes[index]['details']['busStopCoordinates'],
-        //    busStopName: $scope.routes[index]['details']['busStopName']
+        $scope.$emit("sendCoordin", {
+            coordinates: $scope.routes[index]['details']['busStopCoordinates'],
+            busStopName: $scope.routes[index]['details']['busStopName']
+        });
+
+        //var da = new Array();
+        //da.push({
+        //    busStopName: ["hotel prezydent", "partyzantow apena", "zywiecka hotel", "lenartowicza", "jutrzenki sam"],
+        //    coordinates: ["49.8236529, 19.0449636", "49.848266, 19.0452707", "49.8064226, 19.056156", "49.8117055, 19.0568656", "49.8112987, 19.0620607"]
+        //});
+        //da.push({
+        //    busStopName: ["Hotel Prezydent", "Dmowskiego Urząd Miejski", "Żywiecka Osiedle Grunwaldzkie", "Lenartowicza", "Jutrzenki SAM"],
+        //    coordinates: ["49.8234083, 19.0448538", "49.8201898, 19.051539", "49.8149968, 19.0556383", "49.8117055, 19.0568656", "49.8112987, 19.0620607"]
+        //});
+        //da.push({
+        //    busStopName: ["Hotel Prezydent", "3 Maja Dworzec", "Bora-Komorowskiego Gemini Park", "Osiedle Złote Łany", "Jutrzenki SAM"],
+        //    coordinates: ["49.8236529, 19.0449636", "49.8277174, 19.0447992", "49.8036574, 19.0495596", "49.8061335, 19.0625326", "49.8113982, 19.0622099"]
+        //});
+        //da.push({
+        //    busStopName: ["Hotel Prezydent", "Partyzantów Apena", "Partyzantów Folwark", "Bora-Komorowskiego Gemini Park", "Osiedle Złote Łany", "Jutrzenki SAM"],
+        //    coordinates: ["49.8234083, 19.0448538", "49.8088719, 19.0429593", "49.858266, 19.0552707", "49.8036574, 19.0495596", "49.8061335, 19.0625326", "49.8113982, 19.0622099"]
         //});
 
-        var da = new Array();
-        da.push({
-            busStopName: ["hotel prezydent", "partyzantow apena", "zywiecka hotel", "lenartowicza", "jutrzenki sam"],
-            coordinates: ["49.8236529, 19.0449636", "49.848266, 19.0452707", "49.8064226, 19.056156", "49.8117055, 19.0568656", "49.8112987, 19.0620607"]
-        });
-        da.push({
-            busStopName: ["Hotel Prezydent", "Dmowskiego Urząd Miejski", "Żywiecka Osiedle Grunwaldzkie", "Lenartowicza", "Jutrzenki SAM"],
-            coordinates: ["49.8234083, 19.0448538", "49.8201898, 19.051539", "49.8149968, 19.0556383", "49.8117055, 19.0568656", "49.8112987, 19.0620607"]
-        });
-        da.push({
-            busStopName: ["Hotel Prezydent", "3 Maja Dworzec", "Bora-Komorowskiego Gemini Park", "Osiedle Złote Łany", "Jutrzenki SAM"],
-            coordinates: ["49.8236529, 19.0449636", "49.8277174, 19.0447992", "49.8036574, 19.0495596", "49.8061335, 19.0625326", "49.8113982, 19.0622099"]
-        });
-        da.push({
-            busStopName: ["Hotel Prezydent", "Partyzantów Apena", "Partyzantów Folwark", "Bora-Komorowskiego Gemini Park", "Osiedle Złote Łany", "Jutrzenki SAM"],
-            coordinates: ["49.8234083, 19.0448538", "49.8088719, 19.0429593", "49.858266, 19.0552707", "49.8036574, 19.0495596", "49.8061335, 19.0625326", "49.8113982, 19.0622099"]
-        });
-
-        $scope.$emit('sendCoordin', { coordinates: da[index]['coordinates'], busStopName: da[index]['busStopName'] });
+        //$scope.$emit('sendCoordin', { coordinates: da[index]['coordinates'], busStopName: da[index]['busStopName'] });
     };
 
     $scope.selectStartLocation = function () {
