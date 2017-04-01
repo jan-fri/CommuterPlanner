@@ -3,124 +3,101 @@
     $scope.selectedDate = new Date();
     $scope.selectedTime;
 
-    $scope.test = function () {
-        console.log("time " + $filter('date')($scope.selectedDate, 'EEEE') + "date     " + $scope.selectedTime)
+    //all available bus stop data
+    var allStops;
+    //bus stops in cities
+    var cityBusStopList;
+
+    $scope.$on('dataReady', function (event, obj) {
+        init();
+    });
+
+    init = function () {
+        console.log("plan controller");
+        //BusStopService.receiveBusData().then(
+        //    function (data) {
+        //        console.log("data received");
+        //        //init2();
+        //        allStops = BusStopService.getBusData();
+        //        getCities();
+        //    },
+        //    function () {
+        //        alert('error while fetching data from server')
+        //    });
+
+        allStops = BusStopService.getBusData();
+        getCities();
     };
-    //list of all available cities 
-    var cities;
+
+    var getCities = function () {
+        //names of available cities to display
+        $scope.cityNames = new Array();
+
+        cityBusStopList = DataDisplayService.getCities(allStops, $scope.cityNames);
+        console.log("cityBusStopList in plan contr " + cityBusStopList);
+        console.log("citiesList in plan contr " + $scope.cityNames);
+    };
+
     //variable used to prevent calling fuction multiple times (!digest loop error)
     var iterations = 0;
+
+    var IsSelectedStartStop = false;
+    var IsSelectedEndStop = false;
+
+
+
     //index number of selected city from list 
-    var cityNoStart = 0;
+    var cityStartIndex = 0;
     //index number of selected city from list 
-    var cityNoEnd = 0;
+    var cityEndIndex = 0;
     //name of selected city
     var selectedStartCity;
     //name of selected city
     var selectedEndCity;
-    //name of selected bus stop
-    var selectedBusStopStart;
-    //name of selected bus stop
-    var selectedBusStopEnd;
-    //list of all stops is given city
-    var cityStartStops;
-    //list of all stops is given city
-    var cityEndStops;
 
-    var startStopRefs;
-    var endStopRefs;
-
-    var citieslist;
-
-
-    var IsSelectedStartCity = false;
-    var IsSelectedEndCity = false;
-    var IsSelectedStartStop = false;
-    var IsSelectedEndStop = false;
-
-    $scope.routes = new Array();
-
-    init = function () {
-        console.log("toolbar controller2");
-        BusStopService.receiveBusData().then(
-            function (data) {
-                console.log("data received");
-                init2();
-            },
-            function () {
-                alert('error while fetching data444from server')
-            });
-    };
-
-    init2 = function () {
-        var stops = BusStopService.getBusData();
-        console.log("get city in plan contr");
-        console.log(stops);
-        if (typeof (stops) == "undefined") {
-
-            console.log("undefined");
-            init2();
-        }
-
-        citieslist = new Array();
-        cities = DataDisplayService.getCities(stops, citieslist);
-    };
-
-    //reads all available cities from data
-    $scope.getCities = function () {
-        return citieslist;
-    };
 
     $scope.selectCity = function (index, selector) {
         if (selector == 'start') {
-            console.log("is start city");
-            cityNoStart = index;
-            IsSelectedStartCity = true;
-            selectedStartCity = Object.keys(cities[index])[0];
-            cityStartStops = DataDisplayService.getStops(cities, cityNoStart, selectedStartCity);
+            cityStartIndex = index;
+            //  IsSelectedStartCity = true;
+            selectedStartCity = Object.keys(cityBusStopList[index])[0];
+            // console.log("city selected " + selectedStartCity);
+            $scope.busStopsStart = DataDisplayService.getStops(cityBusStopList, cityStartIndex, selectedStartCity);
+            //console.log("bus stops extracted");
         }
         else if (selector == 'end') {
-            console.log("is end city");
-            cityNoEnd = index;
-            IsSelectedEndCity = true;
-            selectedEndCity = Object.keys(cities[index])[0];
-            cityEndStops = DataDisplayService.getStops(cities, cityNoEnd, selectedEndCity);
+            cityEndIndex = index;
+            //  IsSelectedEndCity = true;
+            selectedEndCity = Object.keys(cityBusStopList[index])[0];
+            $scope.busStopsEnd = DataDisplayService.getStops(cityBusStopList, cityEndIndex, selectedEndCity);
         }
     };
 
-    $scope.getBusStopStart = function (city) {
-        if (IsSelectedStartCity) {
-            console.log("get bus stop start");
-            return cityStartStops;
-        }
-    };
+    //   $scope.startBusStop;
+    $scope.endBusStop;
 
-    $scope.getBusStopEnd = function (city) {
-        if (IsSelectedEndCity) {
-            console.log("get bus stop end");
-            return cityEndStops;
-        }
-    };
 
-    $scope.selectBusStop = function (busStop, selector) {
+    $scope.selectBusStop = function (selector, busStop) {
         if (selector == 'start') {
-            IsSelectedStartStop = true;
-            selectedBusStopStart = busStop;
-            console.log("start " + busStop);
+            // IsSelectedStartStop = true;
+            // selectedBusStopStart = busStop;
+            $scope.startBusStop = busStop;
+            console.log("start selected bus stop is" + $scope.startBusStop);
         }
         else if (selector == 'end') {
-            IsSelectedEndStop = true;
-            selectedBusStopEnd = busStop;
-            console.log("end " + busStop);
+            //  IsSelectedEndStop = true;
+            // selectedBusStopEnd = busStop;
+            console.log("end selected bus stop is" + $scope.endBusStop);
         }
     };
+
+
+    $scope.routes = new Array();
 
     $scope.getStopRefs = function () {
-        if (IsSelectedStartStop && IsSelectedEndStop) {
-
-
-            startStopRefs = DataDisplayService.getRefs(cities, cityNoStart, selectedStartCity, selectedBusStopStart);
-            endStopRefs = DataDisplayService.getRefs(cities, cityNoEnd, selectedEndCity, selectedBusStopEnd);
+        if ($scope.startBusStop != 'undefined' && $scope.endBusStop != 'undefined') {
+            var startStopRefs = DataDisplayService.getRefs(cityBusStopList, cityStartIndex, selectedStartCity, $scope.startBusStop);
+            endStopRefs = DataDisplayService.getRefs(cityBusStopList, cityEndIndex, selectedEndCity, $scope.endBusStop);
             console.log("startStopRefs" + startStopRefs);
             console.log("endStopRefs" + endStopRefs);
 
@@ -145,40 +122,45 @@
                 changes: data[i]['busChanges'],
                 details: {
                     busStopName: data[i]['busStopNameList'],
+                    busStopRef: data[i]['busStopRefList'],
                     busNumber: data[i]['busNumber'],
                     arrivalTime: data[i]['arrivalTime'],
                     busStopCoordinates: data[i]['coordinates']
                 },
             });
         }
-        return $scope.routes;
+        console.log($scope.routes);
     };
 
     $scope.sendCoordinatesToService = function (index) {
+        console.log("sending coordinates ");
+        console.log($scope.routes[index]['details']['busStopName']);
+        console.log($scope.routes[index]['details']['busStopRef']);
         $scope.$emit("sendCoordin", {
             coordinates: $scope.routes[index]['details']['busStopCoordinates'],
-            busStopName: $scope.routes[index]['details']['busStopName']
+            busStopName: $scope.routes[index]['details']['busStopName'],
+            busStopRef: $scope.routes[index]['details']['busStopRef']
         });
 
-        //var da = new Array();
-        //da.push({
-        //    busStopName: ["hotel prezydent", "partyzantow apena", "zywiecka hotel", "lenartowicza", "jutrzenki sam"],
-        //    coordinates: ["49.8236529, 19.0449636", "49.848266, 19.0452707", "49.8064226, 19.056156", "49.8117055, 19.0568656", "49.8112987, 19.0620607"]
-        //});
-        //da.push({
-        //    busStopName: ["Hotel Prezydent", "Dmowskiego Urząd Miejski", "Żywiecka Osiedle Grunwaldzkie", "Lenartowicza", "Jutrzenki SAM"],
-        //    coordinates: ["49.8234083, 19.0448538", "49.8201898, 19.051539", "49.8149968, 19.0556383", "49.8117055, 19.0568656", "49.8112987, 19.0620607"]
-        //});
-        //da.push({
-        //    busStopName: ["Hotel Prezydent", "3 Maja Dworzec", "Bora-Komorowskiego Gemini Park", "Osiedle Złote Łany", "Jutrzenki SAM"],
-        //    coordinates: ["49.8236529, 19.0449636", "49.8277174, 19.0447992", "49.8036574, 19.0495596", "49.8061335, 19.0625326", "49.8113982, 19.0622099"]
-        //});
-        //da.push({
-        //    busStopName: ["Hotel Prezydent", "Partyzantów Apena", "Partyzantów Folwark", "Bora-Komorowskiego Gemini Park", "Osiedle Złote Łany", "Jutrzenki SAM"],
-        //    coordinates: ["49.8234083, 19.0448538", "49.8088719, 19.0429593", "49.858266, 19.0552707", "49.8036574, 19.0495596", "49.8061335, 19.0625326", "49.8113982, 19.0622099"]
-        //});
+        //    var da = new Array();
+        //    da.push({
+        //        busStopName: ["hotel prezydent", "partyzantow apena", "Żywiecka Hotel", "lenartowicza", "Jutrzenki-Sam"],
+        //        coordinates: ["49.8236529, 19.0449636", "49.848266, 19.0452707", "49.8064226, 19.056156", "49.8117055, 19.0568656", "49.8112987, 19.0620607"]
+        //    });
+        //    da.push({
+        //        busStopName: ["Hotel Prezydent", "Dmowskiego Urząd Miejski", "Żywiecka Osiedle Grunwaldzkie", "Lenartowicza", "Jutrzenki-Sam"],
+        //        coordinates: ["49.8234083, 19.0448538", "49.8201898, 19.051539", "49.8149968, 19.0556383", "49.8117055, 19.0568656", "49.8112987, 19.0620607"]
+        //    });
+        //    da.push({
+        //        busStopName: ["Hotel Prezydent", "3 Maja Dworzec", "Bora-Komorowskiego Gemini Park", "Osiedle Złote Łany", "Jutrzenki-Sam"],
+        //        coordinates: ["49.8236529, 19.0449636", "49.8277174, 19.0447992", "49.8036574, 19.0495596", "49.8061335, 19.0625326", "49.8113982, 19.0622099"]
+        //    });
+        //    da.push({
+        //        busStopName: ["Hotel Prezydent", "Partyzantów Apena", "Partyzantów Folwark", "Bora-Komorowskiego Gemini Park", "Osiedle Złote Łany", "Jutrzenki-Sam"],
+        //        coordinates: ["49.8234083, 19.0448538", "49.8088719, 19.0429593", "49.858266, 19.0552707", "49.8036574, 19.0495596", "49.8061335, 19.0625326", "49.8113982, 19.0622099"]
+        //    });
 
-        //$scope.$emit('sendCoordin', { coordinates: da[index]['coordinates'], busStopName: da[index]['busStopName'] });
+        //    $scope.$emit('sendCoordin', { coordinates: da[index]['coordinates'], busStopName: da[index]['busStopName'] });
     };
 
     $scope.selectStartLocation = function () {
@@ -188,13 +170,19 @@
     $scope.$on('startLocationSelected', function (event, obj) {
         console.log("da received " + obj.cityName);
         $scope.startCity = obj.cityName;
-        cityStartStops = DataDisplayService.getStops(cities, cityNoStart, $scope.startCity);
-        $scope.getBusStopStart($scope.startCity);
-        $scope.startBusStop = obj.busStopName;
+        console.log("start loc selec reff " + obj.busStopRef);
+        $scope.busStopsStart = DataDisplayService.getStops(cityBusStopList, cityStartIndex, $scope.startCity);
 
+        for (var i = 0; i < $scope.busStopsStart.length; i++) {
+           // console.log($scope.busStopsStart[i]);
+            if (obj.busStopName == $scope.busStopsStart[i]) {
+                $scope.startBusStop = $scope.busStopsStart[i];
+                break;
+            }
+        };
+        console.log();
+        console.log("stop " + obj.busStopName);
         console.log($scope.startBusStop);
         $scope.$apply();
     });
-
-    init();
 }]);

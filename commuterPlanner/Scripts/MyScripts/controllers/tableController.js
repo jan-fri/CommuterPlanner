@@ -1,61 +1,62 @@
-﻿app.controller('PanelController', ['$scope', '$mdPanel', 'BusStopService', 'TimeTableService', 'DataDisplayService', function ($scope, $mdPanel, BusStopService, TimeTableService, DataDisplayService) {
+﻿app.controller('tableController', ['$scope', '$mdPanel', 'BusStopService', 'TimeTableService', 'DataDisplayService', function ($scope, $mdPanel, BusStopService, TimeTableService, DataDisplayService) {
 
-    $scope.stops = BusStopService.getBusData();
+    //all available bus stop data
+    var allStops;
+    //bus stops in cities
+    var cityBusStopList;
 
-    //list of all available cities 
-    var cities;
+    var init = function () {
+        console.log("init in table controller...");
+
+        allStops = BusStopService.getBusData();
+        console.log("stops in table controller " + allStops);
+        getCities();
+        getStops();
+    };    
+
+    var getCities = function () {
+        //names of available cities to display
+        $scope.cityNames = new Array();
+
+        cityBusStopList = DataDisplayService.getCities(allStops, $scope.cityNames);
+        console.log("cityBusStopList in table contr " + cityBusStopList);
+        console.log("citiesList in table contr " + $scope.cityNames);
+    };
+
     //index number of selected city from list 
     var cityNo = 0;
+    //variable used to prevent calling fuction multiple times (!digest loop error)
+    var iterations = 0;
     //name of selected city
     var selectedCity;
     //list of all stops is given city
     var cityStops;
-
-    //variable used to prevent calling fuction multiple times (!digest loop error)
-    var iterations = 0;
 
     //set index number of selected city
     $scope.selectCity = function (index) {
         console.log("index num " + index);
         cityNo = index;
         iterations = 0;
+
+        //clear bus line details array from earlier selection
         $scope.busLineDetails = [];
+        getStops();
     };
-
-    //calls getRelation() with name of selected stop
-    $scope.selectStop = function (name) {
-        console.log("selectStop");
-        iterations = 0;
-        getRelation(name);
-        $scope.busLineDetails = [];
-    };
-
-    //reads all available cities from data
-    $scope.getCities = function () {
-
-        $scope.citieslist = new Array();
-        cities = DataDisplayService.getCities($scope.stops, $scope.citieslist);
-        console.log("stops " + $scope.stops);
-        console.log("get cities " + cities);
-        return $scope.citieslist;
-    };
-
+    
     //reads stops in selected city
-    $scope.getStops = function () {
+    var getStops = function () {
+        $scope.stopList = new Array();
 
-        var stopList = new Array();
+        //selectedCity = Object.keys(cityBusStopList[cityNo])[0];
+        selectedCity = $scope.cityNames[cityNo];        
+        cityStops = cityBusStopList[cityNo][selectedCity];
 
-        selectedCity = Object.keys(cities[cityNo])[0];
-        cityStops = cities[cityNo][selectedCity];
-
-        stopList = DataDisplayService.getStops(cities, cityNo, selectedCity);
+        $scope.stopList = DataDisplayService.getStops(cityBusStopList, cityNo, selectedCity);
 
         //checks if getRelation() was already called, used to prevent calling fuction multiple times (!digest loop error)
         if (iterations == 0) {
-            getRelation(stopList[0]);
+            getRelation($scope.stopList[0]);
         }
-        return stopList;
-
     };
 
     //reads all available bus lines for selected bus stop
@@ -70,7 +71,6 @@
 
         //DataDisplayService.getRelations($scope.busLines, $scope.busNumbers, cityStops, stopName)
         for (var i = 0; i < cityStops.length; i++) {
-
             if (cityStops[i]['tags']['name'] == stopName) {
                 for (var j = 0; j < cityStops[i]['tags']['relation'].length; j++) {
                     var line = cityStops[i]['tags']['relation'][j]['line'];
@@ -88,13 +88,17 @@
             }
         }
 
-        //console.log("lines");
-        //console.log($scope.busLines);
+    };
+    //calls getRelation() with name of selected stop
+    $scope.selectStop = function (name) {
+        console.log("selectStop");
+        iterations = 0;
+        getRelation(name);
+        $scope.busLineDetails = [];
     };
 
     //show details for selected bus line
     $scope.seletBus = function (index) {
-
         $scope.busLineDetails = [];
         for (var i = 0; i < $scope.busLines.length; i++) {
             if ($scope.busLines[i]['line'] == $scope.busNumbers[index]) {
@@ -105,10 +109,10 @@
                 });
             }
         };
-
-        //console.log($scope.busLineDetails);
-        //console.log("dlugosc");
-        //console.log($scope.busLineDetails.length);
+        console.log("in select bus ... bus line details")
+        console.log($scope.busLineDetails);
+        console.log("length of bus line details ");
+        console.log($scope.busLineDetails.length);
 
 
         //$scope.busTimeTable = TimeTableService.receiveTimeTableData($scope.busLineDetails);
@@ -133,4 +137,5 @@
         };
 
     }
+    init();
 }]);

@@ -3,7 +3,6 @@
     var busStops;
 
     return {
-
         receiveBusData: function () {
             var deferred = $q.defer();
             console.log("check data");

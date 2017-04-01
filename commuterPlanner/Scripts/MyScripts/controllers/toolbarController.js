@@ -12,7 +12,7 @@
 
         var config = {
             attachTo: angular.element(document.body),
-            controller: 'PanelController',
+            controller: 'tableController',
             // controllerAs: 'ctrl',
             // disableParentScroll: this.disableParentScroll,
             templateUrl: '/Content/Custom/panel2.html',

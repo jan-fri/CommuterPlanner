@@ -1,9 +1,9 @@
 ﻿app.factory('DataDisplayService', function () {
     return {
-        getCities: function (stops, citieslist) {
+        getCities: function (stops, citiesList) {
             var cities = stops['busStops'];
             for (var i = 0; i < cities.length; i++) {
-                citieslist.push(Object.keys(cities[i])[0]);
+                citiesList.push(Object.keys(cities[i])[0]);
             }
             return cities;
         },
@@ -12,7 +12,7 @@
 
             var stopList = new Array();
             var cityStops = cities[cityNo][selectedCity];
-
+           // console.log("stops in the city " + cityStops);
             for (var i = 0; i < cityStops.length; i++) {
                 var busStop = cityStops[i]['tags']['name'];
 
