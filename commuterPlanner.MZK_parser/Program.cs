@@ -87,15 +87,130 @@ namespace commuterPlanner.MZK_parser
             List<BusStopLink> busStopLink = new List<BusStopLink>();
             List<string> processedLinks = new List<string>();
 
-            ExtractLinks(busStopLink, busLinkList, htmlWeb, processedLinks);      
+            ExtractLinks(busStopLink, busLinkList, htmlWeb, processedLinks);
+            GetBusStopList(busStopLink, busLinkList, htmlWeb, processedLinks);
 
             GetTimeTable();
 
 
         }
+        private static void GetBusStopList(List<BusStopLink> busStopLink, List<BusLink> busLinkList, HtmlWeb htmlWeb, List<string> processedLinks)
+        {
+            List<string> processedStops = new List<string>();
+            Dictionary<string, List<string>> processedRelations = new Dictionary<string, List<string>>();
+
+            System.IO.StreamWriter busStopsFile = new System.IO.StreamWriter("busStops.csv");
+            System.IO.StreamWriter createRelationsFile = new System.IO.StreamWriter("createRelations.csv");
+            System.IO.StreamWriter mergeRelationsFile = new System.IO.StreamWriter("mergeRelations.csv");
+
+            busStopsFile.WriteLine("ref,name,city");
+            createRelationsFile.WriteLine("busA,line,busB");
+            mergeRelationsFile.WriteLine("busA,line,busB");
+
+            foreach (var bLink in busLinkList)
+            {
+                if (bLink.busNumber == null)
+                    continue; // break;
+
+                string link = "http://www.mzkb-b.internetdsl.pl/" + bLink.linktoBus;
+                HtmlDocument doc = htmlWeb.Load(link);
+
+                var tab = doc.DocumentNode.SelectNodes("//table").Descendants("tr");
 
 
 
+
+                foreach (var stop in tab)
+                {
+                    IEnumerable<HtmlNode> stoplinks = stop.Descendants("a").Where(x => x.Attributes.Contains("href"));
+                    foreach (var sLink in stoplinks)
+                    {
+                        BusStopLink tempStopLink;
+                        if (sLink.InnerText.Contains('('))
+                        {
+                            string stopName = Regex.Replace(sLink.InnerText.Replace("&nbsp;", ""), "(\\(.*\\))", "");
+
+                            string stopNo = sLink.Attributes["href"].Value.Split('_', '_')[1];
+                            string extractedStopLink = "p_" + stopNo + "_l.htm";
+
+                            tempStopLink = new BusStopLink
+                            {
+                                stopRef = sLink.InnerText.Split('(', ')')[1],
+                                stopLink = extractedStopLink,
+                                stopName = stopName
+                            };
+
+                            if (processedLinks.Contains(extractedStopLink))
+                                break;
+                            else
+                                processedLinks.Add(extractedStopLink);
+
+                            busStopLink.Add(tempStopLink);
+                        }
+                    }
+                }
+
+                processedLinks.Clear();
+
+                int index = 0;
+                StringBuilder busStopBuilder = new StringBuilder();
+                StringBuilder createRelationsBuilder = new StringBuilder();
+                StringBuilder mergeRelationsBuilder = new StringBuilder();
+
+                foreach (var busStop in busStopLink)
+                {
+                    if (!processedStops.Contains(busStop.stopRef))
+                    {
+                        busStopBuilder.Append(busStop.stopRef + "," + busStop.stopName + "," + "Bielsko Biała" + "\n");
+                        processedStops.Add(busStop.stopRef);
+                    }
+
+                    if (index < busStopLink.Count - 1)
+                    {
+                        bool relationCreated = false;
+                        bool relationExists = false;
+
+                        if (processedRelations.ContainsKey(busStop.stopRef))
+                        {
+                            relationExists = true;
+                            foreach (var rel in processedRelations[busStop.stopRef])
+                            {
+                                if (rel == busStopLink[index + 1].stopRef)
+                                {
+                                    mergeRelationsBuilder.Append(busStop.stopRef + "," + bLink.busNumber + "," + busStopLink[index + 1].stopRef + "\n");
+                                    relationCreated = true;
+                                    break;
+                                }
+                            }
+                            processedRelations[busStop.stopRef].Add(busStopLink[index + 1].stopRef);
+                        }
+
+                        if (!relationCreated)
+                        {
+                            createRelationsBuilder.Append(busStop.stopRef + "," + bLink.busNumber + "," + busStopLink[index + 1].stopRef + "\n");
+                            if (!relationExists)
+                            {
+                                processedRelations.Add(busStop.stopRef, new List<string>() { busStopLink[index + 1].stopRef });
+                            }
+                        }
+                    }
+                    index++;
+                }
+
+                busStopLink.Clear();
+
+                busStopsFile.WriteLine(busStopBuilder);
+                createRelationsFile.WriteLine(createRelationsBuilder);
+                mergeRelationsFile.WriteLine(mergeRelationsBuilder);
+            }
+            busStopsFile.Close();
+            createRelationsFile.Close();
+            mergeRelationsFile.Close();
+        }
+
+
+
+        //extracts bus line numbers, corresponding links to bus stops and route direction 
         private static void MainPageExtract(IEnumerable<HtmlNode> table, List<BusLink> busLinkList)
         {
             foreach (var item in table)
@@ -156,14 +271,16 @@ namespace commuterPlanner.MZK_parser
             }
 
             JArray busLinks = (JArray)JToken.FromObject(busLinkList);
-            System.IO.File.WriteAllText("buss4.json", busLinks.ToString());
+            System.IO.File.WriteAllText("buss5.json", busLinks.ToString());
         }
-        private static void ExtractLinks(List<BusStopLink> busStopLink, List<BusLink> busLinkList, HtmlWeb htmlWeb, List<string> processsedLinks)
+
+        //extracts bus stops for each bus line
+        private static void ExtractLinks(List<BusStopLink> busStopLink, List<BusLink> busLinkList, HtmlWeb htmlWeb, List<string> processedLinks)
         {
             foreach (var bLink in busLinkList)
             {
                 if (bLink.busNumber == null)
-                    break;
+                    continue;
 
                 string link = "http://www.mzkb-b.internetdsl.pl/" + bLink.linktoBus;
                 HtmlDocument doc = htmlWeb.Load(link);
@@ -192,13 +309,13 @@ namespace commuterPlanner.MZK_parser
                                 stopName = stopName
                             };
 
-                            if (processsedLinks.Contains(extractedStopLink))
+                            if (processedLinks.Contains(extractedStopLink))
                             {
                                 break;
                             }
                             else
                             {
-                                processsedLinks.Add(extractedStopLink);
+                                processedLinks.Add(extractedStopLink);
                             }
 
                             tempStopLink.timeTableLink = new List<BusNo2Stop>(ExtractTimeTableLinks(extractedStopLink));
@@ -220,10 +337,11 @@ namespace commuterPlanner.MZK_parser
                         }
                     }
                 }
+
             }
 
             JArray stops = (JArray)JToken.FromObject(busStopLink);
-            System.IO.File.WriteAllText("stops7.json", stops.ToString());
+            System.IO.File.WriteAllText("stops8.json", stops.ToString());
         }
         private static List<BusNo2Stop> ExtractTimeTableLinks(string extractedStopLink)
         {
@@ -251,7 +369,7 @@ namespace commuterPlanner.MZK_parser
 
             JArray busStopArray;
 
-            using (StreamReader file = File.OpenText("stops7.json"))
+            using (StreamReader file = File.OpenText("stops8.json"))
             using (JsonTextReader reader = new JsonTextReader(file))
             {
                 busStopArray = (JArray)JToken.ReadFrom(reader);
@@ -292,7 +410,7 @@ namespace commuterPlanner.MZK_parser
             }
 
             JObject busStops = (JObject)JToken.FromObject(busStop);
-            System.IO.File.WriteAllText("timeTable2.json", busStops.ToString());
+            System.IO.File.WriteAllText("timeTable35.json", busStops.ToString());
 
         }
 

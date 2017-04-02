@@ -23,6 +23,7 @@ namespace commuterPlanner.Services
     {
         public int busChanges;
         public List<string> busStopNameList;
+        public List<string> busStopCity;
         public List<string> busStopRefList;
         public List<string> coordinates;
         public List<string> busNumber;
@@ -142,6 +143,8 @@ namespace commuterPlanner.Services
                     List<string> busStopsName = new List<string>();
                     //all bus stops refs within route
                     List<string> busStopsRef = new List<string>();
+                    //cities where the bus stops are
+                    List<string> busStopCity = new List<string>();
 
                     //all possible relations
                     List<Relation> relations = new List<Relation>();
@@ -157,8 +160,9 @@ namespace commuterPlanner.Services
                         foreach (var node in nodes)
                         {
                             var nodeProperties = node.Properties.Values.ToList();
-                            busStopsName.Add(nodeProperties[1].ToString());
+                            busStopsName.Add(nodeProperties[2].ToString());
                             busStopsRef.Add(nodeProperties[0].ToString());
+                            busStopCity.Add(nodeProperties[1].ToString());
                         }
 
                         //saving relation to relations list variable
@@ -281,12 +285,16 @@ namespace commuterPlanner.Services
                     if (isValidRoute)
                     {
                         var coordinates = getBusStopsCoordinates(busStopsRef);
+                        if (coordinates.Count != busStopsName.Count)
+                            break;
+
 
                         routes.Add(new Route
                         {
                             busChanges = changes.Min(),
                             busNumber = new List<string>(allPaths[shortestPath]),
                             busStopNameList = new List<string>(busStopsName),
+                            busStopCity = new List<string>(busStopCity),
                             busStopRefList = new List<string>(busStopsRef),
                             coordinates = new List<string>(coordinates),
                             arrivalTime = new List<string>(arrivalTimeList)
@@ -318,6 +326,9 @@ namespace commuterPlanner.Services
                 JObject busStop = busStops[selectedCity].Values<JObject>()
                     .Where(m => m["tags"]["ref"].Value<string>() == stopRef)
                     .FirstOrDefault();
+
+                if (busStop == null)
+                    break;
 
                 var lat = (string)busStop["lat"];
                 var lon = (string)busStop["lon"];

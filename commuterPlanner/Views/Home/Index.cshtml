@@ -46,29 +46,14 @@
                                     <label>Godzina</label>
                                     <input ng-model="selectedTime">
                                 </md-input-container>
-                                <md-button style="border: solid;" ng-click="sendCoordinatesToService(0)">
-                                    <strong>test</strong>
-                                </md-button>
                                 <md-divider></md-divider>
                                 <strong>Miejsce rozpoczęcia:</strong>
-
-                                @*<select placeholder="Przystanek początkowy: " ng-model="startCity" ng-options="startCity for startCity in cityNames" ></select>*@
-
                                 <md-select placeholder="Miasto: " ng-model="startCity">
                                     <md-option ng-value="startCity" ng-repeat="startCity in cityNames" ng-click="selectCity($index, 'start')">{{startCity}}</md-option>
                                 </md-select>
-
-
                                 <md-select placeholder="Przystanek końcowy" ng-model="startBusStop">
-                                    <md-option ng-bind="startBusStop" ng-value="startBusStop" ng-repeat="startBusStop in busStopsStart" ng-click="selectBusStop('start', startBusStop)">{{startBusStop}}</md-option>
+                                    <md-option ng-value="startBusStop" ng-repeat="startBusStop in busStopsStart" ng-click="selectBusStop('start', startBusStop)">{{startBusStop}}</md-option>
                                 </md-select>
-
-                                @*<select placeholder="Przystanek początkowy: " style="width:auto;display:none" ng-model="startBusStop" ng-options="startBusStop for startBusStop in busStopsStart" ng-click="selectBusStop('start')"></select>
-                                <md-select placeholder="Przystanek początkowy: " ng-model="startBusStop">
-                                    <md-option ng-bind="startBusStop" ng-value="startBusStop" ng-repeat="startBusStop in busStopsStart" ng-click="selectBusStop('start')"></md-option>
-                                </md-select>*@
-
-                                <md-divider></md-divider><br />
                                 <md-button style="border: solid;" ng-click="selectStartLocation()">
                                     <strong>Wskaż na mapie</strong>
                                 </md-button>
@@ -80,7 +65,7 @@
                                 <md-select placeholder="Przystanek końcowy" ng-model="endBusStop">
                                     <md-option ng-value="endBusStop" ng-repeat="endBusStop in busStopsEnd" ng-click="selectBusStop('end')">{{endBusStop}}</md-option>
                                 </md-select>
-                                <md-button style="border: solid;">
+                                <md-button style="border: solid;" ng-click="selectEndLocation()">
                                     <strong>Wskaż na mapie</strong>
                                 </md-button>
                                 <md-divider></md-divider>
@@ -116,9 +101,10 @@
                                                     <p> <b>Ilość przesiadek: {{ route.changes }} </b></p>
                                                 </div>
                                             </div>
-                                            <md-button style="border: solid;" ng-click="sendCoordinatesToService($index)">
+                                            <md-button style="border: solid;" ng-click="sendCoordinatesToMap($index)">
                                                 <strong>Pokaż na mapie</strong>
                                             </md-button>
+                                            <md-divider></md-divider>
                                         </md-list-item>
                                     </div>
                                 </md-list>

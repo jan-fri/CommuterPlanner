@@ -51,7 +51,7 @@
         selectedCity = $scope.cityNames[cityNo];        
         cityStops = cityBusStopList[cityNo][selectedCity];
 
-        $scope.stopList = DataDisplayService.getStops(cityBusStopList, cityNo, selectedCity);
+        $scope.stopList = DataDisplayService.getStops(cityBusStopList, selectedCity);
 
         //checks if getRelation() was already called, used to prevent calling fuction multiple times (!digest loop error)
         if (iterations == 0) {

@@ -22,6 +22,12 @@
         coordinates = obj['coordinates'];
         busStopNames = obj['busStopName'];
         busStopRefs = obj['busStopRef'];
+        cities = obj['busStopCity'];
+        console.log("map - coordin received");
+        console.log("coord " + coordinates);
+        console.log("city " + cities);
+        console.log("bus stop name " + busStopNames);
+        console.log("bus stop ref " + busStopRefs);
         showRoute(true, true);
 
     });
@@ -35,23 +41,20 @@
         allStops = BusStopService.getBusData();
         console.log(allStops);
         var arrayIndex = 0;
-        // console.log("length" + allStops['busStops'].length);
+
         for (var i = 0; i < allStops['busStops'].length; i++) {
-            // console.log(allStops['busStops'][i]);
             var cityName = Object.keys(allStops['busStops'][i]);
-            //  console.log(allStops['busStops'][i][cityName].length);
             for (var j = 0; j < allStops['busStops'][i][cityName].length; j++) {
-                //  console.log(allStops['busStops'][i][cityName]);
                 var lat = "" + allStops['busStops'][i][cityName][j]['lat'];
                 var lon = "" + allStops['busStops'][i][cityName][j]['lon'];
                 var latlon = lat + ", " + lon;
                 var name = allStops['busStops'][i][cityName][j]['tags']['name'];
                 var ref = allStops['busStops'][i][cityName][j]['tags']['ref'];
 
-                // coordinates.push({ latlon });
                 coordinates[arrayIndex] = latlon;
                 busStopNames[arrayIndex] = name;
                 busStopRefs[arrayIndex] = ref;
+                cities[arrayIndex] = cityName;
 
                 arrayIndex++;
             }
@@ -77,27 +80,25 @@
         }
 
 
-        customCircleMarker = L.CircleMarker.extend({
-            options: {
-                someCustomProperty: '',
-            }
-        });
+        //customCircleMarker = L.CircleMarker.extend({
+        //    options: {
+        //        someCustomProperty: '',
+        //    }
+        //});
 
         var style = { color: 'blue' }
-        //console.log("coordinates.length " + coordinates.length);
         for (var i = 0; i < coordinates.length; i++) {
             var str = coordinates[i].split(", ");
-           // console.log(str[0], str[1]);
             var stop = L.circleMarker([str[0], str[1]], {
                 color: 'blue',
                 fillColor: '#f03',
                 fillOpacity: 0.5,
                 name: busStopNames[i],
-                city: 'Bielsko Biała',
+                city: cities[i],
                 ref: busStopRefs[i]
 
             })
-                .bindPopup(busStopNames[i])
+                .bindPopup("<b>" + busStopNames[i] + "</b>" + "<br>" + cities[i])
                 .on('click', onMarkerClick);
 
 
@@ -115,8 +116,6 @@
             }
             
         }
-        console.log("ba,");
-        console.log(lineRouteArray);
 
         stopLayer = L.layerGroup(stopArray).addTo(map);
         popupLayer = L.layerGroup(popupArray).addTo(map);
@@ -126,10 +125,14 @@
     };
 
     var enableClickStart = false;
+    var enableClickEnd = false;
 
     $rootScope.$on('selectStartLocation', function (event, obj) {
-        console.log("enable click start " + obj['enableClickStart']);
         enableClickStart = obj['enableClickStart'];
+    });
+
+    $rootScope.$on('selectEndLocation', function (event, obj) {
+        enableClickEnd = obj['enableClickEnd'];
     });
 
     function onMarkerClick(e) {
@@ -141,8 +144,13 @@
         console.log("enable click start " + enableClickStart);
         if (enableClickStart) {
             console.log("sending selected point to plan control, bus stop - " + name);
-            $rootScope.$broadcast('startLocationSelected', { busStopRef: ref, busStopName: name, cityName: city })
+            $rootScope.$broadcast('startLocationSelected', { busStopRef: ref, cityName: city })
             enableClickStart = false;
+        }
+        if (enableClickEnd) {
+            console.log("sending selected point to plan control, bus stop - " + name);
+            $rootScope.$broadcast('endLocationSelected', { busStopRef: ref, cityName: city })
+            enableClickEnd = false;
         }
     };
 }]);
