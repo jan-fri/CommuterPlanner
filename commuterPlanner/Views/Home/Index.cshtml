@@ -34,7 +34,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#leftCollapse1">Plan podróży</a>
+                            <a data-toggle="collapse" href="#leftCollapse1"><b>Plan podróży</b></a>
                         </h4>
                     </div>
                     <div id="leftCollapse1" class="panel-collapse collapse in">
@@ -42,33 +42,41 @@
                             <md-content>
                                 <strong>Data i czas:</strong>
                                 <md-datepicker ng-model="selectedDate" md-placeholder="Wybierz datę"></md-datepicker>
-                                <label>Godzina:</label>
-                                <div uib-timepicker ng-model="selectedTime" show-meridian="false"></div>
+                                <div>
+                                    <label>Godzina:</label>
+                                    <div uib-timepicker ng-model="selectedTime" show-meridian="false"></div>
+                                </div>
                                 <md-divider></md-divider>
-                                <strong>Miejsce rozpoczęcia:</strong>
+                                <div>
+                                    <br />
+                                    <strong>Miejsce rozpoczęcia:</strong>
+                                    <md-button class="myButton1" style="border: solid;" ng-click="selectStartLocation()">
+                                        <strong>Wskaż na mapie</strong>
+                                    </md-button>
+                                </div>
                                 <md-select placeholder="Miasto: " ng-model="startCity">
                                     <md-option ng-value="startCity" ng-repeat="startCity in cityNames" ng-click="selectCity($index, 'start')">{{startCity}}</md-option>
                                 </md-select>
                                 <md-select placeholder="Przystanek końcowy" ng-model="startBusStop">
                                     <md-option ng-value="startBusStop" ng-repeat="startBusStop in busStopsStart" ng-click="selectBusStop('start', startBusStop)">{{startBusStop}}</md-option>
                                 </md-select>
-                                <md-button style="border: solid;" ng-click="selectStartLocation()">
-                                    <strong>Wskaż na mapie</strong>
-                                </md-button>
-                                <md-divider></md-divider><br />
-                                <strong>Cel:</strong>
+
+                                <div>
+                                    <br />
+                                    <strong>Cel:</strong>
+                                    <md-button class="myButton1" style="border: solid;" ng-click="selectEndLocation()">
+                                        <strong>Wskaż na mapie</strong>
+                                    </md-button>
+                                </div>
                                 <md-select placeholder="Miasto" ng-model="endCity">
                                     <md-option ng-value="endCity" ng-repeat="endCity in cityNames" ng-click="selectCity($index, 'end')">{{endCity}}</md-option>
                                 </md-select>
                                 <md-select placeholder="Przystanek końcowy" ng-model="endBusStop">
                                     <md-option ng-value="endBusStop" ng-repeat="endBusStop in busStopsEnd" ng-click="selectBusStop('end')">{{endBusStop}}</md-option>
                                 </md-select>
-                                <md-button style="border: solid;" ng-click="selectEndLocation()">
-                                    <strong>Wskaż na mapie</strong>
-                                </md-button>
-                                <md-divider></md-divider>
-                                <md-button style="border: solid;" ng-click="getStopRefs()">
-                                    <strong>Znajdź połączenia</strong>
+
+                                <md-button class="myButton2" style="border: solid;" ng-click="getStopRefs()">
+                                    <strong data-toggle="collapse" href="#leftCollapse2" >Znajdź połączenia</strong>
                                 </md-button>
                             </md-content>
                         </div>
@@ -77,7 +85,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" href="#leftCollapse2">Lista połączeń</a>
+                            <a data-toggle="collapse" href="#leftCollapse2"><b>Lista połączeń</b></a>
                         </h4>
                     </div>
                     <div id="leftCollapse2" class="panel-collapse collapse">
@@ -87,11 +95,13 @@
                                     <div class="panel-group" id="accordion3">
                                         <md-list-item class="md-3-line" ng-value="route" ng-repeat="route in routes">
                                             <div class="md-list-item-text" layout="column">
-                                                <h3>Trasa nr {{ route.index }}:</h3>
-                                                <md-button style="border: solid;" ng-click="sendCoordinatesToMap($index)">
-                                                    <strong>Pokaż na mapie</strong>
-                                                </md-button>
-                                                <a data-toggle="collapse" ng-href="#{{ $index }}">szczegóły</a>
+                                                <div>
+                                                    <h3>Trasa nr {{ route.index }}:</h3>
+                                                    <md-button class="myButton1" style="border: solid;" ng-click="sendCoordinatesToMap($index)">
+                                                        <strong>Pokaż na mapie</strong>
+                                                    </md-button>
+                                                </div>
+                                                <a data-toggle="collapse" ng-href="#{{ $index }}"><u>szczegóły</u></a>
                                                 <div layout-align="center" ng-attr-id="{{ $index }}" class="panel-collapse collapse in">
                                                     <div ng-repeat="stopName in route.details.busStopName track by $index">
                                                         <pre>godz: {{ route.details.arrivalTime[$index] }} <br /><b>{{ stopName }} </b></pre>
@@ -100,9 +110,9 @@
                                                     </div>
                                                     <p> <b>Ilość przesiadek: {{ route.changes }} </b></p>
                                                 </div>
-                                                
+
                                             </div>
-                                            
+
                                             <md-divider></md-divider>
                                         </md-list-item>
                                     </div>
@@ -167,108 +177,3 @@
     </div>
 
 </div>
-@*<div class="container body-content">
-    </div>
-        <div ng-controller="MapController">
-            <div id="mapGoo">
-
-
-            </div>
-
-        </div>*@
-
-@*<script>
-        var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-            maxZoom: 18,
-            id: 'mapbox.mapbox-streets-v9',
-            accessToken: 'pk.eyJ1IjoiamFuZnJpIiwiYSI6ImNpdnd2cGU3ZjAwMHUyeXBrNWp3NjU2c2QifQ.fMyzp13X760ZcmcjyFzWog'
-        }).addTo(mymap);
-
-    </script>*@
-@*<script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiamFuZnJpIiwiYSI6ImNpdnd2cGU3ZjAwMHUyeXBrNWp3NjU2c2QifQ.fMyzp13X760ZcmcjyFzWog';
-    var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9'
-    });
-    </script>*@
-@*<script>
-        var map = L.map('mapid').setView([51.505, -0.09], 13);
-
-        L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        L.marker([51.5, -0.09]).addTo(map)
-            .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-            .openPopup();
-
-    </script>*@
-
-@*<md-toolbar layout="row">
-        <md-button class="menu" ng-click="toggleSidenav();"><i class="material-icons">menu</i></md-button>
-        <h3>Hello Toolbar</h3>
-    </md-toolbar>*@
-
-
-
-@*<md-content id="body-part" flex layout="row" layout-fill>
-        <md-sidenav md-disable-backdrop class="md-whiteframe-7dp" md-component-id="left-side-nav"
-                    flex style="background: cyan">
-            <span>Hello Nav..!!</span>
-            <span>Hello Nav..!!</span><br>
-            <span>Hello Nav..!!</span><br>
-            <span>Hello Nav..!!</span><br>
-            <span>Hello Nav..!!</span><br>
-            <span>Hello Nav..!!</span><br>
-            <span>Hello Nav..!!</span><br>
-           </md-sidenav>
-        <div class="container body-content" flex style="padding: 10px;overflow-y: scroll; background: darkcyan">
-            <span>Hello Content...!</span><br>
-            <span>Hello Content...!</span>
-            <br>
-            <span>Hello Content...!</span>
-            <br>
-            <span>Hello Content...!</span>
-            <br>
-            <span>Hello Content...!</span>
-            <br>
-            <span>Hello Content...!</span>
-            <br>
-
-            <br>
-        </div>
-    </md-content>*@
-
-@*<div>
-        <h1>ASP.NET</h1>
-        <p>ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </div>
-    </div>*@
-
-
-
