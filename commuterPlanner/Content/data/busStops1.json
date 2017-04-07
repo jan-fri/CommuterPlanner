@@ -24,9 +24,6 @@
 							}, {
 								"line": "24",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "24BIS",
-								"route": "Dluga Zajezdnia MZK"
 							}],
 						"ref": "51"							
 					}
@@ -166,9 +163,6 @@
 							}, {
 								"line": "24",
 								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "24BIS",
-								"route": "Mikuszowice Blonia ATH"
 							}],
 						"ref": "50"
 					}
@@ -205,9 +199,6 @@
 						"relation": [{
 								"line": "50",
 								"route": "Osiedle Karpackie"
-							}, {
-								"line": "32",
-								"route": "Osiedle Karpackie"
 							}], 
 						"ref": "338"
 					}
@@ -220,9 +211,6 @@
 						"relation": [{
 								"line": "50",
 								"route": "Osiedle Karpackie"
-							}, {
-								"line": "32",
-								"route": "Osiedle Karpackie"
 							}], 
 						"ref": "153"
 					}
@@ -234,9 +222,6 @@
 						"name": "Katowicka/Skrzyżowanie",
 						"relation": [{
 								"line": "50",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "32",
 								"route": "Osiedle Karpackie"
 							}], 
 						"ref": "154"
@@ -298,15 +283,6 @@
 						"relation": [{
 								"line": "50",
 								"route": "Czechowice-Dziedzice Silesia"
-							}, {
-								"line": "32",
-								"route": "Halcnów Kosciól"
-							}, {
-								"line": "33",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "51",
-								"route": "Warszawska Dworzec"
 							}], 
 						"ref": "220"
 					}
@@ -319,9 +295,6 @@
 						"relation": [{
 								"line": "50",
 								"route": "Czechowice-Dziedzice Silesia"
-							}, {
-								"line": "32",
-								"route": "Halcnów Kosciól"
 							}], 
 						"ref": "219"
 					}
@@ -333,9 +306,6 @@
 						"name": "Warszawska/Tesco",
 						"relation": [{
 								"line": "50",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "32",
 								"route": "Osiedle Karpackie"
 							}], 
 						"ref": "344"
@@ -349,9 +319,6 @@
 						"relation": [{
 								"line": "50",
 								"route": "Czechowice-Dziedzice Silesia"
-							}, {
-								"line": "32",
-								"route": "Halcnów Kosciól"
 							}], 
 						"ref": "345"
 					}
@@ -398,12 +365,6 @@
 							}, {
 								"line": "19",
 								"route": "Grazynskiego Fiat II"
-							}, {
-								"line": "31",
-								"route": "Podwale Dworzec "
-							}, {
-								"line": "33",
-								"route": "Warszawska Dworzec"
 							}],
 						"ref": "270"
 					}
@@ -423,12 +384,6 @@
 							}, {
 								"line": "19",
 								"route": "Grazynskiego Fiat II"
-							}, {
-								"line": "31",
-								"route": "Podwale Dworzec "
-							}, {
-								"line": "33",
-								"route": "Warszawska Dworzec"
 							}],
 						"ref": "272"
 					}
@@ -503,21 +458,6 @@
 							}, {
 								"line": "24",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "26",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "27",
-								"route": "Osiedle Sarni Stok"
-							}, {
-								"line": "28",
-								"route": "Osiedle Wojska Polskiego"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec L"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec S"
 							}],
 						"ref": "3"
 					}
@@ -548,21 +488,6 @@
 							}, {
 								"line": "24",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "25",
-								"route": "Mazancowice Spóldzielnia"
-							}, {
-								"line": "28",
-								"route": "Osiedle Wojska Polskiego"
-							}, {
-								"line": "32",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "36",
-								"route": "Dworcowa Poczta"
-							}, {
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
 							}],
 						"ref": "268"
 					}
@@ -601,9 +526,6 @@
 						"relation": [{
 								"line": "3",
 								"route": "Osiedle Karpackie"
-							}, {
-								"line": "29",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "43"
@@ -617,9 +539,6 @@
 						"relation": [{
 								"line": "3",
 								"route": "Osiedle Karpackie"
-							}, {
-								"line": "29",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "38"
@@ -632,9 +551,6 @@
 						"name": "Bestwińska Krompark",
 						"relation": [{
 								"line": "3",
-								"route": "Komorowice Sosna"
-							}, {
-								"line": "29",
 								"route": "Komorowice Sosna"
 							}
 						],
@@ -649,9 +565,6 @@
 						"relation": [{
 								"line": "3",
 								"route": "Osiedle Karpackie"
-							}, {
-								"line": "29",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "40"
@@ -664,9 +577,6 @@
 						"name": "Bestwińska Oczyszczalnia",
 						"relation": [{
 								"line": "3",
-								"route": "Komorowice Sosna"
-							}, {
-								"line": "29",
 								"route": "Komorowice Sosna"
 							}
 						],
@@ -690,9 +600,6 @@
 							}, {
 								"line": "23",
 								"route": "Szpital Wojewódzki"
-							}, {
-								"line": "37",
-								"route": "Hala Widowiskowo-Sportowa"
 							}
 						],
 						"ref": "329"
@@ -730,12 +637,6 @@
 							}, {
 								"line": "23",
 								"route": "Szpital Wojewódzki"
-							}, {
-								"line": "37",
-								"route": "Hala Widowiskowo-Sportowa"
-							}, {
-								"line": "38",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "388"
@@ -770,24 +671,6 @@
 							}, {
 								"line": "24",
 								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "25",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "28",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "24BIS",
-								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "32",
-								"route": "Halcnów Kosciól"
-							}, {
-								"line": "36",
-								"route": "Czechowice Dziedzice Proseat"
-							}, {
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
 							}
 						],
 						"ref": "266"
@@ -836,18 +719,6 @@
 							}, {
 								"line": "23",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "31",
-								"route": "Halcnów Granica"
-							}, {
-								"line": "33",
-								"route": "Mazancowice Osiedle"
-							}, {
-								"line": "38",
-								"route": "Cygański Las"
-							}, {
-								"line": "51",
-								"route": "Mazańcowice Osiedle"
 							}
 						],
 						"ref": "275"
@@ -876,15 +747,6 @@
 							}, {
 								"line": "23",
 								"route": "Szpital Wojewódzki"
-							}, {
-								"line": "33",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "38",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "51",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "334"
@@ -929,12 +791,6 @@
 							}, {
 								"line": "12",
 								"route": "Halcnów Kosciól"
-							}, {
-								"line": "37",
-								"route": "Hala Widowiskowo-Sportowa"
-							}, {
-								"line": "38",
-								"route": "Warszawska Dworzec"
 							}],
 						"ref": "76"
 					}
@@ -950,12 +806,6 @@
 							}, {
 								"line": "12",
 								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "37",
-								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "38",
-								"route": "Cygański Las"
 							}],
 						"ref": "77"
 					}
@@ -1007,18 +857,6 @@
 							}, {
 								"line": "23",
 								"route": "Szpital Wojewódzki"
-							}, {
-								"line": "31",
-								"route": "Podwale Dworzec "
-							}, {
-								"line": "33",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "38",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "51",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "274"
@@ -1050,9 +888,6 @@
 							}, {
 								"line": "24",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec L"
 							}
 						],
 						"ref": "257"
@@ -1101,24 +936,6 @@
 							}, {
 								"line": "24",
 								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "26",
-								"route": "Wapienna Osiedle"
-							}, {
-								"line": "27",
-								"route": "Lipnik Dolny"
-							}, {
-								"line": "28",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "24BIS",
-								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec L"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec S"
 							}
 						],
 						"ref": "4"
@@ -1150,9 +967,6 @@
 							}, {
 								"line": "23",
 								"route": "Szpital Wojewódzki"
-							}, {
-								"line": "38",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "208"
@@ -1162,11 +976,10 @@
 					"lat": 49.8540897,
 					"lon": 18.9437115,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecze Dolne Boisko",
-						"relation": [{
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
-							}],
+						"public_transport": "stop_position",
 						"ref": "2484"
 					}
 				}, {
@@ -1184,12 +997,6 @@
 							}, {
 								"line": "21",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec S"
-							}, {
-								"line": "38",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "47"
@@ -1209,12 +1016,6 @@
 							}, {
 								"line": "21",
 								"route": "Osiedle Polskich Skrzydel"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec L"
-							}, {
-								"line": "38",
-								"route": "Cygański Las"
 							}
 						],
 						"ref": "46"
@@ -1243,15 +1044,6 @@
 							}, {
 								"line": "23",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "33",
-								"route": "Mazancowice Osiedle"
-							}, {
-								"line": "38",
-								"route": "Cygański Las"
-							}, {
-								"line": "51",
-								"route": "Mazańcowice Osiedle"
 							}
 						],
 						"ref": "335"
@@ -1298,27 +1090,6 @@
 							}, {
 								"line": "24",
 								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "25",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "28",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "29",
-								"route": "Komorowice Sosna"
-							}, {
-								"line": "24BIS",
-								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "32",
-								"route": "Halcnów Kosciól"
-							}, {
-								"line": "36",
-								"route": "Czechowice Dziedzice Proseat"
-							}, {
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
 							}
 						],
 						"ref": "264"
@@ -1365,21 +1136,6 @@
 							}, {
 								"line": "24",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "25",
-								"route": "Mazancowice Spóldzielnia"
-							}, {
-								"line": "28",
-								"route": "Osiedle Wojska Polskiego"
-							}, {
-								"line": "32",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "36",
-								"route": "Dworcowa Poczta"
-							}, {
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
 							}
 						],
 						"ref": "265"
@@ -1420,15 +1176,6 @@
 							}, {
 								"line": "24",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "28",
-								"route": "Osiedle Wojska Polskiego"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec L"
-							}, {
-								"line": "37",
-								"route": "Osiedle Langiewicza"
 							}
 						],
 						"ref": "261"
@@ -1493,30 +1240,6 @@
 							}, {
 								"line": "24",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "26",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "27",
-								"route": "Osiedle Sarni Stok"
-							}, {
-								"line": "28",
-								"route": "Osiedle Wojska Polskiego"
-							}, {
-								"line": "33",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec L"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec S"
-							}, {
-								"line": "38",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "51",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "2"
@@ -1628,13 +1351,7 @@
 							}, {
 								"line": "50",
 								"route": "Czechowice-Dziedzice Silesia"
-							}, {
-								"line": "28",
-								"route": "Osiedle Wojska Polskiego"
-							}, {
-								"line": "32",
-								"route": "Halcnów Kosciól"
-							}
+							} 
 						],
 						"ref": "308"
 					}
@@ -1665,12 +1382,6 @@
 							}, {
 								"line": "23",
 								"route": "Szpital Wojewódzki"
-							}, {
-								"line": "28",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "32",
-								"route": "Osiedle Karpackie"
 							}
 						],
 						"ref": "12"
@@ -1702,12 +1413,6 @@
 							}, {
 								"line": "23",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "28",
-								"route": "Osiedle Wojska Polskiego"
-							}, {
-								"line": "32",
-								"route": "Halcnów Kosciól"
 							}
 						],
 						"ref": "11"
@@ -1745,12 +1450,6 @@
 							}, {
 								"line": "23",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "37",
-								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "38",
-								"route": "Cygański Las"
 							}
 						],
 						"ref": "389"
@@ -1785,9 +1484,6 @@
 							}, {
 								"line": "22",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "38",
-								"route": "Cygański Las"
 							}
 						],
 
@@ -1823,12 +1519,6 @@
 							}, {
 								"line": "22",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "37",
-								"route": "Hala Widowiskowo-Sportowa"
-							}, {
-								"line": "38",
-								"route": "Cygański Las"
 							}
 						],
 						"ref": "134"
@@ -1860,9 +1550,6 @@
 							}, {
 								"line": "23",
 								"route": "Szpital Wojewódzki"
-							}, {
-								"line": "37",
-								"route": "Hala Widowiskowo-Sportowa"
 							}
 						],
 						"ref": "382"
@@ -1897,12 +1584,6 @@
 							}, {
 								"line": "22",
 								"route": "Osiedle Sarni Stok"
-							}, {
-								"line": "37",
-								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "38",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "133"
@@ -1937,12 +1618,6 @@
 							}, {
 								"line": "22",
 								"route": "Osiedle Sarni Stok"
-							}, {
-								"line": "37",
-								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "38",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "135"
@@ -1980,9 +1655,6 @@
 							}, {
 								"line": "24",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec L"
 							}
 						],
 						"ref": "250"
@@ -2020,12 +1692,6 @@
 							}, {
 								"line": "24",
 								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "24BIS",
-								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec S"
 							}
 						],
 						"ref": "251"
@@ -2064,12 +1730,6 @@
 							}, {
 								"line": "24",
 								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "24BIS",
-								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec S"
 							}
 						],
 						"ref": "258"
@@ -2214,18 +1874,6 @@
 							}, {
 								"line": "16",
 								"route": "Wapienica Zapora"
-							}, {
-								"line": "28",
-								"route": "Osiedle Wojska Polskiego"
-							}, {
-								"line": "32",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "36",
-								"route": "Dworcowa Poczta"
-							}, {
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
 							}
 						],
 						"ref": "267"
@@ -2266,18 +1914,6 @@
 							}, {
 								"line": "24",
 								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "28",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "24BIS",
-								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec S"
-							}, {
-								"line": "37",
-								"route": "Hala Widowiskowo-Sportowa"
 							}
 						],
 						"ref": "371"
@@ -2327,39 +1963,6 @@
 							}, {
 								"line": "22",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "25",
-								"route": "Mazancowice Spóldzielnia"
-							}, {
-								"line": "26",
-								"route": "Wapienna Osiedle"
-							}, {
-								"line": "27",
-								"route": "Lipnik Dolny"
-							}, {
-								"line": "32",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "33",
-								"route": "Mazancowice Osiedle"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec L"
-							}, {
-								"line": "35",
-								"route": "Warszawska Dworzec S"
-							}, {
-								"line": "36",
-								"route": "Dworcowa Poczta"
-							}, {
-								"line": "38",
-								"route": "Cygański Las"
-							}, {
-								"line": "51",
-								"route": "Mazańcowice Osiedle"
-							}, {
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
 							}],
 						"ref": "341"
 					}
@@ -2386,21 +1989,6 @@
 								"route": "Halcnów Kosciól"
 							}, {
 								"line": "22",
-								"route": "Osiedle Sarni Stok"
-							}, {
-								"line": "27",
-								"route": "Osiedle Sarni Stok"
-							}, {
-								"line": "29",
-								"route": "Komorowice Sosna"
-							}, {
-								"line": "32",
-								"route": "Halcnów Kosciól"
-							}, {
-								"line": "36",
-								"route": "Czechowice Dziedzice Proseat"
-							}, {
-								"line": "52",
 								"route": "Osiedle Sarni Stok"
 							}],
 						"ref": "342"
@@ -2548,24 +2136,6 @@
 							}, {
 								"line": "24",
 								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "25",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "28",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "24BIS",
-								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "32",
-								"route": "Halcnów Kosciól"
-							}, {
-								"line": "36",
-								"route": "Czechowice Dziedzice Proseat"
-							}, {
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
 							}
 						],
 						"ref": "269"
@@ -2592,12 +2162,6 @@
 							}, {
 								"line": "20",
 								"route": "Osiedle Zlote Lany"
-							}, {
-								"line": "28",
-								"route": "Osiedle Wojska Polskiego"
-							}, {
-								"line": "37",
-								"route": "Osiedle Langiewicza"
 							}
 						],
 						"ref": "223"
@@ -2635,12 +2199,6 @@
 							}, {
 								"line": "20",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "28",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "37",
-								"route": "Hala Widowiskowo-Sportowa"
 							}
 						],
 						"ref": "222"
@@ -2726,12 +2284,6 @@
 							}, {
 								"line": "20",
 								"route": "Osiedle Zlote Lany"
-							}, {
-								"line": "28",
-								"route": "Osiedle Wojska Polskiego"
-							}, {
-								"line": "37",
-								"route": "Osiedle Langiewicza"
 							}
 						],
 						"ref": "225"
@@ -2773,12 +2325,6 @@
 							}, {
 								"line": "20",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "28",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "37",
-								"route": "Hala Widowiskowo-Sportowa"
 							}
 						],
 						"ref": "224"
@@ -2886,12 +2432,6 @@
 							}, {
 								"line": "20",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "36",
-								"route": "Dworcowa Poczta"
-							}, {
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
 							}],
 						"ref": "66"
 					}
@@ -2919,12 +2459,6 @@
 						"name": "Sarni Stok",
 						"relation": [{
 								"line": "22",
-								"route": "Osiedle Sarni Stok"
-							}, {
-								"line": "27",
-								"route": "Osiedle Sarni Stok"
-							}, {
-								"line": "52",
 								"route": "Osiedle Sarni Stok"
 							}],
 						"ref": "294"
@@ -2965,12 +2499,6 @@
 							}, {
 								"line": "22",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "27",
-								"route": "Lipnik Dolny"
-							}, {
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
 							}], 
 						"ref": "293"
 					}
@@ -3015,9 +2543,6 @@
 							}, {
 								"line": "23",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "38",
-								"route": "Cygański Las"
 							}
 						],
 						"ref": "209"
@@ -3032,9 +2557,6 @@
 						"relation": [{
 								"line": "6",
 								"route": "Lipnik Granica"
-							}, {
-								"line": "27",
-								"route": "Lipnik Dolny"
 							}
 						],
 						"ref": "185"
@@ -3049,9 +2571,6 @@
 						"relation": [{
 								"line": "6",
 								"route": "Osiedle Karpackie"
-							}, {
-								"line": "27",
-								"route": "Osiedle Sarni Stok"
 							}
 						],
 						"ref": "184"
@@ -3062,11 +2581,10 @@
 					"lat": 49.8379982,
 					"lon": 18.9397094,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecze Górne Ośrodek Zdrowia",
-						"relation": [{
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
-							}],
+						"public_transport": "stop_position",
 						"ref": "2476"
 					}
 				},{
@@ -3079,9 +2597,6 @@
 						"relation": [{
 								"line": "6",
 								"route": "Osiedle Karpackie"
-							}, {
-								"line": "27",
-								"route": "Osiedle Sarni Stok"
 							}
 						],
 						"ref": "180"
@@ -3096,9 +2611,6 @@
 						"relation": [{
 								"line": "6",
 								"route": "Lipnik Granica"
-							}, {
-								"line": "27",
-								"route": "Lipnik Dolny"
 							}
 						],
 						"ref": "181"
@@ -3131,16 +2643,8 @@
 							}, {
 								"line": "23",
 								"route": "Szpital Wojewódzki"
-							}, {
-								"line": "28",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "32",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "37",
-								"route": "Hala Widowiskowo-Sportowa"
 							}
+
 						],
 						"ref": "6"
 					}
@@ -3171,12 +2675,6 @@
 								"route": "Osiedle Polskich Skrzydel"
 							}, {
 								"line": "23",
-								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "28",
-								"route": "Osiedle Wojska Polskiego"
-							}, {
-								"line": "37",
 								"route": "Osiedle Langiewicza"
 							}
 						],
@@ -3210,15 +2708,6 @@
 							}, {
 								"line": "23",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "28",
-								"route": "Osiedle Wojska Polskiego"
-							}, {
-								"line": "32",
-								"route": "Halcnów Kosciól"
-							}, {
-								"line": "37",
-								"route": "Osiedle Langiewicza"
 							}
 						],
 						"ref": "19"
@@ -3233,12 +2722,6 @@
 						"relation": [{
 								"line": "22",
 								"route": "Osiedle Sarni Stok"
-							}, {
-								"line": "27",
-								"route": "Osiedle Sarni Stok"
-							}, {
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
 							}],
 						"ref": "291"
 					}
@@ -3252,12 +2735,6 @@
 						"relation": [{
 								"line": "22",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "27",
-								"route": "Lipnik Dolny"
-							}, {
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
 							}],
 						"ref": "290"
 					}
@@ -3271,12 +2748,6 @@
 						"relation": [{
 								"line": "3",
 								"route": "Komorowice Sosna"
-							}, {
-								"line": "33",
-								"route": "Mazancowice Osiedle"
-							}, {
-								"line": "51",
-								"route": "Mazańcowice Osiedle"
 							}
 						],
 						"ref": "162"
@@ -3291,12 +2762,6 @@
 						"relation": [{
 								"line": "3",
 								"route": "Osiedle Karpackie"
-							}, {
-								"line": "33",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "51",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "161"
@@ -3310,9 +2775,6 @@
 						"name": "Bestwińska Zakręt",
 						"relation": [{
 								"line": "3",
-								"route": "Komorowice Sosna"
-							}, {
-								"line": "29",
 								"route": "Komorowice Sosna"
 							}
 						],
@@ -3328,9 +2790,6 @@
 						"relation": [{
 								"line": "3",
 								"route": "Osiedle Karpackie"
-							}, {
-								"line": "29",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "42"
@@ -3348,9 +2807,6 @@
 							}, {
 								"line": "14",
 								"route": "Osiedle Polskich Skrzydel"
-							}, {
-								"line": "38",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "247"
@@ -3388,12 +2844,6 @@
 							}, {
 								"line": "21",
 								"route": "Osiedle Polskich Skrzydel"
-							}, {
-								"line": "24BIS",
-								"route": "Dluga Zajezdnia MZK"
-							}, {
-								"line": "38",
-								"route": "Warszawska Dworzec"
 							}],
 						"ref": "52"
 
@@ -3411,9 +2861,6 @@
 							}, {
 								"line": "14",
 								"route": "Cyganski Las"
-							}, {
-								"line": "38",
-								"route": "Cygański Las"
 							}
 						],
 						"ref": "248"
@@ -3444,9 +2891,6 @@
 							}, {
 								"line": "21",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "24BIS",
-								"route": "Mikuszowice Blonia ATH"
 							}
 						],
 						"ref": "132"
@@ -3485,15 +2929,6 @@
 							}, {
 								"line": "17",
 								"route": "Podwale Dworzec"
-							}, {
-								"line": "31",
-								"route": "Podwale Dworzec "
-							}, {
-								"line": "33",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "51",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "155"
@@ -3517,15 +2952,6 @@
 							}, {
 								"line": "17",
 								"route": "Krzemionki Witosa"
-							}, {
-								"line": "31",
-								"route": "Halcnów Granica"
-							}, {
-								"line": "33",
-								"route": "Mazancowice Osiedle"
-							}, {
-								"line": "51",
-								"route": "Mazańcowice Osiedle"
 							}],
 						"ref": "156"
 					}
@@ -3650,12 +3076,6 @@
 							}, {
 								"line": "20",
 								"route": "Osiedle Zlote Lany"
-							}, {
-								"line": "36",
-								"route": "Czechowice Dziedzice Proseat"
-							}, {
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
 							}],
 						"ref": "64"
 					}
@@ -3678,12 +3098,6 @@
 							}, {
 								"line": "20",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "36",
-								"route": "Dworcowa Poczta"
-							}, {
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
 							}],
 						"ref": "65"
 					}
@@ -3700,9 +3114,6 @@
 							}, {
 								"line": "20",
 								"route": "Osiedle Zlote Lany"
-							}, {
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
 							}],
 						"ref": "229"
 					}
@@ -3712,11 +3123,10 @@
 					"lat": 49.8222190,
 					"lon": 18.9754634,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecka Strażacka",
-						"relation": [{
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
-							}],
+						"public_transport": "stop_position",
 						"ref": "230"
 					}
 				}, {
@@ -3732,9 +3142,6 @@
 							}, {
 								"line": "20",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
 							}],
 						"ref": "227"
 					}
@@ -3751,12 +3158,6 @@
 							}, {
 								"line": "20",
 								"route": "Osiedle Zlote Lany"
-							}, {
-								"line": "36",
-								"route": "Czechowice Dziedzice Proseat"
-							}, {
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
 							}],
 						"ref": "78"
 					}
@@ -3773,12 +3174,6 @@
 							}, {
 								"line": "20",
 								"route": "Osiedle Zlote Lany"
-							}, {
-								"line": "36",
-								"route": "Czechowice Dziedzice Proseat"
-							}, {
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
 							}],
 						"ref": "285"
 					}
@@ -3804,12 +3199,6 @@
 							}, {
 								"line": "20",
 								"route": "Osiedle Zlote Lany"
-							}, {
-								"line": "36",
-								"route": "Czechowice Dziedzice Proseat"
-							}, {
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
 							}],
 						"ref": "62"
 					}
@@ -3835,12 +3224,6 @@
 							}, {
 								"line": "20",
 								"route": "Wapienica Strazacka"
-							}, {
-								"line": "36",
-								"route": "Dworcowa Poczta"
-							}, {
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
 							}],
 						"ref": "63"
 					}
@@ -3893,12 +3276,6 @@
 						"relation": [{
 								"line": "22",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "27",
-								"route": "Lipnik Dolny"
-							}, {
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
 							}],
 						"ref": "289"
 					}
@@ -3920,11 +3297,10 @@
 					"lat": 49.8540292,
 					"lon": 18.9436998,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecze Dolne Boisko",
-						"relation": [{
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
-							}],
+						"public_transport": "stop_position",
 						"ref": "2485"
 					}
 				}, {
@@ -3933,11 +3309,10 @@
 					"lat": 49.8296856,
 					"lon": 18.9644174,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecze Górne Granica",
-						"relation": [{
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
-							}],
+						"public_transport": "stop_position",
 						"ref": "2457"
 					}
 				}, {
@@ -3946,11 +3321,10 @@
 					"lat": 49.8310455,
 					"lon": 18.9623057,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecze Górne Granica",
-						"relation": [{
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
-							}],
+						"public_transport": "stop_position",
 						"ref": "2456"
 					}
 				}, {
@@ -3959,11 +3333,10 @@
 					"lat": 49.8345194,
 					"lon": 18.9565343,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecze Górne Kopiec",
-						"relation": [{
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
-							}],
+						"public_transport": "stop_position",
 						"ref": "2464"
 					}
 				}, {
@@ -3972,11 +3345,10 @@
 					"lat": 49.8347565,
 					"lon": 18.9558430,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecze Górne Kopiec",
-						"relation": [{
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
-							}],
+						"public_transport": "stop_position",
 						"ref": "2463"
 					}
 				}, {
@@ -3985,11 +3357,10 @@
 					"lat": 49.8421091,
 					"lon": 18.9409415,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecze Górne OSP",
-						"relation": [{
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
-							}],
+						"public_transport": "stop_position",
 						"ref": "2479"
 					}
 				}, {
@@ -3998,11 +3369,10 @@
 					"lat": 49.8422503,
 					"lon": 18.9409993,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecze Górne OSP",
-						"relation": [{
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
-							}],
+						"public_transport": "stop_position",
 						"ref": "2478"
 					}
 				}, {
@@ -4011,12 +3381,23 @@
 					"lat": 49.8379700,
 					"lon": 18.9397274,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecze Górne Ośrodek Zdrowia",
-						"relation": [{
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
-							}],
+						"public_transport": "stop_position",
 						"ref": "2477"
+					}
+				}, {
+
+					"id": 4353175547,
+					"lat": 49.8479999,
+					"lon": 18.9422125,
+					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
+						"name": "Międzyrzecze Górne",
+						"public_transport": "stop_position",
+						"ref": "2480"
 					}
 				}, {
 
@@ -4024,11 +3405,10 @@
 					"lat": 49.8483507,
 					"lon": 18.9423189,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecze Górne",
-						"relation": [{
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
-							}],
+						"public_transport": "stop_position",
 						"ref": "2480"
 					}
 				}, {
@@ -4044,9 +3424,6 @@
 							}, {
 								"line": "20",
 								"route": "Osiedle Zlote Lany"
-							}, {
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
 							}],
 						"ref": "226"
 					}
@@ -4056,11 +3433,10 @@
 					"lat": 49.8260943,
 					"lon": 18.9713564,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecka Wiadukt",
-						"relation": [{
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
-							}],
+						"public_transport": "stop_position",
 						"ref": "231"
 					}
 				}, {
@@ -4069,11 +3445,10 @@
 					"lat": 49.8261148,
 					"lon": 18.9713164,
 					"tags": {
+						"bus": "yes",
+						"highway": "bus_stop",
 						"name": "Międzyrzecka Wiadukt",
-						"relation": [{
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
-							}],
+						"public_transport": "stop_position",
 						"ref": "232"
 					}
 				}, {
@@ -4113,18 +3488,6 @@
 							}, {
 								"line": "23",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "28",
-								"route": "Osiedle Karpackie"
-							}, {
-								"line": "24BIS",
-								"route": "Mikuszowice Blonia ATH"
-							}, {
-								"line": "36",
-								"route": "Czechowice Dziedzice Proseat"
-							}, {
-								"line": "52",
-								"route": "Osiedle Sarni Stok"
 							}
 						],
 						"ref": "58"
@@ -4166,15 +3529,6 @@
 							}, {
 								"line": "23",
 								"route": "Szpital Wojewódzki"
-							}, {
-								"line": "28",
-								"route": "Osiedle Wojska Polskiego"
-							}, {
-								"line": "36",
-								"route": "Dworcowa Poczta"
-							}, {
-								"line": "52",
-								"route": "Miedzyrzecze Dolne"
 							}
 						],
 						"ref": "59"
@@ -4227,12 +3581,6 @@
 							}, {
 								"line": "22",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "37",
-								"route": "Hala Widowiskowo-Sportowa"
-							}, {
-								"line": "38",
-								"route": "Cygański Las"
 							}
 						],
 						"ref": "136"
@@ -4413,9 +3761,6 @@
 							}, {
 								"line": "21",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "28",
-								"route": "Osiedle Karpackie"
 							}
 						],
 						"ref": "310"
@@ -4710,11 +4055,7 @@
 							}, {
 								"line": "23",
 								"route": "Osiedle Langiewicza"
-							}, {
-								"line": "37",
-								"route": "Osiedle Langiewicza"
 							}
-							
 						],
 						"ref": "383"
 					}
@@ -4728,12 +4069,6 @@
 						"relation": [{
 								"line": "3",
 								"route": "Osiedle Karpackie"
-							}, {
-								"line": "33",
-								"route": "Warszawska Dworzec"
-							}, {
-								"line": "51",
-								"route": "Warszawska Dworzec"
 							}
 						],
 						"ref": "163"
@@ -4747,12 +4082,6 @@
 						"relation": [{
 								"line": "3",
 								"route": "Komorowice Sosna"
-							}, {
-								"line": "33",
-								"route": "Mazancowice Osiedle"
-							}, {
-								"line": "51",
-								"route": "Mazańcowice Osiedle"
 							}
 						],
 						"ref": "164"

@@ -17,29 +17,31 @@
     var lineRouteArray = new Array();
     var lineRouteLayer = L.layerGroup();
 
+    var enableClickStart = false;
+    var enableClickEnd = false;
+
+    $scope.$on('dataReady', function (event, obj) {
+        init();
+    });
+
+    $rootScope.$on('selectStartLocation', function (event, obj) {
+        enableClickStart = obj['enableClickStart'];
+    });
+
+    $rootScope.$on('selectEndLocation', function (event, obj) {
+        enableClickEnd = obj['enableClickEnd'];
+    });
 
     $rootScope.$on('sendCoordin', function (event, obj) {
         coordinates = obj['coordinates'];
         busStopNames = obj['busStopName'];
         busStopRefs = obj['busStopRef'];
         cities = obj['busStopCity'];
-        console.log("map - coordin received");
-        console.log("coord " + coordinates);
-        console.log("city " + cities);
-        console.log("bus stop name " + busStopNames);
-        console.log("bus stop ref " + busStopRefs);
         showRoute(true, true);
-
-    });
-
-    $scope.$on('dataReady', function (event, obj) {
-        console.log("map controller dataready");
-        init();
     });
 
     var init = function () {
         allStops = BusStopService.getBusData();
-        console.log(allStops);
         var arrayIndex = 0;
 
         for (var i = 0; i < allStops['busStops'].length; i++) {
@@ -55,7 +57,6 @@
                 busStopNames[arrayIndex] = name;
                 busStopRefs[arrayIndex] = ref;
                 cities[arrayIndex] = cityName;
-
                 arrayIndex++;
             }
         }
@@ -64,13 +65,11 @@
         var stops = {
             "Wszystkie przystanki": stopLayer
         };
-        L.control.layers(null,stops).addTo(map);
+        L.control.layers(null, stops, { position: 'topleft' }).addTo(map);
     };
 
     var showRoute = function (displayLines, displayPopups) {
-        console.log("stoparray chek " + stopArray[0]);
         if (typeof stopArray[0] != 'undefined') {
-            console.log("cecking " + stopArray);
             stopArray = [];
             popupArray = [];
             lineRouteArray = [];
@@ -78,13 +77,6 @@
             map.removeLayer(popupLayer);
             map.removeLayer(lineRouteLayer);
         }
-
-
-        //customCircleMarker = L.CircleMarker.extend({
-        //    options: {
-        //        someCustomProperty: '',
-        //    }
-        //});
 
         var style = { color: 'blue' }
         for (var i = 0; i < coordinates.length; i++) {
@@ -101,7 +93,6 @@
                 .bindPopup("<b>" + busStopNames[i] + "</b>" + "<br>" + cities[i])
                 .on('click', onMarkerClick);
 
-
             stopArray.push(stop);
 
             if (displayPopups && (i == 0 || i == coordinates.length - 1)) {
@@ -113,8 +104,7 @@
 
             if (displayLines) {
                 lineRouteArray.push([str[0], str[1]]);
-            }
-            
+            }            
         }
 
         stopLayer = L.layerGroup(stopArray).addTo(map);
@@ -124,31 +114,16 @@
         map.addLayer(lineRouteLayer);
     };
 
-    var enableClickStart = false;
-    var enableClickEnd = false;
-
-    $rootScope.$on('selectStartLocation', function (event, obj) {
-        enableClickStart = obj['enableClickStart'];
-    });
-
-    $rootScope.$on('selectEndLocation', function (event, obj) {
-        enableClickEnd = obj['enableClickEnd'];
-    });
 
     function onMarkerClick(e) {
-        console.log("you clicked on " + e.target.options.name + e.target.options.city + e.target.options.ref);
         var name = e.target.options.name;
         var city = e.target.options.city;
         var ref = e.target.options.ref;
-        console.log("ref " + ref);
-        console.log("enable click start " + enableClickStart);
         if (enableClickStart) {
-            console.log("sending selected point to plan control, bus stop - " + name);
             $rootScope.$broadcast('startLocationSelected', { busStopRef: ref, cityName: city })
             enableClickStart = false;
         }
         if (enableClickEnd) {
-            console.log("sending selected point to plan control, bus stop - " + name);
             $rootScope.$broadcast('endLocationSelected', { busStopRef: ref, cityName: city })
             enableClickEnd = false;
         }

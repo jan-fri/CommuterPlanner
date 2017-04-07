@@ -1,1 +1,1 @@
-﻿var app = angular.module('app', ['ngMaterial', 'ngMessages', 'ngRoute']);
+﻿var app = angular.module('app', ['ngMaterial', 'ngMessages', 'ngRoute', 'ui.bootstrap']);

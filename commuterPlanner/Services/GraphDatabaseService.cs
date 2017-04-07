@@ -44,6 +44,9 @@ namespace commuterPlanner.Services
 
         public int calculateTimeDifference(string time)
         {
+            if (time.Contains(':'))
+                time = time.Replace(':', '.');
+
             int totalMinutes;
 
             string selectedTimeHours = time.ToString().Split('.').First();
@@ -69,7 +72,7 @@ namespace commuterPlanner.Services
                ".hour");
 
             //check if there is any bus on the selected day, if no then the route is not valid
-            if (!timeTable.Any())
+            if (timeTable == null || !timeTable.Any())
             {
                 return false;
             }
@@ -192,6 +195,12 @@ namespace commuterPlanner.Services
                         }
                     }
 
+
+                    if (!busStopsRef.Any())
+                    {
+                        continue;
+                    }
+
                     //* the purpose of the below code is to select the shortest path (one with least bus change)
                     List<List<string>> allRelations = new List<List<string>>();
 
@@ -277,16 +286,16 @@ namespace commuterPlanner.Services
 
                         isValidRoute = getArrivalTimes(stopRef, allPaths[shortestPath][indexPath], selectedTravelDay, selectedTravelTime, indexPath, isChange);
                         if (!isValidRoute)
-                            break;                        
+                            break;
                         indexPath++;
                     }
-                    
+
                     //adding shortest route to list i
                     if (isValidRoute)
                     {
-                        var coordinates = getBusStopsCoordinates(busStopsRef);
+                        var coordinates = getBusStopsCoordinates(busStopsRef, busStopCity);
                         if (coordinates.Count != busStopsName.Count)
-                            break;
+                            continue;
 
 
                         routes.Add(new Route
@@ -298,40 +307,48 @@ namespace commuterPlanner.Services
                             busStopRefList = new List<string>(busStopsRef),
                             coordinates = new List<string>(coordinates),
                             arrivalTime = new List<string>(arrivalTimeList)
-                        }); 
+                        });
                     }
                 }
                 return routes;
             }
         }
-        public static List<string> getBusStopsCoordinates(List<string> busStopsRef)
+        public static List<string> getBusStopsCoordinates(List<string> busStopsRef, List<string> busStopCity)
         {
-            //hardcodedselected city - to be implemented through Neo4j add city to database
-            string selectedCity = "Bielsko Biała";
-
             List<string> coordinates = new List<string>();
 
-            JObject busStopData;
+            JObject busStopJSONData;
+
 
             using (StreamReader file = new StreamReader(System.Web.HttpContext.Current.Server.MapPath("~/Content/data/busStops.json")))
             using (JsonTextReader reader = new JsonTextReader(file))
             {
-                busStopData = (JObject)JToken.ReadFrom(reader);
+                busStopJSONData = (JObject)JToken.ReadFrom(reader);
             }
 
-            foreach (string stopRef in busStopsRef)
-            {
-                JObject busStops = busStopData["busStops"].Values<JObject>().FirstOrDefault();
+            // IEnumerable<JObject> busStops = busStopData["busStops"].Values<JObject>();
+            IList<JToken> busStops = busStopJSONData["busStops"].Children().ToList();
 
-                JObject busStop = busStops[selectedCity].Values<JObject>()
-                    .Where(m => m["tags"]["ref"].Value<string>() == stopRef)
+            var selectedBusStops = busStopsRef.Zip(busStopCity, (r, c) => new { stopRef = r, stopCity = c });
+            foreach (var busStop in selectedBusStops)
+            {
+                JToken cityStops = null;
+                foreach (var item in busStops)
+                {
+                    cityStops = item[busStop.stopCity];
+                    if (cityStops != null)
+                        break;
+                }
+
+                JObject stop = cityStops.Values<JObject>()
+                    .Where(m => m["tags"]["ref"].Value<string>() == busStop.stopRef)
                     .FirstOrDefault();
 
-                if (busStop == null)
+                if (stop == null)
                     break;
 
-                var lat = (string)busStop["lat"];
-                var lon = (string)busStop["lon"];
+                var lat = (string)stop["lat"];
+                var lon = (string)stop["lon"];
 
                 coordinates.Add(lat + ", " + lon);
 

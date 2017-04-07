@@ -6,10 +6,7 @@
     var cityBusStopList;
 
     var init = function () {
-        console.log("init in table controller...");
-
         allStops = BusStopService.getBusData();
-        console.log("stops in table controller " + allStops);
         getCities();
         getStops();
     };    
@@ -17,10 +14,7 @@
     var getCities = function () {
         //names of available cities to display
         $scope.cityNames = new Array();
-
         cityBusStopList = DataDisplayService.getCities(allStops, $scope.cityNames);
-        console.log("cityBusStopList in table contr " + cityBusStopList);
-        console.log("citiesList in table contr " + $scope.cityNames);
     };
 
     //index number of selected city from list 
@@ -34,7 +28,6 @@
 
     //set index number of selected city
     $scope.selectCity = function (index) {
-        console.log("index num " + index);
         cityNo = index;
         iterations = 0;
 
@@ -61,13 +54,10 @@
 
     //reads all available bus lines for selected bus stop
     var getRelation = function (stopName) {
-        console.log("getRelation");
         iterations++;
 
         $scope.busLines = [];
         $scope.busNumbers = [];
-        //console.log("stop name " + stopName);
-        //console.log("city stops " + cityStops + "length " + cityStops.length);
 
         //DataDisplayService.getRelations($scope.busLines, $scope.busNumbers, cityStops, stopName)
         for (var i = 0; i < cityStops.length; i++) {
@@ -91,7 +81,6 @@
     };
     //calls getRelation() with name of selected stop
     $scope.selectStop = function (name) {
-        console.log("selectStop");
         iterations = 0;
         getRelation(name);
         $scope.busLineDetails = [];
@@ -109,33 +98,22 @@
                 });
             }
         };
-        console.log("in select bus ... bus line details")
-        console.log($scope.busLineDetails);
-        console.log("length of bus line details ");
-        console.log($scope.busLineDetails.length);
-
 
         //$scope.busTimeTable = TimeTableService.receiveTimeTableData($scope.busLineDetails);
         $scope.busTimeTable = [];
         for (var i = 0; i < $scope.busLineDetails.length; i++) {
-            console.log($scope.busLineDetails[i]);
             TimeTableService.receiveTimeTableData($scope.busLineDetails[i]).then(
                 function (data) {
-                    console.log("tt data");
-                    console.log(data);
                     $scope.busTimeTable.push({
                         workingDay: data[0],
                         saturday: data[1],
                         sunday: data[2]
                     });
-                    //console.log("workingDay");
-                    //console.log($scope.busTimeTable[0].workingDay);
                 },
                 function () {
                     alert('error while fetching speakers from server')
                 });
         };
-
     }
     init();
 }]);

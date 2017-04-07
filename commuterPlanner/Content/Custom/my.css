@@ -27,6 +27,12 @@
     position:relative;
 }*/
 
+pre{
+    display: list-item;
+    padding: initial;
+    text-align: center;
+    margin: 10px;
+}
 body {
     font: bold 12px Arial;
 

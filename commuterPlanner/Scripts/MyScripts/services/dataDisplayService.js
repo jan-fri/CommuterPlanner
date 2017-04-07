@@ -9,13 +9,12 @@
         },
 
         getStops: function (cities, selectedCity) {
-
             var stopList = new Array();
-            console.log("cities " + cities);
             var cityIndex = this.getCityIndex(cities, selectedCity);
             var cityStops = cities[cityIndex][selectedCity];
             for (var i = 0; i < cityStops.length; i++) {
                 var busStop = cityStops[i]['tags']['name'];
+
                 //avoids printing duplicates in bus stop list
                 if (!stopList.includes(busStop)) {
                     stopList.push(busStop);
@@ -27,9 +26,7 @@
         getRefs: function (cities, selectedCity, selectedName) {
 
             var stopRefs = new Array();
-
             var cityIndex = this.getCityIndex(cities, selectedCity);
-
             var cityStops = cities[cityIndex][selectedCity];
 
             for (var i = 0; i < cityStops.length; i++) {
@@ -39,7 +36,6 @@
                     stopRefs.push(cityStops[i]['tags']['ref']);
                 }
             }
-            console.log(stopRefs);
             return stopRefs;
         },
 
@@ -64,7 +60,6 @@
             for (var i = 0; i < cities.length; i++) {
                 if (Object.keys(cities[i]) == selectedCity) {
                     cityIndex = i;
-                    console.log(cities[i] + " city index " + cityIndex);
                 }
             }
             return cityIndex;

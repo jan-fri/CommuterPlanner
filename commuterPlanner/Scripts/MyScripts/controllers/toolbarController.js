@@ -7,7 +7,6 @@
 
         var position = $mdPanel.newPanelPosition()
              .absolute()
-             //.top('10%')
              .center();
 
         var config = {
@@ -15,8 +14,7 @@
             controller: 'tableController',
             // controllerAs: 'ctrl',
             // disableParentScroll: this.disableParentScroll,
-            templateUrl: '/Content/Custom/panel2.html',
-            //templateUrl: '/Views/Home/Panel/panel.html',
+            templateUrl: '/Templates/Panel/panel.html',
             hasBackdrop: true,
             panelClass: 'demo-dialog-example',
             position: position,
@@ -28,6 +26,4 @@
         };
         $mdPanel.open(config);
     };
-
-    //init();
 }]);

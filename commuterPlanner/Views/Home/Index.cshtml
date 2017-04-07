@@ -42,10 +42,8 @@
                             <md-content>
                                 <strong>Data i czas:</strong>
                                 <md-datepicker ng-model="selectedDate" md-placeholder="Wybierz datę"></md-datepicker>
-                                <md-input-container>
-                                    <label>Godzina</label>
-                                    <input ng-model="selectedTime">
-                                </md-input-container>
+                                <label>Godzina:</label>
+                                <div uib-timepicker ng-model="selectedTime" show-meridian="false"></div>
                                 <md-divider></md-divider>
                                 <strong>Miejsce rozpoczęcia:</strong>
                                 <md-select placeholder="Miasto: " ng-model="startCity">
@@ -90,20 +88,21 @@
                                         <md-list-item class="md-3-line" ng-value="route" ng-repeat="route in routes">
                                             <div class="md-list-item-text" layout="column">
                                                 <h3>Trasa nr {{ route.index }}:</h3>
+                                                <md-button style="border: solid;" ng-click="sendCoordinatesToMap($index)">
+                                                    <strong>Pokaż na mapie</strong>
+                                                </md-button>
                                                 <a data-toggle="collapse" ng-href="#{{ $index }}">szczegóły</a>
                                                 <div layout-align="center" ng-attr-id="{{ $index }}" class="panel-collapse collapse in">
                                                     <div ng-repeat="stopName in route.details.busStopName track by $index">
-                                                        <pre>godz: {{ route.details.arrivalTime[$index] }} {{ stopName }} </pre>
-                                                        <pre>{{ route.details.busStopCoordinates[$index] }}</pre>
+                                                        <pre>godz: {{ route.details.arrivalTime[$index] }} <br /><b>{{ stopName }} </b></pre>
 
                                                         <pre ng-if="route.details.busNumber[$index] != null">linia nr: {{ route.details.busNumber[$index] }}</pre>
                                                     </div>
                                                     <p> <b>Ilość przesiadek: {{ route.changes }} </b></p>
                                                 </div>
+                                                
                                             </div>
-                                            <md-button style="border: solid;" ng-click="sendCoordinatesToMap($index)">
-                                                <strong>Pokaż na mapie</strong>
-                                            </md-button>
+                                            
                                             <md-divider></md-divider>
                                         </md-list-item>
                                     </div>

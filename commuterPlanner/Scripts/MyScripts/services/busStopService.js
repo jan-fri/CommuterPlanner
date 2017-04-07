@@ -5,7 +5,6 @@
     return {
         receiveBusData: function () {
             var deferred = $q.defer();
-            console.log("check data");
             $http({ method: 'GET', url: '/Content/data/busStops.json' })
             .success(deferred.resolve)
             .error(deferred.reject);

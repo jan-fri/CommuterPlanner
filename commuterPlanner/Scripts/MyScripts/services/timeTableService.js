@@ -4,8 +4,6 @@
 
     return {
         receiveTimeTableData: function (busLineDetails) {
-            console.log("service");
-
             var deferred = $q.defer();
 
             $http({ method: 'GET', url: '/Home/GetBusTimeTable', params: { busNo: busLineDetails.line, busStopRef: busLineDetails.stopRef } })
