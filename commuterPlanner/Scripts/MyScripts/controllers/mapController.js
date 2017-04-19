@@ -1,7 +1,7 @@
 ﻿app.controller('MapController', ['$rootScope', '$scope', 'BusStopService', function ($rootScope, $scope, BusStopService) {
     var map = L.map('mapid').setView([49.822, 19.058], 13);
 
-    L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
+    L.tileLayer('http://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png?apikey=a7995fd216754878930873899107caa5', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 

@@ -100,16 +100,18 @@ pre {
 .demo-dialog-example {
     background: white;
     border: 50px;
-    min-width: 80%;
+    min-width: 70%;
     min-height: 40%;
     height: 500px;
     overflow: hidden;
 }
+.layout-gt-sm-row > .flex-gt-sm-20 {
+    max-width: 100%;
+}
 
 .demo-dialog-list {
-    position: fixed;
     width: auto;
-    height: 80%;
+    height: 420px;
     overflow: auto;
 }
 
@@ -123,9 +125,12 @@ pre {
         margin: auto;
     }
 
-.demo-dialog-button {
+.panel{
     width: 100%;
 }
+/*.demo-dialog-button {
+    width: 100%;
+}*/
 
 .demo-menu-example {
     background: white;

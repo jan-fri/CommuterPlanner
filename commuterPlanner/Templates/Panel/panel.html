@@ -86,14 +86,14 @@
                             <p>kierunek {{ details.route }}</p>
                         </div>
                         <div ng-attr-id="{{ $index }}" class="panel-collapse collapse in">
-                            <div class="panel-body">                             
+                            <div class="panel-body">
                                 <div ng-repeat="day in busTimeTable[$index]">
                                     <strong>{{ day.day }}</strong>
                                     <md-divider></md-divider>
-                                    <md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="5" md-row-height-gt-md="1:1" md-row-height="2:2">
+                                    <md-grid-list md-cols-sm="1" md-cols-md="2" md-cols-gt-md="5" md-row-height-gt-md="2:1" md-row-height="1:1">
                                         <md-grid-tile ng-repeat="time in day.hour">
                                             <div>
-                                                <p>{{ time }}</p>                                                
+                                                <p>{{ time }}</p>
                                                 <md-divider></md-divider>
                                             </div>
                                         </md-grid-tile>

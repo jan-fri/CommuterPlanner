@@ -12,9 +12,9 @@
             <md-button ng-click="toggleSidenav('left-side-nav')" class="md-raised" style="margin-left: auto">
                 <strong>Zaplanuj podróż</strong>
             </md-button>
-            <md-button ng-click="toggleSidenav('right-side-nav')" style="margin-left: auto; color:white; border: solid">
+            @*<md-button ng-click="toggleSidenav('right-side-nav')" style="margin-left: auto; color:white; border: solid">
                 <h1>Moje podróże</h1>
-            </md-button>
+            </md-button>*@
             <span flex></span>
             <md-button style="margin-left: auto; color:white; border: solid">
                 <h1>Login</h1>
@@ -106,7 +106,7 @@
                                                     <div ng-repeat="stopName in route.details.busStopName track by $index">
                                                         <pre>godz: {{ route.details.arrivalTime[$index] }} <br /><b>{{ stopName }} </b></pre>
 
-                                                        <pre ng-if="route.details.busNumber[$index] != null">linia nr: {{ route.details.busNumber[$index] }}</pre>
+                                                        <pre ng-if="route.details.busNumber[$index] != null">linia nr: <b>{{ route.details.busNumber[$index] }}</b></pre>
                                                     </div>
                                                     <p> <b>Ilość przesiadek: {{ route.changes }} </b></p>
                                                 </div>

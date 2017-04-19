@@ -37,7 +37,8 @@ namespace commuterPlanner
                         "~/Scripts/MyScripts/controllers/*.js",
                         "~/Scripts/MyScripts/directives/*.js",
                         "~/Scripts/MyScripts/routes.js",
-                        "~/Scripts/MyScripts/services/*.js"));
+                        "~/Scripts/MyScripts/services/*.js"
+                        ));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
@@ -47,7 +48,8 @@ namespace commuterPlanner
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
                       "~/Content/angular-material.css",
-                      "~/Content/CustomCss/CustomCSS.css"));
+                      "~/Content/CustomCss/CustomCSS.css"
+                      ));
 
 
         }
