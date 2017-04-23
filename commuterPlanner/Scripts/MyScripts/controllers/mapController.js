@@ -19,8 +19,9 @@
 
     var enableClickStart = false;
     var enableClickEnd = false;
-
+    
     $scope.$on('dataReady', function (event, obj) {
+        console.log("mapContr init");
         init();
     });
 
@@ -37,7 +38,7 @@
         busStopNames = obj['busStopName'];
         busStopRefs = obj['busStopRef'];
         cities = obj['busStopCity'];
-        showRoute(true, true);
+        displayPoints(true, true);
     });
 
     var init = function () {
@@ -61,14 +62,14 @@
             }
         }
 
-        showRoute(false, false);
+        displayPoints(false, false);
         var stops = {
             "Wszystkie przystanki": stopLayer
         };
         L.control.layers(null, stops, { position: 'topleft' }).addTo(map);
     };
 
-    var showRoute = function (displayLines, displayPopups) {
+    var displayPoints = function (displayLines, displayPopups) {
         if (typeof stopArray[0] != 'undefined') {
             stopArray = [];
             popupArray = [];

@@ -1,366 +1,67 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <DirectedGraph DataVirtualized="True" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
   <Nodes>
-    <Node Id="(@1 @9 Type=Hour @55)" Category="CodeSchema_Method" Bounds="-444.452264286845,-234.517579629582,62.5133333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="Hour" UseManualLocation="True" />
-    <Node Id="(@1 @9 Type=Hour Member=minutes)" Category="CodeSchema_Field" Bounds="-444.452264286845,-178.557579629582,79.26,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="minutes" UseManualLocation="True" />
-    <Node Id="(@3 @5 Type=BundleConfig @55)" Category="CodeSchema_Method" Bounds="568.315125306762,339.676010763744,107.69,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="BundleConfig" UseManualLocation="True" />
-    <Node Id="(@3 @5 Type=EmailService @55)" Category="CodeSchema_Method" Bounds="574.189671238077,567.514265415622,101.623333333333,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="EmailService" UseManualLocation="True" />
-    <Node Id="(@3 @5 Type=EmailService Member=(Name=SendAsync OverloadingParameters=[(@43 Namespace=Microsoft.AspNet.Identity Type=IdentityMessage)]))" Category="CodeSchema_Method" Bounds="574.189671187215,511.599030322837,93.48,25.96" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="SendAsync" UseManualLocation="True" />
-    <Node Id="(@3 @5 Type=FilterConfig @55)" Category="CodeSchema_Method" Bounds="353.963899236078,339.749730561113,97.17,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="FilterConfig" UseManualLocation="True" />
-    <Node Id="(@3 @5 Type=RouteConfig @55)" Category="CodeSchema_Method" Bounds="168.410810857172,339.74899492536,102.32,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="RouteConfig" UseManualLocation="True" />
-    <Node Id="(@3 @5 Type=SmsService @55)" Category="CodeSchema_Method" Bounds="391.935644240193,596.59579989705,95.1,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="SmsService" UseManualLocation="True" />
-    <Node Id="(@3 @5 Type=SmsService Member=(Name=SendAsync OverloadingParameters=[(@43 Namespace=Microsoft.AspNet.Identity Type=IdentityMessage)]))" Category="CodeSchema_Method" Bounds="391.91875138741,540.586949799394,93.48,25.96" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsVirtual="True" DelayedCrossGroupLinksState="Fetched" Label="SendAsync" UseManualLocation="True" />
-    <Node Id="(@3 @5 Type=Startup @55)" Category="CodeSchema_Method" Bounds="203.248658613972,569.839513275956,74.63,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="Startup" UseManualLocation="True" />
-    <Node Id="(@3 @5 Type=Startup Member=(Name=Configuration OverloadingParameters=[(@42 Namespace=Owin Type=IAppBuilder)]))" Category="CodeSchema_Method" Bounds="203.248643253458,625.799474253506,108.843333333333,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="Configuration" UseManualLocation="True" />
-    <Node Id="(@3 @7 @25 @55)" Category="CodeSchema_Method" Bounds="-511.668515782775,58.1126074772538,120.946666666667,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="HomeController" UseManualLocation="True" />
-    <Node Id="(@3 @7 @25 Member=(Name=GetBusTimeTable OverloadingParameters=[@47,@47]))" Category="CodeSchema_Method" Bounds="-627.654815132387,114.108443097404,127.776666666667,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="GetBusTimeTable" UseManualLocation="True" />
-    <Node Id="(@3 @7 @25 Member=About)" Category="CodeSchema_Method" Bounds="-532.731440449442,2.20677675725376,68.6800000000001,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="About" UseManualLocation="True" />
-    <Node Id="(@3 @7 @25 Member=Contact)" Category="CodeSchema_Method" Bounds="-434.146962689442,2.20677675725376,77.0333333333334,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="Contact" UseManualLocation="True" />
-    <Node Id="(@3 @7 @25 Member=Index)" Category="CodeSchema_Method" Bounds="-627.654815132387,2.18844309740382,64.8333333333334,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="Index" UseManualLocation="True" />
-    <Node Id="(@3 Namespace=::)" Category="CodeSchema_Namespace" Bounds="-159.509632063655,-28.9286163583525,62.2,25" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="0" Group="Collapsed" Label="::" />
-    <Node Id="@10" Category="CodeSchema_Namespace" Bounds="63.3530692127015,-40.2539885603472,601.94,360.0007" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="commuterPlanner.MZK_parser" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="9" Group="Expanded" Label="commuterPlanner‎.MZK_parser" />
-    <Node Id="@12" Category="CodeSchema_Namespace" Bounds="-614.009329370322,86.0704636416475,424.503333333333,140.0000000024" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="commuterPlanner.Services" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" Group="Expanded" Label="commuterPlanner‎.Services" />
-    <Node Id="@13" Category="CodeSchema_Class" Bounds="548.396749077927,299.66889313291,160.84,141.9203" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Expanded" Label="BundleConfig" UseManualLocation="True" />
-    <Node Id="@14" Category="CodeSchema_Class" Bounds="544.212369150604,54.7490788066594,101.073333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="BusLink" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="BusLink" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner.MZK_parser/Program.cs StartLineNumber=15 StartCharacterOffset=17 EndLineNumber=15 EndCharacterOffset=24)" />
-    <Node Id="@15" Category="CodeSchema_Class" Bounds="354.373027667852,109.747320558739,126.763333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="BusNo2Stop" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="BusNo2Stop" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner.MZK_parser/Program.cs StartLineNumber=30 StartCharacterOffset=17 EndLineNumber=30 EndCharacterOffset=27)" />
-    <Node Id="@16" Category="CodeSchema_Class" Bounds="221.615964540642,54.7490786614594,104.286666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="BusStop" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Collapsed" Icon="CodeSchema_Class" Label="BusStop" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner.MZK_parser/Program.cs StartLineNumber=36 StartCharacterOffset=17 EndLineNumber=36 EndCharacterOffset=24)" />
-    <Node Id="@17" Category="CodeSchema_Class" Bounds="189.278174680716,109.747320461939,134.963333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="BusStopDetail" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="BusStopDetail" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner.MZK_parser/Program.cs StartLineNumber=40 StartCharacterOffset=17 EndLineNumber=40 EndCharacterOffset=30)" />
-    <Node Id="@18" Category="CodeSchema_Class" Bounds="387.955306023394,54.7490787582594,125.596666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="BusStopLink" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="BusStopLink" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner.MZK_parser/Program.cs StartLineNumber=22 StartCharacterOffset=17 EndLineNumber=22 EndCharacterOffset=28)" />
-    <Node Id="@2" Category="CodeSchema_Assembly" AssemblyTimestamp="04/15/2017 11:20:18" Bounds="43.3530692127014,-80.2540885603471,641.94,420.0009" CodeSchemaProperty_StrongName="commuterPlanner.MZK_parser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" CommonLabel="commuterPlanner.MZK_parser" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" FilePath="$(0e9cdce8-bfd8-4891-aa22-e8e717a23afe.OutputPath)" Group="Expanded" Label="commuterPlanner.MZK_parser.exe" />
-    <Node Id="@20" Category="CodeSchema_Class" Bounds="-594.009489370322,181.069703641647,126.746666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Connections" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="3" Group="Collapsed" Icon="CodeSchema_Class" Label="Connections" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner/Services/GraphDatabaseService.cs StartLineNumber=31 StartCharacterOffset=17 EndLineNumber=31 EndCharacterOffset=28)" />
-    <Node Id="@21" Category="CodeSchema_Class" Bounds="554.189666944998,471.592433074317,141.623333384196,141.9203" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Expanded" Label="EmailService" UseManualLocation="True" />
-    <Node Id="@22" Category="CodeSchema_Class" Bounds="333.840082411261,299.758536840585,184.556666666667,141.955195117187" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Expanded" Label="FilterConfig" UseManualLocation="True" />
-    <Node Id="@24" Category="CodeSchema_Class" Bounds="-480.575396850322,126.070143641647,179.876666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="GraphDatabaseService" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="8" Group="Collapsed" Icon="CodeSchema_Class" Label="GraphDatabaseService" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner/Services/GraphDatabaseService.cs StartLineNumber=36 StartCharacterOffset=17 EndLineNumber=36 EndCharacterOffset=37)" />
-    <Node Id="@26" Category="CodeSchema_Class" Bounds="-474.732379645504,11.0703236558159,145.946666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="HomeController" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="6" Group="Collapsed" Icon="CodeSchema_Class" Label="HomeController" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner/Controllers/HomeController.cs StartLineNumber=13 StartCharacterOffset=17 EndLineNumber=13 EndCharacterOffset=31)" />
-    <Node Id="@27" Category="CodeSchema_Class" Bounds="83.3606526914479,274.742045863379,87.5133333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Hour" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Collapsed" Icon="CodeSchema_Class" Label="Hour" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner.MZK_parser/Program.cs StartLineNumber=59 StartCharacterOffset=17 EndLineNumber=59 EndCharacterOffset=21)" />
-    <Node Id="@28" Category="CodeSchema_Class" Bounds="355.706747343334,244.765454471419,143.17,25" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="MvcApplication" UseManualLocation="True" />
-    <Node Id="@29" Category="CodeSchema_Class" Bounds="137.458617969634,-0.249163139020553,106.606666666667,25" CodeSchemaProperty_IsInternal="True" CommonLabel="Program" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Program" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner.MZK_parser/Program.cs StartLineNumber=65 StartCharacterOffset=10 EndLineNumber=65 EndCharacterOffset=17)" />
-    <Node Id="@30" Category="CodeSchema_Class" Bounds="-313.768397983655,181.069703641647,104.26,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Relation" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Collapsed" Icon="CodeSchema_Class" Label="Relation" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner/Services/GraphDatabaseService.cs StartLineNumber=17 StartCharacterOffset=17 EndLineNumber=17 EndCharacterOffset=25)" />
-    <Node Id="@32" Category="CodeSchema_Class" Bounds="-436.807413663655,181.069703641647,92.3400000000001,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Route" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="8" Group="Collapsed" Icon="CodeSchema_Class" Label="Route" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner/Services/GraphDatabaseService.cs StartLineNumber=21 StartCharacterOffset=17 EndLineNumber=21 EndCharacterOffset=22)" />
-    <Node Id="@33" Category="CodeSchema_Class" Bounds="148.369988010219,299.746645120269,155.47,141.920221972656" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Expanded" Label="RouteConfig" UseManualLocation="True" />
-    <Node Id="@34" Category="CodeSchema_Class" Bounds="371.918747145193,500.595756078866,135.116892852783,141.969050097656" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Expanded" Label="SmsService" UseManualLocation="True" />
-    <Node Id="@35" Category="CodeSchema_Class" Bounds="183.248639011242,529.848319555429,148.843333333333,141.9203" CodeSchemaProperty_IsPublic="True" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="2" Group="Expanded" Label="Startup" UseManualLocation="True" />
-    <Node Id="@36" Category="CodeSchema_Class" Bounds="83.3606639871696,219.743804062899,86.8066666666668,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Time" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Time" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner.MZK_parser/Program.cs StartLineNumber=53 StartCharacterOffset=17 EndLineNumber=53 EndCharacterOffset=21)" />
-    <Node Id="@37" Category="CodeSchema_Class" Bounds="158.042818744034,164.745562262419,115.436666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="TimeTable" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="TimeTable" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner.MZK_parser/Program.cs StartLineNumber=47 StartCharacterOffset=17 EndLineNumber=47 EndCharacterOffset=26)" />
-    <Node Id="@39" Category="CodeSchema_Method" Bounds="568.315122255004,395.635590381431,120.84,25.96" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="RegisterBundles" UseManualLocation="True" />
-    <Node Id="@4" Category="CodeSchema_Assembly" AssemblyTimestamp="04/15/2017 11:19:36" Bounds="-634.009169370322,-68.9282963583525,556.700246116302,369.997240028337" CodeSchemaProperty_StrongName="commuterPlanner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" CommonLabel="commuterPlanner" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="4" FilePath="$(c7fdd6f3-af07-4385-adc3-0b9d00f6f22e.OutputPath)" Group="Expanded" Label="commuterPlanner.dll" UseManualLocation="True">
+    <Node Id="@12" Category="CodeSchema_Namespace" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="commuterPlanner.Services" DelayedChildNodesState="Incomplete" Group="Expanded" Label="commuterPlanner.Services" />
+    <Node Id="@24" Category="CodeSchema_Class" Bounds="0,0,179.876666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="GraphDatabaseService" DelayedChildNodesState="NotFetched" Group="Collapsed" Icon="CodeSchema_Class" Label="GraphDatabaseService" SourceLocation="(Assembly=file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner/Services/GraphDatabaseService.cs StartLineNumber=18 StartCharacterOffset=17 EndLineNumber=18 EndCharacterOffset=37)" />
+    <Node Id="@4" Category="CodeSchema_Assembly" CommonLabel="commuterPlanner" DelayedChildNodesState="Incomplete" Group="Expanded" Label="commuterPlanner.dll">
       <Category Ref="CodeMap_WebProject" />
     </Node>
-    <Node Id="@41" Category="CodeSchema_Method" Bounds="353.880902206456,395.7447256783,144.556666666667,25.96" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="RegisterGlobalFilters" UseManualLocation="True" />
-    <Node Id="@45" Category="CodeSchema_Method" Bounds="168.410807805414,395.709016898016,115.47,25.96" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="RegisterRoutes" UseManualLocation="True" />
-    <Node Id="@48" Category="CodeSchema_Method" Bounds="390.444488907997,151.93224085131,162.223333333333,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="calculateTimeDifference" UseManualLocation="True" />
-    <Node Id="@49" Category="CodeSchema_Method" Bounds="1024.86063509846,96.0010083912989,127.236666666667,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="validateWeekDay" UseManualLocation="True" />
-    <Node Id="@51" Category="CodeSchema_Method" Bounds="828.549435574663,95.9883573313099,165.76,25.96" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="getBusStopsCoordinates" UseManualLocation="True" />
-    <Node Id="@52" Category="CodeSchema_Method" Bounds="752.540600907997,40.0444738113089,89.8433333333333,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="getRoutes" UseManualLocation="True" />
-    <Node Id="@53" Category="CodeSchema_Method" Bounds="-627.654815132387,58.1484430974039,85.9166666666667,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="GetRoute" UseManualLocation="True" />
-    <Node Id="@54" Category="CodeSchema_Method" Bounds="648.456520907997,95.9883573313099,118.063333333333,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="getArrivalTimes" UseManualLocation="True" />
-    <Node Id="@56" Category="CodeSchema_Method" Bounds="-572.941199153592,-236.909943741768,79.2866666666666,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="BusStop" UseManualLocation="True" />
-    <Node Id="@57" Category="CodeSchema_Method" Bounds="834.978956066874,262.777515781142,101.746666666667,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="Connections" UseManualLocation="True" />
-    <Node Id="@58" Category="CodeSchema_Method" Bounds="390.445546827997,207.87612437131,154.876666666667,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="GraphDatabaseService" UseManualLocation="True" />
-    <Node Id="@59" Category="CodeSchema_Method" Bounds="594.833610285905,-254.313094581664,79.26,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="Relation" UseManualLocation="True" />
-    <Node Id="@6" Category="CodeSchema_Namespace" Bounds="-614.009329370322,256.069103641647,151.316666666667,25" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="7" Group="Collapsed" Label="commuterPlanner" />
-    <Node Id="@60" Category="CodeSchema_Method" Bounds="339.471185262586,-267.000201604533,67.34,25.96" CodeSchemaProperty_IsConstructor="True" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsSpecialName="True" DelayedCrossGroupLinksState="Fetched" Label="Route" UseManualLocation="True" />
-    <Node Id="@61" Category="CodeSchema_Field" Bounds="436.811190857475,-267.000201604533,94.9266666666667,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="arrivalTime" UseManualLocation="True" />
-    <Node Id="@62" Category="CodeSchema_Field" Bounds="741.140600907997,151.93224085131,112.643333333333,25.96" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" DelayedCrossGroupLinksState="Fetched" Label="arrivalTimeList" UseManualLocation="True" />
-    <Node Id="@63" Category="CodeSchema_Field" Bounds="339.471180481499,-155.080001604533,101.49,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="busChanges" UseManualLocation="True" />
-    <Node Id="@64" Category="CodeSchema_Field" Bounds="594.833606216895,-198.36022039801,99.5433333333334,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="busNumber" UseManualLocation="True" />
-    <Node Id="@65" Category="CodeSchema_Field" Bounds="339.471187907443,-211.040101604533,99.5433333333334,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="busNumber" UseManualLocation="True" />
-    <Node Id="@66" Category="CodeSchema_Field" Bounds="952.318955049621,206.817493808486,88.2,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="busStopA" UseManualLocation="True" />
-    <Node Id="@67" Category="CodeSchema_Field" Bounds="834.97895077716,206.817493808486,87.34,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="busStopB" UseManualLocation="True" />
-    <Node Id="@68" Category="CodeSchema_Field" Bounds="469.014515417004,-211.040101604533,100.67,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="busStopCity" UseManualLocation="True" />
-    <Node Id="@69" Category="CodeSchema_Field" Bounds="-572.941199153592,-180.950391421768,111.136666666667,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="busStopDetail" UseManualLocation="True" />
-    <Node Id="@70" Category="CodeSchema_Field" Bounds="339.471196452364,-99.1199016045331,129.873333333333,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="busStopNameList" UseManualLocation="True" />
-    <Node Id="@71" Category="CodeSchema_Field" Bounds="470.961180481498,-155.080001604533,115.386666666667,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="busStopRefList" UseManualLocation="True" />
-    <Node Id="@72" Category="CodeSchema_Field" Bounds="561.737862406954,-267.000201604533,99.0833333333333,25.96" CodeSchemaProperty_IsPublic="True" DelayedCrossGroupLinksState="Fetched" Label="coordinates" UseManualLocation="True" />
-    <Node Id="@73" Category="CodeSchema_Property" Bounds="582.624558180973,152.41224085131,127.762394787381,25" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="selectedTime" UseManualLocation="True" />
-    <Node Id="@8" Category="CodeSchema_Namespace" Bounds="-507.655180210322,-28.9286163583525,211.793333333333,85" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="commuterPlanner.Controllers" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" Group="Expanded" Label="commuterPlanner‎.Controllers" />
   </Nodes>
   <Links>
-    <Link Source="@10" Target="@14" Category="Contains" FetchingParent="@10" />
-    <Link Source="@10" Target="@15" Category="Contains" FetchingParent="@10" />
-    <Link Source="@10" Target="@16" Category="Contains" FetchingParent="@10" />
-    <Link Source="@10" Target="@17" Category="Contains" FetchingParent="@10" />
-    <Link Source="@10" Target="@18" Category="Contains" FetchingParent="@10" />
-    <Link Source="@10" Target="@27" Category="Contains" FetchingParent="@10" />
-    <Link Source="@10" Target="@29" Category="Contains" FetchingParent="@10" />
-    <Link Source="@10" Target="@36" Category="Contains" FetchingParent="@10" />
-    <Link Source="@10" Target="@37" Category="Contains" FetchingParent="@10" />
-    <Link Source="@12" Target="@20" Category="Contains" FetchingParent="@12" />
     <Link Source="@12" Target="@24" Category="Contains" FetchingParent="@12" />
-    <Link Source="@12" Target="@30" Category="Contains" FetchingParent="@12" />
-    <Link Source="@12" Target="@32" Category="Contains" FetchingParent="@12" />
-    <Link Source="@13" Target="(@3 @5 Type=BundleConfig @55)" Category="Contains" FetchingParent="@13" />
-    <Link Source="@13" Target="@39" Category="Contains" FetchingParent="@13" />
-    <Link Source="@16" Target="@56" Category="Contains" FetchingParent="@16" />
-    <Link Source="@16" Target="@69" Category="Contains" FetchingParent="@16" />
-    <Link Source="@17" Target="@37" Category="References" Bounds="230.456314086914,134.746505737305,16.9842987060547,22.7836151123047" IsSourceVirtualized="True" Weight="1" />
-    <Link Source="@18" Target="@15" Category="References" Bounds="429.885528564453,79.7481460571289,13.3692626953125,22.2818984985352" IsSourceVirtualized="True" Weight="1" />
-    <Link Source="@2" Target="@10" Category="Contains" FetchingParent="@2" />
-    <Link Source="@20" Target="@57" Category="Contains" FetchingParent="@20" />
-    <Link Source="@20" Target="@66" Category="Contains" FetchingParent="@20" />
-    <Link Source="@20" Target="@67" Category="Contains" FetchingParent="@20" />
-    <Link Source="@21" Target="(@3 @5 Type=EmailService @55)" Category="Contains" FetchingParent="@21" />
-    <Link Source="@21" Target="(@3 @5 Type=EmailService Member=(Name=SendAsync OverloadingParameters=[(@43 Namespace=Microsoft.AspNet.Identity Type=IdentityMessage)]))" Category="Contains" FetchingParent="@21" />
-    <Link Source="@22" Target="(@3 @5 Type=FilterConfig @55)" Category="Contains" FetchingParent="@22" />
-    <Link Source="@22" Target="@41" Category="Contains" FetchingParent="@22" />
-    <Link Source="@24" Target="@48" Category="Contains" FetchingParent="@24" />
-    <Link Source="@24" Target="@49" Category="Contains" FetchingParent="@24" />
-    <Link Source="@24" Target="@51" Category="Contains" FetchingParent="@24" />
-    <Link Source="@24" Target="@52" Category="Contains" FetchingParent="@24" />
-    <Link Source="@24" Target="@54" Category="Contains" FetchingParent="@24" />
-    <Link Source="@24" Target="@58" Category="Contains" FetchingParent="@24" />
-    <Link Source="@24" Target="@62" Category="Contains" FetchingParent="@24" />
-    <Link Source="@24" Target="@73" Category="Contains" FetchingParent="@24" />
-    <Link Source="@26" Target="(@3 @7 @25 @55)" Category="Contains" FetchingParent="@26" />
-    <Link Source="@26" Target="(@3 @7 @25 Member=(Name=GetBusTimeTable OverloadingParameters=[@47,@47]))" Category="Contains" FetchingParent="@26" />
-    <Link Source="@26" Target="(@3 @7 @25 Member=About)" Category="Contains" FetchingParent="@26" />
-    <Link Source="@26" Target="(@3 @7 @25 Member=Contact)" Category="Contains" FetchingParent="@26" />
-    <Link Source="@26" Target="(@3 @7 @25 Member=Index)" Category="Contains" FetchingParent="@26" />
-    <Link Source="@26" Target="@53" Category="Contains" FetchingParent="@26" />
-    <Link Source="@27" Target="(@1 @9 Type=Hour @55)" Category="Contains" FetchingParent="@27" />
-    <Link Source="@27" Target="(@1 @9 Type=Hour Member=minutes)" Category="Contains" FetchingParent="@27" />
-    <Link Source="@28" Target="@39" Category="CodeSchema_Calls" IsSourceVirtualized="True" Weight="1" />
-    <Link Source="@28" Target="@41" Category="CodeSchema_Calls" IsSourceVirtualized="True" Weight="1" />
-    <Link Source="@28" Target="@45" Category="CodeSchema_Calls" IsSourceVirtualized="True" Weight="1" />
-    <Link Source="@29" Target="@14" Category="References" Bounds="244.062194824219,18.6823120117188,291.825317382813,37.3068580627441" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="40">
-      <Category Ref="CodeSchema_Calls" />
-      <Category Ref="CodeSchema_FieldRead" />
-      <Category Ref="CodeSchema_FieldWrite" />
-    </Link>
-    <Link Source="@29" Target="@15" Category="References" Bounds="235.189804077148,24.7497863769531,162.018081665039,78.9709167480469" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="7">
-      <Category Ref="CodeSchema_Calls" />
-      <Category Ref="CodeSchema_FieldWrite" />
-    </Link>
-    <Link Source="@29" Target="@17" Category="References" Bounds="190.759963989258,24.7497863769531,44.0850982666016,79.2359771728516" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
-      <Category Ref="CodeSchema_Calls" />
-      <Category Ref="CodeSchema_FieldWrite" />
-    </Link>
-    <Link Source="@29" Target="@18" Category="References" Bounds="242.65446472168,23.2277393341064,140.594589233398,29.7408847808838" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="42">
-      <Category Ref="CodeSchema_Calls" />
-      <Category Ref="CodeSchema_FieldRead" />
-      <Category Ref="CodeSchema_FieldWrite" />
-    </Link>
-    <Link Source="@29" Target="@36" Category="References" Bounds="126.761268615723,24.7497863769531,49.4535293579102,185.99446105957" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="6">
-      <Category Ref="CodeSchema_Calls" />
-      <Category Ref="CodeSchema_FieldWrite" />
-    </Link>
-    <Link Source="@29" Target="@37" Category="References" Bounds="158.760620117188,24.7497863769531,37.568115234375,133.746688842773" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="5">
-      <Category Ref="CodeSchema_Calls" />
-      <Category Ref="CodeSchema_FieldWrite" />
-    </Link>
-    <Link Source="@29" Target="@56" Category="CodeSchema_Calls" IsSourceVirtualized="True" Weight="1" />
-    <Link Source="@29" Target="@69" Category="CodeSchema_FieldRead" IsSourceVirtualized="True" Weight="3">
-      <Category Ref="CodeSchema_FieldWrite" />
-    </Link>
-    <Link Source="@30" Target="@59" Category="Contains" FetchingParent="@30" />
-    <Link Source="@30" Target="@64" Category="Contains" FetchingParent="@30" />
-    <Link Source="@32" Target="@60" Category="Contains" FetchingParent="@32" />
-    <Link Source="@32" Target="@61" Category="Contains" FetchingParent="@32" />
-    <Link Source="@32" Target="@63" Category="Contains" FetchingParent="@32" />
-    <Link Source="@32" Target="@65" Category="Contains" FetchingParent="@32" />
-    <Link Source="@32" Target="@68" Category="Contains" FetchingParent="@32" />
-    <Link Source="@32" Target="@70" Category="Contains" FetchingParent="@32" />
-    <Link Source="@32" Target="@71" Category="Contains" FetchingParent="@32" />
-    <Link Source="@32" Target="@72" Category="Contains" FetchingParent="@32" />
-    <Link Source="@33" Target="(@3 @5 Type=RouteConfig @55)" Category="Contains" FetchingParent="@33" />
-    <Link Source="@33" Target="@45" Category="Contains" FetchingParent="@33" />
-    <Link Source="@34" Target="(@3 @5 Type=SmsService @55)" Category="Contains" FetchingParent="@34" />
-    <Link Source="@34" Target="(@3 @5 Type=SmsService Member=(Name=SendAsync OverloadingParameters=[(@43 Namespace=Microsoft.AspNet.Identity Type=IdentityMessage)]))" Category="Contains" FetchingParent="@34" />
-    <Link Source="@35" Target="(@3 @5 Type=Startup @55)" Category="Contains" FetchingParent="@35" />
-    <Link Source="@35" Target="(@3 @5 Type=Startup Member=(Name=Configuration OverloadingParameters=[(@42 Namespace=Owin Type=IAppBuilder)]))" Category="Contains" FetchingParent="@35" />
-    <Link Source="@37" Target="@36" Category="References" Bounds="154.644027709961,189.744873046875,40.8885650634766,25.2679748535156" IsSourceVirtualized="True" Weight="1" />
-    <Link Source="@4" Target="(@3 Namespace=::)" Category="Contains" FetchingParent="@4" />
     <Link Source="@4" Target="@12" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@6" Category="Contains" FetchingParent="@4" />
-    <Link Source="@4" Target="@8" Category="Contains" FetchingParent="@4" />
-    <Link Source="@52" Target="@20" Category="References" Bounds="355.703242561261,355.584177728899,124.453576977938,210.136764179402" Weight="4" />
-    <Link Source="@52" Target="@30" Category="References" Weight="5" />
-    <Link Source="@52" Target="@32" Category="References" Weight="3" />
-    <Link Source="@52" Target="@49" Category="CodeSchema_Calls" Bounds="392.9375,351.242919921875,174.470520019531,33.5510864257813" Weight="1" />
-    <Link Source="@52" Target="@51" Category="CodeSchema_Calls" Bounds="374.458282470703,355.584381103516,53.0359802246094,26.0341491699219" Weight="1" />
-    <Link Source="@52" Target="@54" Category="CodeSchema_Calls" Bounds="286.534484863281,355.584381103516,40.605712890625,25.2477111816406" Weight="2" />
-    <Link Source="@52" Target="@59" Category="CodeSchema_Calls" Weight="2" />
-    <Link Source="@52" Target="@60" Category="CodeSchema_Calls" Weight="1" />
-    <Link Source="@52" Target="@61" Category="CodeSchema_FieldWrite" Weight="1" />
-    <Link Source="@52" Target="@62" Category="CodeSchema_FieldRead" Bounds="348.015838623047,355.584381103516,0,76.9599914550781" Weight="2">
-      <Category Ref="CodeSchema_FieldWrite" />
-    </Link>
-    <Link Source="@52" Target="@63" Category="CodeSchema_FieldWrite" Weight="1" />
-    <Link Source="@52" Target="@64" Category="CodeSchema_FieldRead" Weight="3">
-      <Category Ref="CodeSchema_FieldWrite" />
-    </Link>
-    <Link Source="@52" Target="@65" Category="CodeSchema_FieldWrite" Weight="1" />
-    <Link Source="@52" Target="@66" Category="CodeSchema_FieldRead" Weight="1" />
-    <Link Source="@52" Target="@67" Category="CodeSchema_FieldRead" Weight="1" />
-    <Link Source="@52" Target="@68" Category="CodeSchema_FieldWrite" Weight="1" />
-    <Link Source="@52" Target="@70" Category="CodeSchema_FieldWrite" Weight="1" />
-    <Link Source="@52" Target="@71" Category="CodeSchema_FieldWrite" Weight="1" />
-    <Link Source="@52" Target="@72" Category="CodeSchema_FieldWrite" Weight="1" />
-    <Link Source="@53" Target="@20" Category="References" Weight="2" />
-    <Link Source="@53" Target="@52" Category="CodeSchema_Calls" Weight="1" />
-    <Link Source="@53" Target="@57" Category="CodeSchema_Calls" Weight="1" />
-    <Link Source="@53" Target="@58" Category="CodeSchema_Calls" Weight="1" />
-    <Link Source="@53" Target="@66" Category="CodeSchema_FieldWrite" Weight="1" />
-    <Link Source="@53" Target="@67" Category="CodeSchema_FieldWrite" Weight="1" />
-    <Link Source="@54" Target="@48" Category="CodeSchema_Calls" Bounds="85.513542175293,411.544372558594,117.761756896973,27.9234924316406" Weight="2" />
-    <Link Source="@54" Target="@62" Category="CodeSchema_FieldRead" Bounds="278.891448974609,411.544372558594,40.605712890625,25.2477416992188" Weight="3" />
-    <Link Source="@54" Target="@73" Category="CodeSchema_Calls" Bounds="217.273681640625,411.544372558594,26.5931091308594,24.3959045410156" IsTargetVirtualized="True" Weight="3" />
-    <Link Source="@6" Target="@13" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="@21" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="@22" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="@28" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="@33" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="@34" Category="Contains" FetchingParent="@6" />
-    <Link Source="@6" Target="@35" Category="Contains" FetchingParent="@6" />
-    <Link Source="@69" Target="@17" Category="References" Weight="1" />
-    <Link Source="@8" Target="@26" Category="Contains" FetchingParent="@8" />
   </Links>
   <Categories>
     <Category Id="CodeMap_WebProject" Label="Web Project" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="Web Projects" />
     <Category Id="CodeSchema_Assembly" Label="Assembly" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="Assemblies" />
-    <Category Id="CodeSchema_Calls" Label="Calls" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Called By" OutgoingActionLabel="Calls" />
     <Category Id="CodeSchema_Class" Label="Class" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Classes" />
-    <Category Id="CodeSchema_Field" Label="Field" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Fields" />
-    <Category Id="CodeSchema_FieldRead" Label="Field Read" BasedOn="CodeSchema_FieldReference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Read By" OutgoingActionLabel="Reads Fields" />
-    <Category Id="CodeSchema_FieldReference" Label="Field Reference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References Fields" />
-    <Category Id="CodeSchema_FieldWrite" Label="Field Write" BasedOn="CodeSchema_FieldReference" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Written By" OutgoingActionLabel="Writes Fields" />
-    <Category Id="CodeSchema_Member" Label="Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="Members" />
-    <Category Id="CodeSchema_Method" Label="Method" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="Methods" />
     <Category Id="CodeSchema_Namespace" Label="Namespace" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="CodeSchema_Namespace" NavigationActionLabel="Namespaces" />
-    <Category Id="CodeSchema_Property" Label="Property" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Property" NavigationActionLabel="Properties" />
     <Category Id="CodeSchema_Type" Label="Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Types" />
     <Category Id="Contains" Label="Contains" Description="Whether the source of the link contains the target object" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contained By" IsContainment="True" OutgoingActionLabel="Contains" />
     <Category Id="File" Label="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="Files" />
-    <Category Id="References" Label="References" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
   </Categories>
   <Properties>
-    <Property Id="AssemblyTimestamp" DataType="System.DateTime" />
     <Property Id="Bounds" DataType="System.Windows.Rect" />
     <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
     <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
-    <Property Id="CodeSchemaProperty_IsConstructor" Label="Is Constructor" Description="Flag to indicate the method is a constructor" DataType="System.Boolean" />
-    <Property Id="CodeSchemaProperty_IsFinal" Label="Is Final" Description="Flag to indicate the member is 'Final' and cannot be derived from" DataType="System.Boolean" />
-    <Property Id="CodeSchemaProperty_IsInternal" Label="Is Internal" Description="Flag to indicate the method is 'Internal'" DataType="System.Boolean" />
     <Property Id="CodeSchemaProperty_IsPublic" Label="Is Public" Description="Flag to indicate the scope is Public" DataType="System.Boolean" />
-    <Property Id="CodeSchemaProperty_IsSpecialName" Label="Is Special Name" Description="Flag to indicate the method is treated in a special way by some compilers" DataType="System.Boolean" />
     <Property Id="CodeSchemaProperty_IsStatic" Label="Is Static" Description="Flag to indicate the member is a static member" DataType="System.Boolean" />
-    <Property Id="CodeSchemaProperty_IsVirtual" Label="Is Virtual" Description="Flag to indicate the method can be overridden" DataType="System.Boolean" />
-    <Property Id="CodeSchemaProperty_StrongName" Label="StrongName" Description="StrongName" DataType="System.String" />
     <Property Id="CommonLabel" DataType="System.String" />
     <Property Id="DataVirtualized" Label="Data Virtualized" Description="If true, the graph can contain nodes and links that represent data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
     <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
     <Property Id="DelayedChildNodesState" Label="Delayed Child Nodes State" Description="Unspecified if the delayed child nodes state is not specified. NotFetched if the group contains child nodes that are not fetched into the graph yet. Fetched if the group has all its delayed child nodes already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
-    <Property Id="DelayedCrossGroupLinksState" Label="Delayed Cross-Group Links State" Description="Unspecified if the delayed cross-group links state is not specified. NotFetched if delayed cross-group links on this node are not fetched into the graph yet. Fetched if all delayed cross-group links have already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
     <Property Id="Expression" DataType="System.String" />
-    <Property Id="FetchedChildrenCount" DataType="System.Int32" />
     <Property Id="FetchingParent" DataType="Microsoft.VisualStudio.GraphModel.GraphNodeId" />
-    <Property Id="FilePath" Label="File Path" Description="File Path" DataType="System.String" />
     <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
     <Property Id="GroupLabel" DataType="System.String" />
-    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" DataType="System.String" />
     <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
     <Property Id="IsContainment" DataType="System.Boolean" />
     <Property Id="IsEnabled" DataType="System.Boolean" />
     <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
-    <Property Id="IsSourceVirtualized" Label="Link Source Virtualized" Description="If true, the link source end contains data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
-    <Property Id="IsTargetVirtualized" Label="Link Target Virtualized" Description="If true, the link target end contains data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
     <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
     <Property Id="Layout" DataType="System.String" />
     <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
     <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
     <Property Id="SourceLocation" Label="Start Line Number" DataType="Microsoft.VisualStudio.GraphModel.CodeSchema.SourceLocation" />
     <Property Id="TargetType" DataType="System.Type" />
-    <Property Id="UseManualLocation" DataType="System.Boolean" />
     <Property Id="Value" DataType="System.String" />
     <Property Id="ValueLabel" DataType="System.String" />
     <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
-    <Property Id="Weight" Label="Weight" Description="Weight" DataType="System.Double" />
     <Property Id="ZoomLevel" DataType="System.String" />
   </Properties>
   <QualifiedNames>
     <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
-    <Name Id="GenericArguments" Label="Generic Arguments" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" />
-    <Name Id="GenericParameterCount" Label="Generic Parameter Count" ValueType="System.String" />
-    <Name Id="Member" Label="Member" ValueType="System.Object" />
-    <Name Id="Name" Label="Name" ValueType="System.String" />
     <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
-    <Name Id="OverloadingParameters" Label="Parameter" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
     <Name Id="Type" Label="Type" ValueType="System.Object" />
   </QualifiedNames>
   <IdentifierAliases>
-    <Alias n="1" Uri="Assembly=$(0e9cdce8-bfd8-4891-aa22-e8e717a23afe.OutputPathUri)" />
-    <Alias n="2" Id="(@1)" />
     <Alias n="3" Uri="Assembly=$(c7fdd6f3-af07-4385-adc3-0b9d00f6f22e.OutputPathUri)" />
     <Alias n="4" Id="(@3)" />
-    <Alias n="5" Id="Namespace=commuterPlanner" />
-    <Alias n="6" Id="(@3 @5)" />
-    <Alias n="7" Id="Namespace=commuterPlanner.Controllers" />
-    <Alias n="8" Id="(@3 @7)" />
-    <Alias n="9" Id="Namespace=commuterPlanner.MZK_parser" />
-    <Alias n="10" Id="(@1 @9)" />
     <Alias n="11" Id="Namespace=commuterPlanner.Services" />
     <Alias n="12" Id="(@3 @11)" />
-    <Alias n="13" Id="(@3 @5 Type=BundleConfig)" />
-    <Alias n="14" Id="(@1 @9 Type=BusLink)" />
-    <Alias n="15" Id="(@1 @9 Type=BusNo2Stop)" />
-    <Alias n="16" Id="(@1 @9 Type=BusStop)" />
-    <Alias n="17" Id="(@1 @9 Type=BusStopDetail)" />
-    <Alias n="18" Id="(@1 @9 Type=BusStopLink)" />
-    <Alias n="19" Id="Type=Connections" />
-    <Alias n="20" Id="(@3 @11 @19)" />
-    <Alias n="21" Id="(@3 @5 Type=EmailService)" />
-    <Alias n="22" Id="(@3 @5 Type=FilterConfig)" />
     <Alias n="23" Id="Type=GraphDatabaseService" />
     <Alias n="24" Id="(@3 @11 @23)" />
-    <Alias n="25" Id="Type=HomeController" />
-    <Alias n="26" Id="(@3 @7 @25)" />
-    <Alias n="27" Id="(@1 @9 Type=Hour)" />
-    <Alias n="28" Id="(@3 @5 Type=MvcApplication)" />
-    <Alias n="29" Id="(@1 @9 Type=Program)" />
-    <Alias n="30" Id="(@3 @11 Type=Relation)" />
-    <Alias n="31" Id="Type=Route" />
-    <Alias n="32" Id="(@3 @11 @31)" />
-    <Alias n="33" Id="(@3 @5 Type=RouteConfig)" />
-    <Alias n="34" Id="(@3 @5 Type=SmsService)" />
-    <Alias n="35" Id="(@3 @5 Type=Startup)" />
-    <Alias n="36" Id="(@1 @9 Type=Time)" />
-    <Alias n="37" Id="(@1 @9 Type=TimeTable)" />
-    <Alias n="38" Uri="Assembly=$(VsSolutionUri)/packages/Microsoft.AspNet.Web.Optimization.1.1.3/lib/net40/System.Web.Optimization.dll" />
-    <Alias n="39" Id="(@3 @5 Type=BundleConfig Member=(Name=RegisterBundles OverloadingParameters=[(@38 Namespace=System.Web.Optimization Type=BundleCollection)]))" />
-    <Alias n="40" Uri="Assembly=$(VsSolutionUri)/packages/Microsoft.AspNet.Mvc.5.2.3/lib/net45/System.Web.Mvc.dll" />
-    <Alias n="41" Id="(@3 @5 Type=FilterConfig Member=(Name=RegisterGlobalFilters OverloadingParameters=[(@40 Namespace=System.Web.Mvc Type=GlobalFilterCollection)]))" />
-    <Alias n="42" Uri="Assembly=$(VsSolutionUri)/packages/Owin.1.0/lib/net40/Owin.dll" />
-    <Alias n="43" Uri="Assembly=$(VsSolutionUri)/packages/Microsoft.AspNet.Identity.Core.2.2.1/lib/net45/Microsoft.AspNet.Identity.Core.dll" />
-    <Alias n="44" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.5.2/System.Web.dll" />
-    <Alias n="45" Id="(@3 @5 Type=RouteConfig Member=(Name=RegisterRoutes OverloadingParameters=[(@44 Namespace=System.Web.Routing Type=RouteCollection)]))" />
-    <Alias n="46" Uri="Assembly=$(FxReferenceAssembliesUri)/.NETFramework/v4.5.2/mscorlib.dll" />
-    <Alias n="47" Id="(@46 Namespace=System Type=String)" />
-    <Alias n="48" Id="(@3 @11 @23 Member=(Name=calculateTimeDifference OverloadingParameters=[@47]))" />
-    <Alias n="49" Id="(@3 @11 @23 Member=(Name=validateWeekDay OverloadingParameters=[@47]))" />
-    <Alias n="50" Id="(@46 Namespace=System.Collections.Generic Type=(Name=List GenericParameterCount=1 GenericArguments=[@47]))" />
-    <Alias n="51" Id="(@3 @11 @23 Member=(Name=getBusStopsCoordinates OverloadingParameters=[@50,@50]))" />
-    <Alias n="52" Id="(@3 @11 @23 Member=(Name=getRoutes OverloadingParameters=[(@46 Namespace=System.Collections.Generic Type=(Name=List GenericParameterCount=1 GenericArguments=[@20])),@47,@47]))" />
-    <Alias n="53" Id="(@3 @7 @25 Member=(Name=GetRoute OverloadingParameters=[@50,@50,@47,@47]))" />
-    <Alias n="54" Id="(@3 @11 @23 Member=(Name=getArrivalTimes OverloadingParameters=[@47,@47,@47,@47,(@46 Namespace=System Type=Int32),(@46 Namespace=System Type=Boolean)]))" />
-    <Alias n="55" Id="Member=.ctor" />
-    <Alias n="56" Id="(@1 @9 Type=BusStop @55)" />
-    <Alias n="57" Id="(@3 @11 @19 @55)" />
-    <Alias n="58" Id="(@3 @11 @23 @55)" />
-    <Alias n="59" Id="(@3 @11 Type=Relation @55)" />
-    <Alias n="60" Id="(@3 @11 @31 @55)" />
-    <Alias n="61" Id="(@3 @11 @31 Member=arrivalTime)" />
-    <Alias n="62" Id="(@3 @11 @23 Member=arrivalTimeList)" />
-    <Alias n="63" Id="(@3 @11 @31 Member=busChanges)" />
-    <Alias n="64" Id="(@3 @11 Type=Relation Member=busNumber)" />
-    <Alias n="65" Id="(@3 @11 @31 Member=busNumber)" />
-    <Alias n="66" Id="(@3 @11 @19 Member=busStopA)" />
-    <Alias n="67" Id="(@3 @11 @19 Member=busStopB)" />
-    <Alias n="68" Id="(@3 @11 @31 Member=busStopCity)" />
-    <Alias n="69" Id="(@1 @9 Type=BusStop Member=busStopDetail)" />
-    <Alias n="70" Id="(@3 @11 @31 Member=busStopNameList)" />
-    <Alias n="71" Id="(@3 @11 @31 Member=busStopRefList)" />
-    <Alias n="72" Id="(@3 @11 @31 Member=coordinates)" />
-    <Alias n="73" Id="(@3 @11 @23 Member=selectedTime)" />
   </IdentifierAliases>
   <Styles>
     <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
@@ -581,10 +282,9 @@
   </Styles>
   <Paths>
     <Path Id="0e9cdce8-bfd8-4891-aa22-e8e717a23afe.OutputPath" Value="C:\Users\jasiek\Desktop\Studia\Praca_dyplomowa\commuterPlanner\commuterPlanner.MZK_parser\bin\Debug\commuterPlanner.MZK_parser.exe" />
-    <Path Id="0e9cdce8-bfd8-4891-aa22-e8e717a23afe.OutputPathUri" Value="file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner.MZK_parser/bin/Debug/commuterPlanner.MZK_parser.exe" />
     <Path Id="c7fdd6f3-af07-4385-adc3-0b9d00f6f22e.OutputPath" Value="C:\Users\jasiek\Desktop\Studia\Praca_dyplomowa\commuterPlanner\commuterPlanner\bin\commuterPlanner.dll" />
     <Path Id="c7fdd6f3-af07-4385-adc3-0b9d00f6f22e.OutputPathUri" Value="file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner/commuterPlanner/bin/commuterPlanner.dll" />
-    <Path Id="FxReferenceAssembliesUri" Value="file:///C:/Program Files (x86)/Reference Assemblies/Microsoft/Framework" />
-    <Path Id="VsSolutionUri" Value="file:///C:/Users/jasiek/Desktop/Studia/Praca_dyplomowa/commuterPlanner" />
+    <Path Id="FxReferenceAssemblies" Value="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework" />
+    <Path Id="VsSolution" Value="C:\Users\jasiek\Desktop\Studia\Praca_dyplomowa\commuterPlanner" />
   </Paths>
 </DirectedGraph>

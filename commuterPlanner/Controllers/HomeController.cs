@@ -1,4 +1,5 @@
-﻿using commuterPlanner.Services;
+﻿using commuterPlanner.Models;
+using commuterPlanner.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
@@ -56,6 +57,7 @@ namespace commuterPlanner.Controllers
             }
 
             GraphDatabaseService graphDatabase = new GraphDatabaseService();
+
             var routes = graphDatabase.getRoutes(connections, selectedTravelDay, selectedTravelTime);
 
             var settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
@@ -67,20 +69,6 @@ namespace commuterPlanner.Controllers
             };
 
             return jsonResult;
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
     }
 }

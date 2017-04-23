@@ -6,9 +6,10 @@
     //all available bus stop data
     var allStops;
     //bus stops in cities
-    var cityBusStopList;
+    var cityList;
 
     $scope.$on('dataReady', function (event, obj) {
+        console.log("planContr init");
         init();
     });
 
@@ -21,19 +22,19 @@
         //names of available cities to display
         $scope.cityNames = new Array();
 
-        cityBusStopList = DataDisplayService.getCities(allStops, $scope.cityNames);
-       // console.log("cityBusStopList in plan contr " + cityBusStopList);
+        cityList = DataDisplayService.getCities(allStops, $scope.cityNames);
+       // console.log("cityList in plan contr " + cityList);
        // console.log("citiesList in plan contr " + $scope.cityNames);
     };
 
     $scope.selectCity = function (index, selector) {
         if (selector == 'start') {
-            $scope.startCity = Object.keys(cityBusStopList[index])[0];
-            $scope.busStopsStart = DataDisplayService.getStops(cityBusStopList, $scope.startCity);
+            $scope.startCity = Object.keys(cityList[index])[0];
+            $scope.busStopsStart = DataDisplayService.getStops(cityList, $scope.startCity);
         }
         else if (selector == 'end') {
-            $scope.endCity = Object.keys(cityBusStopList[index])[0];
-            $scope.busStopsEnd = DataDisplayService.getStops(cityBusStopList, $scope.endCity);
+            $scope.endCity = Object.keys(cityList[index])[0];
+            $scope.busStopsEnd = DataDisplayService.getStops(cityList, $scope.endCity);
         }
     };
 
@@ -54,8 +55,8 @@
     $scope.getStopRefs = function () {
         if ($scope.startBusStop != 'undefined' && $scope.endBusStop != 'undefined') {
             $scope.routes = new Array();
-            var startStopRefs = DataDisplayService.getRefs(cityBusStopList, $scope.startCity, $scope.startBusStop);
-            var endStopRefs = DataDisplayService.getRefs(cityBusStopList, $scope.endCity, $scope.endBusStop);
+            var startStopRefs = DataDisplayService.getRefs(cityList, $scope.startCity, $scope.startBusStop);
+            var endStopRefs = DataDisplayService.getRefs(cityList, $scope.endCity, $scope.endBusStop);
 
             RouteSelectionService.receiveRoutes(startStopRefs, endStopRefs, $filter('date')($scope.selectedDate, 'EEEE'), $filter('date')($scope.selectedTime, 'HH:mm')).then(
                 function (data) {
@@ -107,8 +108,8 @@
                 break;
             }
         }
-        var busStopName = DataDisplayService.getBusStopNamebyRef(cityBusStopList, $scope.startCity, obj.busStopRef);
-        $scope.busStopsStart = DataDisplayService.getStops(cityBusStopList, $scope.startCity);
+        var busStopName = DataDisplayService.getBusStopNamebyRef(cityList, $scope.startCity, obj.busStopRef);
+        $scope.busStopsStart = DataDisplayService.getStops(cityList, $scope.startCity);
 
         for (var i = 0; i < $scope.busStopsStart.length; i++) {
             if (busStopName == $scope.busStopsStart[i]) {
@@ -127,8 +128,8 @@
                 break;
             }
         }
-        var busStopName = DataDisplayService.getBusStopNamebyRef(cityBusStopList, $scope.endCity, obj.busStopRef);
-        $scope.busStopsEnd = DataDisplayService.getStops(cityBusStopList, $scope.endCity);
+        var busStopName = DataDisplayService.getBusStopNamebyRef(cityList, $scope.endCity, obj.busStopRef);
+        $scope.busStopsEnd = DataDisplayService.getStops(cityList, $scope.endCity);
 
         for (var i = 0; i < $scope.busStopsEnd.length; i++) {
             if (busStopName == $scope.busStopsEnd[i]) {

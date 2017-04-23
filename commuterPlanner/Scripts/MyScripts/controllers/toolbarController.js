@@ -1,4 +1,4 @@
-﻿app.controller('ToolbarController', ['$scope', '$mdSidenav', '$mdPanel', 'BusStopService', function ($scope, $mdSidenav, $mdPanel, BusStopService) {
+﻿app.controller('ToolbarController', ['$scope', '$mdSidenav', '$mdPanel', function ($scope, $mdSidenav, $mdPanel) {
     $scope.toggleSidenav = function (side) {
         $mdSidenav(side).toggle();
     };
@@ -14,7 +14,7 @@
             controller: 'tableController',
             // controllerAs: 'ctrl',
             // disableParentScroll: this.disableParentScroll,
-            templateUrl: '/Templates/Panel/panel.html',
+            templateUrl: '/Templates/timeTablePanel.html',
             hasBackdrop: true,
             panelClass: 'demo-dialog-example',
             position: position,

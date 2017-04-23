@@ -3,7 +3,7 @@
     //all available bus stop data
     var allStops;
     //bus stops in cities
-    var cityBusStopList;
+    var cityList;
 
     var init = function () {
         allStops = BusStopService.getBusData();
@@ -14,7 +14,7 @@
     var getCities = function () {
         //names of available cities to display
         $scope.cityNames = new Array();
-        cityBusStopList = DataDisplayService.getCities(allStops, $scope.cityNames);
+        cityList = DataDisplayService.getCities(allStops, $scope.cityNames);
     };
 
     //index number of selected city from list 
@@ -40,11 +40,11 @@
     var getStops = function () {
         $scope.stopList = new Array();
 
-        //selectedCity = Object.keys(cityBusStopList[cityNo])[0];
+        //selectedCity = Object.keys(cityList[cityNo])[0];
         selectedCity = $scope.cityNames[cityNo];        
-        cityStops = cityBusStopList[cityNo][selectedCity];
+        cityStops = cityList[cityNo][selectedCity];
 
-        $scope.stopList = DataDisplayService.getStops(cityBusStopList, selectedCity);
+        $scope.stopList = DataDisplayService.getStops(cityList, selectedCity);
 
         //checks if getRelation() was already called, used to prevent calling fuction multiple times (!digest loop error)
         if (iterations == 0) {

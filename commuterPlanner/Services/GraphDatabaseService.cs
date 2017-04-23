@@ -12,28 +12,10 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System.Web.Mvc;
+using commuterPlanner.Models;
 
 namespace commuterPlanner.Services
-{
-    public class Relation
-    {
-        public List<string> busNumber;
-    }
-    public class Route
-    {
-        public int busChanges;
-        public List<string> busStopNameList;
-        public List<string> busStopCity;
-        public List<string> busStopRefList;
-        public List<string> coordinates;
-        public List<string> busNumber;
-        public List<string> arrivalTime;
-    }
-    public class Connections
-    {
-        public string busStopA;
-        public string busStopB;
-    }
+{ 
     public class GraphDatabaseService
     {
         //selected travel time by user
@@ -41,7 +23,261 @@ namespace commuterPlanner.Services
 
         //list of hours of bus arrival
         public static List<string> arrivalTimeList;
+             
+        public List<Route> getRoutes(List<Connections> connections, string selectedTravelDay, string selectedTravelTime)
+        {
+            selectedTravelDay = validateWeekDay(selectedTravelDay);
 
+            using (var driver = GraphDatabase.Driver("bolt://localhost:7687", AuthTokens.Basic("neo4j", "password")))
+            using (var session = driver.Session())
+            {
+                //list of shortest routes (least bus changes)
+                List<Route> routes = new List<Route>();
+
+                foreach (var connection in connections)
+                {
+                    //Neo4j query - receive all possible routes between bus stop A to bus stop B
+                    var result = session.Run("MATCH p=shortestPath((a:BusStop {refNo:\"" + connection.busStopA + "\"})-[r:RELATION*]->(b:BusStop {refNo:\"" + connection.busStopB + "\"})) return extract(n in nodes(p)" +
+                                   " | n) AS nodes, EXTRACT (rel in rels(p) | rel) AS relations");
+
+                    //all bus stops names within route
+                    List<string> busStopsName = new List<string>();
+                    //all bus stops refs within route
+                    List<string> busStopsRef = new List<string>();
+                    //cities where the bus stops are
+                    List<string> busStopCity = new List<string>();
+                    //all possible relations
+                    List<Relation> relations = new List<Relation>();
+
+                    //extracts data from Neo4j query result, that is relations, bus name, bus ref and bus city
+                    extractRelations(result, relations, busStopsName, busStopsRef, busStopCity);     
+
+                    if (!busStopsRef.Any())
+                    {
+                        continue;
+                    }
+                
+                    List<List<string>> allPaths = new List<List<string>>();                  
+                    
+                    //create all posible paths
+                    getAllPaths(allPaths, relations);
+
+
+                    //* the purpose of the below code is to select the shortest path (one with least bus change)
+                    //calculating shortes connection from all available 
+                    List<int> changes = new List<int>();
+                    calculateShortestPath(changes, allPaths);
+                    
+                    //selecting route with least changes
+                    int shortestPath = changes.IndexOf(changes.Min());
+
+                    //get arrival time for each stop
+                    bool isValidRoute = true;
+                    getBusArrivalTimes(shortestPath, ref isValidRoute, allPaths, selectedTravelDay, selectedTravelTime, busStopsRef);                    
+
+                    //adding shortest route to list i
+                    if (isValidRoute)
+                    {
+                        var coordinates = getBusStopsCoordinates(busStopsRef, busStopCity);
+                        if (coordinates.Count != busStopsName.Count)
+                            continue;
+
+                        routes.Add(new Route
+                        {
+                            busChanges = changes.Min(),
+                            busNumber = new List<string>(allPaths[shortestPath]),
+                            busStopNameList = new List<string>(busStopsName),
+                            busStopCity = new List<string>(busStopCity),
+                            busStopRefList = new List<string>(busStopsRef),
+                            coordinates = new List<string>(coordinates),
+                            arrivalTime = new List<string>(arrivalTimeList)
+                        });
+                    }
+                }
+                return routes;
+            }
+        }
+
+        private void getBusArrivalTimes(int shortestPath, ref bool isValidRoute, List<List<string>> allPaths, string selectedTravelDay, string selectedTravelTime, List<string> busStopsRef)
+        {
+            arrivalTimeList = new List<string>();
+            int indexPath = 0;
+            int currentBusNo = new int();
+            int lastBusNo = new int();
+
+            foreach (var stopRef in busStopsRef)
+            {
+                bool isChange = false;
+
+                if (indexPath == 0)
+                {
+                    int.TryParse(allPaths[shortestPath][indexPath], out currentBusNo);
+                }
+                else if (indexPath < busStopsRef.Count - 1)
+                {
+                    lastBusNo = currentBusNo;
+                    int.TryParse(allPaths[shortestPath][indexPath], out currentBusNo);
+                    if (lastBusNo != currentBusNo)
+                        isChange = true;
+                }
+                else
+                {
+                    indexPath--;
+                    isValidRoute = getArrivalTimes(stopRef, allPaths[shortestPath][indexPath], selectedTravelDay, selectedTravelTime, indexPath, isChange);
+                    break;
+                }
+
+                isValidRoute = getArrivalTimes(stopRef, allPaths[shortestPath][indexPath], selectedTravelDay, selectedTravelTime, indexPath, isChange);
+                if (!isValidRoute)
+                    break;
+                indexPath++;
+            }
+        }
+
+        private void calculateShortestPath(List<int> changes, List<List<string>> allPaths)
+        {
+            int currentBusNo;
+            int lastBusNo;
+
+            foreach (var path in allPaths)
+            {
+                int change = 0;
+                currentBusNo = new int();
+                lastBusNo = new int();
+                int index = 0;
+                foreach (var busNumber in path)
+                {
+                    if (index > 0)
+                    {
+                        lastBusNo = currentBusNo;
+                        int.TryParse(busNumber, out currentBusNo);
+                        if (lastBusNo != currentBusNo)
+                            change++;
+                    }
+                    else
+                        int.TryParse(busNumber, out currentBusNo);
+
+                    index++;
+                }
+                changes.Add(change);
+            }
+        }
+
+        private void getAllPaths(List<List<string>> allPaths, List<Relation> relations)
+        {
+            List<List<string>> allRelations = new List<List<string>>();
+
+            //extracting bus numebers
+            foreach (var rel in relations)
+            {
+                allRelations.Add(new List<string>(rel.busNumber));
+            }
+
+            //savig to single string for each route
+            IEnumerable<string> possibleRelations = new List<string> { null };
+            foreach (var list in allRelations)
+            {
+                // cross join the current result with each member of the next list
+                possibleRelations = possibleRelations.SelectMany(o => list.Select(s => o + s + " "));
+            }
+
+
+            foreach (var rel in possibleRelations)
+            {
+                var path = rel.Split(' ').Where(x => x != "").ToArray();
+                allPaths.Add(new List<string>(path));
+            }
+        }
+
+        private void extractRelations(IStatementResult result, List<Relation> relations, List<string> busStopsName, List<string> busStopsRef, List<string> busStopCity)
+        {
+            foreach (var record in result)
+            {
+                //all nodes returned by query
+                var nodes = record["nodes"].As<List<INode>>();
+                //all relation returned by query
+                var rels = record["relations"].As<List<IRelationship>>();
+
+                //saving nodes to busStop list variable
+                foreach (var node in nodes)
+                {
+                    var nodeProperties = node.Properties.Values.ToList();
+                    busStopsName.Add(nodeProperties[2].ToString());
+                    busStopsRef.Add(nodeProperties[0].ToString());
+                    busStopCity.Add(nodeProperties[1].ToString());
+                }
+
+                //saving relation to relations list variable
+                foreach (var rel in rels)
+                {
+                    var relationProperties = rel.Properties["busNumber"];
+
+                    if (relationProperties is IList)
+                    {
+                        List<string> listRel = new List<string>();
+                        foreach (var numbers in relationProperties.As<List<string>>())
+                        {
+                            listRel.Add(numbers);
+                        }
+                        relations.Add(new Relation
+                        {
+                            busNumber = new List<string>(listRel)
+                        });
+                    }
+                    else
+                    {
+                        relations.Add(new Relation
+                        {
+                            busNumber = new List<string> { relationProperties.ToString() }
+                        });
+                    }
+                }
+            }
+        }
+
+        public static List<string> getBusStopsCoordinates(List<string> busStopsRef, List<string> busStopCity)
+        {
+            List<string> coordinates = new List<string>();
+
+            JObject busStopJSONData;
+
+
+            using (StreamReader file = new StreamReader(System.Web.HttpContext.Current.Server.MapPath("~/Content/data/busStops.json")))
+            using (JsonTextReader reader = new JsonTextReader(file))
+            {
+                busStopJSONData = (JObject)JToken.ReadFrom(reader);
+            }
+
+            // IEnumerable<JObject> busStops = busStopData["busStops"].Values<JObject>();
+            IList<JToken> busStops = busStopJSONData["busStops"].Children().ToList();
+
+            var selectedBusStops = busStopsRef.Zip(busStopCity, (r, c) => new { stopRef = r, stopCity = c });
+            foreach (var busStop in selectedBusStops)
+            {
+                JToken cityStops = null;
+                foreach (var item in busStops)
+                {
+                    cityStops = item[busStop.stopCity];
+                    if (cityStops != null)
+                        break;
+                }
+
+                JObject stop = cityStops.Values<JObject>()
+                    .Where(m => m["tags"]["ref"].Value<string>() == busStop.stopRef)
+                    .FirstOrDefault();
+
+                if (stop == null)
+                    break;
+
+                var lat = (string)stop["lat"];
+                var lon = (string)stop["lon"];
+
+                coordinates.Add(lat + ", " + lon);
+
+            }
+            return coordinates;
+
+        }
         public int calculateTimeDifference(string time)
         {
             if (time.Contains(':'))
@@ -64,7 +300,6 @@ namespace commuterPlanner.Services
             {
                 timeTableData = (JObject)JToken.ReadFrom(reader);
             }
-            //JObject timeTableData = JObject.Parse(File.ReadAllText("~/Content/data/timeTable.json"));
 
             IEnumerable<JToken> timeTable = timeTableData.SelectToken("$.busStopDetail[?(@.stopRef == '" + busStopRef + "')]" +
                ".timeTable[?(@.line == '" + busNo + "')]" +
@@ -125,236 +360,6 @@ namespace commuterPlanner.Services
                     break;
             }
             return weekDay;
-        }
-        public List<Route> getRoutes(List<Connections> connections, string selectedTravelDay, string selectedTravelTime)
-        {
-            selectedTravelDay = validateWeekDay(selectedTravelDay);
-
-            using (var driver = GraphDatabase.Driver("bolt://localhost:7687", AuthTokens.Basic("neo4j", "password")))
-            using (var session = driver.Session())
-            {
-                //list of shortest routes (least bus changes)
-                List<Route> routes = new List<Route>();
-
-                foreach (var connection in connections)
-                {
-                    //Neo4j query - receive all possible routes between bus stop A to bus stop B
-                    var result = session.Run("MATCH p=shortestPath((a:BusStop {refNo:\"" + connection.busStopA + "\"})-[r:RELATION*]->(b:BusStop {refNo:\"" + connection.busStopB + "\"})) return extract(n in nodes(p)" +
-                                   " | n) AS nodes, EXTRACT (rel in rels(p) | rel) AS relations");
-
-                    //all bus stops names within route
-                    List<string> busStopsName = new List<string>();
-                    //all bus stops refs within route
-                    List<string> busStopsRef = new List<string>();
-                    //cities where the bus stops are
-                    List<string> busStopCity = new List<string>();
-
-                    //all possible relations
-                    List<Relation> relations = new List<Relation>();
-
-                    foreach (var record in result)
-                    {
-                        //all nodes returned by query
-                        var nodes = record["nodes"].As<List<INode>>();
-                        //all relation returned by query
-                        var rels = record["relations"].As<List<IRelationship>>();
-
-                        //saving nodes to busStop list variable
-                        foreach (var node in nodes)
-                        {
-                            var nodeProperties = node.Properties.Values.ToList();
-                            busStopsName.Add(nodeProperties[2].ToString());
-                            busStopsRef.Add(nodeProperties[0].ToString());
-                            busStopCity.Add(nodeProperties[1].ToString());
-                        }
-
-                        //saving relation to relations list variable
-                        foreach (var rel in rels)
-                        {
-                            var relationProperties = rel.Properties["busNumber"];
-
-                            if (relationProperties is IList)
-                            {
-                                List<string> listRel = new List<string>();
-                                foreach (var numbers in relationProperties.As<List<string>>())
-                                {
-                                    listRel.Add(numbers);
-                                }
-                                relations.Add(new Relation
-                                {
-                                    busNumber = new List<string>(listRel)
-                                });
-                            }
-                            else
-                            {
-                                relations.Add(new Relation
-                                {
-                                    busNumber = new List<string> { relationProperties.ToString() }
-                                });
-                            }
-                        }
-                    }
-
-
-                    if (!busStopsRef.Any())
-                    {
-                        continue;
-                    }
-
-                    //* the purpose of the below code is to select the shortest path (one with least bus change)
-                    List<List<string>> allRelations = new List<List<string>>();
-
-                    //extracting bus numebers
-                    foreach (var rel in relations)
-                    {
-                        allRelations.Add(new List<string>(rel.busNumber));
-                    }
-
-                    //savig to single string for each route
-                    IEnumerable<string> possibleRelations = new List<string> { null };
-                    foreach (var list in allRelations)
-                    {
-                        // cross join the current result with each member of the next list
-                        possibleRelations = possibleRelations.SelectMany(o => list.Select(s => o + s + " "));
-                    }
-
-
-                    List<List<string>> allPaths = new List<List<string>>();
-                    foreach (var rel in possibleRelations)
-                    {
-                        var path = rel.Split(' ').Where(x => x != "").ToArray();
-                        allPaths.Add(new List<string>(path));
-                    }
-
-                    //calculating shortes connection from all available 
-                    List<int> changes = new List<int>();
-                    int currentBusNo;
-                    int lastNusNo;
-                    foreach (var path in allPaths)
-                    {
-                        int change = 0;
-                        currentBusNo = new int();
-                        lastNusNo = new int();
-                        int index = 0;
-                        foreach (var busNumber in path)
-                        {
-                            if (index > 0)
-                            {
-                                lastNusNo = currentBusNo;
-                                int.TryParse(busNumber, out currentBusNo);
-                                if (lastNusNo != currentBusNo)
-                                    change++;
-                            }
-                            else
-                                int.TryParse(busNumber, out currentBusNo);
-
-                            index++;
-                        }
-                        changes.Add(change);
-                    }
-
-                    //selecting route with least changes
-                    int shortestPath = changes.IndexOf(changes.Min());
-
-                    //get arrival time for each stop
-                    arrivalTimeList = new List<string>();
-                    int indexPath = 0;
-                    currentBusNo = new int();
-                    lastNusNo = new int();
-                    bool isValidRoute = true;
-                    foreach (var stopRef in busStopsRef)
-                    {
-                        bool isChange = false;
-
-                        if (indexPath == 0)
-                        {
-                            int.TryParse(allPaths[shortestPath][indexPath], out currentBusNo);
-                        }
-                        else if (indexPath < busStopsRef.Count - 1)
-                        {
-                            lastNusNo = currentBusNo;
-                            int.TryParse(allPaths[shortestPath][indexPath], out currentBusNo);
-                            if (lastNusNo != currentBusNo)
-                                isChange = true;
-                        }
-                        else
-                        {
-                            indexPath--;
-                            isValidRoute = getArrivalTimes(stopRef, allPaths[shortestPath][indexPath], selectedTravelDay, selectedTravelTime, indexPath, isChange);
-                            break;
-                        }
-
-                        isValidRoute = getArrivalTimes(stopRef, allPaths[shortestPath][indexPath], selectedTravelDay, selectedTravelTime, indexPath, isChange);
-                        if (!isValidRoute)
-                            break;
-                        indexPath++;
-                    }
-
-                    //adding shortest route to list i
-                    if (isValidRoute)
-                    {
-                        var coordinates = getBusStopsCoordinates(busStopsRef, busStopCity);
-                        if (coordinates.Count != busStopsName.Count)
-                            continue;
-
-
-                        routes.Add(new Route
-                        {
-                            busChanges = changes.Min(),
-                            busNumber = new List<string>(allPaths[shortestPath]),
-                            busStopNameList = new List<string>(busStopsName),
-                            busStopCity = new List<string>(busStopCity),
-                            busStopRefList = new List<string>(busStopsRef),
-                            coordinates = new List<string>(coordinates),
-                            arrivalTime = new List<string>(arrivalTimeList)
-                        });
-                    }
-                }
-                return routes;
-            }
-        }
-        public static List<string> getBusStopsCoordinates(List<string> busStopsRef, List<string> busStopCity)
-        {
-            List<string> coordinates = new List<string>();
-
-            JObject busStopJSONData;
-
-
-            using (StreamReader file = new StreamReader(System.Web.HttpContext.Current.Server.MapPath("~/Content/data/busStops.json")))
-            using (JsonTextReader reader = new JsonTextReader(file))
-            {
-                busStopJSONData = (JObject)JToken.ReadFrom(reader);
-            }
-
-            // IEnumerable<JObject> busStops = busStopData["busStops"].Values<JObject>();
-            IList<JToken> busStops = busStopJSONData["busStops"].Children().ToList();
-
-            var selectedBusStops = busStopsRef.Zip(busStopCity, (r, c) => new { stopRef = r, stopCity = c });
-            foreach (var busStop in selectedBusStops)
-            {
-                JToken cityStops = null;
-                foreach (var item in busStops)
-                {
-                    cityStops = item[busStop.stopCity];
-                    if (cityStops != null)
-                        break;
-                }
-
-                JObject stop = cityStops.Values<JObject>()
-                    .Where(m => m["tags"]["ref"].Value<string>() == busStop.stopRef)
-                    .FirstOrDefault();
-
-                if (stop == null)
-                    break;
-
-                var lat = (string)stop["lat"];
-                var lon = (string)stop["lon"];
-
-                coordinates.Add(lat + ", " + lon);
-
-            }
-            return coordinates;
-
         }
     }
 }
