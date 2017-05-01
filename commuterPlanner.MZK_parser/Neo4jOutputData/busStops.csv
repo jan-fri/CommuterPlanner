@@ -199,8 +199,8 @@ ref,name,city
 
 129,Jaworzańska Zagłoby,Bielsko Biała
 372,Zapora Jaworzańska,Bielsko Biała
-376,Zapora Sklep,Bielsko Biała
 374,Zapora Klimczokówka,Bielsko Biała
+376,Zapora Sklep,Bielsko Biała
 
 328,Wapienica Zapora,Bielsko Biała
 373,Zapora Klimczokówka,Bielsko Biała
@@ -463,33 +463,31 @@ ref,name,city
 
 151,Katowicka Królewska,Bielsko Biała
 149,Katowicka Centrostal,Bielsko Biała
+2352,Czechowice-Dz. Krzywa Elektrociepłownia,Bielsko Biała
+2354,Czechowice-Dziedzice Junacka Kamionka,Bielsko Biała
+2356,Czechowice-Dziedzice Południowe,Bielsko Biała
+2358,Czechowice-Dziedzice Legionów Gigant,Bielsko Biała
+2360,Czechowice-Dziedzice Legionów Gliksmanka,Bielsko Biała
+2362,Czechowice-Dziedzice Legionów MOSiR,Bielsko Biała
+2364,Czechowice-Dziedzice Niepodległości MDK,Bielsko Biała
+2366,Czechowice-Dziedzice Dworzec PKP,Bielsko Biała
+2368,Czechowice-Dziedzice Traugutta ZSTiL,Bielsko Biała
+2370,Czechowice-Dz. Wyspiańskiego Os. Północ,Bielsko Biała
+2372,Czechowice-Dz. Węglowa Kościół,Bielsko Biała
+2374,Czechowice-Dziedzice Górnicza,Bielsko Biała
 
-2352,Krzywa Elektrociepłownia,Czechowice Dziedzice
-2354,Junacka Kamionka,Czechowice Dziedzice
-2356,Południowe,Czechowice Dziedzice
-2358,Legionów Gigant,Czechowice Dziedzice
-2360,Legionów Gliksmanka,Czechowice Dziedzice
-2362,Legionów MOSiR,Czechowice Dziedzice
-2364,Niepodległości MDK,Czechowice Dziedzice
-2366,Dworzec PKP,Czechowice Dziedzice
-2368,Traugutta ZSTiL,Czechowice Dziedzice
-2370,Wyspiańskiego Os. Północ,Czechowice Dziedzice
-2372,Węglowa Kościół,Czechowice Dziedzice
-2374,Górnicza,Czechowice Dziedzice
-
-2375,Silesia,Czechowice Dziedzice
-2373,Węglowa Kościół,Czechowice Dziedzice
-2371,Wyspiańskiego Os. Północ,Czechowice Dziedzice
-2369,Traugutta ZSTiL,Czechowice Dziedzice
-2367,Dworzec PKP,Czechowice Dziedzice
-2365,Niepodległości MDK,Czechowice Dziedzice
-2363,Legionów MOSiR,Czechowice Dziedzice
-2361,Legionów Gliksmanka,Czechowice Dziedzice
-2359,Legionów Gigant,Czechowice Dziedzice
-2357,Południowe,Czechowice Dziedzice
-2355,Junacka Kamionka,Czechowice Dziedzice
-2353,Krzywa Elektrociepłownia,Czechowice Dziedzice
-
+2375,Czechowice-Dziedzice Silesia,Bielsko Biała
+2373,Czechowice-Dz. Węglowa Kościół,Bielsko Biała
+2371,Czechowice-Dz. Wyspiańskiego Os. Północ,Bielsko Biała
+2369,Czechowice-Dziedzice Traugutta ZSTiL,Bielsko Biała
+2367,Czechowice-Dziedzice Dworzec PKP,Bielsko Biała
+2365,Czechowice-Dziedzice Niepodległości MDK,Bielsko Biała
+2363,Czechowice-Dziedzice Legionów MOSiR,Bielsko Biała
+2361,Czechowice-Dziedzice Legionów Gliksmanka,Bielsko Biała
+2359,Czechowice-Dziedzice Legionów Gigant,Bielsko Biała
+2357,Czechowice-Dziedzice Południowe,Bielsko Biała
+2355,Czechowice-Dziedzice Junacka Kamionka,Bielsko Biała
+2353,Czechowice-Dz. Krzywa Elektrociepłownia,Bielsko Biała
 148,Katowicka Centrostal,Bielsko Biała
 150,Katowicka Królewska,Bielsko Biała
 
@@ -571,5 +569,14 @@ ref,name,city
 139,Kamienica Spółdzielnia,Bielsko Biała
 23,Armii Krajowej Parking,Bielsko Biała
 
+
+
+
+
+
 124,Janowicka Niklówka,Bielsko Biała
+
+
+
+
 

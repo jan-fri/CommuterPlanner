@@ -19,7 +19,7 @@ namespace commuterPlanner.MZK_parser.Classes
             Dictionary<string, List<string>> processedRelations = new Dictionary<string, List<string>>();
 
             System.IO.StreamWriter busStopsFile = new System.IO.StreamWriter(@"../../Neo4jOutputData/busStops.csv");
-            System.IO.StreamWriter createRelationsFile = new System.IO.StreamWriter("@../../Neo4jOutputData/createRelations.csv");
+            System.IO.StreamWriter createRelationsFile = new System.IO.StreamWriter(@"../../Neo4jOutputData/createRelations.csv");
             System.IO.StreamWriter mergeRelationsFile = new System.IO.StreamWriter(@"../../Neo4jOutputData/mergeRelations.csv");
 
             busStopsFile.WriteLine("ref,name,city");
