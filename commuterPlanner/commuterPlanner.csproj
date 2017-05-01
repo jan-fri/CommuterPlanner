@@ -217,6 +217,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\GraphDatabaseWrapper.cs" />
+    <Compile Include="Interfaces\IGraphDatabaseWrapper.cs" />
     <Compile Include="Models\Connections.cs" />
     <Compile Include="Models\Relation.cs" />
     <Compile Include="Models\Route.cs" />
@@ -382,19 +384,16 @@
     <Content Include="Scripts\lodash.js" />
     <Content Include="Scripts\lodash.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\MyScripts\controllers\appControllers.js" />
-    <Content Include="Scripts\MyScripts\controllers\mapController.js" />
-    <Content Include="Scripts\MyScripts\controllers\planController.js" />
-    <Content Include="Scripts\MyScripts\controllers\tableController.js" />
-    <Content Include="Scripts\MyScripts\controllers\toolbarController.js" />
-    <Content Include="Scripts\MyScripts\directives\directives.js" />
-    <Content Include="Scripts\MyScripts\mainApp.js" />
-    <Content Include="Scripts\MyScripts\odlScripts.js" />
-    <Content Include="Scripts\MyScripts\routes.js" />
-    <Content Include="Scripts\MyScripts\services\busStopService.js" />
-    <Content Include="Scripts\MyScripts\services\dataDisplayService.js" />
-    <Content Include="Scripts\MyScripts\services\routeSelectionService.js" />
-    <Content Include="Scripts\MyScripts\services\timeTableService.js" />
+    <Content Include="Scripts\ApplicationScripts\controllers\appController.js" />
+    <Content Include="Scripts\ApplicationScripts\controllers\mapController.js" />
+    <Content Include="Scripts\ApplicationScripts\controllers\planController.js" />
+    <Content Include="Scripts\ApplicationScripts\controllers\tableController.js" />
+    <Content Include="Scripts\ApplicationScripts\controllers\toolbarController.js" />
+    <Content Include="Scripts\ApplicationScripts\mainApp.js" />
+    <Content Include="Scripts\ApplicationScripts\services\busStopService.js" />
+    <Content Include="Scripts\ApplicationScripts\services\dataDisplayService.js" />
+    <Content Include="Scripts\ApplicationScripts\services\routeSelectionService.js" />
+    <Content Include="Scripts\ApplicationScripts\services\timeTableService.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
@@ -415,7 +414,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

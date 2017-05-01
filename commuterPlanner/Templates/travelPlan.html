@@ -44,7 +44,7 @@
                                 <md-option ng-value="endCity" ng-repeat="endCity in cityNames" ng-click="selectCity($index, 'end')">{{endCity}}</md-option>
                             </md-select>
                             <md-select placeholder="Przystanek końcowy" ng-model="endBusStop">
-                                <md-option ng-value="endBusStop" ng-repeat="endBusStop in busStopsEnd" ng-click="selectBusStop('end')">{{endBusStop}}</md-option>
+                                <md-option ng-value="endBusStop" ng-repeat="endBusStop in busStopsEnd" ng-click="selectBusStop('end', endBusStop)">{{endBusStop}}</md-option>
                             </md-select>
 
                             <md-button class="myButton2" style="border: solid;" ng-click="getStopRefs()">

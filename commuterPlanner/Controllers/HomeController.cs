@@ -1,4 +1,5 @@
-﻿using commuterPlanner.Models;
+﻿using commuterPlanner.Interfaces;
+using commuterPlanner.Models;
 using commuterPlanner.Services;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -18,7 +19,6 @@ namespace commuterPlanner.Controllers
         {
             return View();
         }
-
 
         public ActionResult GetBusTimeTable(string busNo, string busStopRef)
         {
@@ -56,7 +56,8 @@ namespace commuterPlanner.Controllers
                 }                
             }
 
-            GraphDatabaseService graphDatabase = new GraphDatabaseService();
+            GraphDatabaseService graphDataService = new GraphDatabaseService();
+            GraphDatabaseWrapper graphDatabase = new GraphDatabaseWrapper(graphDataService);
 
             var routes = graphDatabase.getRoutes(connections, selectedTravelDay, selectedTravelTime);
 

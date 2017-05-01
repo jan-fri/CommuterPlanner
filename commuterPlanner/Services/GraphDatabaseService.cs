@@ -13,10 +13,11 @@ using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System.Web.Mvc;
 using commuterPlanner.Models;
+using commuterPlanner.Interfaces;
 
 namespace commuterPlanner.Services
 { 
-    public class GraphDatabaseService
+    public class GraphDatabaseService : IGraphDatabaseWrapper
     {
         //selected travel time by user
         public static string selectedTime { get; set; }

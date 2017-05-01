@@ -51,12 +51,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\BusLinksExtractor.cs" />
+    <Compile Include="Classes\BusStopsExtractor.cs" />
+    <Compile Include="Classes\BusStopsParser.cs" />
+    <Compile Include="Classes\MainPage.cs" />
+    <Compile Include="Classes\TimeTableExtractor.cs" />
+    <Compile Include="Classes\TimeTableParser.cs" />
+    <Compile Include="Interfaces\IBusStopsExtractor.cs" />
+    <Compile Include="Interfaces\ILinksExtractor.cs" />
+    <Compile Include="Interfaces\ITimeTableExtractor.cs" />
+    <Compile Include="Models\BusStop.cs" />
+    <Compile Include="Models\BusStopDetail.cs" />
+    <Compile Include="Models\Links\BusLink.cs" />
+    <Compile Include="Models\Links\BusNo2Link.cs" />
+    <Compile Include="Models\Links\BusStopLink.cs" />
+    <Compile Include="Models\TimeTable\Hour.cs" />
+    <Compile Include="Models\TimeTable\Time.cs" />
+    <Compile Include="Models\TimeTable\TimeTable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Neo4jOutputData\busStops.csv" />
+    <None Include="Neo4jOutputData\createRelations.csv" />
+    <None Include="Neo4jOutputData\mergeRelations.csv" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="JSONOutputData\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
