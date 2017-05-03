@@ -1,22 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using Neo4jClient;
-using Neo4j;
-using Neo4j.Driver;
 using Neo4j.Driver.V1;
 using System.Collections;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Serialization;
-using System.Web.Mvc;
 using commuterPlanner.Models;
 using commuterPlanner.Interfaces;
 
 namespace commuterPlanner.Services
-{ 
+{
     public class GraphDatabaseService : IGraphDatabaseWrapper
     {
         //selected travel time by user
