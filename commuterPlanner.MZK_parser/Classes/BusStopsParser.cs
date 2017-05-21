@@ -33,11 +33,23 @@ namespace commuterPlanner.MZK_parser.Classes
                 HtmlDocument doc = htmlWeb.Load(link);
 
                 var tab = doc.DocumentNode.SelectNodes("//table").Descendants("tr");
+                int iterations = 0;
 
                 foreach (var stop in tab)
                 {
-                    IEnumerable<HtmlNode> stoplinks = stop.Descendants("a").Where(x => x.Attributes.Contains("href"));
-                    foreach (var sLink in stoplinks)
+                    if (stop.InnerText.Contains("Pozostałe przystanki linii"))
+                    {
+                        iterations++;
+                        if (iterations <= 1)
+                            continue;
+                        else if (iterations >= 2)
+                            break;
+                    }
+                    //IEnumerable<HtmlNode> stopLinks = stop.Descendants("td");
+                    IEnumerable<HtmlNode> stopLinks = stop.Descendants("a").Where(x => x.Attributes.Contains("href"));
+                    // IEnumerable<HtmlNode> s = stop.Descendants("td").Where(x => x.InnerText.Contains("Pozostałe przystanki linii"));
+                
+                    foreach (var sLink in stopLinks)
                     {
                         BusStopLink tempStopLink;
                         if (sLink.InnerText.Contains('('))

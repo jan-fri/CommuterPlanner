@@ -1,6 +1,3376 @@
 {
 	"busStops": [{
 			"Bielsko Biała": [{
+					"lat": 49.869746705788835,
+					"lon": 19.094549417495728,
+					"tags": {
+					"name": "Janowicka Niklówka",
+					"relation": [{
+							"line": "56BIS",
+							"route": "Podwale Dworzec"
+						}],
+					"ref": "124"
+					}
+				},{
+					"lat": 49.77376079005463,
+					"lon": 19.072608947753906,
+					"tags": {
+					"name": "Bystra Szkoła",
+					"relation": [{
+							"line": "57",
+							"route": "Filarowa Med Work"
+						}],
+					"ref": "2029"
+					}
+				},{
+					"lat": 49.760788412190905,
+					"lon": 19.056107997894287,
+					"tags": {
+					"name": "Bystra Ława",
+					"relation": [{
+							"line": "57",
+							"route": "Filarowa Med Work"
+						}],
+					"ref": "2033"
+					}
+				},{
+					"lat": 49.773074837780825,
+					"lon": 19.073059558868408,
+					"tags": {
+					"name": "Bystra Szkoła",
+					"relation": [{
+							"line": "57",
+							"route": "Bystra Leśniczówka"
+						}],
+					"ref": "2028"
+					}
+				},{
+					"lat": 49.85798280886392,
+					"lon": 19.091829657554626,
+					"tags": {
+					"name": "Janowicka Na Żadanie",
+					"relation": [{
+							"line": "56",
+							"route": "Podwale Dworzec"
+						}, {
+							"line": "56BIS",
+							"route": "Podwale Dworzec"
+						}],
+					"ref": "126"
+					}
+				},{
+					"lat": 49.866952953209776,
+					"lon": 19.09296154975891,
+					"tags": {
+					"name": "Janowicka Pod Kasztanem",
+					"relation": [{
+							"line": "56",
+							"route": "Podwale Dworzec"
+						}, {
+							"line": "56BIS",
+							"route": "Podwale Dworzec"
+						}],
+					"ref": "128"
+					}
+				},{
+					"lat": 49.87205281296047,
+					"lon": 19.09598171710968,
+					"tags": {
+					"name": "Janowice Niklówka",
+					"relation": [{
+							"line": "56",
+							"route": "Podwale Dworzec"
+						}],
+					"ref": "2165"
+					}
+				},{
+					"lat": 49.8772281878337,
+					"lon": 19.1034597158432,
+					"tags": {
+					"name": "Janowice Leśniczówka",
+					"relation": [{
+							"line": "56",
+							"route": "Podwale Dworzec"
+						}],
+					"ref": "2163"
+					}
+				},{
+					"lat": 49.88557261400232,
+					"lon": 19.09401834011078,
+					"tags": {
+					"name": "Janowice Kościół",
+					"relation": [{
+							"line": "56",
+							"route": "Podwale Dworzec"
+						}],
+					"ref": "2169"
+					}
+				},{
+					"lat": 49.89221877814275,
+					"lon": 19.078869223594666,
+					"tags": {
+					"name": "Janowice Stawy",
+					"relation": [{
+							"line": "56",
+							"route": "Podwale Dworzec"
+						}],
+					"ref": "2171"
+					}
+				},{
+					"lat": 49.89712245911039,
+					"lon": 19.06674563884735,
+					"tags": {
+					"name": "Bestwina Piekarnia",
+					"relation": [{
+							"line": "56",
+							"route": "Podwale Dworzec"
+						}],
+					"ref": "2172"
+					}
+				},{
+					"lat": 49.89237429364641,
+					"lon": 19.078960418701172,
+					"tags": {
+					"name": "Janowice Stawy",
+					"relation": [{
+							"line": "56",
+							"route": "Bestwina Piekarnia"
+						}],
+					"ref": "2170"
+					}
+				},{
+					"lat": 49.885676305337476,
+					"lon": 19.09422755241394,
+					"tags": {
+					"name": "Janowice Kościół",
+					"relation": [{
+							"line": "56",
+							"route": "Bestwina Piekarnia"
+						}],
+					"ref": "2168"
+					}
+				},{
+					"lat": 49.87791266482258,
+					"lon": 19.104377031326294,
+					"tags": {
+					"name": "Janowice Leśniczówka",
+					"relation": [{
+							"line": "56",
+							"route": "Bestwina Piekarnia"
+						}],
+					"ref": "2162"
+					}
+				},{
+					"lat": 49.87204244091084,
+					"lon": 19.096126556396484,
+					"tags": {
+					"name": "Janowice Niklówka",
+					"relation": [{
+							"line": "56",
+							"route": "Bestwina Piekarnia"
+						}],
+					"ref": "2164"
+					}
+				},{
+					"lat": 49.86850198449989,
+					"lon": 19.09353017807007,
+					"tags": {
+					"name": "Janowicka Pod Kasztanem",
+					"relation": [{
+							"line": "56",
+							"route": "Bestwina Piekarnia"
+						}, {
+							"line": "56BIS",
+							"route": "Janowicka Niklówka"
+						}],
+					"ref": "127"
+					}
+				},{
+					"lat": 49.85810730954234,
+					"lon": 19.092071056365967,
+					"tags": {
+					"name": "Janowicka Na Żadanie",
+					"relation": [{
+							"line": "56",
+							"route": "Bestwina Piekarnia"
+						}, {
+							"line": "56BIS",
+							"route": "Janowicka Niklówka"
+						}],
+					"ref": "125"
+					}
+				},{
+					"lat": 49.8307163526191,
+					"lon": 19.06574249267578,
+					"tags": {
+					"name": "Wyzwolenia Piekarska",
+					"relation": [{
+							"line": "56",
+							"route": "Bestwina Piekarnia"
+						}, {
+							"line": "56BIS",
+							"route": "Janowicka Niklówka"
+						}],
+					"ref": "361"
+					}
+				},{
+					"lat": 49.848250013255544,
+					"lon": 18.94221067428589,
+					"tags": {
+					"name": "Miedzyrzecze Górne",
+					"relation": [{
+							"line": "52",
+							"route": "Osiedle Sarni Stok"
+						}],
+					"ref": "2481"
+					}
+				},{
+					"lat": 49.866287338568775,
+					"lon": 18.945877254009247,
+					"tags": {
+					"name": "Międzyrzecze Dolne Młyn",
+					"relation": [{
+							"line": "52",
+							"route": "Osiedle Sarni Stok"
+						}],
+					"ref": "2489"
+					}
+				},{
+					"lat": 49.86906487884702,
+					"lon": 18.94630640745163,
+					"tags": {
+					"name": "Międzyrzecze Dolne",
+					"relation": [{
+							"line": "52",
+							"route": "Osiedle Sarni Stok"
+						}],
+					"ref": "2487"
+					}
+				},{
+					"lat": 49.86609889016028,
+					"lon": 18.945971131324768,
+					"tags": {
+					"name": "Międzyrzecze Dolne Młyn",
+					"relation": [{
+							"line": "52",
+							"route": "Miedzyrzecze Dolne"
+						}],
+					"ref": "2488"
+					}
+				},{
+					"lat": 49.79164755116705,
+					"lon": 19.016931653022766,
+					"tags": {
+					"name": "Kolista Falista",
+					"relation": [{
+							"line": "37",
+							"route": "Hala Widowiskowo-Sportowa"
+						}],
+					"ref": "425"
+					}
+				},{
+					"lat": 49.79663069874065,
+					"lon": 19.02057945728302,
+					"tags": {
+					"name": "Kolista Działowa",
+					"relation": [{
+							"line": "37",
+							"route": "Hala Widowiskowo-Sportowa"
+						}],
+					"ref": "415"
+					}
+				},{
+					"lat": 49.80044303178392,
+					"lon": 19.02182936668396,
+					"tags": {
+					"name": "Kolista Niwna",
+					"relation": [{
+							"line": "37",
+							"route": "Hala Widowiskowo-Sportowa"
+						}],
+					"ref": "417"
+					}
+				},{
+					"lat": 49.80316792149268,
+					"lon": 19.027740955352783,
+					"tags": {
+					"name": "Kolista Osiedle Karpackie",
+					"relation": [{
+							"line": "37",
+							"route": "Hala Widowiskowo-Sportowa"
+						}],
+					"ref": "419"
+					}
+				},{
+					"lat": 49.8026312653805,
+					"lon": 19.026769995689392,
+					"tags": {
+					"name": "Kolista Osiedle Karpackie",
+					"relation": [{
+							"line": "37",
+							"route": "Osiedle Langiewicza"
+						}],
+					"ref": "418"
+					}
+				},{
+					"lat": 49.8002248954825,
+					"lon": 19.021947383880615,
+					"tags": {
+					"name": "Kolista Niwna",
+					"relation": [{
+							"line": "37",
+							"route": "Osiedle Langiewicza"
+						}],
+					"ref": "416"
+					}
+				},{
+					"lat": 49.797032375587065,
+					"lon": 19.020708203315735,
+					"tags": {
+					"name": "Kolista Działowa",
+					"relation": [{
+							"line": "37",
+							"route": "Osiedle Langiewicza"
+						}],
+					"ref": "414"
+					}
+				},{
+					"lat": 49.79271417487451,
+					"lon": 19.018031358718872,
+					"tags": {
+					"name": "Kolista Falista",
+					"relation": [{
+							"line": "37",
+							"route": "Osiedle Langiewicza"
+						}],
+					"ref": "424"
+					}
+				},{
+					"lat": 49.865227522823,
+					"lon": 19.039864540100098,
+					"tags": {
+					"name": "Czechowice-Dziedzice Proseat",
+					"relation": [{
+							"line": "36",
+							"route": "Konwojowa Tacho"
+						}],
+					"ref": "175"
+					}
+				},{
+					"lat": 49.869691385523815,
+					"lon": 19.040422439575195,
+					"tags": {
+					"name": "Czechowice-Dziedzice Proseat",
+					"relation": [{
+							"line": "36",
+							"route": "Dworcowa Poczta"
+						}],
+					"ref": "2492"
+					}
+				},{
+					"lat": 49.86511341403155,
+					"lon": 19.039918184280396,
+					"tags": {
+					"name": "Konwojowa Tacho",
+					"relation": [{
+							"line": "36",
+							"route": "Czechowice Dziedzice Proseat"
+						}],
+					"ref": "174"
+					}
+				},{
+					"lat": 49.81580358800047,
+					"lon": 19.090064764022827,
+					"tags": {
+					"name": "Księdza Brzóski Lubelska",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}],
+					"ref": "187"
+					}
+				},{
+					"lat": 49.81564436450768,
+					"lon": 19.09296691417694,
+					"tags": {
+					"name": "Wielkopolska",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}],
+					"ref": "346"
+					}
+				},{
+					"lat": 49.81150783148884,
+					"lon": 19.094367027282715,
+					"tags": {
+					"name": "Lipnik Wielkopolska",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}],
+					"ref": "192"
+					}
+				},{
+					"lat": 49.808863034301254,
+					"lon": 19.096105098724365,
+					"tags": {
+					"name": "Księdza Brzóski Senatorska",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}],
+					"ref": "396"
+					}
+				},{
+					"lat": 49.80558106932967,
+					"lon": 19.09652888774872,
+					"tags": {
+					"name": "Księdza Brzóski Waszkowskiego",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}],
+					"ref": "398"
+					}
+				},{
+					"lat": 49.80339296905968,
+					"lon": 19.090182781219482,
+					"tags": {
+					"name": "Księdza Brzóski Wspólna",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}],
+					"ref": "400"
+					}
+				},{
+					"lat": 49.80131210475117,
+					"lon": 19.087629318237305,
+					"tags": {
+					"name": "Księdza Brzóski Piekarnia",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}],
+					"ref": "394"
+					}
+				},{
+					"lat": 49.80128786786791,
+					"lon": 19.0874844789505,
+					"tags": {
+					"name": "Księdza Brzóski Piekarnia",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}],
+					"ref": "393"
+					}
+				},{
+					"lat": 49.80357993085824,
+					"lon": 19.090644121170044,
+					"tags": {
+					"name": "Księdza Brzóski Wspólna",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}],
+					"ref": "399"
+					}
+				},{
+					"lat": 49.8060588375626,
+					"lon": 19.09651279449463,
+					"tags": {
+					"name": "Księdza Brzóski Waszkowskiego",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}],
+					"ref": "397"
+					}
+				},{
+					"lat": 49.80864839782307,
+					"lon": 19.096110463142395,
+					"tags": {
+					"name": "Księdza Brzóski Senatorska",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}],
+					"ref": "395"
+					}
+				},{
+					"lat": 49.81146629128889,
+					"lon": 19.09445822238922,
+					"tags": {
+					"name": "Lipnik Wielkopolska",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}],
+					"ref": "191"
+					}
+				},{
+					"lat": 49.81303094753261,
+					"lon": 19.08990114927292,
+					"tags": {
+					"name": "Księdza Brzóski Piotrkowska",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}],
+					"ref": "188"
+					}
+				},{
+					"lat": 49.81883219598244,
+					"lon": 19.08773124217987,
+					"tags": {
+					"name": "Księdza Brzóski Kościół",
+					"relation": [{
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}],
+					"ref": "190"
+					}
+				},{
+					"lat": 49.858252559928346,
+					"lon": 19.01905596256256,
+					"tags": {
+					"name": "Mazancowicka Akademicka",
+					"relation": [{
+							"line": "33",
+							"route": "Warszawska Dworzec"
+						}, {
+							"line": "51",
+							"route": "Warszawska Dworzec"
+						}],
+					"ref": "217"
+					}
+				},{
+					"lat": 49.85853614275695,
+					"lon": 19.00486707687378,
+					"tags": {
+					"name": "Mazancowice Osiedle",
+					"relation": [{
+							"line": "33",
+							"route": "Warszawska Dworzec"
+						}, {
+							"line": "51",
+							"route": "Warszawska Dworzec"
+						}],
+					"ref": "2221"
+					}
+				},{
+					"lat": 49.85826293493921,
+					"lon": 19.0193510055542,
+					"tags": {
+					"name": "Mazancowicka Akademicka",
+					"relation": [{
+							"line": "33",
+							"route": "Mazancowice Osiedle"
+						}, {
+							"line": "51",
+							"route": "Mazańcowice Osiedle "
+						}],
+					"ref": "218"
+					}
+				},{
+					"lat": 49.855510020600434,
+					"lon": 19.033936858177185,
+					"tags": {
+					"name": "Mazancowicka Skrzyzowanie",
+					"relation": [{
+							"line": "33",
+							"route": "Mazancowice Osiedle"
+						}, {
+							"line": "51",
+							"route": "Mazańcowice Osiedle "
+						}],
+					"ref": "221"
+					}
+				},{
+					"lat": 49.850417061497936,
+					"lon": 19.051210284233093,
+					"tags": {
+					"name": "Hałcnowska Beczałka",
+					"relation": [{
+							"line": "32",
+							"route": "Osiedle Karpackie"
+						}],
+					"ref": "114"
+					}
+				},{
+					"lat": 49.85080272709794,
+					"lon": 19.05949294567108,
+					"tags": {
+					"name": "Hałcnowska Na Żądanie",
+					"relation": [{
+							"line": "32",
+							"route": "Osiedle Karpackie"
+						}],
+					"ref": "116"
+					}
+				},{
+					"lat": 49.85097221145554,
+					"lon": 19.06650960445404,
+					"tags": {
+					"name": "Hałcnowska Sklep",
+					"relation": [{
+							"line": "32",
+							"route": "Osiedle Karpackie"
+						}],
+					"ref": "120"
+					}
+				},{
+					"lat": 49.85124891933353,
+					"lon": 19.07746911048889,
+					"tags": {
+					"name": "Hałcnowska Stolarnia",
+					"relation": [{
+							"line": "32",
+							"route": "Osiedle Karpackie"
+						}],
+					"ref": "122"
+					}
+				},{
+					"lat": 49.84952638702919,
+					"lon": 19.08633381128311,
+					"tags": {
+					"name": "Halcnowska Piekarnia",
+					"relation": [{
+							"line": "32",
+							"route": "Osiedle Karpackie"
+						}],
+					"ref": "118"
+					}
+				},{
+					"lat": 49.84947796153908,
+					"lon": 19.085869789123535,
+					"tags": {
+					"name": "Halcnowska Piekarnia",
+					"relation": [{
+							"line": "32",
+							"route": "Halcnów Kosciól"
+						}],
+					"ref": "119"
+					}
+				},{
+					"lat": 49.85109327134709,
+					"lon": 19.078434705734253,
+					"tags": {
+					"name": "Halcnowska Stolarnia",
+					"relation": [{
+							"line": "32",
+							"route": "Halcnów Kosciól"
+						}],
+					"ref": "123"
+					}
+				},{
+					"lat": 49.85067128984004,
+					"lon": 19.065935611724854,
+					"tags": {
+					"name": "Halcnowska Sklep",
+					"relation": [{
+							"line": "32",
+							"route": "Halcnów Kosciól"
+						}],
+					"ref": "121"
+					}
+				},{
+					"lat": 49.85072144357272,
+					"lon": 19.058731198310852,
+					"tags": {
+					"name": "Halcnowska Na Zadanie",
+					"relation": [{
+							"line": "32",
+							"route": "Halcnów Kosciól"
+						}],
+					"ref": "117"
+					}
+				},{
+					"lat": 49.85028735264493,
+					"lon": 19.05116468667984,
+					"tags": {
+					"name": "Halcnowska Beczalka",
+					"relation": [{
+							"line": "32",
+							"route": "Halcnów Kosciól"
+						}],
+					"ref": "115"
+					}
+				},{
+					"lat": 49.852328064920385,
+					"lon": 19.10969853401184,
+					"tags": {
+					"name": "Wyzwolenia Spółdzielnia",
+					"relation": [{
+							"line": "31",
+							"route": "Podwale Dworzec"
+						}],
+					"ref": "366"
+					}
+				},{
+					"lat": 49.858069267702405,
+					"lon": 19.113324880599976,
+					"tags": {
+					"name": "Wyzwolenia Wawelska",
+					"relation": [{
+							"line": "31",
+							"route": "Podwale Dworzec"
+						}],
+					"ref": "358"
+					}
+				},{
+					"lat": 49.86759608383873,
+					"lon": 19.116055369377136,
+					"tags": {
+					"name": "Hałcnów Granica",
+					"relation": [{
+							"line": "31",
+							"route": "Podwale Dworzec"
+						}],
+					"ref": "356"
+					}
+				},{
+					"lat": 49.858390893223415,
+					"lon": 19.113324880599976,
+					"tags": {
+					"name": "Wyzwolenia Wawelska",
+					"relation": [{
+							"line": "31",
+							"route": "Halcnów Granica"
+						}],
+					"ref": "359"
+					}
+				},{
+					"lat": 49.85221392566128,
+					"lon": 19.1097629070282,
+					"tags": {
+					"name": "Wyzwolenia Spóldzielnia",
+					"relation": [{
+							"line": "31",
+							"route": "Halcnów Granica"
+						}],
+					"ref": "367"
+					}
+				},{
+					"lat": 49.850090194521684,
+					"lon": 19.092929363250732,
+					"tags": {
+					"name": "Halcnów Kosciól",
+					"relation": [{
+							"line": "31",
+							"route": "Halcnów Granica"
+						}],
+					"ref": "355"
+					}
+				},{
+					"lat": 49.85466613103003,
+					"lon": 19.038180112838745,
+					"tags": {
+					"name": "Grazynskiego Mazancowicka",
+					"relation": [{
+						"line": "29",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "110"
+					}
+				},{
+					"lat": 49.85423380484473,
+					"lon": 19.04034733772278,
+					"tags": {
+					"name": "Komorowicka Kosciól",
+					"relation": [{
+						"line": "29",
+						"route": "Warszawska Dworzec"
+						}, {
+							"line": "32",
+							"route": "Osiedle Karpackie"
+						}, {
+							"line": "33",
+							"route": "Mazancowice Osiedle"
+						}, {
+							"line": "51",
+							"route": "Mazańcowice Osiedle "
+						}],
+					"ref": "160"
+					}
+				},{
+					"lat": 49.85392252759648,
+					"lon": 19.039885997772217,
+					"tags": {
+					"name": "Komorowicka Kosciól",
+					"relation": [{
+						"line": "29",
+						"route": "Komorowice Sosna"
+						}, {
+							"line": "32",
+							"route": "Halcnów Kosciól"
+						}, {
+							"line": "33",
+							"route": "Warszawska Dworzec"
+						}, {
+							"line": "51",
+							"route": "Warszawska Dworzec"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "159"
+					}
+				}, {
+					"lat": 49.854867593711276,
+					"lon": 19.03831422328949,
+					"tags": {
+					"name": "Grazynskiego Mazancowicka",
+					"relation": [{
+						"line": "29",
+						"route": "Komorowice Sosna"
+						}],
+					"ref": "111"
+					}
+				}, {
+					"lat": 49.847094675683664,
+					"lon": 19.04605507850647,
+					"tags": {
+					"name": "Grazynskiego Fiat II",
+					"relation": [{
+						"line": "29",
+						"route": "Komorowice Sosna"
+						}],
+					"ref": "108"
+					}
+				}, {
+					"lat": 49.815447065105026,
+					"lon": 19.00885820388794,
+					"tags": {
+					"name": "Stawowa",
+					"relation": [{
+						"line": "28",
+						"route": "Osiedle Karpackie"
+						}, {
+							"line": "N1",
+							"route": "Wapienica Centrum"
+						}],
+					"ref": "312"
+					}
+				}, {
+					"lat": 49.815100923858594,
+					"lon": 19.00930881500244,
+					"tags": {
+					"name": "Stawowa",
+					"relation": [{
+						"line": "28",
+						"route": "Osiedle Wojska Polskiego"
+						}, {
+							"line": "N1",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "313"
+					}
+				}, {
+					"lat": 49.82189176287113,
+					"lon": 19.11616802215576,
+					"tags": {
+					"name": "Polna Wróblowicka",
+					"relation": [{
+						"line": "27",
+						"route": "Osiedle Sarni Stok"
+						}],
+					"ref": "283"
+					}
+				}, {
+					"lat": 49.82016818450576,
+					"lon": 19.10975217819214,
+					"tags": {
+					"name": "Polna/Sw. Franciszka",
+					"relation": [{
+						"line": "27",
+						"route": "Osiedle Sarni Stok"
+						}],
+					"ref": "281"
+					}
+				}, {
+					"lat": 49.82081539884219,
+					"lon": 19.101410508155823,
+					"tags": {
+					"name": "Polna/Odrzanska",
+					"relation": [{
+						"line": "27",
+						"route": "Osiedle Sarni Stok"
+						}],
+					"ref": "279"
+					}
+				}, {
+					"lat": 49.820169915036914,
+					"lon": 19.090968668460846,
+					"tags": {
+					"name": "Polna Cmentarz",
+					"relation": [{
+						"line": "27",
+						"route": "Osiedle Sarni Stok"
+						}],
+					"ref": "277"
+					}
+				}, {
+					"lat": 49.81934617520776,
+					"lon": 19.08734768629074,
+					"tags": {
+					"name": "Ksiedza Brzóski Kosciól",
+					"relation": [{
+						"line": "27",
+						"route": "Osiedle Sarni Stok"
+						}],
+					"ref": "401"
+					}
+				}, {
+					"lat": 49.818991408986086,
+					"lon": 19.087189435958862,
+					"tags": {
+					"name": "Ksiedza Brzóski Kosciól",
+					"relation": [{
+						"line": "27",
+						"route": "Lipnik Dolny"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}],
+					"ref": "189"
+					}
+				}, {
+					"lat": 49.82007819680019,
+					"lon": 19.091180562973022,
+					"tags": {
+					"name": "Polna Cmentarz",
+					"relation": [{
+						"line": "27",
+						"route": "Lipnik Dolny"
+						}],
+					"ref": "278"
+					}
+				}, {
+					"lat": 49.820742717449846,
+					"lon": 19.10122275352478,
+					"tags": {
+					"name": "Polna/Odrzanska",
+					"relation": [{
+						"line": "27",
+						"route": "Lipnik Dolny"
+						}],
+					"ref": "280"
+					}
+				}, {
+					"lat": 49.82046583495498,
+					"lon": 19.107896089553833,
+					"tags": {
+					"name": "Polna Sw. Franciszka",
+					"relation": [{
+						"line": "27",
+						"route": "Lipnik Dolny"
+						}],
+					"ref": "282"
+					}
+				}, {
+					"lat": 49.82189176287113,
+					"lon": 19.11616802215576,
+					"tags": {
+					"name": "Polna Wróblowicka",
+					"relation": [{
+						"line": "27",
+						"route": "Lipnik Dolny"
+						}],
+					"ref": "284"
+					}
+				}, {
+					"lat": 49.82369141772379,
+					"lon": 19.067351818084717,
+					"tags": {
+					"name": "Wapienna Norwida",
+					"relation": [{
+						"line": "26",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "336"
+					}
+				}, {
+					"lat": 49.825871679111316,
+					"lon": 19.07050609588623,
+					"tags": {
+					"name": "Wapienna Osiedle",
+					"relation": [{
+						"line": "26",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "337"
+					}
+				}, {
+					"lat": 49.82206134858919,
+					"lon": 19.06825304031372,
+					"tags": {
+					"name": "Norwida Kosciól",
+					"relation": [{
+						"line": "26",
+						"route": "Wapienna Osiedle"
+						}],
+					"ref": "241"
+					}
+				}, {
+					"lat": 49.82458775929988,
+					"lon": 19.015789031982422,
+					"tags": {
+					"name": "Andersa Stare Bielsko",
+					"relation": [{
+						"line": "25",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "13"
+					}
+				}, {
+					"lat": 49.82858475605642,
+					"lon": 19.012731313705444,
+					"tags": {
+					"name": "Andersa Wzniesienie",
+					"relation": [{
+						"line": "25",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "17"
+					}
+				}, {
+					"lat": 49.835359862734414,
+					"lon": 19.008729457855225,
+					"tags": {
+					"name": "Andersa Francuska",
+					"relation": [{
+						"line": "25",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "7"
+					}
+				}, {
+					"lat": 49.83995795162259,
+					"lon": 19.00309145450592,
+					"tags": {
+					"name": "Andersa Wiadukt",
+					"relation": [{
+						"line": "25",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "15"
+					}
+				}, {
+					"lat": 49.842576833134,
+					"lon": 18.997930884361267,
+					"tags": {
+					"name": "Andersa Granica",
+					"relation": [{
+						"line": "25",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "9"
+					}
+				}, {
+					"lat": 49.846465108856314,
+					"lon": 18.992432355880737,
+					"tags": {
+					"name": "Mazancowice Spóldzielnia",
+					"relation": [{
+						"line": "25",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "2240"
+					}
+				}, {
+					"lat": 49.84280515689928,
+					"lon": 18.997673392295837,
+					"tags": {
+					"name": "Andersa Granica",
+					"relation": [{
+						"line": "25",
+						"route": "Mazancowice Spóldzielnia"
+						}],
+					"ref": "10"
+					}
+				}, {
+					"lat": 49.84026585918536,
+					"lon": 19.003021717071533,
+					"tags": {
+					"name": "Andersa Wiadukt",
+					"relation": [{
+						"line": "25",
+						"route": "Mazancowice Spóldzielnia"
+						}],
+					"ref": "16"
+					}
+				}, {
+					"lat": 49.8353252629665,
+					"lon": 19.009201526641846,
+					"tags": {
+					"name": "Andersa Francuska",
+					"relation": [{
+						"line": "25",
+						"route": "Mazancowice Spóldzielnia"
+						}],
+					"ref": "8"
+					}
+				}, {
+					"lat": 49.829069218069606,
+					"lon": 19.0128493309021,
+					"tags": {
+					"name": "Andersa Wzniesienie",
+					"relation": [{
+						"line": "25",
+						"route": "Mazancowice Spóldzielnia"
+						}],
+					"ref": "18"
+					}
+				}, {
+					"lat": 49.824542769578024,
+					"lon": 19.016218185424805,
+					"tags": {
+					"name": "Andersa Stare Bielsko",
+					"relation": [{
+						"line": "25",
+						"route": "Mazancowice Spóldzielnia"
+						}],
+					"ref": "14"
+					}
+				}, {
+					"lat": 49.82290926826282,
+					"lon": 19.02129828929901,
+					"tags": {
+					"name": "Sobieskiego Piastów Slaskich",
+					"relation": [{
+						"line": "24",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "25",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "298"
+					}
+				}, {
+					"lat": 49.82475733556769,
+					"lon": 19.010231494903564,
+					"tags": {
+					"name": "Sobieskiego Sklep",
+					"relation": [{
+						"line": "24",
+						"route": "Mikuszowice Blonia ATH"
+						}],
+					"ref": "299"
+					}
+				}, {
+					"lat": 49.82395443859517,
+					"lon": 19.005779027938843,
+					"tags": {
+					"name": "Sobieskiego Olecka",
+					"relation": [{
+						"line": "24",
+						"route": "Mikuszowice Blonia ATH"
+						}],
+					"ref": "295"
+					}
+				}, {
+					"lat": 49.822708537601045,
+					"lon": 19.000194668769836,
+					"tags": {
+					"name": "Sobieskiego Spóldzielnia",
+					"relation": [{
+						"line": "24",
+						"route": "Mikuszowice Blonia ATH"
+						}],
+					"ref": "300"
+					}
+				}, {
+					"lat": 49.82056274400842,
+					"lon": 18.99539887905121,
+					"tags": {
+					"name": "Sobieskiego Stare Bielsko",
+					"relation": [{
+						"line": "24",
+						"route": "Mikuszowice Blonia ATH"
+						}],
+					"ref": "304"
+					}
+				}, 	{
+					"lat": 49.82042776348802,
+					"lon": 18.986188173294067,
+					"tags": {
+					"name": "Sobieskiego Komandorska",
+					"relation": [{
+						"line": "24",
+						"route": "Mikuszowice Blonia ATH"
+						}],
+					"ref": "420"
+					}
+				}, 	{
+					"lat": 49.82161488695198,
+					"lon": 18.98337185382843,
+					"tags": {
+					"name": "Sobieskiego Dozynkowa",
+					"relation": [{
+						"line": "24",
+						"route": "Mikuszowice Blonia ATH"
+						}],
+					"ref": "422"
+					}
+				}, 	{
+					"lat": 49.82121687504217,
+					"lon": 18.98184299468994,
+					"tags": {
+					"name": "Sobieskiego Dozynkowa",
+					"relation": [{
+						"line": "24",
+						"route": "Wapienica Strazacka"
+						}],
+					"ref": "423"
+					}
+				}, 	{
+					"lat": 49.82053505572724,
+					"lon": 18.986263275146484,
+					"tags": {
+					"name": "Sobieskiego Komandorska",
+					"relation": [{
+						"line": "24",
+						"route": "Wapienica Strazacka"
+						}],
+					"ref": "421"
+					}
+				}, 	{
+					"lat": 49.82055236090484,
+					"lon": 18.99509310722351,
+					"tags": {
+					"name": "Sobieskiego Stare Bielsko",
+					"relation": [{
+						"line": "24",
+						"route": "Wapienica Strazacka"
+						}],
+					"ref": "426"
+					}
+				}, 	{
+					"lat": 49.82279229067151,
+					"lon": 19.00011420249939,
+					"tags": {
+					"name": "Sobieskiego Spóldzielnia",
+					"relation": [{
+						"line": "24",
+						"route": "Wapienica Strazacka"
+						}],
+					"ref": "301"
+					}
+				}, 	{
+					"lat": 49.82404095830606,
+					"lon": 19.005687832832336,
+					"tags": {
+					"name": "Sobieskiego Olecka",
+					"relation": [{
+						"line": "24",
+						"route": "Wapienica Strazacka"
+						}],
+					"ref": "296"
+					}
+				}, 	{
+					"lat": 49.82284697262933,
+					"lon": 19.021153450012207,
+					"tags": {
+					"name": "Sobieskiego Piastów Slaskich",
+					"relation": [{
+						"line": "24",
+						"route": "Wapienica Strazacka"
+						}, {
+						"line": "25",
+						"route": "Mazancowice Spóldzielnia"
+						}],
+					"ref": "297"
+					}
+				}, 	{
+					"lat": 49.82198174720372,
+					"lon": 19.05329704284668,
+					"tags": {
+					"name": "Stojalowskiego Pawilon",
+					"relation": [{
+						"line": "22",
+						"route": "Osiedle Langiewicza"
+						}, {
+						"line": "26",
+						"route": "Wapienna Osiedle"
+						}, {
+						"line": "27",
+						"route": "Lipnik Dolny"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "315"
+					}
+				}, 	{
+					"lat": 49.822009434656984,
+					"lon": 19.053683280944824,
+					"tags": {
+					"name": "Stojalowskiego Pawilon",
+					"relation": [{
+						"line": "22",
+						"route": "Osiedle Sarni Stok"
+						}, {
+						"line": "26",
+						"route": "Warszawska Dworzec"
+						}, {
+						"line": "27",
+						"route": "Osiedle Sarni Stok"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}, {
+							"line": "N2",
+							"route": "Komorowicka Kościół"
+						}],
+					"ref": "314"
+					}
+				}, 	{
+					"lat": 49.79219471821103,
+					"lon": 19.037997722625732,
+					"tags": {
+					"name": "Szpital Wojewódzki",
+					"relation": [{
+						"line": "21",
+						"route": "Osiedle Polskich Skrzydel"
+						}, {
+						"line": "21",
+						"route": "Osiedle Langiewicza"
+						}, {
+						"line": "23",
+						"route": "Osiedle Langiewicza"
+						}],
+					"ref": "30"
+					}
+				}, 	{
+					"lat": 49.841732717730416,
+					"lon": 19.046435952186584,
+					"tags": {
+					"name": "Grazynskiego Fiat I",
+					"relation": [{
+						"line": "19",
+						"route": "Osiedle Zlote Lany"
+						}, {
+						"line": "29",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "105"
+					}
+				}, 	{
+					"lat": 49.8476931024841,
+					"lon": 19.04451549053192,
+					"tags": {
+					"name": "Grazynskiego Fiat II",
+					"relation": [{
+						"line": "19",
+						"route": "Osiedle Zlote Lany"
+						}, {
+						"line": "29",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "107"
+					}
+				}, 	{
+					"lat": 49.84225510236179,
+					"lon": 19.046704173088074,
+					"tags": {
+					"name": "Grazynskiego Fiat I",
+					"relation": [{
+						"line": "19",
+						"route": "Grazynskiego Fiat II"
+						}, {
+						"line": "29",
+						"route": "Komorowice Sosna"
+						}],
+					"ref": "106"
+					}
+				}, 	{
+					"lat": 49.79049086124748,
+					"lon": 19.034628868103027,
+					"tags": {
+					"name": "Goscinna Armii Krajowej",
+					"relation": [{
+						"line": "18",
+						"route": "Osiedle Zlote Lany"
+						}],
+					"ref": "87"
+					}
+				}, 	{
+					"lat": 49.79282499157497,
+					"lon": 19.027698040008545,
+					"tags": {
+					"name": "Goscinna Dzialki",
+					"relation": [{
+						"line": "18",
+						"route": "Osiedle Zlote Lany"
+						}],
+					"ref": "89"
+					}
+				}, 	{
+					"lat": 49.793579923599275,
+					"lon": 19.020434617996216,
+					"tags": {
+					"name": "Goscinna Kolista",
+					"relation": [{
+						"line": "18",
+						"route": "Osiedle Zlote Lany"
+						}],
+					"ref": "93"
+					}
+				}, 	{
+					"lat": 49.794480285855876,
+					"lon": 19.013772010803223,
+					"tags": {
+					"name": "Goscinna Karpacka",
+					"relation": [{
+						"line": "18",
+						"route": "Osiedle Zlote Lany"
+						}],
+					"ref": "91"
+					}
+				}, 	{
+					"lat": 49.83010733461551,
+					"lon": 19.03006911277771,
+					"tags": {
+					"name": "Nad Potokiem Listopadowa",
+					"relation": [{
+						"line": "18",
+						"route": "Osiedle Zlote Lany"
+						}],
+					"ref": "233"
+					}
+				}, 	{
+					"lat": 49.8279791717164,
+					"lon": 19.021174907684326,
+					"tags": {
+					"name": "Nad Potokiem Zuchów",
+					"relation": [{
+						"line": "18",
+						"route": "Osiedle Zlote Lany"
+						}],
+					"ref": "235"
+					}
+				}, 	{
+					"lat": 49.82605855408661,
+					"lon": 19.017446637153625,
+					"tags": {
+					"name": "Nad Potokiem Zuchów",
+					"relation": [{
+						"line": "18",
+						"route": "Osiedle Zlote Lany"
+						}],
+					"ref": "237"
+					}
+				}, 	{
+					"lat": 49.82420015416988,
+					"lon": 19.013428688049316,
+					"tags": {
+					"name": "Stare Bielsko Kosciól",
+					"relation": [{
+						"line": "18",
+						"route": "Osiedle Zlote Lany"
+						}, {
+						"line": "24",
+						"route": "Mikuszowice Blonia ATH"
+						}],
+					"ref": "305"
+					}
+				}, 	{
+					"lat": 49.825387185072515,
+					"lon": 19.01336431503296,
+					"tags": {
+					"name": "Stare Bielsko Kosciól",
+					"relation": [{
+						"line": "18",
+						"route": "Stare Bielsko Kosciól"
+						}, {
+						"line": "24",
+						"route": "Wapienica Strazacka"
+						}],
+					"ref": "306"
+					}
+				}, 	{
+					"lat": 49.82611046367387,
+					"lon": 19.01731789112091,
+					"tags": {
+					"name": "Nad Potokiem Zuchów",
+					"relation": [{
+						"line": "18",
+						"route": "Stare Bielsko Kosciól"
+						}],
+					"ref": "238"
+					}
+				}, 	{
+					"lat": 49.8279791717164,
+					"lon": 19.021174907684326,
+					"tags": {
+					"name": "Nad Potokiem Stoczniowa",
+					"relation": [{
+						"line": "18",
+						"route": "Stare Bielsko Kosciól"
+						}],
+					"ref": "236"
+					}
+				}, 	{
+					"lat": 49.83012117601897,
+					"lon": 19.028406143188477,
+					"tags": {
+					"name": "Nad Potokiem Listopadowa",
+					"relation": [{
+						"line": "18",
+						"route": "Stare Bielsko Kosciól"
+						}],
+					"ref": "234"
+					}
+				}, 	{
+					"lat": 49.794480285855876,
+					"lon": 19.013772010803223,
+					"tags": {
+					"name": "Goscinna Karpacka",
+					"relation": [{
+						"line": "18",
+						"route": "Stare Bielsko Kosciól"
+						}],
+					"ref": "90"
+					}
+				}, 	{
+					"lat": 49.79366303466267,
+					"lon": 19.020144939422607,
+					"tags": {
+					"name": "Goscinna Kolista",
+					"relation": [{
+						"line": "18",
+						"route": "Stare Bielsko Kosciól"
+						}],
+					"ref": "92"
+					}
+				}, 	{
+					"lat": 49.793399849139256,
+					"lon": 19.026496410369873,
+					"tags": {
+					"name": "Goscinna Dzialki",
+					"relation": [{
+						"line": "18",
+						"route": "Stare Bielsko Kosciól"
+						}],
+					"ref": "88"
+					}
+				}, 	{
+					"lat": 49.79049086124748,
+					"lon": 19.034628868103027,
+					"tags": {
+					"name": "Goscinna Armii Krajowej",
+					"relation": [{
+						"line": "18",
+						"route": "Stare Bielsko Kosciól"
+						}],
+					"ref": "86"
+					}
+				}, 	{
+					"lat": 49.83619716956919,
+					"lon": 19.071139097213745,
+					"tags": {
+					"name": "Wyzwolenia Bukietowa",
+					"relation": [{
+						"line": "17",
+						"route": "Podwale Dworzec"
+						}, {
+							"line": "31",
+							"route": "Podwale Dworzec"
+						}, {
+							"line": "33",
+							"route": "Warszawska Dworzec"
+						}, {
+							"line": "56",
+							"route": "Podwale Dworzec"
+						}, {
+							"line": "56BIS",
+							"route": "Podwale Dworzec"
+						}],
+					"ref": "357"
+					}
+				}, 	{
+					"lat": 49.841718879650216,
+					"lon": 19.09097671508789,
+					"tags": {
+					"name": "Witosa Szkola",
+					"relation": [{
+						"line": "17",
+						"route": "Podwale Dworzec"
+						}, {
+							"line": "D",
+							"route": "Hałcnów Kościół"
+						}],
+					"ref": "348"
+					}
+				}, 	{
+					"lat": 49.84094394083648,
+					"lon": 19.10498857498169,
+					"tags": {
+					"name": "Krzemionki Witosa",
+					"relation": [{
+						"line": "17",
+						"route": "Podwale Dworzec"
+						}, {
+							"line": "D",
+							"route": "Hałcnów Kościół"
+						}],
+					"ref": "347"
+					}
+				}, 	{
+					"lat": 49.8417465558067,
+					"lon": 19.091298580169678,
+					"tags": {
+					"name": "Witosa Szkola",
+					"relation": [{
+						"line": "17",
+						"route": "Krzemionki Witosa"
+						}, {
+							"line": "D",
+							"route": "Krzemionki Witosa"
+						}],
+					"ref": "349"
+					}
+				}, 	{
+					"lat": 49.83153297836102,
+					"lon": 19.067137241363525,
+					"tags": {
+					"name": "Piekarska Wyzwolenia",
+					"relation": [{
+						"line": "17",
+						"route": "Krzemionki Witosa"
+						}, {
+						"line": "31",
+						"route": "Halcnów Granica"
+						}, {
+							"line": "33",
+							"route": "Mazancowice Osiedle"
+						}],
+					"ref": "273"
+					}
+				}, 	{
+					"lat": 49.82758813322838,
+					"lon": 19.04781460762024,
+					"tags": {
+					"name": "Gazownicza",
+					"relation": [{
+						"line": "17",
+						"route": "Krzemionki Witosa"
+						}, {
+						"line": "31",
+						"route": "Halcnów Granica"
+						}, {
+							"line": "56",
+							"route": "Bestwina Piekarnia"
+						}, {
+							"line": "56BIS",
+							"route": "Janowicka Niklówka"
+						}],
+					"ref": "85"
+					}
+				}, 	{
+					"lat": 49.831339204008984,
+					"lon": 19.047964811325073,
+					"tags": {
+					"name": "Podwale Dworzec",
+					"relation": [{
+						"line": "17",
+						"route": "Krzemionki Witosa"
+						}, {
+						"line": "31",
+						"route": "Halcnów Granica"
+						}, {
+							"line": "56",
+							"route": "Bestwina Piekarnia"
+						}, {
+							"line": "56BIS",
+							"route": "Janowicka Niklówka"
+						}],
+					"ref": "276"
+					}
+				}, 	{
+					"lat": 49.801810689371656,
+					"lon": 18.983479142189026,
+					"tags": {
+					"name": "Jaworzanska Zagloby",
+					"relation": [{
+						"line": "16",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "130"
+					}
+				}, 	{
+					"lat": 49.79824431139624,
+					"lon": 18.984670042991638,
+					"tags": {
+					"name": "Jaworzanska Zapora",
+					"relation": [{
+						"line": "16",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "131"
+					}
+				}, 	{
+					"lat": 49.793126273197586,
+					"lon": 18.983951210975647,
+					"tags": {
+					"name": "Zapora Sklep",
+					"relation": [{
+						"line": "16",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "375"
+					}
+				}, 	{
+					"lat": 49.788991279004854,
+					"lon": 18.981826901435852,
+					"tags": {
+					"name": "Zapora Klimczokówka",
+					"relation": [{
+						"line": "16",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "373"
+					}
+				}, 	{
+					"lat": 49.787290772761025,
+					"lon": 18.980695009231567,
+					"tags": {
+					"name": "Wapienica Zapora",
+					"relation": [{
+						"line": "16",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "328"
+					}
+				}, 	{
+					"lat": 49.78900166887989,
+					"lon": 18.98166060447693,
+					"tags": {
+					"name": "Zapora Klimczokówka",
+					"relation": [{
+						"line": "16",
+						"route": "Wapienica Zapora"
+						}],
+					"ref": "374"
+					}
+				}, 	{
+					"lat": 49.79316436614281,
+					"lon": 18.98386001586914,
+					"tags": {
+					"name": "Zapora Sklep",
+					"relation": [{
+						"line": "16",
+						"route": "Wapienica Zapora"
+						}],
+					"ref": "376"
+					}
+				}, 	{
+					"lat": 49.79733016833964,
+					"lon": 18.984289169311523,
+					"tags": {
+					"name": "Zapora Jaworzanska",
+					"relation": [{
+						"line": "16",
+						"route": "Wapienica Zapora"
+						}],
+					"ref": "372"
+					}
+				}, 	{
+					"lat": 49.80181415174692,
+					"lon": 18.983473777770996,
+					"tags": {
+					"name": "Jaworzanska Zagloby",
+					"relation": [{
+						"line": "16",
+						"route": "Wapienica Zapora"
+						}],
+					"ref": "129"
+					}
+				}, 	{
+					"lat": 49.815280917615716,
+					"lon": 19.075323343276978,
+					"tags": {
+					"name": "Lipnicka Mostek",
+					"relation": [{
+						"line": "13",
+						"route": "Lipnik Dolny"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}, {
+							"line": "N2",
+							"route": "Komorowicka Kościół"
+						}],
+					"ref": "202"
+					}
+				}, 	{
+					"lat": 49.81652008723486,
+					"lon": 19.067115783691406,
+					"tags": {
+					"name": "Lipnicka Zlote Lany",
+					"relation": [{
+						"line": "13",
+						"route": "Lipnik Dolny"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}, {
+							"line": "N2",
+							"route": "Komorowicka Kościół"
+						}],
+					"ref": "204"
+					}
+				}, 	{
+					"lat": 49.818991408986086,
+					"lon": 19.060914516448975,
+					"tags": {
+					"name": "Lipnicka Akademii Umiejetnosci",
+					"relation": [{
+						"line": "13",
+						"route": "Lipnik Dolny"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}, {
+							"line": "N2",
+							"route": "Komorowicka Kościół"
+						}],
+					"ref": "199"
+					}
+				}, 	{
+					"lat": 49.82091576820452,
+					"lon": 19.057701230049133,
+					"tags": {
+					"name": "Lipnicka Zywiecka",
+					"relation": [{
+						"line": "13",
+						"route": "Lipnik Dolny"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}, {
+							"line": "N2",
+							"route": "Komorowicka Kościół"
+						}],
+					"ref": "205"
+					}
+				}, 	{
+					"lat": 49.83991989549551,
+					"lon": 19.040234684944153,
+					"tags": {
+					"name": "Kwiatkowskiego Warszawska",
+					"relation": [{
+						"line": "13",
+						"route": "Lipnik Dolny"
+						}, {
+						"line": "29",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "194"
+					}
+				}, 	{
+					"lat": 49.8407467446023,
+					"lon": 19.05075967311859,
+					"tags": {
+					"name": "Kwiatkowskiego Komorowicka",
+					"relation": [{
+						"line": "13",
+						"route": "Lipnik Dolny"
+						}, {
+						"line": "19",
+						"route": "Grazynskiego Fiat II"
+						}],
+					"ref": "193"
+					}
+				}, 	{
+					"lat": 49.84068793153464,
+					"lon": 19.048367142677307,
+					"tags": {
+					"name": "Kwiatkowskiego Most",
+					"relation": [{
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}],
+					"ref": "196"
+					}
+				}, 	{
+					"lat": 49.83982302521876,
+					"lon": 19.040422439575195,
+					"tags": {
+					"name": "Kwiatkowskiego Warszawska",
+					"relation": [{
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "29",
+						"route": "Komorowice Sosna"
+						}],
+					"ref": "195"
+					}
+				}, 	{
+					"lat": 49.820182028753315,
+					"lon": 19.058972597122192,
+					"tags": {
+					"name": "Lipnicka Akademii Umiejetnosci",
+					"relation": [{
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "200"
+					}
+				}, 	{
+					"lat": 49.81701159265204,
+					"lon": 19.067072868347168,
+					"tags": {
+					"name": "Lipnicka Zlote Lany",
+					"relation": [{
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "203"
+					}
+				}, 	{
+					"lat": 49.815280917615716,
+					"lon": 19.074583053588867,
+					"tags": {
+					"name": "Lipnicka Mostek",
+					"relation": [{
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "201"
+					}
+				}, 	{
+					"lat": 49.81923455392091,
+					"lon": 19.084703028202057,
+					"tags": {
+					"name": "Lipnik Dolny",
+					"relation": [{
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "27",
+						"route": "Osiedle Sarni Stok"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}, {
+							"line": "N2",
+							"route": "Komorowicka Kościół"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "206"
+					}
+				}, 	{
+					"lat": 49.78772369753036,
+					"lon": 19.059675335884094,
+					"tags": {
+					"name": "Szeroka Bystrzanska",
+					"relation": [{
+						"line": "12",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "21",
+						"route": "Osiedle Polskich Skrzydel"
+						}, {
+						"line": "21",
+						"route": "Osiedle Langiewicza"
+						}, {
+						"line": "24",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "24BIS",
+						"route": "Mikuszowice Blonia ATH"
+						}],
+					"ref": "322"
+					}
+				}, 	{
+					"lat": 49.79591078845385,
+					"lon": 19.0523099899292,
+					"tags": {
+					"name": "Dluga Bystrzanska",
+					"relation": [{
+						"line": "12",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "21",
+						"route": "Osiedle Langiewicza"
+						}, {
+							"line": "N2",
+							"route": "Komorowicka Kościół"
+						}],
+					"ref": "72"
+					}
+				}, 	{
+					"lat": 49.84098545573069,
+					"lon": 19.060828685760498,
+					"tags": {
+					"name": "Czerwona Krausa",
+					"relation": [{
+						"line": "12",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+							"line": "33",
+							"route": "Mazancowice Osiedle"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "68"
+					}
+				}, 	{
+					"lat": 49.839034217169136,
+					"lon": 19.070184230804443,
+					"tags": {
+					"name": "Czerwona Niepodleglosci",
+					"relation": [{
+						"line": "12",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+							"line": "33",
+							"route": "Mazancowice Osiedle"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "70"
+					}
+				}, 	{
+					"lat": 49.83724897248588,
+					"lon": 19.071450233459473,
+					"tags": {
+					"name": "Niepodleglosci Wyzwolenia",
+					"relation": [{
+						"line": "12",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+							"line": "33",
+							"route": "Mazancowice Osiedle"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "240"
+					}
+				}, 	{
+					"lat": 49.84023818218129,
+					"lon": 19.078209400177002,
+					"tags": {
+					"name": "Wyzwolenia Witosa",
+					"relation": [{
+						"line": "12",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "17",
+						"route": "Podwale Dworzec"
+						}, {
+							"line": "31",
+							"route": "Podwale Dworzec"
+						}, {
+							"line": "56",
+							"route": "Podwale Dworzec"
+						}, {
+							"line": "56BIS",
+							"route": "Podwale Dworzec"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "369"
+					}
+				}, 	{
+					"lat": 49.84856132703989,
+					"lon": 19.085923433303833,
+					"tags": {
+					"name": "Wyzwolenia Poczta",
+					"relation": [{
+						"line": "12",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+							"line": "31",
+							"route": "Podwale Dworzec"
+						}, {
+							"line": "56",
+							"route": "Podwale Dworzec"
+						}, {
+							"line": "56BIS",
+							"route": "Podwale Dworzec"
+						}, {
+							"line": "D",
+							"route": "Krzemionki Witosa"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "363"
+					}
+				}, 	{
+					"lat": 49.849626696818646,
+					"lon": 19.091427326202393,
+					"tags": {
+					"name": "Halcnów Kosciól",
+					"relation": [{
+						"line": "12",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+							"line": "31",
+							"route": "Podwale Dworzec"
+						}, {
+							"line": "32",
+							"route": "Osiedle Karpackie"
+						}, {
+							"line": "D",
+							"route": "Krzemionki Witosa"
+						}],
+					"ref": "354"
+					}
+				}, 	{
+					"lat": 49.848319194269784,
+					"lon": 19.085869789123535,
+					"tags": {
+					"name": "Wyzwolenia Poczta",
+					"relation": [{
+						"line": "12",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "31",
+						"route": "Halcnów Granica"
+						}, {
+							"line": "56",
+							"route": "Bestwina Piekarnia"
+						}, {
+							"line": "56BIS",
+							"route": "Janowicka Niklówka"
+						}, {
+							"line": "D",
+							"route": "Hałcnów Kościół"
+						}],
+					"ref": "364"
+					}
+				}, 	{
+					"lat": 49.84052878993402,
+					"lon": 19.078960418701172,
+					"tags": {
+					"name": "Wyzwolenia Niepodleglosci",
+					"relation": [{
+						"line": "12",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "17",
+						"route": "Krzemionki Witosa"
+						}, {
+						"line": "31",
+						"route": "Halcnów Granica"
+						}, {
+							"line": "56",
+							"route": "Bestwina Piekarnia"
+						}, {
+							"line": "56BIS",
+							"route": "Janowicka Niklówka"
+						}, {
+							"line": "D",
+							"route": "Krzemionki Witosa"
+						}, {
+							"line": "D",
+							"route": "Hałcnów Kościół"
+						}],
+					"ref": "370"
+					}
+				}, 	{
+					"lat": 49.836778431903845,
+					"lon": 19.071879386901855,
+					"tags": {
+					"name": "Wyzwolenia Niepodleglosci",
+					"relation": [{
+						"line": "12",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "17",
+						"route": "Krzemionki Witosa"
+						}, {
+						"line": "31",
+						"route": "Halcnów Granica"
+						}, {
+							"line": "56",
+							"route": "Bestwina Piekarnia"
+						}, {
+							"line": "56BIS",
+							"route": "Janowicka Niklówka"
+						}],
+					"ref": "360"
+					}
+				}, 	{
+					"lat": 49.838536015981006,
+					"lon": 19.070720672607422,
+					"tags": {
+					"name": "Niepodleglosci Czerwona",
+					"relation": [{
+						"line": "12",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+							"line": "33",
+							"route": "Warszawska Dworzec"
+						}],
+					"ref": "239"
+					}
+				}, 	{
+					"lat": 49.840521870722114,
+					"lon": 19.062598943710327,
+					"tags": {
+					"name": "Czerwona Krausa",
+					"relation": [{
+						"line": "12",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+							"line": "33",
+							"route": "Warszawska Dworzec"
+						}, {
+							"line": "N2",
+							"route": "Komorowicka Kościół"
+						}],
+					"ref": "69"
+					}
+				}, 	{
+					"lat": 49.840812476769734,
+					"lon": 19.05328631401062,
+					"tags": {
+					"name": "Czerwona Komorowicka",
+					"relation": [{
+						"line": "12",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "13",
+						"route": "Halcnów Kosciól"
+						}, {
+							"line": "33",
+							"route": "Warszawska Dworzec"
+						}, {
+							"line": "N2",
+							"route": "Komorowicka Kościół"
+						}],
+					"ref": "67"
+					}
+				}, 	{
+					"lat": 49.8150040038659,
+					"lon": 19.044671058654785,
+					"tags": {
+					"name": "Plac Mickiewicza Lacznik",
+					"relation": [{
+						"line": "12",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "14",
+						"route": "Osiedle Polskich Skrzydel"
+						}],
+					"ref": "259"
+					}
+				}, 	{
+					"lat": 49.787734087677265,
+					"lon": 19.059954285621643,
+					"tags": {
+					"name": "Szeroka Bystrzanska",
+					"relation": [{
+						"line": "12",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "21",
+						"route": "Osiedle Polskich Skrzydel"
+						}, {
+						"line": "21",
+						"route": "Osiedle Langiewicza"
+						}, {
+						"line": "24",
+						"route": "Wapienica Strazacka"
+						}, {
+						"line": "24BIS",
+						"route": "Dluga Zajezdnia MZK"
+						}],
+					"ref": "323"
+					}
+				}, {
+					"lat": 49.78524385205882,
+					"lon": 19.056950211524963,
+					"tags": {
+					"name": "Mikuszowice Blonia ATH",
+					"relation": [{
+						"line": "12",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "21",
+						"route": "Osiedle Polskich Skrzydel"
+						}, {
+						"line": "21",
+						"route": "Osiedle Langiewicza"
+						}, {
+						"line": "24",
+						"route": "Wapienica Strazacka"
+						}, {
+						"line": "24BIS",
+						"route": "Dluga Zajezdnia MZK"
+						}],
+					"ref": "321"
+					}
+				}, {
+					"lat": 49.801499074585536,
+					"lon": 19.070640206336975,
+					"tags": {
+					"name": "Górska Bulwary",
+					"relation": [{
+						"line": "11",
+						"route": "Dworzec Warszawska"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}],
+					"ref": "94"
+					}
+				},{
+					"lat": 49.80194399063991,
+					"lon": 19.0782630443573,
+					"tags": {
+					"name": "Górska Partyzant",
+					"relation": [{
+						"line": "11",
+						"route": "Dworzec Warszawska"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}],
+					"ref": "98"
+					}
+				},{
+					"lat": 49.80059538036395,
+					"lon": 19.08777415752411,
+					"tags": {
+					"name": "Górska Piekarnia",
+					"relation": [{
+						"line": "11",
+						"route": "Dworzec Warszawska"
+						}],
+					"ref": "101"
+					}
+				},{
+					"lat": 49.79688347852401,
+					"lon": 19.09501612186432,
+					"tags": {
+					"name": "Górska Kosciól",
+					"relation": [{
+						"line": "11",
+						"route": "Dworzec Warszawska"
+						}],
+					"ref": "96"
+					}
+				},{
+					"lat": 49.79447336005626,
+					"lon": 19.105771780014038,
+					"tags": {
+					"name": "Straconka Lesniczówka",
+					"relation": [{
+						"line": "11",
+						"route": "Dworzec Warszawska"
+						}],
+					"ref": "102"
+					}
+				},{
+					"lat": 49.7967449692171,
+					"lon": 19.095037579536438,
+					"tags": {
+					"name": "Górska Kosciól",
+					"relation": [{
+						"line": "11",
+						"route": "Straconka Leśniczówka"
+						}],
+					"ref": "97"
+					}
+				},{
+					"lat": 49.801800302244445,
+					"lon": 19.077415466308594,
+					"tags": {
+					"name": "Górska Partyzant",
+					"relation": [{
+						"line": "11",
+						"route": "Straconka Leśniczówka"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}],
+					"ref": "99"
+					}
+				},{
+					"lat": 49.801260168557924,
+					"lon": 19.069926738739014,
+					"tags": {
+					"name": "Górska Bulwary",
+					"relation": [{
+						"line": "11",
+						"route": "Straconka Leśniczówka"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}],
+					"ref": "95"
+					}
+				},{
+					"lat": 49.785545180839954,
+					"lon": 19.06523823738098,
+					"tags": {
+					"name": "Bystrzanska Willowa",
+					"relation": [{
+						"line": "10",
+						"route": "Mikuszowice Śląskie"
+							}, {
+							"line": "57",
+							"route": "Bystra Leśniczówka"
+						}],
+					"ref": "54"
+					}
+				},{
+					"lat": 49.796502576976714,
+					"lon": 19.054434299468994,
+					"tags": {
+					"name": "Partyzantów Krepol",
+					"relation": [{
+						"line": "10",
+						"route": "Mikuszowice Śląskie"
+							}, {
+						"line": "21",
+						"route": "Osiedle Polskich Skrzydel"
+						}, {
+						"line": "24",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "24BIS",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+							"line": "57",
+							"route": "Bystra Leśniczówka"
+						}],
+					"ref": "256"
+					}
+				},{
+					"lat": 49.79945275432903,
+					"lon": 19.050979614257812,
+					"tags": {
+					"name": "Partyzantów Belos",
+					"relation": [{
+						"line": "10",
+						"route": "Mikuszowice Śląskie"
+						}, {
+						"line": "21",
+						"route": "Osiedle Polskich Skrzydel"
+						}, {
+						"line": "24",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "24BIS",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+							"line": "38",
+							"route": "Cygański Las"
+						}, {
+							"line": "57",
+							"route": "Bystra Leśniczówka"
+						}],
+					"ref": "253"
+					}
+				},{
+					"lat": 49.82179485647966,
+					"lon": 18.973957300186157,
+					"tags": {
+					"name": "Wapienica Strazacka",
+					"relation": [{
+						"line": "10",
+						"route": "Mikuszowice Śląskie"
+						}, {
+						"line": "20",
+						"route": "Osiedle Zlote Lany"
+						}, {
+						"line": "24",
+						"route": "Mikuszowice Blonia ATH"
+						}],
+					"ref": "316"
+					}
+				},{
+					"lat": 49.81096088266724,
+					"lon": 18.978956937789917,
+					"tags": {
+					"name": "Miedzyrzecka Przejazd",
+					"relation": [{
+						"line": "10",
+						"route": "Wapienica Strażacka"
+						}, {
+						"line": "20",
+						"route": "Wapienica Strazacka"
+						}, {
+							"line": "36",
+							"route": "Konwojowa Tacho"
+						}, {
+							"line": "52",
+							"route": "Miedzyrzecze Dolne"
+						}],
+					"ref": "228"
+					}
+				},{
+					"lat": 49.798787941318636,
+					"lon": 19.05226707458496,
+					"tags": {
+					"name": "Partyzantów Belos",
+					"relation": [{
+						"line": "10",
+						"route": "Wapienica Strażacka"
+							}, {
+						"line": "21",
+						"route": "Osiedle Langiewicza"
+						}, {
+						"line": "24",
+						"route": "Wapienica Strazacka"
+						}, {
+							"line": "38",
+							"route": "Warszawska Dworzec"
+						}, {
+							"line": "57",
+							"route": "Filarowa Med Work"
+						}],
+					"ref": "252"
+					}
+				},{
+					"lat": 49.78440912691216,
+					"lon": 19.067072868347168,
+					"tags": {
+					"name": "Bystrzanska Willowa",
+					"relation": [{
+						"line": "10",
+						"route": "Wapienica Strażacka"
+							}, {
+							"line": "57",
+							"route": "Filarowa Med Work"
+						}],
+					"ref": "55"
+					}
+				},{
+					"lat": 49.83421113720744,
+					"lon": 19.058167934417725,
+					"tags": {
+					"name": "Piekarska B-B Wschód",
+					"relation": [{
+						"line": "9",
+						"route": "Mikuszowice Dom Ludowy"
+						}, {
+						"line": "17",
+						"route": "Krzemionki Witosa"
+						}, {
+						"line": "19",
+						"route": "Osiedle Zlote Lany"
+						}, {
+						"line": "31",
+						"route": "Halcnów Granica"
+						}, {
+							"line": "33",
+							"route": "Mazancowice Osiedle"
+						}],
+					"ref": "271"
+					}
+				},{
+					"lat": 49.78040501712396,
+					"lon": 19.023580849170685,
+					"tags": {
+					"name": "Armii Krajowej Parking",
+					"relation": [{
+						"line": "8",
+						"route": "Szyndzielnia"
+						}],
+					"ref": "23"
+					}
+				},{
+					"lat": 49.78198453248001,
+					"lon": 19.025949239730835,
+					"tags": {
+					"name": "Armii Krajowej ZIAD",
+					"relation": [{
+						"line": "8",
+						"route": "Szyndzielnia"
+						}],
+					"ref": "27"
+					}
+				},{
+					"lat": 49.78877309111451,
+					"lon": 19.03382420539856,
+					"tags": {
+					"name": "Armii Krajowej Zielen Miejska",
+					"relation": [{
+						"line": "8",
+						"route": "Szyndzielnia"
+						}],
+					"ref": "29"
+					}
+				},{
+					"lat": 49.78935492330469,
+					"lon": 19.034623503684998,
+					"tags": {
+					"name": "Armii Krajowej Zielen Miejska",
+					"relation": [{
+						"line": "8",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "28"
+					}
+				},{
+					"lat": 49.78233091054223,
+					"lon": 19.026684165000916,
+					"tags": {
+					"name": "Armii Krajowej ZIAD",
+					"relation": [{
+						"line": "8",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "26"
+					}
+				},{
+					"lat": 49.78030802766096,
+					"lon": 19.023631811141968,
+					"tags": {
+					"name": "Armii Krajowej Parking",
+					"relation": [{
+						"line": "8",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "22"
+					}
+				},{
+					"lat": 49.807533657580464,
+					"lon": 18.97059917449951,
+					"tags": {
+					"name": "Cieszynska Osiedle Sloneczne",
+					"relation": [{
+						"line": "7",
+						"route": "Wapienica Dzwonkowa"
+						}],
+					"ref": "79"
+					}
+				},{
+					"lat": 49.7874154554913,
+					"lon": 19.015252590179443,
+					"tags": {
+					"name": "Karbowa Wyciag",
+					"relation": [{
+						"line": "7",
+						"route": "Hala Widowiskowo-Sportowa"
+						}, {
+							"line": "37",
+							"route": "Hala Widowiskowo-Sportowa"
+						}],
+					"ref": "402"
+					}
+				},{
+					"lat": 49.79307086522373,
+					"lon": 19.01210367679596,
+					"tags": {
+					"name": "Kamienica Spóldzielnia",
+					"relation": [{
+						"line": "7",
+						"route": "Hala Widowiskowo-Sportowa"
+						}],
+					"ref": "139"
+					}
+				},{
+					"lat": 49.79756563108008,
+					"lon": 19.01555836200714,
+					"tags": {
+					"name": "Karpacka Pawilon",
+					"relation": [{
+						"line": "7",
+						"route": "Hala Widowiskowo-Sportowa"
+						}, {
+						"line": "18",
+						"route": "Osiedle Zlote Lany"
+						}],
+					"ref": "147"
+					}
+				},{
+					"lat": 49.80199419491852,
+					"lon": 19.019882082939148,
+					"tags": {
+					"name": "Karpacka Dom Kultury",
+					"relation": [{
+						"line": "7",
+						"route": "Hala Widowiskowo-Sportowa"
+						}, {
+						"line": "18",
+						"route": "Osiedle Zlote Lany"
+						}],
+					"ref": "141"
+					}
+				},{
+					"lat": 49.80451472902084,
+					"lon": 19.024983644485474,
+					"tags": {
+					"name": "Karpacka Mostek",
+					"relation": [{
+						"line": "7",
+						"route": "Hala Widowiskowo-Sportowa"
+						}, {
+						"line": "18",
+						"route": "Osiedle Zlote Lany"
+						}],
+					"ref": "143"
+					}
+				},{
+					"lat": 49.80675470894452,
+					"lon": 19.033148288726807,
+					"tags": {
+					"name": "Karpacka Osiedle",
+					"relation": [{
+						"line": "7",
+						"route": "Hala Widowiskowo-Sportowa"
+						}, {
+						"line": "18",
+						"route": "Osiedle Zlote Lany"
+						}],
+					"ref": "145"
+					}
+				},{
+					"lat": 49.81605626768539,
+					"lon": 19.02486562728882,
+					"tags": {
+					"name": "Cieszynska Osiedle Sloneczne",
+					"relation": [{
+						"line": "7",
+						"route": "Hala Widowiskowo-Sportowa"
+						}],
+					"ref": "60"
+					}
+				},{
+					"lat": 49.80918152538588,
+					"lon": 18.969815969467163,
+					"tags": {
+					"name": "Wapienica Dzwonkowa",
+					"relation": [{
+						"line": "7",
+						"route": "Hala Widowiskowo-Sportowa"
+						}],
+					"ref": "81"
+					}
+				},{
+					"lat": 49.81615751225736,
+					"lon": 19.024915248155594,
+					"tags": {
+					"name": "Cieszynska Osiedle Sloneczne",
+					"relation": [{
+						"line": "7",
+						"route": "Wapienica Dzwonkowa"
+						}],
+					"ref": "61"
+					}
+				},{
+					"lat": 49.80674432287803,
+					"lon": 19.034403562545776,
+					"tags": {
+					"name": "Karpacka Osiedle",
+					"relation": [{
+						"line": "7",
+						"route": "Wapienica Dzwonkowa"
+						}, {
+						"line": "18",
+						"route": "Stare Bielsko Kosciól"
+						}],
+					"ref": "144"
+					}
+				},{
+					"lat": 49.80450780465636,
+					"lon": 19.02533769607544,
+					"tags": {
+					"name": "Karpacka Mostek",
+					"relation": [{
+						"line": "7",
+						"route": "Wapienica Dzwonkowa"
+						}, {
+						"line": "18",
+						"route": "Stare Bielsko Kosciól"
+						}],
+					"ref": "142"
+					}
+				},{
+					"lat": 49.801357116073554,
+					"lon": 19.019232988357544,
+					"tags": {
+					"name": "Karpacka Dom Kultury",
+					"relation": [{
+						"line": "7",
+						"route": "Wapienica Dzwonkowa"
+						}, {
+						"line": "18",
+						"route": "Stare Bielsko Kosciól"
+						}],
+					"ref": "140"
+					}
+				},{
+					"lat": 49.79603337140681,
+					"lon": 19.0147402882576,
+					"tags": {
+					"name": "Karpacka Pawilon",
+					"relation": [{
+						"line": "7",
+						"route": "Wapienica Dzwonkowa"
+						}, {
+						"line": "18",
+						"route": "Stare Bielsko Kosciól"
+						}],
+					"ref": "146"
+					}
+				},{
+					"lat": 49.79357299767088,
+					"lon": 19.012661576271057,
+					"tags": {
+					"name": "Kamienica Spóldzielnia",
+					"relation": [{
+						"line": "7",
+						"route": "Wapienica Dzwonkowa"
+						}],
+					"ref": "138"
+					}
+				},{
+					"lat": 49.79036618643331,
+					"lon": 19.01111125946045,
+					"tags": {
+					"name": "Kamienica",
+					"relation": [{
+						"line": "7",
+						"route": "Wapienica Dzwonkowa"
+						}, {
+						"line": "7",
+						"route": "Hala Widowiskowo-Sportowa"
+						}],
+					"ref": "137"
+					}
+				},{
+					"lat": 49.78698599140265,
+					"lon": 19.01658296585083,
+					"tags": {
+					"name": "Karbowa Wyciag",
+					"relation": [{
+						"line": "7",
+						"route": "Wapienica Dzwonkowa"
+						}, {
+							"line": "37",
+							"route": "Osiedle Langiewicza"
+						}],
+					"ref": "403"
+					}
+				},{
+					"lat": 49.78453381705943,
+					"lon": 19.022676944732666,
+					"tags": {
+					"name": "Karbowa Hala Widowiskowo Sportowa",
+					"relation": [{
+						"line": "7",
+						"route": "Wapienica Dzwonkowa"
+						}, {
+							"line": "37",
+							"route": "Osiedle Langiewicza"
+						}],
+					"ref": "405"
+					}
+				},{
+					"lat": 49.825664039403115,
+					"lon": 19.09672737121582,
+					"tags": {
+					"name": "Krakowska Lipnik Górny",
+					"relation": [{
+						"line": "6",
+						"route": "Osiedle Karpackie "
+						}, {
+						"line": "27",
+						"route": "Osiedle Sarni Stok"
+						}],
+					"ref": "182"
+					}
+				},{
+					"lat": 49.82447355453964,
+					"lon": 19.109859466552734,
+					"tags": {
+					"name": "Krakowska Kopiec",
+					"relation": [{
+						"line": "6",
+						"route": "Osiedle Karpackie "
+						}, {
+						"line": "27",
+						"route": "Osiedle Sarni Stok"
+						}],
+					"ref": "178"
+					}
+				},{
+					"lat": 49.823732947430145,
+					"lon": 19.11200523376465,
+					"tags": {
+					"name": "Krakowska Kopiec",
+					"relation": [{
+						"line": "6",
+						"route": "Lipnik Granica"
+						}, {
+						"line": "27",
+						"route": "Lipnik Dolny"
+						}],
+					"ref": "179"
+					}
+				},{
+					"lat": 49.825747095393346,
+					"lon": 19.097585678100586,
+					"tags": {
+					"name": "Krakowska Lipnik Górny",
+					"relation": [{
+						"line": "6",
+						"route": "Lipnik Granica"
+						}, {
+						"line": "27",
+						"route": "Lipnik Dolny"
+						}],
+					"ref": "183"
+					}
+				},{
+					"lat": 49.835539781128446,
+					"lon": 19.054402112960815,
+					"tags": {
+					"name": "Komorowicka Przejazd",
+					"relation": [{
+						"line": "3",
+						"route": "Osiedle Karpackie"
+						}, {
+						"line": "12",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "19",
+						"route": "Osiedle Zlote Lany"
+						}, {
+							"line": "51",
+							"route": "Warszawska Dworzec"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "165"
+					}
+				},{
+					"lat": 49.83995795162259,
+					"lon": 19.051741361618042,
+					"tags": {
+					"name": "Komorowicka Czerwona",
+					"relation": [{
+						"line": "3",
+						"route": "Osiedle Karpackie"
+						}, {
+						"line": "12",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "19",
+						"route": "Osiedle Zlote Lany"
+						}, {
+							"line": "51",
+							"route": "Warszawska Dworzec"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "157"
+					}
+				},{
+					"lat": 49.853026729661444,
+					"lon": 19.04282033443451,
+					"tags": {
+					"name": "Komorowice Olimpijska",
+					"relation": [{
+						"line": "3",
+						"route": "Osiedle Karpackie"
+						}, {
+						"line": "29",
+						"route": "Warszawska Dworzec"
+						}, {
+							"line": "32",
+							"route": "Osiedle Karpackie"
+						}],
+					"ref": "245"
+					}
+				},{
+					"lat": 49.854849436165,
+					"lon": 19.048629999160767,
+					"tags": {
+					"name": "Daszynskiego Stazystów",
+					"relation": [{
+						"line": "3",
+						"route": "Osiedle Karpackie"
+						}, {
+						"line": "29",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "71"
+					}
+				},{
+					"lat": 49.86752001507109,
+					"lon": 19.047181606292725,
+					"tags": {
+					"name": "Bestwinska Cegielnia",
+					"relation": [{
+						"line": "3",
+						"route": "Osiedle Karpackie"
+						}, {
+						"line": "29",
+						"route": "Warszawska Dworzec"
+						}],
+					"ref": "36"
+					}
+				},{
+					"lat": 49.867768966956106,
+					"lon": 19.04733180999756,
+					"tags": {
+					"name": "Bestwinska Cegielnia",
+					"relation": [{
+						"line": "3",
+						"route": "Komorowice Sosna"
+						}, {
+						"line": "29",
+						"route": "Komorowice Sosna"
+						}],
+					"ref": "35"
+					}
+				},{
+					"lat": 49.85280883035571,
+					"lon": 19.04208540916443,
+					"tags": {
+					"name": "Komorowice Olimpijska",
+					"relation": [{
+						"line": "3",
+						"route": "Komorowice Sosna"
+						}, {
+						"line": "29",
+						"route": "Komorowice Sosna"
+						}, {
+							"line": "32",
+							"route": "Halcnów Kosciól"
+						}],
+					"ref": "246"
+					}
+				},{
+					"lat": 49.841943747963,
+					"lon": 19.051151275634766,
+					"tags": {
+					"name": "Komorowicka Czerwona",
+					"relation": [{
+						"line": "3",
+						"route": "Komorowice Sosna"
+						}, {
+							"line": "33",
+							"route": "Mazancowice Osiedle"
+						}, {
+							"line": "51",
+							"route": "Mazańcowice Osiedle "
+						}],
+					"ref": "158"
+					}
+				},{
+					"lat": 49.83614181088721,
+					"lon": 19.05452013015747,
+					"tags": {
+					"name": "Komorowicka Przejazd Krakowskie",
+					"relation": [{
+						"line": "3",
+						"route": "Komorowice Sosna"
+						}, {
+						"line": "12",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "19",
+						"route": "Grazynskiego Fiat II"
+						}, {
+							"line": "51",
+							"route": "Mazańcowice Osiedle "
+						}, {
+							"line": "N2",
+							"route": "Komorowicka Kościół"
+						}],
+					"ref": "166"
+					}
+				},{
+					"lat": 49.77999973843561,
+					"lon": 19.081116914749146,
+					"tags": {
+					"name": "Zywiecka Mikuszowice Krakowskie",
+					"relation": [{
+						"line": "2",
+						"route": "Mikuszowice Stalownik"
+						}],
+					"ref": "387"
+					}
+				},{
+					"lat": 49.792790361383325,
+					"lon": 19.067180156707764,
+					"tags": {
+					"name": "Zywiecka Dworek",
+					"relation": [{
+						"line": "2",
+						"route": "Mikuszowice Stalownik"
+						}],
+					"ref": "381"
+					}
+				},{
+					"lat": 49.8024719985509,
+					"lon": 19.058618545532227,
+					"tags": {
+					"name": "Zywiecka Leszczyny",
+					"relation": [{
+						"line": "2",
+						"route": "Mikuszowice Stalownik"
+						}, {
+						"line": "9",
+						"route": "Mikuszowice Dom Ludowy"
+						}, {
+						"line": "11",
+						"route": "Straconka Leśniczówka"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}],
+					"ref": "385"
+					}
+				},{
+					"lat": 49.80190417341642,
+					"lon": 19.059412479400635,
+					"tags": {
+					"name": "Zywiecka Leszczyny",
+					"relation": [{
+						"line": "2",
+						"route": "Osiedle Kopernika"
+						}, {
+						"line": "9",
+						"route": "Cieszyńska Lotnisko"
+						}, {
+						"line": "11",
+						"route": "Dworzec Warszawska"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}],
+					"ref": "384"
+					}
+				},{
+					"lat": 49.79324747791938,
+					"lon": 19.066965579986572,
+					"tags": {
+					"name": "Zywiecka Dworek",
+					"relation": [{
+						"line": "2",
+						"route": "Osiedle Kopernika"
+						}],
+					"ref": "386"
+					}
+				},{
+					"lat": 49.78137490107597,
+					"lon": 19.079453945159912,
+					"tags": {
+					"name": "Zywiecka Mikuszowice Krakowskie",
+					"relation": [{
+						"line": "2",
+						"route": "Osiedle Kopernika"
+						}],
+					"ref": "386"
+					}
+				},{
+					"lat": 49.79277650929972,
+					"lon": 19.047846794128418,
+					"tags": {
+					"name": "Dluga Zajezdnia MZK",
+					"relation": [{
+						"line": "1",
+						"route": "Cygański Las"
+						}, {
+						"line": "12",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "14",
+						"route": "Osiedle Polskich Skrzydel"
+						}, {
+						"line": "21",
+						"route": "Osiedle Langiewicza"
+						}, {
+							"line": "N2",
+							"route": "Komorowicka Kościół"
+						}],
+					"ref": "74"
+					}
+				},{
+					"lat": 49.79365610874618,
+					"lon": 19.039371013641357,
+					"tags": {
+					"name": "Boboli Szpital",
+					"relation": [{
+						"line": "1",
+						"route": "Cygański Las"
+						}, {
+						"line": "12",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "14",
+						"route": "Osiedle Polskich Skrzydel"
+						}, {
+							"line": "N1",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "44"
+					}
+				},{
+					"lat": 49.803510685831846,
+					"lon": 19.044735431671143,
+					"tags": {
+					"name": "Partyzantów Folwark",
+					"relation": [{
+						"line": "1",
+						"route": "Cygański Las"
+						}, {
+						"line": "8",
+						"route": "Szyndzielnia"
+						}, {
+						"line": "10",
+						"route": "Mikuszowice Śląskie"
+						}, {
+						"line": "12",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "14",
+						"route": "Osiedle Polskich Skrzydel"
+						}, {
+						"line": "24",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+						"line": "24BIS",
+						"route": "Mikuszowice Blonia ATH"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec S"
+						}, {
+							"line": "57",
+							"route": "Bystra Leśniczówka"
+						}],
+					"ref": "255"
+					}
+				},{
+					"lat": 49.8033444973644,
+					"lon": 19.045722484588623,
+					"tags": {
+					"name": "Partyzantów Folwark",
+					"relation": [{
+						"line": "1",
+						"route": "Osiedle Beskidzkie"
+						}, {
+						"line": "8",
+						"route": "Warszawska Dworzec"
+						}, {
+						"line": "10",
+						"route": "Wapienica Strażacka"
+						}, {
+						"line": "12",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "14",
+						"route": "Osiedle Polskich Skrzydel"
+						}, {
+						"line": "24",
+						"route": "Wapienica Strazacka"
+						}, {
+							"line": "35",
+							"route": "Warszawska Dworzec L"
+						}, {
+							"line": "57",
+							"route": "Filarowa Med Work"
+						}],
+					"ref": "254"
+					}
+				},{
+					"lat": 49.79276265721217,
+					"lon": 19.047538340091705,
+					"tags": {
+					"name": "Dluga Zajezdnia MZK",
+					"relation": [{
+						"line": "1",
+						"route": "Osiedle Beskidzkie"
+						}, {
+						"line": "12",
+						"route": "Halcnów Kosciól"
+						}, {
+						"line": "14",
+						"route": "Osiedle Polskich Skrzydel"
+						}, {
+						"line": "21",
+						"route": "Osiedle Polskich Skrzydel"
+						}, {
+							"line": "N1",
+							"route": "Wapienica Centrum"
+						}, {
+							"line": "N2",
+							"route": "Długa Zajezdnia MZK"
+						}],
+					"ref": "75"
+					}
+				},{
 					"id": 1088348076,
 					"lat": 49.7908640,
 					"lon": 19.0601505,
@@ -83,8 +3453,8 @@
 					}
 				}, {
 					"id": 443422495,
-					"lat": 49.7603337,
-					"lon": 19.0355917,
+					"lat": 49.760369108093485,
+					"lon": 19.03533160686493,
 					"tags": {
 						"name": "Bystra/Skocznia",
 						"relation": [{
@@ -95,8 +3465,8 @@
 					}
 				}, {
 					"id": 3181579859,
-					"lat": 49.7599970,
-					"lon": 19.0449539,
+					"lat": 49.75999138476895,
+					"lon": 19.044746160507202,
 					"tags": {
 						"name": "Bystra/Pod źródłem",
 						"relation": [{
@@ -379,6 +3749,12 @@
 							}, {
 								"line": "19",
 								"route": "Osiedle Zlote Lany"
+							}, {
+								"line": "56",
+								"route": "Podwale Dworzec"
+							}, {
+								"line": "56BIS",
+								"route": "Podwale Dworzec"
 							}], 
 						"ref": "362"			
 					}
@@ -445,6 +3821,12 @@
 							}, {
 								"line": "19",
 								"route": "Grazynskiego Fiat II"
+							}, {
+								"line": "56",
+								"route": "Bestwina Piekarnia"
+							}, {
+								"line": "56BIS",
+								"route": " Janowicka Niklówka"
 							}],
 						"ref": "210"
 					}
@@ -518,13 +3900,19 @@
 							}, {
 								"line": "35",
 								"route": "Warszawska Dworzec S"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
+							}, {
+								"line": "N2",
+								"route": "Komorowicka Kościół"
 							}],
 						"ref": "3"
 					}
 				}, {
 					"id": 288013616,
-					"lat": 49.8250443,
-					"lon": 19.0300396,
+					"lat": 49.82517954328475,
+					"lon": 19.03007984161377,
 					"tags": {
 						"name": "Piastowska Wita Stwosza",
 						"relation": [{
@@ -536,6 +3924,9 @@
 							}, {
 								"line": "4",
 								"route": "Osiedle Polskich Skrzydeł"
+							},{
+								"line": "6",
+								"route": "Osiedle Karpackie"
 							}, {
 								"line": "9",
 								"route": "Cieszyńska Lotnisko"
@@ -563,6 +3954,9 @@
 							}, {
 								"line": "52",
 								"route": "Miedzyrzecze Dolne"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}],
 						"ref": "268"
 					}
@@ -736,6 +4130,9 @@
 							}, {
 								"line": "38",
 								"route": "Warszawska Dworzec"
+							}, {
+								"line": "N2",
+								"route": "Komorowicka Kościół"
 							}
 						],
 						"ref": "388"
@@ -788,6 +4185,9 @@
 							}, {
 								"line": "52",
 								"route": "Osiedle Sarni Stok"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "266"
@@ -848,8 +4248,16 @@
 							}, {
 								"line": "51",
 								"route": "Mazańcowice Osiedle"
-							}
-						],
+							}, {
+								"line": "56",
+								"route": "Bestwina Piekarnia"
+							}, {
+								"line": "56BIS",
+								"route": " Janowicka Niklówka"
+							}, {
+								"line": "N2",
+								"route": "Komorowicka Kościół"
+							}],
 						"ref": "275"
 					}
 				}, {
@@ -913,14 +4321,17 @@
 							}, {
 								"line": "23",
 								"route": "Osiedle Langiewicza"
+							}, {
+								"line": "N2",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "392"
 					}
 				}, {
 					"id": 299017332,
-					"lat": 49.8210304,
-					"lon": 19.0525730,
+					"lat": 49.821237640961904,
+					"lon": 19.05258357524872,
 					"tags": {
 						"name": "Dmowskiego Urząd Miejski",
 						"relation": [{
@@ -940,8 +4351,8 @@
 					}
 				}, {
 					"id": 299017701,
-					"lat": 49.8201898,
-					"lon": 19.0515390,
+					"lat": 49.820102424275845,
+					"lon": 19.051534831523895,
 					"tags": {
 						"name": "Dmowskiego Urząd Miejski",
 						"relation": [{
@@ -956,13 +4367,19 @@
 							}, {
 								"line": "38",
 								"route": "Cygański Las"
+							}, {
+								"line": "15",
+								"route": "Osiedle Polskich Skrzydeł"
+							}, {
+								"line": "2",
+								"route": "Mikuszowice Stalownik"
 							}],
 						"ref": "77"
 					}
 				}, {
 					"id": 299017883,
-					"lat": 49.8157482,
-					"lon": 19.0504224,
+					"lat": 49.815758590109965,
+					"lon": 19.05058264732361,
 					"tags": {
 						"name": "PCK Trasa W-Z",
 						"relation": [{
@@ -1019,6 +4436,12 @@
 							}, {
 								"line": "51",
 								"route": "Warszawska Dworzec"
+							}, {
+								"line": "56",
+								"route": "Podwale Dworzec"
+							}, {
+								"line": "56BIS",
+								"route": "Podwale Dworzec"
 							}
 						],
 						"ref": "274"
@@ -1119,6 +4542,9 @@
 							}, {
 								"line": "35",
 								"route": "Warszawska Dworzec S"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "4"
@@ -1252,6 +4678,9 @@
 							}, {
 								"line": "51",
 								"route": "Mazańcowice Osiedle"
+							}, {
+								"line": "N2",
+								"route": "Komorowicka Kościół"
 							}
 						],
 						"ref": "335"
@@ -1319,6 +4748,9 @@
 							}, {
 								"line": "52",
 								"route": "Osiedle Sarni Stok"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "264"
@@ -1380,6 +4812,9 @@
 							}, {
 								"line": "52",
 								"route": "Miedzyrzecze Dolne"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}
 						],
 						"ref": "265"
@@ -1429,6 +4864,9 @@
 							}, {
 								"line": "37",
 								"route": "Osiedle Langiewicza"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}
 						],
 						"ref": "261"
@@ -1517,6 +4955,9 @@
 							}, {
 								"line": "51",
 								"route": "Warszawska Dworzec"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}
 						],
 						"ref": "2"
@@ -1568,8 +5009,8 @@
 					}
 				}, {
 					"id": 10734498672,
-					"lat": 49.7860232,
-					"lon": 19.0732789,
+					"lat": 49.78599197523789,
+					"lon": 19.073204398155212,
 					"tags": {
 						"name": "Mikuszowice/Dom Ludowy",
 						"relation": [{
@@ -1592,21 +5033,25 @@
 							}, {
 								"line": "9",
 								"route": "Cieszyńska Lotnisko"
+							}, {
+								"line": "N2",
+								"route": "Komorowicka Kościół"
 							}
 						],
 						"ref": "390"
 					}
 				}, {
 					"id": 10734499432,
-					"lat": 49.7970232,
-					"lon": 19.0635334,
+					"lat": 49.797042763737174,
+					"lon": 19.063650369644165,
 					"tags": {
 						"name": "Żywiecka/Pawia",
 						"relation": [{
 								"line": "2",
 								"route": "Mikuszowice Stalownik"
-							}
-						],
+							}, {
+							"line": "9",
+							"route": "Mikuszowice Dom Ludowy"}],
 						"ref": "391"
 					}
 				},
@@ -1671,6 +5116,9 @@
 							}, {
 								"line": "32",
 								"route": "Osiedle Karpackie"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "12"
@@ -1708,6 +5156,9 @@
 							}, {
 								"line": "32",
 								"route": "Halcnów Kosciól"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}
 						],
 						"ref": "11"
@@ -1751,6 +5202,9 @@
 							}, {
 								"line": "38",
 								"route": "Cygański Las"
+							}, {
+								"line": "N2",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "389"
@@ -1788,6 +5242,9 @@
 							}, {
 								"line": "38",
 								"route": "Cygański Las"
+							}, {
+								"line": "N2",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 
@@ -1829,6 +5286,9 @@
 							}, {
 								"line": "38",
 								"route": "Cygański Las"
+							}, {
+								"line": "N2",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "134"
@@ -1903,6 +5363,9 @@
 							}, {
 								"line": "38",
 								"route": "Warszawska Dworzec"
+							}, {
+								"line": "N2",
+								"route": "Komorowicka Kościół"
 							}
 						],
 						"ref": "133"
@@ -1943,6 +5406,9 @@
 							}, {
 								"line": "38",
 								"route": "Warszawska Dworzec"
+							}, {
+								"line": "N2",
+								"route": "Komorowicka Kościół"
 							}
 						],
 						"ref": "135"
@@ -2133,6 +5599,9 @@
 							}, {
 								"line": "23",
 								"route": "Szpital Wojewódzki"
+							}, {
+								"line": "N2",
+								"route": "Komorowicka Kościół"
 							}
 						],
 						"ref": "213"
@@ -2226,6 +5695,9 @@
 							}, {
 								"line": "52",
 								"route": "Miedzyrzecze Dolne"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}
 						],
 						"ref": "267"
@@ -2278,6 +5750,9 @@
 							}, {
 								"line": "37",
 								"route": "Hala Widowiskowo-Sportowa"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "371"
@@ -2566,6 +6041,9 @@
 							}, {
 								"line": "52",
 								"route": "Osiedle Sarni Stok"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "269"
@@ -2598,6 +6076,9 @@
 							}, {
 								"line": "37",
 								"route": "Osiedle Langiewicza"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}
 						],
 						"ref": "223"
@@ -2641,6 +6122,9 @@
 							}, {
 								"line": "37",
 								"route": "Hala Widowiskowo-Sportowa"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "222"
@@ -2732,6 +6216,9 @@
 							}, {
 								"line": "37",
 								"route": "Osiedle Langiewicza"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}
 						],
 						"ref": "225"
@@ -2779,6 +6266,9 @@
 							}, {
 								"line": "37",
 								"route": "Hala Widowiskowo-Sportowa"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "224"
@@ -2808,10 +6298,12 @@
 							{
 								"line": "2",
 								"route": "Mikuszowice Stalownik"
-							},
-							{
+							}, {
 								"line": "9",
 								"route": "Dom Ludowy"
+							}, {
+								"line": "N2",
+								"route": "Komorowicka Kościół"
 							}		
 						],
 						"ref": "380"
@@ -2948,6 +6440,9 @@
 							}, {
 								"line": "20",
 								"route": "Osiedle Zlote Lany"
+							}, {
+								"line": "2",
+								"route": "Mikuszowice Stalownik"
 							}
 						],
 						"ref": "263"
@@ -3035,6 +6530,9 @@
 							}, {
 								"line": "27",
 								"route": "Lipnik Dolny"
+							}, {
+								"line": "N2",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "185"
@@ -3052,6 +6550,9 @@
 							}, {
 								"line": "27",
 								"route": "Osiedle Sarni Stok"
+							}, {
+								"line": "N2",
+								"route": "Komorowicka Kościół"
 							}
 						],
 						"ref": "184"
@@ -3082,6 +6583,9 @@
 							}, {
 								"line": "27",
 								"route": "Osiedle Sarni Stok"
+							}, {
+								"line": "N2",
+								"route": "Komorowicka Kościół"
 							}
 						],
 						"ref": "180"
@@ -3140,6 +6644,9 @@
 							}, {
 								"line": "37",
 								"route": "Hala Widowiskowo-Sportowa"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "6"
@@ -3178,6 +6685,9 @@
 							}, {
 								"line": "37",
 								"route": "Osiedle Langiewicza"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}
 						],
 						"ref": "5"
@@ -3219,6 +6729,9 @@
 							}, {
 								"line": "37",
 								"route": "Osiedle Langiewicza"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}
 						],
 						"ref": "19"
@@ -3264,8 +6777,8 @@
 				}, {
 
 					"id": 4003481909,
-					"lat": 49.8448587,
-					"lon": 19.0496081,
+					"lat": 49.84482196999428,
+					"lon": 19.0496626496315,
 					"tags": {
 						"name": "Komorowicka/Mostek",
 						"relation": [{
@@ -3284,8 +6797,8 @@
 					}
 				}, {
 					"id": 8787575400002,
-					"lat": 49.8448587,
-					"lon": 19.0496081,
+					"lat": 49.84484964437437,
+					"lon": 19.04954731464386,
 					"tags": {
 						"name": "Komorowicka/Mostek",
 						"relation": [{
@@ -3401,8 +6914,8 @@
 				}, {
 
 					"id": 40676561852,
-					"lat": 49.7956880,
-					"lon": 19.0527293,
+					"lat": 49.794798871568034,
+					"lon": 19.0527606010437,
 					"tags": {
 						"name": "Bystrzańska/Olszówka",
 						"relation": [{
@@ -3447,6 +6960,9 @@
 							}, {
 								"line": "24BIS",
 								"route": "Mikuszowice Blonia ATH"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "132"
@@ -3469,8 +6985,8 @@
 				{
 
 					"id": 89797600001,
-					"lat": 49.8289750,
-					"lon": 19.0533511,
+					"lat": 49.828273313628515,
+					"lon": 19.053179025650024,
 					"tags": {
 						"name": "Komorowicka/Bielsbud",
 						"relation": [{
@@ -3494,6 +7010,9 @@
 							}, {
 								"line": "51",
 								"route": "Warszawska Dworzec"
+							}, {
+								"line": "N2",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "155"
@@ -3526,6 +7045,9 @@
 							}, {
 								"line": "51",
 								"route": "Mazańcowice Osiedle"
+							}, {
+								"line": "N2",
+								"route": "Komorowicka Kościół"
 							}],
 						"ref": "156"
 					}
@@ -3542,6 +7064,9 @@
 							}, {
 								"line": "12",
 								"route": "Mikuszowice Blonia ATH"
+							}, {
+								"line": "N2",
+								"route": "Długa Zajezdnia MZK"
 							}],
 						"ref": "167"
 					}
@@ -3656,6 +7181,9 @@
 							}, {
 								"line": "52",
 								"route": "Osiedle Sarni Stok"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}],
 						"ref": "64"
 					}
@@ -3684,6 +7212,9 @@
 							}, {
 								"line": "52",
 								"route": "Miedzyrzecze Dolne"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}],
 						"ref": "65"
 					}
@@ -3779,6 +7310,9 @@
 							}, {
 								"line": "52",
 								"route": "Osiedle Sarni Stok"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}],
 						"ref": "285"
 					}
@@ -3810,6 +7344,9 @@
 							}, {
 								"line": "52",
 								"route": "Osiedle Sarni Stok"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}],
 						"ref": "62"
 					}
@@ -3841,6 +7378,9 @@
 							}, {
 								"line": "52",
 								"route": "Miedzyrzecze Dolne"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}],
 						"ref": "63"
 					}
@@ -4125,6 +7665,9 @@
 							}, {
 								"line": "52",
 								"route": "Osiedle Sarni Stok"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "58"
@@ -4175,6 +7718,9 @@
 							}, {
 								"line": "52",
 								"route": "Miedzyrzecze Dolne"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}
 						],
 						"ref": "59"
@@ -4233,6 +7779,9 @@
 							}, {
 								"line": "38",
 								"route": "Cygański Las"
+							}, {
+								"line": "N2",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "136"
@@ -4265,29 +7814,14 @@
 							}, {
 								"line": "23",
 								"route": "Szpital Wojewódzki"
+							}, {
+								"line": "N2",
+								"route": "Komorowicka Kościół"
 							}
 						],
 						"ref": "428"
 					}
 				}, {
-
-					"id": 44081896442,
-					"lat": 49.8177866,
-					"lon": 19.0555072,
-					"tags": {
-						"name": "Żywiecka Stadion Miejski",
-						"relation": [{
-								"line": "15",
-								"route": "Osiedle Polskich Skrzydeł"
-							}, {
-								"line": "2",
-								"route": "Mikuszowice Stalownik"
-							}
-						],
-						"ref": "428-2"
-					}
-				},
-				{
 
 					"id": 4408189645,
 					"lat": 49.8175584,
@@ -4309,6 +7843,9 @@
 							}, {
 								"line": "21",
 								"route": "Osiedle Polskich Skrzydel"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}
 						],
 						"ref": "309"
@@ -4455,11 +7992,14 @@
 				}, {
 
 					"id": 4410324050,
-					"lat": 49.8100638,
-					"lon": 19.0235317,
+					"lat": 49.81011621538208,
+					"lon": 19.02357816696167,
 					"tags": {
-						"name": "Osiedle Beskidzkie",
+						"name": "Osiedle Karpackie",
 						"relation": [{
+								"line": "3",
+								"route": "Osiedle Polskich Skrzydeł"
+							},{
 								"line": "34",
 								"route": "Osiedle Polskich Skrzydeł"
 							}, {
@@ -4492,6 +8032,12 @@
 							}, {
 								"line": "23",
 								"route": "Osiedle Langiewicza"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
+							}, {
+								"line": "N1",
+								"route": "Długa Zajezdnia MZK"
 							}
 						],
 						"ref": "33"
@@ -4524,6 +8070,9 @@
 							}, {
 								"line": "23",
 								"route": "Osiedle Langiewicza"
+							}, {
+								"line": "N1",
+								"route": "Wapienica Centrum"
 							}
 						],
 						"ref": "24"
@@ -4721,8 +8270,8 @@
 				}, {
 
 					"id": 999999999000001,
-					"lat": 49.8482660,
-					"lon": 19.0452707,
+					"lat": 49.84826039041397,
+					"lon": 19.04506266117096,
 					"tags": {
 						"name": "Komorowicka Piekarnia",
 						"relation": [{
@@ -4740,8 +8289,8 @@
 					}
 				}, {
 					"id": 4413727685,
-					"lat": 49.8482660,
-					"lon": 19.0452707,
+					"lat": 49.848319194269784,
+					"lon": 19.04525578022003,
 					"tags": {
 						"name": "Komorowicka Piekarnia",
 						"relation": [{

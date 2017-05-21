@@ -1,8 +1,16 @@
 ﻿app.controller('PlanController', ['$rootScope', '$scope', 'BusStopService', 'DataDisplayService', 'RouteSelectionService', '$filter', function ($rootScope, $scope, BusStopService, DataDisplayService, RouteSelectionService, $filter) {
-
     $scope.selectedDate = new Date();
     $scope.selectedTime = new Date();
+
+    this.selectedDate = new Date();
+   // $scope.selectedDate = new Date();
+    this.selectedTime = new Date();
     
+    $scope.selectDateFun = function () {
+        console.log("date selected " + this.selectedDate);
+        console.log("time " + this.selectedTime);
+       // $scope.selectedDate = new Date();
+    };
     //all available bus stop data
     var allStops;
     //bus stops in cities
@@ -23,8 +31,6 @@
         $scope.cityNames = new Array();
 
         cityList = DataDisplayService.getCities(allStops, $scope.cityNames);
-       // console.log("cityList in plan contr " + cityList);
-       // console.log("citiesList in plan contr " + $scope.cityNames);
     };
 
     $scope.selectCity = function (index, selector) {
@@ -58,7 +64,7 @@
             var startStopRefs = DataDisplayService.getRefs(cityList, $scope.startCity, $scope.startBusStop);
             var endStopRefs = DataDisplayService.getRefs(cityList, $scope.endCity, $scope.endBusStop);
 
-            RouteSelectionService.receiveRoutes(startStopRefs, endStopRefs, $filter('date')($scope.selectedDate, 'EEEE'), $filter('date')($scope.selectedTime, 'HH:mm')).then(
+            RouteSelectionService.receiveRoutes(startStopRefs, endStopRefs, $filter('date')(this.selectedDate, 'EEEE'), $filter('date')(this.selectedTime, 'HH:mm')).then(
                 function (data) {
                     getRoutes(data);
                 });

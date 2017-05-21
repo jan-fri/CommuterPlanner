@@ -14,7 +14,7 @@ namespace commuterPlanner.MZK_parser
         {
             Console.WriteLine("Wybierz opcję:");
             Console.WriteLine("1. Rozkład jazdy - utworzenie nowego pliku timeTable.json");
-            Console.WriteLine("2. Pliki danch do konfiguracji grafowej bazy danych (Neo4j)");
+            Console.WriteLine("2. Pliki CSV do konfiguracji grafowej bazy danych (Neo4j)");
             string input = Console.ReadLine();
 
             //html agile config

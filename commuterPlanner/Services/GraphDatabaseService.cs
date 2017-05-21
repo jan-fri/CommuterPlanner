@@ -60,7 +60,7 @@ namespace commuterPlanner.Services
                     //* the purpose of the below code is to select the shortest path (one with least bus change)
                     //calculating shortes connection from all available 
                     List<int> changes = new List<int>();
-                    calculateShortestPath(changes, allPaths);
+                    calculateLeastChangePath(changes, allPaths);
                     
                     //selecting route with least changes
                     int shortestPath = changes.IndexOf(changes.Min());
@@ -128,7 +128,7 @@ namespace commuterPlanner.Services
             }
         }
 
-        private void calculateShortestPath(List<int> changes, List<List<string>> allPaths)
+        private void calculateLeastChangePath(List<int> changes, List<List<string>> allPaths)
         {
             int currentBusNo;
             int lastBusNo;

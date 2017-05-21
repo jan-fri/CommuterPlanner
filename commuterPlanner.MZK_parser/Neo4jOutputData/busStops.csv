@@ -15,9 +15,6 @@ ref,name,city
 59,Cieszyńska Hulanka,Bielsko Biała
 318,Szarotki Cieszyńska,Bielsko Biała
 320,Szarotki SAM,Bielsko Biała
-11,Andersa Osiedle Karpackie Kościół,Bielsko Biała
-19,Andersa Osiedle Karpackie Kolista,Bielsko Biała
-5,Osiedle Beskidzkie Kładka,Bielsko Biała
 
 33,Osiedle Beskidzkie,Bielsko Biała
 319,Szarotki SAM,Bielsko Biała
@@ -44,10 +41,6 @@ ref,name,city
 66,Wapienica Centrum,Bielsko Biała
 228,Międzyrzecka Przejazd,Bielsko Biała
 227,Międzyrzecka Osiedle,Bielsko Biała
-1,Beskidzki Inkubator Technologiczny,Bielsko Biała
-230,Międzyrzecka Strażacka,Bielsko Biała
-232,Międzyrzecka Wiadukt,Bielsko Biała
-288,Wapienica Park Przemysłowy,Bielsko Biała
 
 316,Wapienica Strażacka,Bielsko Biała
 229,Międzyrzecka Strażacka,Bielsko Biała
@@ -60,13 +53,6 @@ ref,name,city
 256,Partyzantów Krepol,Bielsko Biała
 50,Bystrzańska Bewelana,Bielsko Biała
 54,Bystrzańska Willowa,Bielsko Biała
-12,Andersa Osiedle Karpackie Kościół,Bielsko Biała
-72,Długa Bystrzańska,Bielsko Biała
-231,Międzyrzecka Wiadukt,Bielsko Biała
-34,Osiedle Beskidzkie,Bielsko Biała
-6,Osiedle Beskidzkie Kładka,Bielsko Biała
-287,Wapienica Giełda,Bielsko Biała
-427,Wapienica Park Przemysłowy GE,Bielsko Biała
 
 341,Warszawska Dworzec,Bielsko Biała
 335,Wałowa,Bielsko Biała
@@ -80,11 +66,6 @@ ref,name,city
 99,Górska Partyzant,Bielsko Biała
 100,Górska Piekarnia,Bielsko Biała
 97,Górska Kościół,Bielsko Biała
-47,Bora-Komorowskiego Gemini Park,Bielsko Biała
-103,Straconka Leśniczówka,Bielsko Biała
-340,Warszawska Fiat,Bielsko Biała
-338,Warszawska Metalplast,Bielsko Biała
-344,Warszawska Tesco,Bielsko Biała
 
 102,Straconka Leśniczówka,Bielsko Biała
 96,Górska Kościół,Bielsko Biała
@@ -98,11 +79,6 @@ ref,name,city
 208,Lwowska Krakowska,Bielsko Biała
 274,Piłsudskiego,Bielsko Biała
 334,Wałowa,Bielsko Biała
-46,Bora-Komorowskiego Gemini Park,Bielsko Biała
-73,Długa Bystrzańska,Bielsko Biała
-104,Straconka Zakręt,Bielsko Biała
-342,Warszawska Dworzec,Bielsko Biała
-339,Warszawska Fiat,Bielsko Biała
 
 321,Mikuszowice Błonia ATH,Bielsko Biała
 323,Szeroka Bystrzańska,Bielsko Biała
@@ -119,12 +95,6 @@ ref,name,city
 360,Wyzwolenia Niepodległości,Bielsko Biała
 370,Wyzwolenia Witosa,Bielsko Biała
 364,Wyzwolenia Poczta,Bielsko Biała
-408,Krzemionki Sobieskiego,Bielsko Biała
-410,Krzemionki Suchy Potok,Bielsko Biała
-347,Krzemionki Witosa,Bielsko Biała
-412,Krzemionki Wyzwolenia,Bielsko Biała
-406,Witosa Krańcowa,Bielsko Biała
-349,Witosa Szkoła,Bielsko Biała
 
 354,Hałcnów Kościół,Bielsko Biała
 363,Wyzwolenia Poczta,Bielsko Biała
@@ -138,19 +108,16 @@ ref,name,city
 167,Komorowicka Szkoła,Bielsko Biała
 77,Dmowskiego Urząd Miejski,Bielsko Biała
 262,PCK Trasa W-Z,Bielsko Biała
+72,Długa Bystrzańska,Bielsko Biała
 322,Szeroka Bystrzańska,Bielsko Biała
 
 206,Lipnik Dolny,Bielsko Biała
 201,Lipnicka Mostek,Bielsko Biała
 203,Lipnicka Złote Łany,Bielsko Biała
 200,Lipnicka Akademii Umiejętności,Bielsko Biała
+342,Warszawska Dworzec,Bielsko Biała
 195,Kwiatkowskiego Warszawska,Bielsko Biała
 196,Kwiatkowskiego Most,Bielsko Biała
-355,Hałcnów Kościół,Bielsko Biała
-409,Krzemionki Sobieskiego,Bielsko Biała
-411,Krzemionki Suchy Potok,Bielsko Biała
-413,Krzemionki Wyzwolenia,Bielsko Biała
-407,Witosa Krańcowa,Bielsko Biała
 
 193,Kwiatkowskiego Komorowicka,Bielsko Biała
 194,Kwiatkowskiego Warszawska,Bielsko Biała
@@ -158,7 +125,6 @@ ref,name,city
 199,Lipnicka Akademii Umiejętności,Bielsko Biała
 204,Lipnicka Złote Łany,Bielsko Biała
 202,Lipnicka Mostek,Bielsko Biała
-348,Witosa Szkoła,Bielsko Biała
 
 222,Michałowicza Czarnieckiego,Bielsko Biała
 224,Michałowicza Reja,Bielsko Biała
@@ -170,9 +136,9 @@ ref,name,city
 326,Tańskiego Skrzydlewskiego,Bielsko Biała
 310,Osiedle Wojska Polskiego,Bielsko Biała
 132,Osiedle Kopernika,Bielsko Biała
+34,Osiedle Beskidzkie,Bielsko Biała
 225,Michałowicza SAM,Bielsko Biała
 223,Michałowicza Czarnieckiego,Bielsko Biała
-53,Bystrzańska Vienna,Bielsko Biała
 
 329,Osiedle Langiewicza,Bielsko Biała
 330,Tuwima Osiedle Langiewicza,Bielsko Biała
@@ -184,7 +150,6 @@ ref,name,city
 113,Grunwaldzka Szpital,Bielsko Biała
 171,Konopnickiej Szpital,Bielsko Biała
 169,Konopnickiej Pawilon,Bielsko Biała
-313,Stawowa,Bielsko Biała
 
 168,Konopnickiej Pawilon,Bielsko Biała
 170,Konopnickiej Szpital,Bielsko Biała
@@ -199,8 +164,6 @@ ref,name,city
 
 129,Jaworzańska Zagłoby,Bielsko Biała
 372,Zapora Jaworzańska,Bielsko Biała
-374,Zapora Klimczokówka,Bielsko Biała
-376,Zapora Sklep,Bielsko Biała
 
 328,Wapienica Zapora,Bielsko Biała
 373,Zapora Klimczokówka,Bielsko Biała
@@ -213,13 +176,15 @@ ref,name,city
 85,Gazownicza,Bielsko Biała
 271,Piekarska B-B Wschód,Bielsko Biała
 273,Piekarska Wyzwolenia,Bielsko Biała
-210,Lwowska Wyzwolenia,Bielsko Biała
-361,Wyzwolenia Piekarska,Bielsko Biała
+349,Witosa Szkoła,Bielsko Biała
 
+347,Krzemionki Witosa,Bielsko Biała
+348,Witosa Szkoła,Bielsko Biała
 357,Wyzwolenia Bukietowa,Bielsko Biała
 272,Piekarska Wyzwolenia,Bielsko Biała
 270,Piekarska B-B Wschód,Bielsko Biała
 
+46,Bora-Komorowskiego Gemini Park,Bielsko Biała
 25,Armii Krajowej Szpital,Bielsko Biała
 86,Gościnna Armii Krajowej,Bielsko Biała
 88,Gościnna Działki,Bielsko Biała
@@ -248,20 +213,14 @@ ref,name,city
 93,Gościnna Kolista,Bielsko Biała
 89,Gościnna Działki,Bielsko Biała
 87,Gościnna Armii Krajowej,Bielsko Biała
+47,Bora-Komorowskiego Gemini Park,Bielsko Biała
 
+210,Lwowska Wyzwolenia,Bielsko Biała
 106,Grażyńskiego Fiat I,Bielsko Biała
-108,Grażyńskiego Fiat II,Bielsko Biała
-111,Grażyńskiego Mazańcowicka,Bielsko Biała
-174,Konwojowa Tacho,Bielsko Biała
-177,Konwojowa TNT I,Bielsko Biała
 
 107,Grażyńskiego Fiat II,Bielsko Biała
 105,Grażyńskiego Fiat I,Bielsko Biała
 362,Wyzwolenia Piekarska,Bielsko Biała
-2492,Czechowice-Dziedzice Proseat,Bielsko Biała
-110,Grażyńskiego Mazańcowicka,Bielsko Biała
-175,Konwojowa Tacho,Bielsko Biała
-176,Konwojowa TNT II,Bielsko Biała
 
 379,Mikuszowice Stalownik,Bielsko Biała
 386,Żywiecka Mikuszowice Krakowskie,Bielsko Biała
@@ -277,19 +236,21 @@ ref,name,city
 
 
 30,Szpital Wojewódzki,Bielsko Biała
+11,Andersa Osiedle Karpackie Kościół,Bielsko Biała
+19,Andersa Osiedle Karpackie Kolista,Bielsko Biała
+5,Osiedle Beskidzkie Kładka,Bielsko Biała
 
+6,Osiedle Beskidzkie Kładka,Bielsko Biała
+12,Andersa Osiedle Karpackie Kościół,Bielsko Biała
 
 314,Stojałowskiego Pawilon,Bielsko Biała
 294,Sarni Stok,Bielsko Biała
 291,Sarni Potok,Bielsko Biała
-244,Okrężna Bosmal,Bielsko Biała
-242,Okrężna Metalplast,Bielsko Biała
 
 289,Osiedle Sarni Stok,Bielsko Biała
 290,Sarni Potok,Bielsko Biała
 293,Sarni Stok,Bielsko Biała
 315,Stojałowskiego Pawilon,Bielsko Biała
-243,Okrężna Bosmal,Bielsko Biała
 
 
 
@@ -313,10 +274,6 @@ ref,name,city
 8,Andersa Francuska,Bielsko Biała
 16,Andersa Wiadukt,Bielsko Biała
 10,Andersa Granica,Bielsko Biała
-2243,Mazańcowice Mrzygłód,Bielsko Biała
-2245,Mazańcowice Skrzyżowanie,Bielsko Biała
-2241,Mazańcowice Spółdzielnia,Bielsko Biała
-45,Wapienica Leroy Merlin,Bielsko Biała
 
 2240,Mazańcowice Spółdzielnia,Bielsko Biała
 9,Andersa Granica,Bielsko Biała
@@ -324,9 +281,6 @@ ref,name,city
 7,Andersa Francuska,Bielsko Biała
 17,Andersa Wzniesienie,Bielsko Biała
 13,Andersa Stare Bielsko,Bielsko Biała
-2242,Mazańcowice Mrzygłód,Bielsko Biała
-2246,Mazańcowice Ośrodek Zdrowia,Bielsko Biała
-2244,Mazańcowice Skrzyżowanie,Bielsko Biała
 
 241,Norwida Kościół,Bielsko Biała
 
@@ -354,9 +308,12 @@ ref,name,city
 184,Krakowska Solskiego,Bielsko Biała
 
 308,Osiedle Karpackie,Bielsko Biała
+313,Stawowa,Bielsko Biała
 
 312,Stawowa,Bielsko Biała
 
+108,Grażyńskiego Fiat II,Bielsko Biała
+111,Grażyńskiego Mazańcowicka,Bielsko Biała
 159,Komorowicka Kościół,Bielsko Biała
 246,Komorowice Olimpijska,Bielsko Biała
 41,Bestwińska Zakręt,Bielsko Biała
@@ -372,29 +329,24 @@ ref,name,city
 71,Daszyńskiego Stażystów,Bielsko Biała
 245,Komorowice Olimpijska,Bielsko Biała
 160,Komorowicka Kościół,Bielsko Biała
+110,Grażyńskiego Mazańcowicka,Bielsko Biała
 
 158,Komorowicka Czerwona,Bielsko Biała
 162,Komorowicka Mostek,Bielsko Biała
 164,Komorowicka Piekarnia,Bielsko Biała
-414,Kolista Działowa,Bielsko Biała
-416,Kolista Niwna,Bielsko Biała
-418,Kolista Osiedle Karpackie,Bielsko Biała
 
 163,Komorowicka Piekarnia,Bielsko Biała
 161,Komorowicka Mostek,Bielsko Biała
-415,Kolista Działowa,Bielsko Biała
-417,Kolista Niwna,Bielsko Biała
-419,Kolista Osiedle Karpackie,Bielsko Biała
 
 
 
+355,Hałcnów Kościół,Bielsko Biała
 367,Wyzwolenia Spółdzielnia,Bielsko Biała
 359,Wyzwolenia Wawelska,Bielsko Biała
 
 356,Hałcnów Granica,Bielsko Biała
 358,Wyzwolenia Wawelska,Bielsko Biała
 366,Wyzwolenia Spółdzielnia,Bielsko Biała
-343,Warszawska Lipowa,Bielsko Biała
 
 345,Warszawska Tesco,Bielsko Biała
 219,Mazańcowicka Łącznik,Bielsko Biała
@@ -412,6 +364,8 @@ ref,name,city
 114,Hałcnowska Beczałka,Bielsko Biała
 154,Katowicka Skrzyżowanie,Bielsko Biała
 153,Katowicka Polmozbyt,Bielsko Biała
+344,Warszawska Tesco,Bielsko Biała
+338,Warszawska Metalplast,Bielsko Biała
 
 221,Mazańcowicka Skrzyżowanie,Bielsko Biała
 218,Mazańcowicka Akademicka,Bielsko Biała
@@ -437,21 +391,23 @@ ref,name,city
 346,Wielkopolska,Bielsko Biała
 187,Księdza Brzóski Lubelska,Bielsko Biała
 
+174,Konwojowa Tacho,Bielsko Biała
 
+2492,Czechowice-Dziedzice Proseat,Bielsko Biała
+175,Konwojowa Tacho,Bielsko Biała
 
 405,Karbowa Hala Widowiskowo Sportowa,Bielsko Biała
 403,Karbowa Wyciąg,Bielsko Biała
 424,Kolista Falista,Bielsko Biała
-21,Armii Krajowej Młodzieżowa,Bielsko Biała
-27,Armii Krajowej ZIAD,Bielsko Biała
-29,Armii Krajowej Zieleń Miejska,Bielsko Biała
+414,Kolista Działowa,Bielsko Biała
+416,Kolista Niwna,Bielsko Biała
+418,Kolista Osiedle Karpackie,Bielsko Biała
 
+419,Kolista Osiedle Karpackie,Bielsko Biała
+417,Kolista Niwna,Bielsko Biała
+415,Kolista Działowa,Bielsko Biała
 425,Kolista Falista,Bielsko Biała
 402,Karbowa Wyciąg,Bielsko Biała
-20,Armii Krajowej Młodzieżowa,Bielsko Biała
-26,Armii Krajowej ZIAD,Bielsko Biała
-28,Armii Krajowej Zieleń Miejska,Bielsko Biała
-404,Karbowa Hala Widowiskowo Sportowa,Bielsko Biała
 
 
 
@@ -491,13 +447,10 @@ ref,name,city
 148,Katowicka Centrostal,Bielsko Biała
 150,Katowicka Królewska,Bielsko Biała
 
-2403,Mazańcowice Kościół,Bielsko Biała
-2401,Mazańcowice Osiedle,Bielsko Biała
-2402,Mazańcowice Wzniesienie,Bielsko Biała
 
-2404,Mazańcowice Kościół,Bielsko Biała
-2406,Mazańcowice Wzniesienie,Bielsko Biała
 
+230,Międzyrzecka Strażacka,Bielsko Biała
+232,Międzyrzecka Wiadukt,Bielsko Biała
 2456,Międzyrzecze Górne Granica,Bielsko Biała
 2463,Międzyrzecze Górne Kopiec,Bielsko Biała
 2476,Międzyrzecze Górne Ośrodek Zdrowia,Bielsko Biała
@@ -514,7 +467,9 @@ ref,name,city
 2477,Międzyrzecze Górne Ośrodek Zdrowia,Bielsko Biała
 2464,Międzyrzecze Górne Kopiec,Bielsko Biała
 2457,Międzyrzecze Górne Granica,Bielsko Biała
+231,Międzyrzecka Wiadukt,Bielsko Biała
 
+361,Wyzwolenia Piekarska,Bielsko Biała
 125,Janowicka Na Żadanie,Bielsko Biała
 127,Janowicka Pod Kasztanem,Bielsko Biała
 2164,Janowice Niklówka,Bielsko Biała
@@ -529,7 +484,6 @@ ref,name,city
 2165,Janowice Niklówka,Bielsko Biała
 128,Janowicka Pod Kasztanem,Bielsko Biała
 126,Janowicka Na Żadanie,Bielsko Biała
-365,Wyzwolenia Polsport,Bielsko Biała
 
 82,Filarowa Med Work,Bielsko Biała
 83,Filarowa Zakłady Energetyczne,Bielsko Biała
@@ -558,8 +512,6 @@ ref,name,city
 49,Browarna,Bielsko Biała
 61,Cieszyńska Osiedle Słoneczne,Bielsko Biała
 79,Dzwonkowa Cieszyńska,Bielsko Biała
-22,Armii Krajowej Parking,Bielsko Biała
-31,Szyndzielnia,Bielsko Biała
 
 81,Wapienica Dzwonkowa,Bielsko Biała
 60,Cieszyńska Osiedle Słoneczne,Bielsko Biała
@@ -567,14 +519,21 @@ ref,name,city
 302,Sobieskiego Wyspiańskiego,Bielsko Biała
 351,Wyspiańskiego Szpital,Bielsko Biała
 139,Kamienica Spółdzielnia,Bielsko Biała
+
+31,Szyndzielnia,Bielsko Biała
+22,Armii Krajowej Parking,Bielsko Biała
+26,Armii Krajowej ZIAD,Bielsko Biała
+20,Armii Krajowej Młodzieżowa,Bielsko Biała
+28,Armii Krajowej Zieleń Miejska,Bielsko Biała
+
+29,Armii Krajowej Zieleń Miejska,Bielsko Biała
+21,Armii Krajowej Młodzieżowa,Bielsko Biała
+27,Armii Krajowej ZIAD,Bielsko Biała
 23,Armii Krajowej Parking,Bielsko Biała
 
 
 
 
-
-
-124,Janowicka Niklówka,Bielsko Biała
 
 
 
