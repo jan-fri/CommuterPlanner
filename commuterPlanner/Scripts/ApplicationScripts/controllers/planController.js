@@ -3,14 +3,8 @@
     $scope.selectedTime = new Date();
 
     this.selectedDate = new Date();
-   // $scope.selectedDate = new Date();
     this.selectedTime = new Date();
     
-    $scope.selectDateFun = function () {
-        console.log("date selected " + this.selectedDate);
-        console.log("time " + this.selectedTime);
-       // $scope.selectedDate = new Date();
-    };
     //all available bus stop data
     var allStops;
     //bus stops in cities
